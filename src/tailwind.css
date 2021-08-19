@@ -10,3 +10,11 @@ html,
 :host {
   font-family: "Nunito Sans", sans-serif;
 }
+
+.bg-aqua {
+  background: #5fffdd;
+}
+
+@apply {
+  router-link: shadow border border-gray-700 text-green-600 p-2 rounded-lg;
+}
