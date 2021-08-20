@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/main-content/main-content.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/project-card/project-card.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/tech-tools.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/globals/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/hero/hero.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/hero/hero.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/techstack-info/techstack-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/short-info/short-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" afterDir="false" />
-    </list>
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="projects card" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,8 +64,16 @@
       <option name="presentableId" value="Default" />
       <updated>1629449929397</updated>
       <workItem from="1629449983633" duration="599000" />
-      <workItem from="1629467893422" duration="8473000" />
+      <workItem from="1629467893422" duration="8733000" />
     </task>
+    <task id="LOCAL-00001" summary="projects card">
+      <created>1629477311451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629477311451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,5 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="projects card" />
+    <option name="LAST_COMMIT_MESSAGE" value="projects card" />
   </component>
 </project>

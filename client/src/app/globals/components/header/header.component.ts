@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +18,7 @@ import {Component, OnInit} from '@angular/core';
         <div routerLink="/about" [routerLinkActive]="'shadow border border-gray-700 text-blue-600 p-2 rounded-lg'"
              class="m-auto cursor-pointer hover:text-blue-500">about
         </div>
-        <div routerLink="/contact" [routerLinkActive]="'shadow border border-gray-700 text-blue-600 p-2 rounded-lg'"
+        <div routerLink="/catch-me" [routerLinkActive]="'shadow border border-gray-700 text-blue-600 p-2 rounded-lg'"
              class="m-auto cursor-pointer hover:text-blue-500">catch me
         </div>
       </div>
