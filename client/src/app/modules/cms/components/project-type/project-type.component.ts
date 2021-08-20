@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProjectTypeService } from '../../services/project-type.service';
+import { ProjectTypeService } from '../../../global-services/project-type.service';
 
 @Component({
   selector: 'app-project-type',

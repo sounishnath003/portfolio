@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CmsRoutingModule } from './cms-routing.module';
@@ -8,12 +7,6 @@ import { ProjectTypeComponent } from './components/project-type/project-type.com
 
 @NgModule({
   declarations: [CmsComponent, ProjectTypeComponent],
-  imports: [
-    CommonModule,
-    CmsRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, CmsRoutingModule, FormsModule, ReactiveFormsModule],
 })
 export class CmsModule {}
