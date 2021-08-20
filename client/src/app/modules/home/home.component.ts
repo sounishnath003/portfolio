@@ -4,8 +4,7 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-home',
   template: `
     <div class="w-auto">
-      <app-hero></app-hero>
-      <app-techstack-info></app-techstack-info>
+      <router-outlet></router-outlet>
     </div>
   `,
   styleUrls: ['./home.component.css']

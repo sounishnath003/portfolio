@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-techstack-info',
+  selector: 'app-short-info',
   template: `
     <div class="md:my-20 my-8 -bg-gray-50 px-4 py-4 rounded-xl">
       <div class="text-gray-800 font-black text-xl">A bit about me &rarr;</div>
@@ -13,11 +13,11 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [],
 })
-export class TechstackInfoComponent implements OnInit {
+export class ShortInfoComponent implements OnInit {
   data: string = `
     <div> <p> Currently working at <span class="text-blue-700 font-semibold"> <a href="https://tcs.com" target="_blank">  Tata Consultancy Services </a> </span> as an
           Full time Software Engineer.  </p>
-          <p> Who is quite profient with building scalable backend systems with <span class="text-green-700 font-semibold"> Node + TypeScript </span>.  </p>
+          <p> Who is quite proficient with building scalable backend systems with <span class="text-green-700 font-semibold"> Node + TypeScript </span>.  </p>
           <p> Also quite experienced with <span class="text-red-600 font-semibold"> Angular </span> &amp; <span class="text-blue-700 font-semibold"> React </span> ecosystems. </p> </div>
     <div class="my-4 w-2/3">
     <p> Now, I am exploring field of <b class="text-blue-700"> Cloud Computing, DevOps, &amp; Data Science. </b>

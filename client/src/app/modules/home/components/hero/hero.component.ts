@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
           <mark class="bg-yellow-100 rounded"> Backend &amp; Frontend </mark>
           Engineer Based in Kolkata, In.
         </div>
+        <div class="text-3xl text-blue-800 font-semibold text-center animate-bounce"> &darr; </div>
       </div>
     </div>
   `,
