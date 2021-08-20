@@ -31,6 +31,11 @@ const routes: Routes = [
         (m) => m.ContactsModule
       ),
   },
+  {
+    path: 'cms',
+    loadChildren: () =>
+      import('./modules/cms/cms.module').then((m) => m.CmsModule),
+  },
 ];
 
 @NgModule({
