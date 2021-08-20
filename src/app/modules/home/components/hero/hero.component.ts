@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
           class="text-blue-600"> I&apos;m Sounish&comma; </span>
         </div>
         <div class="max-w-xl text-3xl md:text-6xl md:leading-normal leading-relaxed tracking-wide">
-          <mark class="bg-yellow-50 rounded"> Fullstack </mark>
+          <mark class="bg-yellow-100 rounded"> Backend &amp; Frontend </mark>
           Engineer Based in Kolkata, In.
         </div>
       </div>
