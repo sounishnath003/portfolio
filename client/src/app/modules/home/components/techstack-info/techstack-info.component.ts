@@ -21,7 +21,7 @@ export class TechstackInfoComponent implements OnInit {
           <p> Also quite experienced with <span class="text-red-600 font-semibold"> Angular </span> &amp; <span class="text-blue-700 font-semibold"> React </span> ecosystems. </p> </div>
     <div class="my-4 w-2/3">
     <p> Now, I am exploring field of <b class="text-blue-700"> Cloud Computing, DevOps, &amp; Data Science. </b>
-    <span> Equally enthusiastic to learn and build <span class="text-red-500 font-semibold"> Large Scale Distributive Systems </span>. </span> </p>
+    <span> Equally enthusiastic to learn and build <span class="text-red-500 font-semibold"> Large Scale Distributed Systems </span>. </span> </p>
     </div>
     <div class="mt-4">
       <p> You can find me on &rarr; <span class="text-blue-700"> <a target="_blank" href="https://github.com/sounishnath003" > GitHub </a> · <a target="_blank" href="https://www.linkedin.com/in/sounish-nath-897b30186/" > LinkedIn </a> · <a target="_blank" href="https://twitter.com/sounish1" > Twitter </a> </span> </p>
