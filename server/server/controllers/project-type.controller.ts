@@ -46,7 +46,13 @@ router.put(
     try {
       const projectId = req.params.id;
       const payload = req.body; // {id: 1, name: 'test'}
-      const doc = await ProjectType.findById(projectId);
+      const doc = await ProjectType.findOneAndUpdate(
+        { _id: projectId },
+        payload,
+        { upsert: false, useFindAndModify: true }
+      );
+
+      if (doc === null) throw new Error("Project type not found.");
 
       return res
         .status(200)
