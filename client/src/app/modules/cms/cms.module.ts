@@ -1,13 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthComponent } from './auth.component';
-import { CmsRoutingModule } from './cms-routing.module';
-import { CmsComponent } from './cms.component';
-import { AddFormComponent } from './components/project-type/add-form/add-form.component';
-import { ProjectTypeComponent } from './components/project-type/project-type.component';
-import { TableLayoutComponent } from './components/project-type/table-layout/table-layout.component';
-import { AuthGuard } from './guards/auth.guard';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AuthComponent} from './auth.component';
+import {CmsRoutingModule} from './cms-routing.module';
+import {CmsComponent} from './cms.component';
+import {AddFormComponent} from './components/project-type/add-form/add-form.component';
+import {ProjectTypeComponent} from './components/project-type/project-type.component';
+import {TableLayoutComponent} from './components/project-type/table-layout/table-layout.component';
+import {AuthGuard} from './guards/auth.guard';
+import {AuthService} from "./auth.service";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AuthGuard } from './guards/auth.guard';
     TableLayoutComponent,
     AuthComponent,
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AuthService],
   imports: [CommonModule, CmsRoutingModule, FormsModule, ReactiveFormsModule],
 })
-export class CmsModule {}
+export class CmsModule {
+}

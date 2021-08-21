@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-cms',
   template: `
     <div>
+      <div> CMS Dashboard </div>
       <router-outlet></router-outlet>
     </div>
   `,
