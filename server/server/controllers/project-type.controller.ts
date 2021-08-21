@@ -41,15 +41,12 @@ router.post(
 
 // [PUT] /api/project-type/update/:id
 router.put(
-  "/update",
+  "/update/:id",
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const projectId = req.params.id;
       const payload = req.body; // {id: 1, name: 'test'}
-      const doc = await ProjectType.findByIdAndUpdate(projectId, {
-        $set: payload,
-      });
-      await doc?.save();
+      const doc = await ProjectType.findById(projectId);
 
       return res
         .status(200)

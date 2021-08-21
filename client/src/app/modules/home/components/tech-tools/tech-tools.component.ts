@@ -8,7 +8,7 @@ import { ProjectTypeService } from 'src/app/modules/global-services/project-type
       <div class="text-3xl my-4 font-semibold">
         Things I&apos;m good at &rarr;
       </div>
-      <div class="my-6 parent">
+      <div class="my-6 grid md:grid-cols-2 sm:grid-cols-1 gap-3">
         <app-project-card
           *ngFor="let project of projects"
           [project]="project"
