@@ -1,11 +1,12 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectTypeService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getAllProjectTypes() {
     return this.http.get('/api/project-type/all');
@@ -16,8 +17,13 @@ export class ProjectTypeService {
   }
 
   updatedProjectType(projectType: any) {
-    return this.http.put(`/api/project-type/update/${projectType._id}`, {
-      projectType,
-    });
+    const projectId: string = projectType._id;
+    this.formatPayloadReceived(projectType);
+    return this.http.put(`/api/project-type/update/${projectId}`, projectType);
+  }
+
+  private formatPayloadReceived(rawFormData: any) {
+    delete rawFormData['_id'];
+    delete rawFormData['__v'];
   }
 }

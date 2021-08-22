@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
@@ -7,9 +7,9 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, take } from 'rxjs/operators';
-import { AuthService } from '../auth.service';
+import {Observable} from 'rxjs';
+import {map, take} from 'rxjs/operators';
+import {AuthService} from '../auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +18,8 @@ export class AuthGuardCanActivateChild implements CanActivateChild {
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router
-  ) {}
+  ) {
+  }
 
   canActivateChild(
     route: ActivatedRouteSnapshot,
@@ -45,7 +46,8 @@ export class AuthGuardCanActivateSelf implements CanActivate {
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router
-  ) {}
+  ) {
+  }
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -58,6 +60,8 @@ export class AuthGuardCanActivateSelf implements CanActivate {
     return this.authService.getAuthState().pipe(
       take(1),
       map((state) => {
+        if (state === true)
+          this.router.navigate(['cms', 'dashboard', 'project-type']);
         return state === true ? false : true;
       })
     );

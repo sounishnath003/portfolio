@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="guards" />
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="guards">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/project-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/project-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/global-services/project-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/global-services/project-type.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/database/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server/controllers/project-type.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/controllers/project-type.controller.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +48,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/client/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -75,6 +82,7 @@
       <workItem from="1629467893422" duration="8733000" />
       <workItem from="1629515466711" duration="6065000" />
       <workItem from="1629563912003" duration="6429000" />
+      <workItem from="1629609792383" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>

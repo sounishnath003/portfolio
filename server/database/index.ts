@@ -2,6 +2,8 @@ import { config } from "dotenv";
 import mongoosse from "mongoose";
 config();
 
+mongoosse.set('debug', true);
+
 export async function createMongoDBConnection() {
   try {
     console.log("Connecting to MongoDB...", process.env.DATABASE_URL);
@@ -10,6 +12,7 @@ export async function createMongoDBConnection() {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         poolSize: 10,
+        loggerLevel: "full"
       })
       .catch((e) => {
         throw new Error(e);
