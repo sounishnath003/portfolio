@@ -10,6 +10,7 @@ import { TechToolsComponent } from './components/tech-tools/tech-tools.component
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { BagPackComponent } from './components/tech-tools/bag-pack.component';
+import { TechecoCardComponent } from './components/tech-tools/techeco-card.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BagPackComponent } from './components/tech-tools/bag-pack.component';
     TechToolsComponent,
     MainContentComponent,
     ProjectCardComponent,
-    BagPackComponent
+    BagPackComponent,
+    TechecoCardComponent
   ],
   imports: [
     CommonModule,
