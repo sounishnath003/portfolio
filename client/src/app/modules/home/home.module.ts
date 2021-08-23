@@ -9,6 +9,7 @@ import {SanitizeToHtmlPipe} from "../../globals/pipes/sanitize-to-html.pipe";
 import { TechToolsComponent } from './components/tech-tools/tech-tools.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { BagPackComponent } from './components/tech-tools/bag-pack.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     SanitizeToHtmlPipe,
     TechToolsComponent,
     MainContentComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    BagPackComponent
   ],
   imports: [
     CommonModule,

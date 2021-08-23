@@ -8,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
       class="max-w-md font-semibold mx-auto rounded-xl overflow-hidden md:max-w-2xl"
     >
       <div class="md:flex">
-        <div class="md:flex-shrink-0">
+        <div class="md:flex-shrink-0 text-center">
           <img
             class="m-4 object-cover w-20"
             [src]="project.logo"
+            loading="lazy"
             alt="Man looking at item at a store"
           />
         </div>
@@ -20,6 +21,7 @@ import { Component, Input, OnInit } from '@angular/core';
             {{ project.tags }}
           </div>
           <p class="mt-2 text-gray-500">{{ project.description }}</p>
+          <div class="my-4">View more &rarr;</div>
         </div>
       </div>
     </div>
