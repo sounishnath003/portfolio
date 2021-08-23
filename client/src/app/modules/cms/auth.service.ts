@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {Router} from "@angular/router";
+import {share} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AuthService {
   }
 
   getAuthState() {
-    return this.user$;
+    return this.user$.asObservable().pipe(share());
   }
 
   doLogin(password: string) {
@@ -33,6 +34,13 @@ export class AuthService {
     if (alreadyLoggedIn) {
       this.user$.next(true);
     }
+  }
+
+  logoutWithChange() {
+    window.localStorage.clear();
+    this.router.navigate(['/']);
+    this.user$.next(false);
+    return this.getAuthState();
   }
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectTypeService } from 'src/app/modules/global-services/project-type.service';
+import {Component, OnInit} from '@angular/core';
+import {ProjectTypeService} from 'src/app/modules/global-services/project-type.service';
+import {tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-tech-tools',
@@ -42,14 +43,17 @@ import { ProjectTypeService } from 'src/app/modules/global-services/project-type
 export class TechToolsComponent implements OnInit {
   projects = [];
 
-  constructor(private readonly projectService: ProjectTypeService) {}
+  constructor(private readonly projectService: ProjectTypeService) {
+  }
 
   ngOnInit(): void {
+    this.projectService.refreshNeededState.pipe(tap(() => this.loadProjectData()))
+    this.loadProjectData();
+  }
+
+  private loadProjectData() {
     this.projectService.getAllProjectTypes().subscribe((resp: any) => {
       this.projects = resp.data;
     });
-
-    console.log(this.projects);
-
   }
 }

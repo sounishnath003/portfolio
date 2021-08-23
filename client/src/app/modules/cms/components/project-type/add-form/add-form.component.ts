@@ -158,6 +158,7 @@ export class AddFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.projectToEdit !== null) {
       this.form.setValue({...this.form.value, ...this.projectToEdit});
+      console.log(this.form.value)
     }
   }
 

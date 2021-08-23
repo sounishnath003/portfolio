@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ProjectTypeService} from '../../../global-services/project-type.service';
+import { Component, OnInit } from '@angular/core';
+import { ProjectTypeService } from '../../../global-services/project-type.service';
 
 @Component({
   selector: 'app-project-type',
@@ -25,15 +25,13 @@ import {ProjectTypeService} from '../../../global-services/project-type.service'
     </div>
   `,
   styles: [],
-  providers: [ProjectTypeService],
 })
 export class ProjectTypeComponent implements OnInit {
   projectTypes: any[] = [];
   isEditRequested: boolean = false;
   projectToEdit: any | null = null;
 
-  constructor(private readonly projectService: ProjectTypeService) {
-  }
+  constructor(private readonly projectService: ProjectTypeService) {}
 
   ngOnInit(): void {
     this.projectService.getAllProjectTypes().subscribe((resp: any) => {
@@ -42,7 +40,7 @@ export class ProjectTypeComponent implements OnInit {
   }
 
   onSubmit(rawFormData: any) {
-    const formData = {...rawFormData, tags: rawFormData.tags.split(',')};
+    const formData = { ...rawFormData, tags: rawFormData.tags.split(',') };
     this.projectService
       .createNewProjectType(formData)
       .subscribe(() => this.projectTypes.push(formData));
@@ -54,11 +52,14 @@ export class ProjectTypeComponent implements OnInit {
   }
 
   onEditClicked(editedFormData: any) {
+    const _editedFormTemp = editedFormData;
     const pid: string = editedFormData._id;
-    this.projectService.updatedProjectType(editedFormData).subscribe((data) => {
-      const rests = this.projectTypes.filter((p) => p._id !== pid);
-      rests.push(editedFormData);
-      this.projectTypes = rests;
-    });
+    this.projectService
+      .updatedProjectType(_editedFormTemp)
+      .subscribe((resp: any) => {
+        resp.subscribe((re: any) => {
+          this.projectTypes = re.data.reverse();
+        });
+      });
   }
 }
