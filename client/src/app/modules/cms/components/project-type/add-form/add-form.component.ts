@@ -1,11 +1,14 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-form',
   template: `
     <div>
-      <div *ngIf="!projectToEdit; else showEdit" class="my-6 font-semibold text-gray-800">
+      <div
+        *ngIf="!projectToEdit; else showEdit"
+        class="my-6 font-semibold text-gray-800"
+      >
         <form [formGroup]="form" (ngSubmit)="onSubmitClicked()">
           <div class="my-3 flex flex-col space-y-2">
             <label for="projectType" class="">Project Type: </label>
@@ -100,15 +103,15 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
             <div class="my-3 flex flex-col space-y-2">
               <label for="description" class="">Description: </label>
               <div>
-              <textarea
-                formControlName="description"
-                class="px-8 py-2 rounded border"
-                type="text"
-                name="description"
-                id="description"
-                [value]="projectToEdit.description"
-                placeholder="write about the project..."
-              ></textarea>
+                <textarea
+                  formControlName="description"
+                  class="px-8 py-2 rounded border"
+                  type="text"
+                  name="description"
+                  id="description"
+                  [value]="projectToEdit.description"
+                  placeholder="write about the project type..."
+                ></textarea>
               </div>
             </div>
             <div class="my-3 flex flex-col space-y-2">
@@ -135,35 +138,36 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
       </ng-template>
     </div>
   `,
-  styles: []
+  styles: [],
 })
 export class AddFormComponent implements OnInit {
   @Input() projectToEdit: any | null = null;
-  @Output() onSubmitEventFired: EventEmitter<HTMLButtonElement> = new EventEmitter<HTMLButtonElement>();
-  @Output() onEditEventFired: EventEmitter<HTMLButtonElement> = new EventEmitter<HTMLButtonElement>();
+  @Output() onSubmitEventFired: EventEmitter<HTMLButtonElement> =
+    new EventEmitter<HTMLButtonElement>();
+  @Output() onEditEventFired: EventEmitter<HTMLButtonElement> =
+    new EventEmitter<HTMLButtonElement>();
 
   form: FormGroup = new FormGroup({
     _id: new FormControl(''),
     __v: new FormControl(''),
-    projectType: new FormControl('', {validators: [Validators.required]}),
-    tags: new FormControl('', {validators: [Validators.required]}),
-    logo: new FormControl('', {validators: [Validators.required]}),
-    description: new FormControl('', {validators: [Validators.required]}),
+    projectType: new FormControl('', { validators: [Validators.required] }),
+    tags: new FormControl('', { validators: [Validators.required] }),
+    logo: new FormControl('', { validators: [Validators.required] }),
+    description: new FormControl('', { validators: [Validators.required] }),
   });
 
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     if (this.projectToEdit !== null) {
-      this.form.setValue({...this.form.value, ...this.projectToEdit});
-      console.log(this.form.value)
+      this.form.setValue({ ...this.form.value, ...this.projectToEdit });
+      console.log(this.form.value);
     }
   }
 
   onSubmitClicked() {
-    if (this.form.invalid === true) window.alert('Please fill your data correctly');
+    if (this.form.invalid === true)
+      window.alert('Please fill your data correctly');
     else {
       this.onSubmitEventFired.emit(this.form.value);
       this.form.reset();

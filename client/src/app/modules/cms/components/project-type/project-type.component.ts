@@ -5,7 +5,9 @@ import { ProjectTypeService } from '../../../global-services/project-type.servic
   selector: 'app-project-type',
   template: `
     <div>
-      <div class="text-2xl font-semibold">Project-Type</div>
+      <div class="text-2xl font-semibold text-blue-700">
+        Project-Type Manager
+      </div>
       <div class="flex flex-row space-x-4 justify-center items-center">
         <app-add-form
           *ngIf="!isEditRequested; else editForm"

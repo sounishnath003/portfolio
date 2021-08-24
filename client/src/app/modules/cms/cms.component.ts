@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cms',
   template: `
-    <div>
+    <div class="w-full">
       <app-header></app-header>
       <router-outlet></router-outlet>
     </div>

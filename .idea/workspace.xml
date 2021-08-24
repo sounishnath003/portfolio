@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="projects.component.ts">
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/header/header.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/header/header.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/projects/projects.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/projects/projects.component.ts" afterDir="false" />
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="cms navbars and tabs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/cms-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/cms-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/cms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/cms.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/cms.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/cms.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +89,7 @@
       <workItem from="1629689755106" duration="2257000" />
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
-      <workItem from="1629777005650" duration="11619000" />
+      <workItem from="1629777005650" duration="12384000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>
@@ -133,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629787717267</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cms navbars and tabs">
+      <created>1629789804555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629789804555</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +157,7 @@
     <MESSAGE value="guards" />
     <MESSAGE value="tooling &amp; ecosystems" />
     <MESSAGE value="projects.component.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="projects.component.ts" />
+    <MESSAGE value="cms navbars and tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="cms navbars and tabs" />
   </component>
 </project>
