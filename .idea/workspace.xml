@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="tooling &amp; ecosystems">
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="projects.component.ts">
+      <change afterPath="$PROJECT_DIR$/server/server/controllers/projects.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +92,7 @@
       <workItem from="1629689755106" duration="2257000" />
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
-      <workItem from="1629777005650" duration="7465000" />
+      <workItem from="1629777005650" duration="9595000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>
@@ -108,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629782336355</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="projects.component.ts">
+      <created>1629785614871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629785614871</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +145,7 @@
     <MESSAGE value="projects card" />
     <MESSAGE value="guards" />
     <MESSAGE value="tooling &amp; ecosystems" />
-    <option name="LAST_COMMIT_MESSAGE" value="tooling &amp; ecosystems" />
+    <MESSAGE value="projects.component.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="projects.component.ts" />
   </component>
 </project>
