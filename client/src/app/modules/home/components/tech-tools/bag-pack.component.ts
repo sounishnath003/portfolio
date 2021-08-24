@@ -10,7 +10,7 @@ type PackTool = {
   template: `
     <div class="m-auto p-4 rounded">
       <div
-        class="text-3xl text-center font-semibold text-gray-800 hover:text-blue-700 cursor-pointer"
+        class="text-2xl md:text-3xl text-center font-semibold text-gray-800 hover:text-blue-700 cursor-pointer"
       >
         Tooling &amp; Ecosystems
       </div>

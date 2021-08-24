@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="guards">
-      <change afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/bigdata.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/docker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/flutter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/golang.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/java.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/rails.svg" afterDir="false" />
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="tooling &amp; ecosystems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/add-form/add-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/add-form/add-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/main-content/main-content.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/main-content/main-content.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/project-card/project-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/project-card/project-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techeco-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +85,7 @@
       <workItem from="1629689755106" duration="2257000" />
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
-      <workItem from="1629777005650" duration="3873000" />
+      <workItem from="1629777005650" duration="7465000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>
@@ -111,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629572230060</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tooling &amp; ecosystems">
+      <created>1629782336355</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629782336355</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +130,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="projects card" />
     <MESSAGE value="guards" />
-    <option name="LAST_COMMIT_MESSAGE" value="guards" />
+    <MESSAGE value="tooling &amp; ecosystems" />
+    <option name="LAST_COMMIT_MESSAGE" value="tooling &amp; ecosystems" />
   </component>
 </project>

@@ -15,7 +15,7 @@ type PackTool = {
         class="block hover:bg-gray-100 w-full relative z-10 px-4 py-1 leading-6 sm:text-xl font-semibold focus:outline-none transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-white focus-visible:ring-gray-300 hover:text-gray-900 rounded-xl text-gray-900"
       >
         <div class="flex flex-col items-center hover:text-gray-700 py-1">
-          <img [src]="pack.logo" [alt]="pack.name" /> {{ pack.name }}
+          <img [src]="pack.logo" [alt]="pack.name" /> <span class="md:block hidden"> {{ pack.name }} </span>
         </div>
       </button>
     </li>
