@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './auth.component';
-import { CmsComponent } from './cms.component';
-import { ProjectTypeComponent } from './components/project-type/project-type.component';
-import {
-  AuthGuardCanActivateChild,
-  AuthGuardCanActivateSelf,
-} from './guards/auth.guard';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AuthComponent} from './auth.component';
+import {CmsComponent} from './cms.component';
+import {ProjectTypeComponent} from './components/project-type/project-type.component';
+import {AuthGuardCanActivateChild, AuthGuardCanActivateSelf,} from './guards/auth.guard';
+import {ProjectsComponent} from "./components/projects/projects.component";
 
 const routes: Routes = [
   {
@@ -25,7 +23,10 @@ const routes: Routes = [
     path: 'dashboard',
     component: CmsComponent,
     canActivateChild: [AuthGuardCanActivateChild],
-    children: [{ path: 'project-type', component: ProjectTypeComponent }],
+    children: [
+      {path: 'project-type', component: ProjectTypeComponent},
+      {path: 'projects', component: ProjectsComponent}
+    ],
   },
 ];
 
@@ -33,4 +34,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CmsRoutingModule {}
+export class CmsRoutingModule {
+}

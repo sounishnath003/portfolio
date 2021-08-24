@@ -12,6 +12,8 @@ import {
   AuthGuardCanActivateChild,
   AuthGuardCanActivateSelf,
 } from './guards/auth.guard';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import {
     AddFormComponent,
     TableLayoutComponent,
     AuthComponent,
+    ProjectsComponent,
+    HeaderComponent,
   ],
   providers: [AuthGuardCanActivateChild, AuthService, AuthGuardCanActivateSelf],
   imports: [CommonModule, CmsRoutingModule, FormsModule, ReactiveFormsModule],
