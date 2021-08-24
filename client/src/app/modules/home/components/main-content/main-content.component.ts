@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
     <app-hero></app-hero>
     <app-short-info></app-short-info>
     <app-tech-tools></app-tech-tools>
+    <app-projects></app-projects>
   `,
   styles: []
 })

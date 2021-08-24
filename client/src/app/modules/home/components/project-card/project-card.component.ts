@@ -21,7 +21,7 @@ import { Component, Input, OnInit } from '@angular/core';
             {{ project.tags }}
           </div>
           <p class="mt-2 text-gray-500">{{ project.description }}</p>
-          <div class="my-4">View more &rarr;</div>
+          <div class="my-4 hover:text-blue-800 inline-flex rounded cursor-pointer">View more &rarr;</div>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ type PackTool = {
 };
 
 @Component({
-  selector: 'app-techeco-card',
+  selector: 'app-tech-card',
   template: `
     <li class="relative" *ngIf="pack">
       <div style="border-radius:12px" class="absolute inset-0"></div>
@@ -22,7 +22,7 @@ type PackTool = {
   `,
   styles: [],
 })
-export class TechecoCardComponent implements OnInit {
+export class TechnoCardComponent implements OnInit {
   @Input() pack: PackTool | null = null;
 
   constructor() {}

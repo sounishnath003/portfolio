@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="guards">
+      <change afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/projects/projects.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/bigdata.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/docker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/flutter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/golang.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/java.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/rails.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/globals/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/add-form/add-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/add-form/add-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/global-services/project-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/global-services/project-type.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/main-content/main-content.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/main-content/main-content.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/project-card/project-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/project-card/project-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/tech-tools.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/tech-tools.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/bag-pack.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techeco-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/components/tech-tools/techno-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +55,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/client/node_modules/typescript/lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -90,6 +95,7 @@
       <workItem from="1629689755106" duration="2257000" />
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
+      <workItem from="1629777005650" duration="3873000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>

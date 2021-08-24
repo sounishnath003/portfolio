@@ -163,8 +163,11 @@ export class AddFormComponent implements OnInit {
   }
 
   onSubmitClicked() {
-    this.onSubmitEventFired.emit(this.form.value);
-    this.form.reset();
+    if (this.form.invalid === true) window.alert('Please fill your data correctly');
+    else {
+      this.onSubmitEventFired.emit(this.form.value);
+      this.form.reset();
+    }
   }
 
   onEditClicked() {
