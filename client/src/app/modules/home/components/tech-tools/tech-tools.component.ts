@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
-import { ProjectTypeService } from 'src/app/modules/global-services/project-type.service';
+import { ProjectTypeService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-tech-tools',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectTypeService } from '../../../global-services/project-type.service';
+import { ProjectTypeService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-project-type',
