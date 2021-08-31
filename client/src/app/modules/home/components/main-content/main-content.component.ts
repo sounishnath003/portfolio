@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
     <app-short-info></app-short-info>
     <app-tech-tools></app-tech-tools>
     <app-projects></app-projects>
+    <app-email-card></app-email-card>
   `,
   styles: []
 })
