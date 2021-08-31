@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
     <div
       *ngIf="project; else temp"
-      class="max-w-md font-semibold mx-auto rounded-xl overflow-hidden md:max-w-2xl"
+      class="max-w-md cursor-pointer font-semibold mx-auto rounded-xl overflow-hidden md:max-w-2xl"
     >
       <div class="md:flex">
         <div class="md:flex-shrink-0 text-center">
@@ -21,7 +21,11 @@ import { Component, Input, OnInit } from '@angular/core';
             {{ project.tags }}
           </div>
           <p class="mt-2 text-gray-500">{{ project.description }}</p>
-          <div class="my-4 hover:text-blue-800 inline-flex rounded cursor-pointer">View more &rarr;</div>
+          <div
+            class="my-4 hover:text-blue-800 inline-flex rounded cursor-pointer"
+          >
+            View more &rarr;
+          </div>
         </div>
       </div>
     </div>

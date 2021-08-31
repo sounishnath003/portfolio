@@ -12,11 +12,11 @@ import { ProjectTypeComponent } from './components/project-type/project-type.com
 import { TableLayoutComponent } from './components/project-type/table-layout/table-layout.component';
 import { AddformComponent } from './components/projects/addform.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { TableviewComponent } from './components/projects/tableview.component';
 import {
   AuthGuardCanActivateChild,
   AuthGuardCanActivateSelf,
 } from './guards/auth.guard';
-import { TableviewComponent } from './projects/tableview.component';
 
 @NgModule({
   declarations: [

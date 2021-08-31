@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-projects',
@@ -12,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
   `,
   styleUrls: ['./projects.component.css'],
+  providers: [ProjectService],
 })
 export class ProjectsComponent implements OnInit {
   constructor() {}
