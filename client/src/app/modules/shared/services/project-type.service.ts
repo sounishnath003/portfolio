@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -23,14 +23,19 @@ export class ProjectTypeService {
   }
 
   createNewProjectType(payload: any) {
-    const resp$ = this.http.post('/api/project-type/create', payload);
+    ProjectTypeService.formatPayloadReceived(payload);
+    const resp$ = this.http.post('/api/project-type/create', payload).pipe(
+      catchError(err => {
+        return throwError(err);
+      })
+    )
     this.refreshNeeded$.next(true);
     return resp$;
   }
 
   updatedProjectType(projectType: any) {
     const projectId: string = projectType._id;
-    this.formatPayloadReceived(projectType);
+    ProjectTypeService.formatPayloadReceived(projectType);
     return this.http
       .put(`/api/project-type/update/${projectId}`, projectType)
       .pipe(
@@ -41,8 +46,12 @@ export class ProjectTypeService {
       );
   }
 
-  private formatPayloadReceived(rawFormData: any) {
+  private static formatPayloadReceived(rawFormData: any) {
     delete rawFormData['_id'];
     delete rawFormData['__v'];
+  }
+
+  deleteProjectType(projectId: string) {
+    return this.http.delete(`/api/project-type/delete/${projectId}`);
   }
 }

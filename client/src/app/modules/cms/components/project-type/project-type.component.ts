@@ -1,27 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectTypeService } from 'src/app/modules/shared';
+import {Component, OnInit} from '@angular/core';
+import {ProjectTypeService} from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-project-type',
   template: `
     <div>
-      <div class="text-2xl font-semibold text-blue-700">
-        Project-Type Manager
+      <div>
+        <button
+          routerLink='/cms/dashboard/project-type/add'
+          class="flex mr-0 flex-wrap space-x-3 bg-blue-600 my-4 hover:bg-blue-700 text-white py-2 px-6 rounded-lg"
+        >
+          <div>
+            <img src="assets/add-icon.svg" alt="add-icon"/>
+          </div>
+          <div class="font-semibold">Add New</div>
+        </button>
       </div>
       <div class="flex flex-row space-x-4 justify-center items-center">
-        <app-add-form
-          *ngIf="!isEditRequested; else editForm"
-          (onSubmitEventFired)="onSubmit($event)"
-        ></app-add-form>
-        <ng-template #editForm>
-          <app-add-form
-            (onEditEventFired)="onEditClicked($event)"
-            [projectToEdit]="projectToEdit"
-          ></app-add-form>
-        </ng-template>
         <app-table-layout
           [projectTypes]="projectTypes"
-          (onEditEventFired)="onEdit($event)"
+          (onDeleteEventFired)="onDelete($event)"
         ></app-table-layout>
       </div>
     </div>
@@ -30,38 +28,31 @@ import { ProjectTypeService } from 'src/app/modules/shared';
 })
 export class ProjectTypeComponent implements OnInit {
   projectTypes: any[] = [];
-  isEditRequested: boolean = false;
-  projectToEdit: any | null = null;
 
-  constructor(private readonly projectService: ProjectTypeService) {}
+  constructor(private readonly projectTypeService: ProjectTypeService) {
+  }
 
   ngOnInit(): void {
-    this.projectService.getAllProjectTypes().subscribe((resp: any) => {
+    this.projectTypeService.getAllProjectTypes().subscribe((resp: any) => {
       this.projectTypes = resp.data.reverse();
     });
-  }
-
-  onSubmit(rawFormData: any) {
-    const formData = { ...rawFormData, tags: rawFormData.tags.split(',') };
-    this.projectService
-      .createNewProjectType(formData)
-      .subscribe(() => this.projectTypes.push(formData));
-  }
-
-  onEdit(projectPayload: any) {
-    this.isEditRequested = true;
-    this.projectToEdit = projectPayload;
   }
 
   onEditClicked(editedFormData: any) {
     const _editedFormTemp = editedFormData;
     const pid: string = editedFormData._id;
-    this.projectService
+    this.projectTypeService
       .updatedProjectType(_editedFormTemp)
       .subscribe((resp: any) => {
         resp.subscribe((re: any) => {
           this.projectTypes = re.data.reverse();
         });
       });
+  }
+
+  onDelete(projectId: string) {
+    this.projectTypeService.deleteProjectType(projectId).subscribe((data) => {
+      this.projectTypes = this.projectTypes.filter((projectType) => projectType._id !== projectId);
+    })
   }
 }

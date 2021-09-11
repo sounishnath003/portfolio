@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-table-layout',
@@ -29,12 +30,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
               {{ project.description }}
             </td>
             <td class="">{{ project.tags }}</td>
-            <td class="" (click)="onEdit(project)">
+            <td>
               <div class="flex flex-row space-x-4">
-                <div>
+                <div (click)="onEdit(project)">
                   <img src="assets/edit.svg" alt="edit-icon" class="w-4 h-4" />
                 </div>
-                <div>
+                <div (click)="onDelete(project._id)">
                   <img
                     src="assets/trash.svg"
                     alt="trash-icon"
@@ -60,14 +61,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TableLayoutComponent implements OnInit {
   @Input() projectTypes: any[] = [];
-  @Output() onEditEventFired: EventEmitter<HTMLDataElement> =
+  @Output() onDeleteEventFired: EventEmitter<string> =
     new EventEmitter();
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   onEdit(project: any) {
-    this.onEditEventFired.emit(project);
+    this.router.navigate(['cms', 'dashboard', 'project-type', 'edit'], {state: project});
+  }
+
+  onDelete(projectId: string) {
+    this.onDeleteEventFired.emit(projectId);
   }
 }

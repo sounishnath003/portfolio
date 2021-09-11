@@ -61,12 +61,11 @@ router.put(
 
 // [DETELE]: /api/project-type/delete/:id
 router.delete(
-  "delete/:id",
+  "/delete/:id",
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const projectId = req.params.id;
       const doc = await ProjectType.findByIdAndRemove(projectId);
-      await doc?.save();
 
       return res
         .status(200)

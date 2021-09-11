@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="cms navbars and tabs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="feat: modal service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +51,12 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/app/modules/shared/components/modal" />
+      <recent name="$PROJECT_DIR$/client/src/app/modules/shared" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.start:dev">
     <configuration name="start:dev" type="NodeJSConfigurationType" singleton="false" node-parameters="npm run start:dev" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -90,6 +94,10 @@
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
       <workItem from="1629777005650" duration="12384000" />
+      <workItem from="1630944747041" duration="2353000" />
+      <workItem from="1631338451479" duration="3481000" />
+      <workItem from="1631348165277" duration="4046000" />
+      <workItem from="1631363828787" duration="4166000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>
@@ -133,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629789804555</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: modal service">
+      <created>1631367974921</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631367974921</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +173,8 @@
     <MESSAGE value="tooling &amp; ecosystems" />
     <MESSAGE value="projects.component.ts" />
     <MESSAGE value="cms navbars and tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="cms navbars and tabs" />
+    <MESSAGE value="project-type.component.ts full structured" />
+    <MESSAGE value="feat: modal service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: modal service" />
   </component>
 </project>
