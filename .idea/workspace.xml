@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e8680a4-b960-4c90-b783-e3f6000b6de7" name="Changes" comment="cms navbars and tabs">
+      <change afterPath="$PROJECT_DIR$/client/src/app/modules/shared/components/modal/modal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/modules/shared/components/modal/modal.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/cms.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/cms.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/project-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/cms/components/project-type/project-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/modules/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/modules/home/home-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +62,12 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/app/modules/shared/components/modal" />
+      <recent name="$PROJECT_DIR$/client/src/app/modules/shared" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.start:dev">
     <configuration name="start:dev" type="NodeJSConfigurationType" singleton="false" node-parameters="npm run start:dev" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -90,6 +105,8 @@
       <workItem from="1629694096274" duration="2981000" />
       <workItem from="1629718548091" duration="1396000" />
       <workItem from="1629777005650" duration="12384000" />
+      <workItem from="1630944747041" duration="2353000" />
+      <workItem from="1631338451479" duration="3481000" />
     </task>
     <task id="LOCAL-00001" summary="projects card">
       <created>1629477311451</created>

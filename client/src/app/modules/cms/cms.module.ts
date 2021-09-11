@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ZoomUpDirective } from '../shared';
+import { ModalComponent } from '../shared/components/modal/modal.component';
+import { ModalService } from '../shared/components/modal/modal.service';
 import { AuthComponent } from './auth.component';
 import { AuthService } from './auth.service';
 import { CmsRoutingModule } from './cms-routing.module';
@@ -30,8 +32,14 @@ import {
     AddformComponent,
     TableviewComponent,
     ZoomUpDirective,
+    ModalComponent,
   ],
-  providers: [AuthGuardCanActivateChild, AuthService, AuthGuardCanActivateSelf],
+  providers: [
+    AuthGuardCanActivateChild,
+    AuthService,
+    AuthGuardCanActivateSelf,
+    ModalService,
+  ],
   imports: [CommonModule, CmsRoutingModule, FormsModule, ReactiveFormsModule],
 })
 export class CmsModule {}

@@ -1,5 +1,5 @@
 {
-  "name": ".",
+  "name": "server",
   "version": "1.0.0",
   "description": "add some good description",
   "main": "src/index.ts",
