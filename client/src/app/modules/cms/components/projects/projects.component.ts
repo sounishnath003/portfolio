@@ -5,14 +5,22 @@ import { ProjectService } from 'src/app/modules/shared';
   selector: 'app-projects',
   template: `
     <div>
-      <div class="text-2xl font-semibold text-blue-700">Projects Manager</div>
-      <div class="grid grid-cols-2 gap-2">
-        <app-addform></app-addform>
+     <div>
+       <button
+         routerLink="/cms/dashboard/projects/add"
+         class="flex mr-0 flex-wrap space-x-3 bg-blue-600 my-4 hover:bg-blue-700 text-white py-2 px-6 rounded-lg"
+       >
+         <div>
+           <img src="assets/add-icon.svg" alt="add-icon" />
+         </div>
+         <div class="font-semibold">Add New</div>
+       </button>
+     </div>
+      <div>
         <app-tableview></app-tableview>
       </div>
     </div>
   `,
-  styleUrls: ['./projects.component.css'],
   providers: [ProjectService],
 })
 export class ProjectsComponent implements OnInit {

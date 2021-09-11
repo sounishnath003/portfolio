@@ -62,7 +62,7 @@ export class AuthGuardCanActivateSelf implements CanActivate {
       map((state) => {
         if (state === true)
           this.router.navigate(['cms', 'dashboard', 'project-type']);
-        return state === true ? false : true;
+        return state !== true;
       })
     );
   }

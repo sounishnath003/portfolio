@@ -29,7 +29,7 @@ import {Router} from "@angular/router";
             <td class="whitespace-pre-wrap leading-relaxed">
               {{ project.description }}
             </td>
-            <td class="">{{ project.tags }}</td>
+            <td class="leading-relaxed">{{ project.tags }}</td>
             <td>
               <div class="flex flex-row space-x-4">
                 <div (click)="onEdit(project)">

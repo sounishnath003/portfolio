@@ -38,7 +38,7 @@ import {Subscription} from "rxjs";
                       placeholder="Description: Add some good description which tells your experience"></textarea>
           </div>
           <button type="submit" value="Save"
-                  class="my-4 float-right px-8 py-2 tracking-wide rounded bg-blue-600 text-white"> Publish
+                  class="my-4 float-right px-8 py-2 tracking-wide rounded bg-blue-600 text-white"> {{buttonText}}
           </button>
         </form>
       </div>
@@ -56,6 +56,7 @@ export class AddFormComponent implements OnInit, OnDestroy {
   error: string = '';
   activeSubscription: Subscription = new Subscription();
   urlType: string = '';
+  buttonText: string = 'Publish';
 
   form: FormGroup = new FormGroup({
     _id: new FormControl(''),
@@ -82,10 +83,13 @@ export class AddFormComponent implements OnInit, OnDestroy {
       window.alert('Please fill your data correctly');
     else {
       const rawFormData = this.form.value;
-      if (this.urlType === 'add')
-        this.createNewProjectTypeRecord(rawFormData);
-      else
-        this.editProjectType(rawFormData);
+      this.buttonText = 'Publishing...';
+      setTimeout(() => {
+        if (this.urlType === 'add')
+          this.createNewProjectTypeRecord(rawFormData);
+        else
+          this.editProjectType(rawFormData);
+      }, 1100)
     }
   }
 

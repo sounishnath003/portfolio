@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ProjectTypeService} from 'src/app/modules/shared';
+import { Component, OnInit } from '@angular/core';
+import { ProjectTypeService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-project-type',
@@ -7,11 +7,11 @@ import {ProjectTypeService} from 'src/app/modules/shared';
     <div>
       <div>
         <button
-          routerLink='/cms/dashboard/project-type/add'
+          routerLink="/cms/dashboard/project-type/add"
           class="flex mr-0 flex-wrap space-x-3 bg-blue-600 my-4 hover:bg-blue-700 text-white py-2 px-6 rounded-lg"
         >
           <div>
-            <img src="assets/add-icon.svg" alt="add-icon"/>
+            <img src="assets/add-icon.svg" alt="add-icon" />
           </div>
           <div class="font-semibold">Add New</div>
         </button>
@@ -24,13 +24,13 @@ import {ProjectTypeService} from 'src/app/modules/shared';
       </div>
     </div>
   `,
+  providers: [ProjectTypeService],
   styles: [],
 })
 export class ProjectTypeComponent implements OnInit {
   projectTypes: any[] = [];
 
-  constructor(private readonly projectTypeService: ProjectTypeService) {
-  }
+  constructor(private readonly projectTypeService: ProjectTypeService) {}
 
   ngOnInit(): void {
     this.projectTypeService.getAllProjectTypes().subscribe((resp: any) => {
@@ -52,7 +52,9 @@ export class ProjectTypeComponent implements OnInit {
 
   onDelete(projectId: string) {
     this.projectTypeService.deleteProjectType(projectId).subscribe((data) => {
-      this.projectTypes = this.projectTypes.filter((projectType) => projectType._id !== projectId);
-    })
+      this.projectTypes = this.projectTypes.filter(
+        (projectType) => projectType._id !== projectId
+      );
+    });
   }
 }

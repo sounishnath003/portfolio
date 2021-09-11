@@ -6,6 +6,7 @@ import {AddFormComponent} from './components/project-type/add-form/add-form.comp
 import {ProjectTypeComponent} from './components/project-type/project-type.component';
 import {ProjectsComponent} from './components/projects/projects.component';
 import {AuthGuardCanActivateChild, AuthGuardCanActivateSelf,} from './guards/auth.guard';
+import {AddformComponent} from "./components/projects/addform.component";
 
 const routes: Routes = [
   {
@@ -41,6 +42,17 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {path: 'projects', component: ProjectsComponent},
+
+      {
+        path: 'projects/add',
+        component: AddformComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'projects/edit',
+        component: AddformComponent,
+        pathMatch: 'full'
+      },
     ],
   },
 ];

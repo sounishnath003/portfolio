@@ -18,6 +18,11 @@ export class ProjectTypeService {
     return this.refreshNeeded$.asObservable();
   }
 
+  private static formatPayloadReceived(rawFormData: any) {
+    delete rawFormData['_id'];
+    delete rawFormData['__v'];
+  }
+
   getAllProjectTypes() {
     return this.http.get('/api/project-type/all');
   }
@@ -44,11 +49,6 @@ export class ProjectTypeService {
           return this.getAllProjectTypes();
         })
       );
-  }
-
-  private static formatPayloadReceived(rawFormData: any) {
-    delete rawFormData['_id'];
-    delete rawFormData['__v'];
   }
 
   deleteProjectType(projectId: string) {

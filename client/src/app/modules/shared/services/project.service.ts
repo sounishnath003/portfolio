@@ -1,14 +1,12 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
 export interface ProjectInterface {
-  id: number;
+  _id: string;
   title: string;
   photo: string;
   description: string;
   summary: string;
-  logo: string;
 }
 
 interface ResponseObject {
@@ -19,17 +17,28 @@ interface ResponseObject {
   providedIn: 'root',
 })
 export class ProjectService {
-  private projectsSubject$: BehaviorSubject<Array<ProjectInterface>> =
-    new BehaviorSubject<Array<ProjectInterface>>([]);
-  projects$ = this.projectsSubject$.asObservable();
+  constructor(private readonly http: HttpClient) {
+  }
 
-  constructor(private readonly http: HttpClient) {}
-
-  publishProjects(projects: Array<ProjectInterface>) {
-    this.projectsSubject$.next(projects);
+  private static formatPayloadReceived(rawFormData: any) {
+    delete rawFormData['_id'];
+    delete rawFormData['__v'];
   }
 
   getAllProjects() {
     return this.http.get<ResponseObject>('/api/projects/top-4');
+  }
+
+  public createNewProjectRecord(rawFormData: any) {
+    ProjectService.formatPayloadReceived(rawFormData);
+    return this.http.post<ProjectInterface>(`/api/projects/create`, rawFormData);
+  }
+
+  public updateProjectRecord(rawFormData: ProjectInterface) {
+    return this.http.put<ProjectInterface>(`/api/projects/update/${rawFormData._id}`, rawFormData);
+  }
+
+  public deleteProjectRecord(_id: string) {
+    return this.http.delete(`/api/projects/delete/${_id}`);
   }
 }
