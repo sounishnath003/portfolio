@@ -1,5 +1,11 @@
 import { mongoose } from ".";
 
+// Skills Schema
+export const Skills = mongoose.model("Skills", new mongoose.Schema({
+  skill: {type: String, required: true},
+  parentSkillId: {type: String, required: true, default: null},
+}))
+
 
 // Project Schema
 export const Project = mongoose.model("Projects", new mongoose.Schema({

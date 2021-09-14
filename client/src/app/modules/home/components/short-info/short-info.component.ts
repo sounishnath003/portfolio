@@ -10,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
         [innerHTML]="data"
       ></div>
       <div class="my-4">
-        <button class="flex space-x-3 hover:bg-blue-700 transition-all bg-blue-600 text-white px-4 py-3 rounded-lg">
-          <div> <img src="assets/file.svg" /> </div>
-          <div>Download Resume</div>
+        <button
+          class="flex space-x-3 hover:bg-blue-700 transition-all bg-blue-600 text-white px-4 py-3 rounded-lg"
+        >
+          <div><img src="assets/file.svg" /></div>
+          <a target="_blank" [href]="resume_link" [download]="resume_link">Download Resume</a>
         </button>
       </div>
     </div>
@@ -33,6 +35,9 @@ export class ShortInfoComponent implements OnInit {
       <p> You can find me on &rarr; <span class="text-blue-700"> <a target="_blank" href="https://github.com/sounishnath003" > GitHub </a> · <a target="_blank" href="https://www.linkedin.com/in/sounish-nath-897b30186/" > LinkedIn </a> · <a target="_blank" href="https://twitter.com/sounish1" > Twitter </a> </span> </p>
     </div>
           `;
+
+  resume_link: string =
+    'https://drive.google.com/file/d/1RqTw6wUERMhLG9C8ayAGxxCO7PvZkOxe/view';
 
   constructor() {}
 

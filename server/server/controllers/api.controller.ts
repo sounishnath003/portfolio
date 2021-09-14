@@ -2,6 +2,7 @@ import { Router } from "express";
 import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
 import ProjectTypeController from "./project-type.controller";
 import ProjectsController from "./projects.controller";
+import SkillsController from './skills.controller';
 
 const router = Router();
 
@@ -25,5 +26,6 @@ router.get(
 // Controllers
 router.use("/project-type", ProjectTypeController);
 router.use("/projects", ProjectsController);
+router.use('/skills', SkillsController);
 
 export default router;
