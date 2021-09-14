@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-customtable',
@@ -6,7 +6,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
     <div
       class="w-full rounded-lg shadow-lg border-gray-600 px-4 md:px-10 pt-4 md:pt-7 pb-5 border whitespace-pre-wrap overflow-y-hidden"
     >
-      <table class="table able-fixed h-10">
+      <table class="table able-fixed h-10" *ngIf="loadData.length; else noContentTemplate;" >
         <thead>
         <tr
           class="h-16 font-semibold w-full text-sm leading-none text-gray-800"
@@ -15,7 +15,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
               *ngFor="let header of this.tableHeaders"> {{ header | titlecase }} </th>
         </tr>
         </thead>
-        <tbody *ngIf="loadData; else noContentTemplate;">
+        <tbody>
         <tr
           class="h-32 cursor-pointer text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100"
           *ngFor="let project of loadData"
@@ -49,15 +49,15 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
             </ng-template>
           </td>
         </tr>
-        </tbody>
+        </tbody>  
+        </table>
         <ng-template #noContentTemplate>
-          <tbody>
-          <tr class="text-red-500 bg-red-100 p-2 rounded-lg">
-            <td> Add new record to view the content!</td>
-          </tr>
-          </tbody>
+        <div class="text-red-500 bg-red-100 flex p-2 rounded-lg"> 
+          <div class="m-3 text-center m-auto">
+            No records are created. To view the dashboard, add some new records to make the content available!
+          </div>
+        </div>
         </ng-template>
-      </table>
     </div>
   `,
   styleUrls: ['./customtable.component.css']
