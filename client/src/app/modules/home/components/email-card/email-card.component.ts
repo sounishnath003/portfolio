@@ -3,18 +3,18 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-email-card',
   template: `
-    <p>
-      email-card works!
-    </p>
+    <div class="p-4 my-4 bg-gray-50 rounded-lg font-semibold text-gray-700">
+      <div class="text-center text-2xl">Get in touch</div>
+      <div class="my-3 text-center">
+        If you need more details, feel free to email me at
+        <a class="text-blue-600" href="mailto:flock.sinasini@gmail.com">flock.sinasini@gmail.com.</a>
+      </div>
+    </div>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class EmailCardComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

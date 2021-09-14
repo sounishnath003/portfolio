@@ -15,6 +15,7 @@ import {ProjectInterface, ProjectService} from "../../../shared";
              *ngFor="let project of projectsTop4">
           <header>
             <div><img [src]="project.photo" [alt]="project.title"
+                      loading="lazy"
                       class="object-cover rounded-tl-lg rounded-tr-lg"></div>
             <div class="text-xl text-blue-600 my-4 mx-2">{{project.title}}</div>
           </header>
