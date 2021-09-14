@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Router} from "@angular/router";
-import {ProjectInterface, ProjectService} from "../../../shared";
-import {Subscription} from "rxjs";
+/// <reference path="../../node_modules/@types/remarkable/lib/index.d.ts">
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from "@angular/router";
+import { Subscription } from "rxjs";
+import { ProjectInterface, ProjectService } from "../../../shared";
+
 
 @Component({
   selector: 'app-addform',
@@ -83,15 +85,15 @@ export class AddformComponent implements OnInit {
     this.urlType = this.router.url.split('/')[4];
     if (this.urlType === 'edit') {
       const state = this.router.getCurrentNavigation()?.extras.state;
-      this.form.setValue({...this.form.value, ...state});
+      this.form.setValue({ ...this.form.value, ...state });
     }
   }
 
   private createNewProjectRecord(rawData: FormGroup) {
     this.activeSubscription = this.projectService.createNewProjectRecord(rawData).subscribe((data) => {
-        this.router.navigate(['cms', 'dashboard', 'projects']).then();
-        this.form.reset();
-      },
+      this.router.navigate(['cms', 'dashboard', 'projects']).then();
+      this.form.reset();
+    },
       (error: Error) => this.error = error.message
     )
   }

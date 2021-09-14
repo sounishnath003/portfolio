@@ -13,6 +13,7 @@ import { BagPackComponent } from './components/tech-tools/bag-pack.component';
 import { TechnoCardComponent } from './components/tech-tools/techno-card.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { EmailCardComponent } from './components/email-card/email-card.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EmailCardComponent } from './components/email-card/email-card.component
     BagPackComponent,
     TechnoCardComponent,
     ProjectsComponent,
-    EmailCardComponent
+    EmailCardComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,

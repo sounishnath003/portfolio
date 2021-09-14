@@ -9,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
         class="my-6 leading-relaxed font-semibold text-gray-800"
         [innerHTML]="data"
       ></div>
+      <div class="my-4">
+        <button class="flex space-x-3 hover:bg-blue-700 transition-all bg-blue-600 text-white px-4 py-3 rounded-lg">
+          <div> <img src="assets/file.svg" /> </div>
+          <div>Download Resume</div>
+        </button>
+      </div>
     </div>
   `,
   styles: [],

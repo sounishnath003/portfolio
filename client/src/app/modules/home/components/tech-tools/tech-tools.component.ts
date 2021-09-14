@@ -9,6 +9,7 @@ import { ProjectTypeService } from 'src/app/modules/shared';
       <div class="text-3xl px-4 my-4 font-semibold">
         Things I&apos;m good at &rarr;
       </div>
+      <app-skills></app-skills>
       <div class="my-6 grid sm:text-left md:grid-cols-2 sm:grid-cols-1 gap-3">
         <app-project-card
           *ngFor="let project of projects"
