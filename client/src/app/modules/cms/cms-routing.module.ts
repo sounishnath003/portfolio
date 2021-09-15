@@ -6,6 +6,7 @@ import { AddFormComponent } from './components/project-type/add-form/add-form.co
 import { ProjectTypeComponent } from './components/project-type/project-type.component';
 import { AddformComponent } from './components/projects/addform.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { AddskillFormComponent } from './components/skills/addskill-form.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import {
   AuthGuardCanActivateChild,
@@ -60,6 +61,11 @@ const routes: Routes = [
       {
         path: 'skills',
         component: SkillsComponent,
+        pathMatch: 'full',
+      },
+      {
+        path: 'skills/add',
+        component: AddskillFormComponent,
         pathMatch: 'full',
       },
     ],

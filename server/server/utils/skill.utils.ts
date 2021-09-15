@@ -1,28 +1,15 @@
 export class SkillUtilService {
   static async generate_formated_skillSets(skills: any[] = []) {
-    /**
-     * data: [
-     *  {
-     *      _id: 1,
-     *      skill: 'frontend',
-     *      parentSkillId: null,
-     *  },
-     *  {
-     *      _id: 2,
-     *      skill: 'javascript',
-     *      parentSkillId: 1,
-     *  },
-     *  {
-     *      _id: 3,
-     *      skill: 'html',
-     *      parentSkillId: 1,
-     *  },
-     * ]
-     */
-
     const parentSkill_hashmap: any = {};
+    const skillParentNodes: any = [];
     Object.entries(skills).map(([_, { _id, skill, parentSkillId }]) => {
-      if (parentSkillId === null) parentSkill_hashmap[_id] = skill;
+      if (parentSkillId === null) {
+        skillParentNodes.push({
+          _id,
+          skill,
+        });
+        parentSkill_hashmap[_id] = skill;
+      }
     });
 
     let _orderedSkills: any = {};
@@ -36,6 +23,6 @@ export class SkillUtilService {
       }
     });
 
-    return _orderedSkills;
+    return { skillParentNodes, _orderedSkills };
   }
 }

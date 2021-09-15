@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         routeToLink="/cms/dashboard/skills/add"
       ></app-add-route-button>
 
-      <div class="text-2xl">Skills Portal</div>
+      <app-customtable></app-customtable>
     </div>
   `,
   styles: [],

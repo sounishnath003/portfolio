@@ -1,3 +1,4 @@
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import express, { json, urlencoded } from "express";
 import morgan from "morgan";
@@ -10,7 +11,6 @@ import {
   RequestInterface,
   ResponseInterface,
 } from "./utils";
-import cookieParser from "cookie-parser";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -45,19 +45,20 @@ export class Server {
 
   private errorHandlers(): void {
     this.app.use(
-        async (req: RequestInterface, res: ResponseInterface, next: Next) => {
-          next(createError(404, "Not Found!"));
-        }
+      async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+        next(createError(404, "Not Found!"));
+      }
     );
     this.app.use(
-        (err: any, req: RequestInterface, res: ResponseInterface, next: Next) => {
-          res.status(err.status || 500).send({
-            error: {
-              status: err.status || 500,
-              message: err.message,
-            },
-          });
-        }
+      (err: any, req: RequestInterface, res: ResponseInterface, next: Next) => {
+        console.error(err.message);
+        return res.status(err.status || 500).send({
+          error: {
+            status: err.status || 500,
+            message: err.message,
+          },
+        });
+      }
     );
   }
 
@@ -65,9 +66,9 @@ export class Server {
     try {
       await this.serverConfig();
       this.app.listen(this.PORT, () =>
-          console.log(
-              `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
-          )
+        console.log(
+          `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
+        )
       );
       this.app.use("/api", APIController);
 

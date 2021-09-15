@@ -22,6 +22,7 @@ import {
   AuthGuardCanActivateChild,
   AuthGuardCanActivateSelf,
 } from './guards/auth.guard';
+import { AddskillFormComponent } from './components/skills/addskill-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {
     CustomtableComponent,
     SkillsComponent,
     AddRouteButtonComponent,
+    AddskillFormComponent,
   ],
   providers: [
     AuthGuardCanActivateChild,

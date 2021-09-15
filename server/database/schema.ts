@@ -3,7 +3,7 @@ import { mongoose } from ".";
 // Skills Schema
 export const Skills = mongoose.model("Skills", new mongoose.Schema({
   skill: {type: String, required: true},
-  parentSkillId: {type: String, required: true, default: null},
+  parentSkillId: {type: String, default: null},
 }))
 
 
