@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
           >
             <div
               *ngFor="let c of [1, 2, 3, 4, 5, 5, 5]"
-              class="m-auto rounded px-4 py-2 border hover:bg-gray-100 transition-all hover:text-blue-700 cursor-pointer"
+              class="m-auto rounded px-4 py-2 border border-blue-500 hover:bg-blue-50 transition-all hover:text-blue-700 cursor-pointer"
             >
               JavaScript/ES6+
             </div>
