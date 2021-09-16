@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SkillService } from 'src/app/modules/shared/services/skill.service';
 
 @Component({
@@ -8,7 +9,10 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
       <app-add-route-button
         routeToLink="/cms/dashboard/skills/add"
       ></app-add-route-button>
-      <div *ngFor="let skill_node of allSkillTable" class="my-3">
+      <div
+        *ngFor="let skill_node of allSkillTable; let idx = index"
+        class="my-3"
+      >
         <div class="text-blue-700">{{ skill_node.parentSkill }}</div>
         <div class="parent-grid">
           <div
@@ -19,7 +23,14 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
               class="flex control_display flex-wrap justify-between items-center"
             >
               <div>{{ c.skill }}</div>
-              <div>
+              <div
+                (click)="
+                  onPressed({
+                    parentSkillIdx: idx,
+                    skillToDeleteId: c._id
+                  })
+                "
+              >
                 <img
                   src="assets/close.svg"
                   alt="close.icon"
@@ -31,6 +42,10 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
         </div>
       </div>
     </div>
+    <app-modal
+      [showModal]="showModal"
+      (onSaveEventEmitted)="eventCapturedFromModal($event)"
+    ></app-modal>
   `,
   styles: [
     `
@@ -48,12 +63,50 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
 })
 export class SkillsComponent implements OnInit {
   allSkillTable: any[] = [];
+  showModal: boolean = false;
+  onOpenModal: {
+    skillToDeleteId: null | string;
+    parentSkillIdx: null | number;
+  } = { skillToDeleteId: null, parentSkillIdx: null };
 
-  constructor(private readonly skillService: SkillService) {}
+  constructor(
+    private readonly skillService: SkillService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.skillService
       .getSkillsetsCollections()
       .subscribe((data) => (this.allSkillTable = data));
+  }
+
+  eventCapturedFromModal($event: any) {
+    this.showModal = false;
+    if ($event === true) {
+      this.skillService
+        .deleteSkillService(this.onOpenModal.skillToDeleteId as string)
+        .subscribe((_) => {
+          this.deleteReference();
+
+          this.router.navigate(['cms', 'dashboard', 'skills']);
+        });
+    }
+  }
+
+  private deleteReference() {
+    const relatedSkills =
+      this.allSkillTable[this.onOpenModal.parentSkillIdx as number]
+        .relatedSkills;
+
+    this.allSkillTable[
+      this.onOpenModal.parentSkillIdx as number
+    ].relatedSkills = relatedSkills.filter(
+      (_skill: any) => _skill._id !== this.onOpenModal.skillToDeleteId
+    );
+  }
+
+  onPressed(payload: any) {
+    this.showModal = true;
+    this.onOpenModal = payload;
   }
 }

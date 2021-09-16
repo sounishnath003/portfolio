@@ -9,6 +9,10 @@ import { catchError, map } from 'rxjs/operators';
 export class SkillService {
   constructor(private http: HttpClient) {}
 
+  deleteSkillService(skillId: string) {
+    return this.http.delete(`/api/skills/delete/${skillId}`);
+  }
+
   getAllSkillsForCms() {
     return this.http
       .get('/api/skills/all', { params: { forcms: true } })

@@ -2,60 +2,54 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
-  template: ` <div
+  template: `<div
       *ngIf="showModal"
       class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
     >
-      <div class="relative w-auto my-6 mx-auto max-w-3xl">
+      <div class="relative w-auto my-6 mx-auto max-w-md">
         <!--content-->
         <div
           class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
         >
-          <!--header-->
-          <div
-            class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t"
-          >
-            <h3 class="text-3xl font-semibold">Modal Title</h3>
-            <button
-              class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-              (click)="toggleModal()"
-            >
-              <span
-                class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none"
-              >
-                ×
-              </span>
-            </button>
-          </div>
           <!--body-->
-          <div class="relative p-6 flex-auto">
-            <p class="my-4 text-blueGray-500 text-lg leading-relaxed">
-              I always felt like I could do anything. That’s the main thing
-              people are controlled by! Thoughts- their perception of
-              themselves! They're slowed down by their perception of themselves.
-              If you're taught you can’t do anything, you won’t do anything. I
-              was taught I could do everything.
+          <section class="relative p-6 flex-auto">
+            <p
+              class="my-4 bg-red-50 rounded-lg p-3 font-semibold text-red-500 text-lg leading-relaxed"
+            >
+              Are you sure want to delete skills?
+              <br />
+              <span class="text-xs"
+                >Note: This process cannot be undone!. Make sure what to
+                do.</span
+              >
             </p>
-          </div>
+          </section>
           <!--footer-->
-          <div
+          <footer
             class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b"
           >
             <button
-              class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              class="text-red-500 hover:bg-red-100 background-transparent font-bold uppercase px-6 py-3 rounded-lg text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
-              (click)="toggleModal()"
+              (click)="onCancel()"
             >
               Close
             </button>
             <button
-              (click)="onSave()"
-              class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              class="bg-red-500 items-center flex space-x-3 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
+              (click)="onSave()"
             >
-              Save Changes
+              <div>
+                <img
+                  src="assets/delete.svg"
+                  alt="delete.icon"
+                  class="w-5 h-5"
+                />
+              </div>
+              <div>Delete</div>
             </button>
-          </div>
+          </footer>
         </div>
       </div>
     </div>
@@ -66,7 +60,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styles: [],
 })
 export class ModalComponent implements OnInit {
-  @Input() showModal: boolean = true;
+  @Input() showModal: boolean = false;
   @Output() onSaveEventEmitted = new EventEmitter();
 
   constructor() {}
@@ -74,9 +68,10 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {}
 
   onSave() {
-    this.onSaveEventEmitted.next('button clicked');
-    this.showModal = false;
+    this.onSaveEventEmitted.next(true);
   }
 
-  toggleModal() {}
+  onCancel() {
+    this.onSaveEventEmitted.emit(false);
+  }
 }
