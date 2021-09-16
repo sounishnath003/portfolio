@@ -4,6 +4,7 @@ import {
   Next,
   RequestInterface,
   ResponseInterface,
+  SkillCreateBodyInterface,
   SkillUtilService,
   SUCCESS,
 } from "../utils";
@@ -17,15 +18,15 @@ router.get(
     try {
       const skills = await Skills.find({});
 
-      const { skillParentNodes, _orderedSkills } =
+      const { parentSkill_hashmap, skillsetCollections } =
         await SkillUtilService.generate_formated_skillSets(skills);
 
       return res.status(200).send({
         ...SUCCESS,
         message: "all skills are ordered by parent skills",
         data: {
-          skillParentNodes: skillParentNodes,
-          skillsetsCollections: _orderedSkills,
+          parentSkill_hashmap,
+          skillsetCollections,
         },
       });
     } catch (error) {
@@ -35,25 +36,36 @@ router.get(
 );
 
 // [POST]: /api/skills/create
-interface SkillCreateBodyInterface {
-  skill: string;
-  parentSkillId: string | null;
-}
-
 router.post(
   "/create",
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const payload: SkillCreateBodyInterface = req.body;
 
-      // create new key for skills as parent node
-      const doc = new Skills(payload);
-      await doc.save();
+      const doc = await SkillUtilService.createNewSkillRecord(payload);
 
       return res.status(200).send({
         ...SUCCESS,
         message: `skills has been added in records`,
         data: doc,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+// [DELETE]: /api/skills/delete
+router.delete(
+  "/delete/:id",
+  async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+    try {
+      const skillId: string = req.params.id;
+      await Skills.findByIdAndRemove(skillId);
+
+      return res.status(200).send({
+        ...SUCCESS,
+        message: `${skillId} has been successfully removed!`,
       });
     } catch (error) {
       next(error);

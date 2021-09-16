@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillService } from 'src/app/modules/shared/services/skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,16 +12,14 @@ import { Component, OnInit } from '@angular/core';
           My Skills
         </div>
         <div class="textxl opacity-50">CODE</div>
-        <div class="my-2">
-          <div class="text-blue-700">Front End</div>
-          <div
-            class="parent-grid"
-          >
+        <div *ngFor="let skill_node of skillsetCollection" class="my-2">
+          <div class="text-blue-700">{{ skill_node.parentSkill }}</div>
+          <div class="parent-grid">
             <div
-              *ngFor="let c of [1, 2, 3, 4, 5, 5, 5]"
+              *ngFor="let c of skill_node.relatedSkills"
               class="m-auto rounded px-4 py-2 border border-blue-500 hover:bg-blue-50 transition-all hover:text-blue-700 cursor-pointer"
             >
-              JavaScript/ES6+
+              {{ c.skill }}
             </div>
           </div>
         </div>
@@ -38,9 +37,16 @@ import { Component, OnInit } from '@angular/core';
       }
     `,
   ],
+  providers: [SkillService],
 })
 export class SkillsComponent implements OnInit {
-  constructor() {}
+  skillsetCollection: any[] = [];
 
-  ngOnInit(): void {}
+  constructor(private readonly skillService: SkillService) {}
+
+  ngOnInit(): void {
+    this.skillService
+      .getSkillsetsCollections()
+      .subscribe((data) => (this.skillsetCollection = data));
+  }
 }

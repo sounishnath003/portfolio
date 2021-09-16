@@ -12,7 +12,15 @@ export class SkillService {
   getAllParentSkillNodes() {
     return this.http.get('/api/skills/all').pipe(
       map((resp: any) => {
-        return resp.data.skillParentNodes;
+        return resp.data.parentSkill_hashmap;
+      })
+    );
+  }
+
+  getSkillsetsCollections() {
+    return this.http.get('/api/skills/all').pipe(
+      map((resp: any) => {
+        return resp.data.skillsetCollections;
       })
     );
   }

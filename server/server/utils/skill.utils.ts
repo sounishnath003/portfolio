@@ -1,4 +1,18 @@
+import { Skills } from "../../database/schema";
+
+export interface SkillCreateBodyInterface {
+  skill: string;
+  parentSkillId: string | null;
+}
+
 export class SkillUtilService {
+  static async createNewSkillRecord(payload: SkillCreateBodyInterface) {
+    // create new key for skills as parent node
+    const doc = new Skills(payload);
+    await doc.save();
+    return doc;
+  }
+
   static async generate_formated_skillSets(skills: any[] = []) {
     const parentSkill_hashmap: any = {};
     const skillParentNodes: any = [];
@@ -13,6 +27,7 @@ export class SkillUtilService {
     });
 
     let _orderedSkills: any = {};
+    const skillsetCollections: any = [];
 
     skills.map((__skill) => {
       if (__skill.parentSkillId === null) {
@@ -23,6 +38,11 @@ export class SkillUtilService {
       }
     });
 
-    return { skillParentNodes, _orderedSkills };
+    Object.entries(_orderedSkills).map((data) => {
+      const [key, relatedSkills] = data;
+      skillsetCollections.push({ parentSkill: key, relatedSkills });
+    });
+
+    return { parentSkill_hashmap, skillsetCollections };
   }
 }

@@ -19,10 +19,6 @@ export async function createMongoDBConnection() {
       });
 
     console.log(`### MongoDB Connection has been established`);
-
-    const CatSchema: mongoosse.Schema = new mongoosse.Schema({
-      name: { type: String, required: true },
-    });
   } catch (error) {
     console.error(error);
   }
