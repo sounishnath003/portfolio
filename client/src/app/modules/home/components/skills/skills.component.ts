@@ -12,7 +12,7 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
           My Skills
         </div>
         <div class="textxl opacity-50">CODE</div>
-        <div *ngFor="let skill_node of skillsetCollection" class="my-2">
+        <div *ngFor="let skill_node of skillsetCollection" class="my-3">
           <div class="text-blue-700">{{ skill_node.parentSkill }}</div>
           <div class="parent-grid">
             <div
@@ -32,8 +32,8 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 3px;
-        grid-row-gap: 3px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
       }
     `,
   ],

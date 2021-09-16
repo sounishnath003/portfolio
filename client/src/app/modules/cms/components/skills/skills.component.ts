@@ -44,6 +44,7 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
     </div>
     <app-modal
       [showModal]="showModal"
+      message="Are you sure want to delete skills?"
       (onSaveEventEmitted)="eventCapturedFromModal($event)"
     ></app-modal>
   `,

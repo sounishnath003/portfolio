@@ -16,7 +16,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
             <p
               class="my-4 bg-red-50 rounded-lg p-3 font-semibold text-red-500 text-lg leading-relaxed"
             >
-              Are you sure want to delete skills?
+              {{message}}
               <br />
               <span class="text-xs"
                 >Note: This process cannot be undone!. Make sure what to
@@ -61,6 +61,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Input() showModal: boolean = false;
+  @Input() message: string = '';
   @Output() onSaveEventEmitted = new EventEmitter();
 
   constructor() {}
