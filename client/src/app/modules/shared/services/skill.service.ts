@@ -9,10 +9,16 @@ import { catchError, map } from 'rxjs/operators';
 export class SkillService {
   constructor(private http: HttpClient) {}
 
+  getAllSkillsForCms() {
+    return this.http
+      .get('/api/skills/all', { params: { forcms: true } })
+      .pipe(map((data: any) => data.data.skills));
+  }
+
   getAllParentSkillNodes() {
     return this.http.get('/api/skills/all').pipe(
       map((resp: any) => {
-        return resp.data.parentSkill_hashmap;
+        return resp.data.skillParentNodes;
       })
     );
   }

@@ -17,7 +17,7 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
           <div class="parent-grid">
             <div
               *ngFor="let c of skill_node.relatedSkills"
-              class="m-auto rounded px-4 py-2 border border-blue-500 hover:bg-blue-50 transition-all hover:text-blue-700 cursor-pointer"
+              class="m-auto rounded px-4 py-2 border border-blue-500 hover:bg-blue-700 transition-all hover:text-white cursor-pointer"
             >
               {{ c.skill }}
             </div>
@@ -32,8 +32,8 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 8px;
-        grid-row-gap: 8px;
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
       }
     `,
   ],

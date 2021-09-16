@@ -43,6 +43,6 @@ export class SkillUtilService {
       skillsetCollections.push({ parentSkill: key, relatedSkills });
     });
 
-    return { parentSkill_hashmap, skillsetCollections };
+    return { skillParentNodes, skillsetCollections };
   }
 }

@@ -31,7 +31,7 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
             <div class="flex relative flex-col space-y-3 my-3">
               <label for="parentSkillId">Belongs to: </label>
               <select
-                class="w-full h-10 py-2 px-4 text-base placeholder-gray-600 border border-gray-600 rounded-lg appearance-none focus:shadow-outline"
+                class="w-full h-10 py-2 px-8 text-base placeholder-gray-600 border border-gray-600 rounded-lg appearance-none focus:shadow-outline"
                 formControlName="parentSkillId"
                 aria-placeholder="select skills from dropdown"
               >

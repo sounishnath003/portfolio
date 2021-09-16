@@ -16,19 +16,27 @@ router.get(
   "/all",
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
+      const { forcms = false } = req.query;
       const skills = await Skills.find({});
+      if (forcms === "true") {
+        return res.status(200).send({
+          ...SUCCESS,
+          message: "Lists of for skills",
+          data: { skills },
+        });
+      } else {
+        const { skillParentNodes, skillsetCollections } =
+          await SkillUtilService.generate_formated_skillSets(skills);
 
-      const { parentSkill_hashmap, skillsetCollections } =
-        await SkillUtilService.generate_formated_skillSets(skills);
-
-      return res.status(200).send({
-        ...SUCCESS,
-        message: "all skills are ordered by parent skills",
-        data: {
-          parentSkill_hashmap,
-          skillsetCollections,
-        },
-      });
+        return res.status(200).send({
+          ...SUCCESS,
+          message: "all skills are ordered by parent skills",
+          data: {
+            skillParentNodes,
+            skillsetCollections,
+          },
+        });
+      }
     } catch (error) {
       next(error);
     }
