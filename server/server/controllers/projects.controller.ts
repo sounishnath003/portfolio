@@ -1,6 +1,7 @@
 import {Router} from "express";
 import {Project} from "../../database/schema";
 import {Next, RequestInterface, ResponseInterface, SUCCESS} from "../utils";
+import { requiresAuth } from "../utils/requiesauth.middleware";
 
 const router = Router();
 
@@ -24,6 +25,7 @@ router.get(
 // [POST]: Create new Project
 router.post(
     "/create",
+    requiresAuth,
     async (req: RequestInterface, res: ResponseInterface, next: Next) => {
         try {
             const payload = req.body;
@@ -42,6 +44,7 @@ router.post(
 // [PUT]: Update project data
 router.put(
     "/update/:id",
+    requiresAuth,
     async (req: RequestInterface, res: ResponseInterface, next: Next) => {
         try {
             const pid: string = req.params.id;
@@ -61,7 +64,7 @@ router.put(
 );
 
 // [DELETE]: Delete project by id
-router.delete(`/delete/:id`, async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+router.delete(`/delete/:id`, requiresAuth, async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
         const pid: string = req.params.id;
         const doc = await Project.findByIdAndRemove(pid);

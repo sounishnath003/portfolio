@@ -1,3 +1,4 @@
+import { genSaltSync, hashSync } from "bcrypt";
 import environment from "dotenv";
 import {
   NextFunction,
@@ -23,5 +24,12 @@ export const uuid = v4;
 export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_TOKEN_SECRET as string;
 export const JWT_REFRESH_SECRET = process.env
   .JWT_REFRESH_TOKEN_SECRET as string;
+
+export async function generate_api_key(payload: any) {
+  const today: string = new Date().toLocaleDateString();
+  if (today !== payload)
+    throw new Error(`You are not authorized person!. Go back`);
+  return hashSync(payload, genSaltSync(10));
+}
 
 export * from "./skill.utils";

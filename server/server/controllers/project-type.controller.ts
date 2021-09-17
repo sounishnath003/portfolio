@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { ProjectType } from "../../database/schema";
 import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
+import { requiresAuth } from "../utils/requiesauth.middleware";
 
 const router = Router();
 
@@ -24,6 +25,7 @@ router.get(
 // [POST] /api/project-type/create
 router.post(
   "/create",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const payload = req.body;
@@ -42,11 +44,12 @@ router.post(
 // [PUT] /api/project-type/update/:id
 router.put(
   "/update/:id",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const projectId = req.params.id;
       const payload = req.body; // {id: 1, name: 'test'}
-      const doc = await ProjectType.updateOne({_id: projectId}, payload);
+      const doc = await ProjectType.updateOne({ _id: projectId }, payload);
 
       if (doc === null) throw new Error("Project type not found.");
 
@@ -62,6 +65,7 @@ router.put(
 // [DETELE]: /api/project-type/delete/:id
 router.delete(
   "/delete/:id",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const projectId = req.params.id;

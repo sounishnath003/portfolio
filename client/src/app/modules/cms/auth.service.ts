@@ -1,15 +1,16 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
-import {Router} from "@angular/router";
-import {share} from "rxjs/operators";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject, throwError } from 'rxjs';
+import { catchError, share } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private user$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private readonly router: Router) {
+  constructor(private readonly router: Router, private http: HttpClient) {
     this.precheckedAuthenticated();
   }
 
@@ -18,15 +19,28 @@ export class AuthService {
   }
 
   doLogin(password: string) {
-    const today = new Date().toLocaleDateString();
-    if (today === password) {
-      this.user$.next(true);
-      window.localStorage.setItem('isLoggedIn', JSON.stringify(true));
-      this.router.navigate(['cms', 'dashboard', 'project-type']);
-    } else {
-      window.alert('Something went wrong! Refresh the page');
-      this.user$.next(false);
-    }
+    return this.http
+      .get('/api/auth', { params: { payload: btoa(password) } })
+      .pipe(this.handleError())
+      .subscribe(
+        (resp: any) => {
+          this.user$.next(true);
+          window.localStorage.setItem('isLoggedIn', JSON.stringify(true));
+          window.localStorage.setItem('xApiKey', JSON.stringify(resp.apiKey));
+          this.router.navigate(['cms', 'dashboard', 'project-type']);
+        },
+        (error: Error) => {
+          console.warn('ErrorResponse:', error.message);
+          window.alert(error.message);
+        }
+      );
+  }
+
+  private handleError() {
+    return catchError((err) => {
+      console.log(err);
+      return throwError(err);
+    });
   }
 
   private precheckedAuthenticated() {
@@ -42,5 +56,4 @@ export class AuthService {
     this.user$.next(false);
     return this.getAuthState();
   }
-
 }

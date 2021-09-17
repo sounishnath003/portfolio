@@ -45,7 +45,7 @@ export class AuthComponent implements OnInit {
     const payload = this.form.value.password;
     if (!payload) window.alert('Please enter your secret key!');
     else {
-      this.authService.doLogin(payload);
+      this.authService.doLogin(payload)
       this.form.reset();
     }
   }

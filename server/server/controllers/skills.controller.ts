@@ -8,6 +8,7 @@ import {
   SkillUtilService,
   SUCCESS,
 } from "../utils";
+import { requiresAuth } from "../utils/requiesauth.middleware";
 
 const router = Router();
 
@@ -46,6 +47,7 @@ router.get(
 // [POST]: /api/skills/create
 router.post(
   "/create",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const payload: SkillCreateBodyInterface = req.body;
@@ -66,6 +68,7 @@ router.post(
 // [DELETE]: /api/skills/delete
 router.delete(
   "/delete/:id",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const skillId: string = req.params.id;
