@@ -4,7 +4,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 @Component({
   selector: 'app-featuredprojects',
   template: `
-  <div class="text-2xl font-semibold">Most Featured Projects</div>
+    <div class="text-2xl font-semibold">Most Featured Projects</div>
     <div class="card-list">
       <article
         class="card"
@@ -44,7 +44,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
       </article>
     </div>
   `,
-  styleUrls: ['featureProjects-style.css'],
+  styleUrls: ['./featureProjects-style.css'],
   providers: [ProjectService],
 })
 export class FeaturedprojectsComponent implements OnInit {
