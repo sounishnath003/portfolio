@@ -1,5 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ServiceUtility } from './utils';
 
 export interface ProjectInterface {
   _id: string;
@@ -17,9 +18,6 @@ interface ResponseObject {
   providedIn: 'root',
 })
 export class ProjectService {
-  headers = new HttpHeaders({
-    'x-api-key': JSON.parse(window.localStorage.getItem('xApiKey') as string),
-  });
   constructor(private readonly http: HttpClient) {}
 
   private static formatPayloadReceived(rawFormData: any) {
@@ -28,9 +26,7 @@ export class ProjectService {
   }
 
   getAllProjects() {
-    return this.http.get<ResponseObject>('/api/projects/top-4', {
-      headers: this.headers,
-    });
+    return this.http.get<ResponseObject>('/api/projects/top-4');
   }
 
   public createNewProjectRecord(rawFormData: any) {
@@ -38,7 +34,7 @@ export class ProjectService {
     return this.http.post<ProjectInterface>(
       `/api/projects/create`,
       rawFormData,
-      { headers: this.headers }
+      { headers: ServiceUtility.getXpiKeyFromLocalStorage() }
     );
   }
 
@@ -46,13 +42,13 @@ export class ProjectService {
     return this.http.put<ProjectInterface>(
       `/api/projects/update/${rawFormData._id}`,
       rawFormData,
-      { headers: this.headers }
+      { headers: ServiceUtility.getXpiKeyFromLocalStorage() }
     );
   }
 
   public deleteProjectRecord(_id: string) {
     return this.http.delete(`/api/projects/delete/${_id}`, {
-      headers: this.headers,
+      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
     });
   }
 }
