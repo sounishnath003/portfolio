@@ -3,9 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-projects',
   template: `
-    <p>
-      projects works!
-    </p>
+   <div>
+     <app-featuredprojects></app-featuredprojects>
+     <div>
+       projects home
+     </div>
+   </div>
   `,
   styleUrls: ['./projects.component.css']
 })
