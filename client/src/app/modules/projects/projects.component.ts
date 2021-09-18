@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div>
       <app-herobanner
-        title="It' time to discover projects"
+        title="It's time to discover projects"
         subtitle="Things I've build over time, whenever came across new
                 learning & stuffs. I've build generally through web technologies such as Angular, React, Node, TypeScript, NestJS, Heroku, Lamda etc. Hope you will enjoy."
       ></app-herobanner>
