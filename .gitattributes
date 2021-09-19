@@ -1,4 +1,4 @@
-* linguist-vendored
-*.ts linguist-vendored=true
-*.js linguist-vendored=true
-*.css linguist-vendored=false
+*.ts linguist-detectable=true
+*.js linguist-detectable=true
+*.html linguist-detectable=true
+*.css linguist-detectable=false
