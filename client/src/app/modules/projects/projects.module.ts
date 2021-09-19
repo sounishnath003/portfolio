@@ -5,6 +5,7 @@ import { SocialLinksComponent } from 'src/app/modules/projects/components/heroba
 import { FeaturedprojectsComponent } from './components/featuredprojects/featuredprojects.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
+import { GithubprojectsComponent } from './components/githubprojects/githubprojects.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { ProjectsComponent } from './projects.component';
     FeaturedprojectsComponent,
     HerobannerComponent,
     SocialLinksComponent,
+    GithubprojectsComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })

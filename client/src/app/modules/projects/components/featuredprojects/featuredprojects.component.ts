@@ -4,20 +4,38 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 @Component({
   selector: 'app-featuredprojects',
   template: `
-    <div class="text-2xl font-semibold">Most Featured Projects</div>
+    <div
+      class="text-2xl hover:text-blue-700 cursor-pointer inline-flex space-x-3 font-semibold"
+    >
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="blue"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 3v18h18" />
+          <path d="m18.7 8-5.1 5.2-2.8-2.7L7 14.3" />
+        </svg>
+      </div>
+      <a href="#github-projects">Most Featured Projects</a>
+    </div>
     <div class="card-list">
-      <article
-        class="card"
-        *ngFor="let project of [1, 1, 1, 1, 1, 1, 1, 1, 1] as list"
-      >
+      <article class="card" *ngFor="let project of projects as list">
         <header class="card-header">
           <div>
             <span class="author-name-prefix" style="margin-right: 5px;"
               >Article:
             </span>
-            18th Sept, 2021
+            <div class="text-sm text-gray-400 leading-relaxed">
+              {{ project.summary }}
+            </div>
           </div>
-          <h2 class="text-xl font-sans">Project Title</h2>
+          <h2 class="text-xl my-1 font-sans">{{ project.title }}</h2>
         </header>
 
         <section class="card-author">

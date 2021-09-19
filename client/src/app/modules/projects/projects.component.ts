@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
                 learning & stuffs. I've build generally through web technologies such as Angular, React, Node, TypeScript, NestJS, Heroku, Lamda etc. Hope you will enjoy."
       ></app-herobanner>
       <app-featuredprojects></app-featuredprojects>
-      <div>projects home</div>
+      <app-githubprojects></app-githubprojects>
     </div>
   `,
   styleUrls: ['./projects.component.css'],
