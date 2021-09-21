@@ -12,7 +12,7 @@ export class GithubapiService {
 
   getRepository() {
     return this.http.get<Array<RepositoryInterface>>(
-      `${this.GITHUB_API}/repos`
+      `${this.GITHUB_API}/repos?sort=updated&direction=desc`
     );
   }
 }

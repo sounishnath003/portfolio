@@ -29,7 +29,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
         <header class="card-header">
           <div>
             <span class="author-name-prefix" style="margin-right: 5px;"
-              >Article:
+              >Summary:
             </span>
             <div class="text-sm text-gray-400 leading-relaxed">
               {{ project.summary }}

@@ -98,7 +98,6 @@ export interface Owner {
   site_admin: boolean;
 }
 
-
 export class ServiceUtility {
   static getXpiKeyFromLocalStorage(): HttpHeaders {
     const header = new HttpHeaders({
@@ -106,5 +105,11 @@ export class ServiceUtility {
         JSON.parse(window.localStorage.getItem('xApiKey') as string) || '',
     });
     return header;
+  }
+
+  static generateRandomHexColor(): string {
+    const randomColor = Math.floor(Math.random() * 16627713).toString(16);
+    const hexCode = `#${randomColor}`;
+    return hexCode;
   }
 }

@@ -27,16 +27,18 @@ import { RepositoryInterface } from 'src/app/modules/shared/services/utils';
       </div>
       <a>Projects from GitHub Repository</a>
     </div>
-    
+
     <div class="my-2">
       <div *ngIf="repository$ | async as repositories; else temp">
-        <p>Count: {{ repositories.length }}</p>
-        <div>
-          <ul class=" ">
-            <li *ngFor="let repository of repositories">
-              {{ repository.name }}
-            </li>
-          </ul>
+        <p class="my-2">Public Repositories: {{ repositories.length }}</p>
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 md:grid-flow-row"
+          style=""
+        >
+          <app-gitprojectcard
+            [repository]="repository"
+            *ngFor="let repository of repositories"
+          ></app-gitprojectcard>
         </div>
       </div>
       <ng-template #temp>

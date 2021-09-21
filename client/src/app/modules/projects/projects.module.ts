@@ -6,6 +6,7 @@ import { FeaturedprojectsComponent } from './components/featuredprojects/feature
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { GithubprojectsComponent } from './components/githubprojects/githubprojects.component';
+import { GitprojectcardComponent } from './components/githubprojects/gitprojectcard.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { GithubprojectsComponent } from './components/githubprojects/githubproje
     HerobannerComponent,
     SocialLinksComponent,
     GithubprojectsComponent,
+    GitprojectcardComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })
