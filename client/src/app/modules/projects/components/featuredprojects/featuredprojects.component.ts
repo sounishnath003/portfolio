@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 
 @Component({
@@ -26,39 +27,41 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
     </div>
     <div class="card-list">
       <article class="card" *ngFor="let project of projects as list">
-        <header class="card-header">
-          <div>
-            <span class="author-name-prefix" style="margin-right: 5px;"
-              >Summary:
-            </span>
-            <div class="text-sm text-gray-400 leading-relaxed">
-              {{ project.summary }}
+        <div (click)="generate_projectDetail_route(project)">
+          <header class="card-header">
+            <div>
+              <span class="author-name-prefix" style="margin-right: 5px;"
+                >Summary:
+              </span>
+              <div class="text-sm text-gray-400 leading-relaxed">
+                {{ project.summary }}
+              </div>
             </div>
-          </div>
-          <h2 class="text-xl my-1 font-sans">{{ project.title }}</h2>
-        </header>
+            <h2 class="text-xl my-1 font-sans">{{ project.title }}</h2>
+          </header>
 
-        <section class="card-author">
-          <a href="#" class="author-avatar">
-            <img src="https://avatars.githubusercontent.com/u/40270033?v=4" />
-          </a>
-          <svg class="half-circle" viewBox="0 0 106 57">
-            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-          </svg>
+          <section class="card-author">
+            <a href="#" class="author-avatar">
+              <img src="https://avatars.githubusercontent.com/u/40270033?v=4" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
 
-          <div class="author-name">
-            <div class="author-name-prefix">Author</div>
-            Sounish
-          </div>
-        </section>
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Sounish
+            </div>
+          </section>
 
-        <section>
-          <div class="tags">
-            <span>html</span>
-            <span>css</span>
-            <span>javascript</span>
-          </div>
-        </section>
+          <section>
+            <div class="tags">
+              <span>html</span>
+              <span>css</span>
+              <span>javascript</span>
+            </div>
+          </section>
+        </div>
       </article>
     </div>
   `,
@@ -67,11 +70,25 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 })
 export class FeaturedprojectsComponent implements OnInit {
   projects: Array<ProjectInterface> = [];
-  constructor(private readonly projectService: ProjectService) {}
+  constructor(
+    private readonly projectService: ProjectService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.projectService.getAllProjects().subscribe((resp) => {
       this.projects = resp.data;
     });
+  }
+
+  generate_projectDetail_route(project: ProjectInterface) {
+    this.router.navigate(
+      ['project-details', project._id, project.title, 'view'],
+      {
+        state: project,
+        relativeTo: this.route,
+      }
+    );
   }
 }

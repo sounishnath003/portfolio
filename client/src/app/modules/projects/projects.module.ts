@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { HerobannerComponent } from 'src/app/modules/projects/components/herobanner/herobanner.component';
 import { SocialLinksComponent } from 'src/app/modules/projects/components/herobanner/social-links.component';
 import { FeaturedprojectsComponent } from './components/featuredprojects/featuredprojects.component';
-import { ProjectsRoutingModule } from './projects-routing.module';
-import { ProjectsComponent } from './projects.component';
+import { HeaderComponent } from './components/featuredprojects/projectdetails/header.component';
+import { ProjectdetailsComponent } from './components/featuredprojects/projectdetails/projectdetails.component';
 import { GithubprojectsComponent } from './components/githubprojects/githubprojects.component';
 import { GitprojectcardComponent } from './components/githubprojects/gitprojectcard.component';
-
+import { ProjectsRoutingModule } from './projects-routing.module';
+import { ProjectsComponent } from './projects.component';
+  
 @NgModule({
   declarations: [
     ProjectsComponent,
@@ -16,6 +18,8 @@ import { GitprojectcardComponent } from './components/githubprojects/gitprojectc
     SocialLinksComponent,
     GithubprojectsComponent,
     GitprojectcardComponent,
+    ProjectdetailsComponent,
+    HeaderComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })
