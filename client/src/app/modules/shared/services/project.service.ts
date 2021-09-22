@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ServiceUtility } from './utils';
 
 export interface ProjectInterface {
@@ -27,6 +28,12 @@ export class ProjectService {
 
   getAllProjects() {
     return this.http.get<ResponseObject>('/api/projects/top-4');
+  }
+
+  getProjectById(_id: string): Observable<{ data: ProjectInterface }> {
+    return this.http.get<{ data: ProjectInterface }>(`/api/projects/search`, {
+      params: { id: _id },
+    });
   }
 
   public createNewProjectRecord(rawFormData: any) {
