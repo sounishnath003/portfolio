@@ -25,13 +25,13 @@ export class AuthService {
       .subscribe(
         (resp: any) => {
           this.user$.next(true);
-          window.localStorage.setItem('isLoggedIn', JSON.stringify(true));
-          window.localStorage.setItem('xApiKey', JSON.stringify(resp.apiKey));
+          localStorage.setItem('isLoggedIn', JSON.stringify(true));
+          localStorage.setItem('xApiKey', JSON.stringify(resp.apiKey));
           this.router.navigate(['cms', 'dashboard', 'project-type']);
         },
         (error: Error) => {
           console.warn('ErrorResponse:', error.message);
-          window.alert(error.message);
+          alert(error.message);
         }
       );
   }
@@ -44,14 +44,14 @@ export class AuthService {
   }
 
   private precheckedAuthenticated() {
-    const alreadyLoggedIn = window.localStorage.getItem('isLoggedIn');
+    const alreadyLoggedIn = localStorage.getItem('isLoggedIn');
     if (alreadyLoggedIn) {
       this.user$.next(true);
     }
   }
 
   logoutWithChange() {
-    window.localStorage.clear();
+    localStorage.clear();
     this.router.navigate(['/']);
     this.user$.next(false);
     return this.getAuthState();

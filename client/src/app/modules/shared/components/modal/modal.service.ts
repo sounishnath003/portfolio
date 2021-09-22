@@ -24,7 +24,7 @@ export class ModalService {
     const componentRef: ComponentRef<ModalComponent> = this.componentFactoryResolver.resolveComponentFactory(ModalComponent).create(this.injector);
     this.appRef.attachView(componentRef.hostView);
     const modal_element = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
-    window.document.body.appendChild(modal_element);
+    document.body.appendChild(modal_element);
   }
 
 }

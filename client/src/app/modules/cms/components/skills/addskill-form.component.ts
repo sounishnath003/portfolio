@@ -114,7 +114,7 @@ export class AddskillFormComponent implements OnInit, OnDestroy {
           });
       }, 1100);
     } else {
-      window.alert(`Please carefully fill the inputs`);
+      alert(`Please carefully fill the inputs`);
     }
   }
 }
