@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npx concurrently -m=100 \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "cd client && npm run dev:ssr",
-    "dev:server": "cd server && npm run dev"
+    "dev:client": "cd client && npm start",
+    "dev:server": "cd server && npm run dev",
+    "i": "npx concurrently -m=100 \"npm run install:client\" \"npm run install:server\"",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install"
   },
   "repository": {
     "type": "git",
