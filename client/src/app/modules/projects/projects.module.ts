@@ -5,7 +5,10 @@ import { SocialLinksComponent } from 'src/app/modules/projects/components/heroba
 import { MarkdownToHtmlPipe } from '../shared/pipes/markdown-to-html.pipe';
 import { FeaturedprojectsComponent } from './components/featuredprojects/featuredprojects.component';
 import { HeaderComponent } from './components/featuredprojects/projectdetails/header.component';
-import { ProjectdetailsComponent } from './components/featuredprojects/projectdetails/projectdetails.component';
+import {
+  ProjectdetailsComponent,
+  Safe,
+} from './components/featuredprojects/projectdetails/projectdetails.component';
 import { GithubprojectsComponent } from './components/githubprojects/githubprojects.component';
 import { GitprojectcardComponent } from './components/githubprojects/gitprojectcard.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
@@ -22,6 +25,7 @@ import { ProjectsComponent } from './projects.component';
     ProjectdetailsComponent,
     HeaderComponent,
     MarkdownToHtmlPipe,
+    Safe,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })

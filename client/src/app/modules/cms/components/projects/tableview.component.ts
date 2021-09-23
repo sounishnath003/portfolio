@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   template: `
     <div>
       <app-customtable
-        [tableHeaders]="['photo', 'title', 'summary', 'description', 'actions']"
+        [tableHeaders]="['photo', 'title', 'summary', 'actions']"
         [uniqueIdentifierProperty]="'_id'"
         (onEditFired)="onEdit($event)"
         (onDeleteFired)="onDelete($event)"

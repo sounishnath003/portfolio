@@ -25,6 +25,7 @@
     "@angular/platform-server": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@nguniversal/express-engine": "^12.1.0",
+    "@tailwindcss/typography": "^0.4.1",
     "express": "^4.15.2",
     "localstorage-polyfill": "^1.0.1",
     "marked": "^3.0.4",

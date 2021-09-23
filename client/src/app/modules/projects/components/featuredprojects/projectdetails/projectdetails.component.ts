@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 
@@ -19,22 +20,25 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
       </blockquote>
 
       <div class="my-16">
-        <div
-          class="leading-relaxed p-2 md:text-xl"
-          [outerHTML]="project.description | markdownToHtml"
-        ></div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(0, 1fr));">
+          <section class="col-span-6">
+            <article class="prose lg:prose-xl">
+              <div
+                className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
+                [innerHTML]="project.description | markdownToHtml | safeHtml"
+              ></div>
+            </article>
+          </section>
+          <div>
+            <div class="font-semibold">
+              <div class="uppercase"> table content </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <ng-template #temp>No Content</ng-template>
   `,
-  styles: [
-    `
-      ul {
-        font-size: 2rem;
-        background-color: red;
-      }
-    `,
-  ],
   providers: [ProjectService],
 })
 export class ProjectdetailsComponent implements OnInit {
@@ -59,5 +63,16 @@ export class ProjectdetailsComponent implements OnInit {
 
   gotoPrevRoute() {
     return this.router.createUrlTree(['/projects']).toString();
+  }
+}
+
+@Pipe({ name: 'safeHtml' })
+export class Safe {
+  constructor(private sanitizer: DomSanitizer) {}
+
+  transform(style: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(style);
+    //return this.sanitizer.bypassSecurityTrustStyle(style);
+    // return this.sanitizer.bypassSecurityTrustXxx(style); - see docs
   }
 }
