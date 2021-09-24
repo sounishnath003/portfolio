@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, Pipe } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
@@ -20,7 +20,10 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
       </blockquote>
 
       <div class="my-16">
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(0, 1fr));">
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(0, 1fr));"
+        >
           <section class="col-span-6">
             <article class="prose lg:prose-xl">
               <div
@@ -30,8 +33,18 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
             </article>
           </section>
           <div>
-            <div class="font-semibold">
-              <div class="uppercase"> table content </div>
+            <div class="font-semibold sticky">
+              <div class="uppercase text-center">table content</div>
+              <section class="my-3 w-64 p-2 rounded-lg bg-gray-100">
+                <ul class="flex flex-col space-y-2 items-start justify-start">
+                  <li
+                    class="hover:text-blue-700 px-6 py-1 rounded-lg hover:bg-gray-50"
+                    *ngFor="let idText of contentIds"
+                  >
+                    <a [href]="'#' + idText">{{ idText | titlecase }}</a>
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
         </div>
@@ -41,14 +54,25 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
   `,
   providers: [ProjectService],
 })
-export class ProjectdetailsComponent implements OnInit {
+export class ProjectdetailsComponent implements OnInit, AfterViewChecked {
   project!: ProjectInterface;
+  contentIds: Array<string> = [];
 
   constructor(
     private readonly route: ActivatedRoute,
     private router: Router,
     private readonly projectService: ProjectService
   ) {}
+
+  ngAfterViewChecked(): void {
+    this.extractIdsFromMarkdown();
+  }
+
+  private extractIdsFromMarkdown() {
+    if (this.contentIds.length > 0) return;
+    const ids = document.querySelectorAll('*[id]');
+    ids.forEach((eeid) => this.contentIds.push(eeid.id));
+  }
 
   ngOnInit(): void {
     this.loadPayloadRecieved();
@@ -72,7 +96,5 @@ export class Safe {
 
   transform(style: string) {
     return this.sanitizer.bypassSecurityTrustHtml(style);
-    //return this.sanitizer.bypassSecurityTrustStyle(style);
-    // return this.sanitizer.bypassSecurityTrustXxx(style); - see docs
   }
 }
