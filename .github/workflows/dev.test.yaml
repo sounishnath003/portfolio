@@ -1,5 +1,9 @@
 name: A Quick Dev Test 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,7 +13,7 @@ jobs:
     steps:
       - name: Checkout code
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@master
         with:
         node-version: 14
       - run: npm ci

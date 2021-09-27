@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
         weather that be websites, applications or anything in between. 
         At the same time quite enthusiastic about Cloud Infrastructure and DataScience."
       ></app-herobanner>
+      <app-timeline></app-timeline>
+      <app-resumeboxcard></app-resumeboxcard>
     </div>
   `,
   styleUrls: ['./about.component.css'],
