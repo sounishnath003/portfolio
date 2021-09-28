@@ -55,6 +55,7 @@ router.post(
 // [PUT]: /api/timelines/update?id=eqe312315389sf
 router.put(
   "/update",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const timelineId = req.query["id"];
