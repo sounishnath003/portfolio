@@ -23,6 +23,9 @@ import {
   AuthGuardCanActivateSelf,
 } from './guards/auth.guard';
 import { AddskillFormComponent } from './components/skills/addskill-form.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { TimelinetableviewComponent } from './components/timeline/timelinetableview.component';
+import { AddformtimelineComponent } from './components/timeline/addformtimeline.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { AddskillFormComponent } from './components/skills/addskill-form.compone
     SkillsComponent,
     AddRouteButtonComponent,
     AddskillFormComponent,
+    TimelineComponent,
+    TimelinetableviewComponent,
+    AddformtimelineComponent,
   ],
   providers: [
     AuthGuardCanActivateChild,

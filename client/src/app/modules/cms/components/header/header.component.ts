@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
     { routeTo: '/cms/dashboard/project-type', linkName: 'Project Type' },
     { routeTo: '/cms/dashboard/projects', linkName: 'Projects' },
     { routeTo: '/cms/dashboard/skills', linkName: 'Skills' },
+    { routeTo: '/cms/dashboard/timelines', linkName: 'Timelines' },
     { routeTo: '/cms/dashboard/blogs', linkName: 'Blogs' },
     { routeTo: '/cms/dashboard/blogs', linkName: 'Contacts' },
   ];

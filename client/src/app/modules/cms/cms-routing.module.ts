@@ -8,6 +8,8 @@ import { AddformComponent } from './components/projects/addform.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AddskillFormComponent } from './components/skills/addskill-form.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { AddformtimelineComponent } from './components/timeline/addformtimeline.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 import {
   AuthGuardCanActivateChild,
   AuthGuardCanActivateSelf,
@@ -67,6 +69,21 @@ const routes: Routes = [
         path: 'skills/add',
         component: AddskillFormComponent,
         pathMatch: 'full',
+      },
+      {
+        path: 'timelines',
+        component: TimelineComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'timelines/add',
+        component: AddformtimelineComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'timelines/edit',
+        component: AddformtimelineComponent,
+        pathMatch: 'full'
       },
     ],
   },
