@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 type InputType = 'text' | 'url' | 'email' | 'textarea';
@@ -72,11 +72,16 @@ export class CustomformComponent implements OnInit {
   @Input() formGroupContext!: FormGroup;
   @Input() customFormContext!: Array<CustomFormInterface>;
 
+  @Output() onSubmitEmitter: EventEmitter<HTMLFormElement> =
+    new EventEmitter<HTMLFormElement>();
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  onSubmit() {}
+  onSubmit() {
+    this.onSubmitEmitter.emit(this.formGroupContext.value);
+  }
 
   get_status(type: string): boolean {
     return type === 'text' ? true : false;

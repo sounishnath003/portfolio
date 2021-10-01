@@ -73,7 +73,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       </table>
       <ng-template #noContentTemplate>
         <div class="text-red-500 bg-red-100 flex p-2 rounded-lg">
-          <div class="m-3 text-center m-auto">
+          <div class="m-3 text-center">
             No records are created. To view the dashboard, add some new records
             to make the content available!
           </div>
