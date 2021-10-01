@@ -26,6 +26,7 @@ import { AddskillFormComponent } from './components/skills/addskill-form.compone
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelinetableviewComponent } from './components/timeline/timelinetableview.component';
 import { AddformtimelineComponent } from './components/timeline/addformtimeline.component';
+import { CustomformComponent } from '../shared/components/customform/customform.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AddformtimelineComponent } from './components/timeline/addformtimeline.
     ZoomUpDirective,
     ModalComponent,
     CustomtableComponent,
+    CustomformComponent,
     SkillsComponent,
     AddRouteButtonComponent,
     AddskillFormComponent,
