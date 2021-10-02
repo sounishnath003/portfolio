@@ -9,6 +9,7 @@ import {
 import ProjectTypeController from "./project-type.controller";
 import ProjectsController from "./projects.controller";
 import SkillsController from "./skills.controller";
+import TimelineController from "./timeline.controller";
 
 const router = Router();
 
@@ -54,5 +55,6 @@ router.get(
 router.use("/project-type", ProjectTypeController);
 router.use("/projects", ProjectsController);
 router.use("/skills", SkillsController);
+router.use("/timelines", TimelineController);
 
 export default router;

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomFormInterface } from 'src/app/modules/shared/components/customform/customform.component';
+import {
+  TimelineDTO,
+  TimelineService,
+} from 'src/app/modules/shared/services/timeline.service';
 
 @Component({
   selector: 'app-addformtimeline',
@@ -13,6 +18,7 @@ import { CustomFormInterface } from 'src/app/modules/shared/components/customfor
     ></app-customform>
   `,
   styles: [],
+  providers: [TimelineService],
 })
 export class AddformtimelineComponent implements OnInit {
   buttonText: string = 'Publish';
@@ -60,11 +66,25 @@ export class AddformtimelineComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private readonly timelineService: TimelineService
+  ) {}
 
   ngOnInit(): void {}
 
-  onSubmitClicked(formValuePayload: any) {
-    console.log(formValuePayload);
+  onSubmitClicked(emittedPayload: { type: string; payload: TimelineDTO }) {
+    emittedPayload.type === 'ADD'
+      ? this.create_new_timeline(emittedPayload.payload)
+      : this.update_edited_timeline(emittedPayload.payload);
+  }
+
+  create_new_timeline(payload: TimelineDTO) {
+    this.timelineService.createNewTimeline(payload).subscribe((data) => {
+      this.router.navigate(['cms', 'dashboard', 'timelines']).then();
+    });
+  }
+  update_edited_timeline(payload: TimelineDTO) {
+    this.router.navigate(['cms', 'dashboard', 'timelines']).then();
   }
 }

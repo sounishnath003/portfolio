@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <section>
       <div
-        class="my-4 border border-gray-500 cursor-pointer hover:bg-indigo-50 transition-all p-4 rounded-lg flex flex-col justify-start items-start space-y-2"
+        class="my-4 cursor-pointer hover:bg-indigo-50 transition-all p-4 rounded-lg flex flex-col justify-start items-start space-y-2"
       >
         <div class="font-sm">Bengaluru, India</div>
         <div

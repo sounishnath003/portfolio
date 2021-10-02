@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {ProjectInterface, ProjectService} from 'src/app/modules/shared';
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-tableview',
@@ -20,8 +20,7 @@ import {Router} from "@angular/router";
 export class TableviewComponent implements OnInit {
   projects: Array<ProjectInterface> = [];
 
-  constructor(private projectService: ProjectService, private router: Router) {
-  }
+  constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit(): void {
     this.getProjects();
@@ -34,12 +33,14 @@ export class TableviewComponent implements OnInit {
   }
 
   onEdit(project: any) {
-    this.router.navigate(['cms', 'dashboard', 'projects', 'edit'], {state: project})
+    this.router.navigate(['cms', 'dashboard', 'projects', 'edit'], {
+      state: project,
+    });
   }
 
   onDelete(_id: any) {
     this.projectService.deleteProjectRecord(_id).subscribe((data) => {
       this.projects = this.projects.filter((project) => project._id !== _id);
-    })
+    });
   }
 }

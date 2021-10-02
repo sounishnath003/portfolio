@@ -1,6 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { TimelineDTO } from '../../services/timeline.service';
 
+type PayloadInterface<T> = T;
 type InputType = 'text' | 'url' | 'email' | 'textarea';
 
 export interface CustomFormInterface {
@@ -53,11 +56,12 @@ export interface CustomFormInterface {
             </div>
           </div>
           <button
+            [disabled]="isClicked"
             type="submit"
             value="Save"
             class="my-4 float-right px-8 py-2 tracking-wide rounded bg-blue-600 text-white"
           >
-            Publish
+            {{ buttonText }}
           </button>
         </form>
       </div>
@@ -67,20 +71,57 @@ export interface CustomFormInterface {
 })
 export class CustomformComponent implements OnInit {
   buttonText: string = 'Publish';
+  routeType: string = '';
+  isClicked: boolean = false;
 
   @Input() formTitle!: string;
   @Input() formGroupContext!: FormGroup;
   @Input() customFormContext!: Array<CustomFormInterface>;
 
-  @Output() onSubmitEmitter: EventEmitter<HTMLFormElement> =
-    new EventEmitter<HTMLFormElement>();
+  @Output() onSubmitEmitter: EventEmitter<{
+    type: string;
+    payload: PayloadInterface<TimelineDTO>;
+  }> = new EventEmitter<{
+    type: string;
+    payload: PayloadInterface<TimelineDTO>;
+  }>();
 
-  constructor() {}
+  constructor(private router: Router) {
+    this.preloadUrlPayloadCheck();
+  }
+
+  private preloadUrlPayloadCheck() {
+    this.routeType = this.router.url.split('/')[4];
+    if (this.routeType === 'edit') {
+      const state = this.router.getCurrentNavigation()?.extras.state;
+      this.formGroupContext.setValue({
+        ...this.formGroupContext.value,
+        ...state,
+      });
+    }
+  }
 
   ngOnInit(): void {}
 
   onSubmit() {
-    this.onSubmitEmitter.emit(this.formGroupContext.value);
+    this.isClicked = true;
+    this.buttonText = 'Publishing...';
+    setTimeout(() => {
+      if (this.routeType === 'add') {
+        const formatted_form_payload = this.formGroupContext.value;
+        delete formatted_form_payload['_id'];
+        this.onSubmitEmitter.emit({
+          type: 'ADD',
+          payload: formatted_form_payload,
+        });
+      } else {
+        this.onSubmitEmitter.emit({
+          type: 'EDIT',
+          payload: this.formGroupContext.value,
+        });
+      }
+    }, 1100);
+    this.isClicked = false;
   }
 
   get_status(type: string): boolean {
