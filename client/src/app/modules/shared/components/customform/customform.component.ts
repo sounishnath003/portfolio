@@ -16,7 +16,7 @@ export interface CustomFormInterface {
 @Component({
   selector: 'app-customform',
   template: `
-    <div class="font-semibold text-gray-800">
+    <div class="font-semibold text-gray-800" *ngIf="!isLoading; else temp">
       <div class="text-2xl text-blue-600">{{ formTitle }}</div>
       <div class="my-4">
         <form [formGroup]="formGroupContext" (ngSubmit)="onSubmit()">
@@ -66,6 +66,9 @@ export interface CustomFormInterface {
         </form>
       </div>
     </div>
+    <ng-template #temp>
+      <div class="text-blue-600">Loading Data...</div>
+    </ng-template>
   `,
   styles: [],
 })
@@ -73,6 +76,7 @@ export class CustomformComponent implements OnInit {
   buttonText: string = 'Publish';
   routeType: string = '';
   isClicked: boolean = false;
+  isLoading: boolean = true;
 
   @Input() formTitle!: string;
   @Input() formGroupContext!: FormGroup;
@@ -93,11 +97,17 @@ export class CustomformComponent implements OnInit {
   private preloadUrlPayloadCheck() {
     this.routeType = this.router.url.split('/')[4];
     if (this.routeType === 'edit') {
-      const state = this.router.getCurrentNavigation()?.extras.state;
-      this.formGroupContext.setValue({
-        ...this.formGroupContext.value,
-        ...state,
-      });
+      const state: any = this.router.getCurrentNavigation()?.extras.state;
+      delete state['__v'];
+      delete state['createdAt'];
+      delete state['updatedAt'];
+      setTimeout(() => {
+        this.formGroupContext.setValue({
+          ...this.formGroupContext.value,
+          ...state,
+        });
+        this.isLoading = false;
+      }, 300);
     }
   }
 

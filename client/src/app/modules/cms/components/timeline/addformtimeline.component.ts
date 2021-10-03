@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { CustomFormInterface } from 'src/app/modules/shared/components/customform/customform.component';
 import {
   TimelineDTO,
@@ -20,8 +21,8 @@ import {
   styles: [],
   providers: [TimelineService],
 })
-export class AddformtimelineComponent implements OnInit {
-  buttonText: string = 'Publish';
+export class AddformtimelineComponent implements OnInit, OnDestroy {
+  activeSubscription: Subscription = new Subscription();
   form: FormGroup = new FormGroup({
     _id: new FormControl(null, []),
     location: new FormControl('', [Validators.requiredTrue]),
@@ -71,6 +72,10 @@ export class AddformtimelineComponent implements OnInit {
     private readonly timelineService: TimelineService
   ) {}
 
+  ngOnDestroy(): void {
+    this.activeSubscription.unsubscribe();
+  }
+
   ngOnInit(): void {}
 
   onSubmitClicked(emittedPayload: { type: string; payload: TimelineDTO }) {
@@ -80,11 +85,17 @@ export class AddformtimelineComponent implements OnInit {
   }
 
   create_new_timeline(payload: TimelineDTO) {
-    this.timelineService.createNewTimeline(payload).subscribe((data) => {
-      this.router.navigate(['cms', 'dashboard', 'timelines']).then();
-    });
+    this.activeSubscription = this.timelineService
+      .createNewTimeline(payload)
+      .subscribe((data) => {
+        this.router.navigate(['cms', 'dashboard', 'timelines']).then();
+      });
   }
   update_edited_timeline(payload: TimelineDTO) {
-    this.router.navigate(['cms', 'dashboard', 'timelines']).then();
+    this.activeSubscription = this.timelineService
+      .updateNewTimeline(payload)
+      .subscribe((data) => {
+        this.router.navigate(['cms', 'dashboard', 'timelines']).then();
+      });
   }
 }

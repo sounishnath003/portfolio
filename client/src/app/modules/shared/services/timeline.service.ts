@@ -33,4 +33,11 @@ export class TimelineService {
       headers: ServiceUtility.getXpiKeyFromLocalStorage(),
     });
   }
+
+  updateNewTimeline(payload: TimelineDTO) {
+    return this.http.patch('/api/timelines/update', payload, {
+      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+      params: { id: payload._id || '' },
+    });
+  }
 }

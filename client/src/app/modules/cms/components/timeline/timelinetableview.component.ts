@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TimelineService } from 'src/app/modules/shared/services/timeline.service';
 
 @Component({
@@ -6,11 +7,11 @@ import { TimelineService } from 'src/app/modules/shared/services/timeline.servic
   template: `
     <app-customtable
       [tableHeaders]="[
+        '_id',
         'location',
         'roleOffered',
         'organization',
         'timeDuration',
-        'workDescription',
         'actions'
       ]"
       [uniqueIdentifierProperty]="'_id'"
@@ -24,7 +25,10 @@ import { TimelineService } from 'src/app/modules/shared/services/timeline.servic
 })
 export class TimelinetableviewComponent implements OnInit {
   timelines: Array<any> = [];
-  constructor(private readonly timelineService: TimelineService) {}
+  constructor(
+    private readonly timelineService: TimelineService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.timelineService.getAllTimelines().subscribe((resp) => {
@@ -32,6 +36,10 @@ export class TimelinetableviewComponent implements OnInit {
     });
   }
 
-  onEdit(id: any) {}
+  onEdit(timeline: any) {
+    this.router.navigate(['cms', 'dashboard', 'timelines', 'edit'], {
+      state: timeline
+    });
+  }
   onDelete(id: any) {}
 }

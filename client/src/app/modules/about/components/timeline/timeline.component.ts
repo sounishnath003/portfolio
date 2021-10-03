@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import {
+  TimelineDTO,
+  TimelineService,
+} from 'src/app/modules/shared/services/timeline.service';
 
 @Component({
   selector: 'app-timeline',
@@ -25,13 +30,20 @@ import { Component, OnInit } from '@angular/core';
         </div>
         <div class="text-xl md:text-3xl">Timeline Tracks</div>
       </div>
-      <app-timelinecard *ngFor="let x of [1, 1, 1, 1, 1]"></app-timelinecard>
+      <app-timelinecard [timeline]="p" *ngFor="let p of timelines$ | async"></app-timelinecard>
     </div>
   `,
   styles: [],
+  providers: [TimelineService],
 })
 export class TimelineComponent implements OnInit {
-  constructor() {}
+  timelines$: Observable<Array<TimelineDTO>> = new Observable();
+
+  constructor(private timelineService: TimelineService) {
+    this.timelineService.getAllTimelines().subscribe((resp) => {
+      this.timelines$ = of(resp.data);
+    });
+  }
 
   ngOnInit(): void {}
 }

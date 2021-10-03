@@ -1,0 +1,4 @@
+.gradiant {
+  background:linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);
+  /* background:linear-gradient(to right, rgb(29, 78, 216), rgb(30, 64, 175), rgb(17, 24, 39)); */
+}

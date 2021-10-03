@@ -52,8 +52,8 @@ router.post(
   }
 );
 
-// [PUT]: /api/timelines/update?id=eqe312315389sf
-router.put(
+// [PATCH]: /api/timelines/update?id=eqe312315389sf
+router.patch(
   "/update",
   requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
