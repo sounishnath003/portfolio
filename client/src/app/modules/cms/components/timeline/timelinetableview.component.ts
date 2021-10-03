@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TimelineService } from 'src/app/modules/shared/services/timeline.service';
+import {
+  TimelineDTO,
+  TimelineService,
+} from 'src/app/modules/shared/services/timeline.service';
 
 @Component({
   selector: 'app-timelinetableview',
@@ -24,7 +27,7 @@ import { TimelineService } from 'src/app/modules/shared/services/timeline.servic
   providers: [TimelineService],
 })
 export class TimelinetableviewComponent implements OnInit {
-  timelines: Array<any> = [];
+  timelines: Array<TimelineDTO> = [];
   constructor(
     private readonly timelineService: TimelineService,
     private router: Router
@@ -38,8 +41,14 @@ export class TimelinetableviewComponent implements OnInit {
 
   onEdit(timeline: any) {
     this.router.navigate(['cms', 'dashboard', 'timelines', 'edit'], {
-      state: timeline
+      state: timeline,
     });
   }
-  onDelete(id: any) {}
+  onDelete(id: any) {
+    this.timelineService.deleteTimelineById(id).subscribe(() => {
+      this.timelines = this.timelines.filter(
+        (timeline: TimelineDTO) => timeline._id !== id
+      );
+    });
+  }
 }

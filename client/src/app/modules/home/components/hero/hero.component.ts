@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
         <div
           class="text-3xl text-blue-800 font-semibold text-center animate-bounce"
         >
-          &darr;
+          <a href="#__short-info-section"> &darr; </a>
         </div>
       </div>
     </div>

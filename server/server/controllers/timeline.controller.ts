@@ -15,7 +15,7 @@ router.get(
       return res.status(200).send({
         ...SUCCESS,
         message: "lists of all timelines",
-        data: timelines,
+        data: timelines.reverse(),
       });
     } catch (error) {
       next(error);

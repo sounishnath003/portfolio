@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-short-info',
   template: `
-    <div class="md:my-20 my-8 -bg-gray-50 px-4 py-4 rounded-xl">
+    <div id="__short-info-section" class="md:my-20 my-8 -bg-gray-50 px-4 py-4 rounded-xl">
       <div class="text-gray-800 font-black text-xl">A bit about me &rarr;</div>
       <div
         class="my-6 leading-relaxed font-semibold text-gray-800"
@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
           class="flex space-x-3 hover:bg-blue-700 transition-all bg-blue-600 text-white px-4 py-3 rounded-lg"
         >
           <div><img src="assets/file.svg" /></div>
-          <a target="_blank" [href]="resume_link" [download]="resume_link">Download Resume</a>
+          <a target="_blank" [href]="resume_link" [download]="resume_link">Checkout Resume</a>
         </button>
       </div>
     </div>

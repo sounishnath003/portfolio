@@ -96,7 +96,8 @@ export class CustomformComponent implements OnInit {
 
   private preloadUrlPayloadCheck() {
     this.routeType = this.router.url.split('/')[4];
-    if (this.routeType === 'edit') {
+    if (this.routeType === 'add') this.isLoading = false;
+    else {
       const state: any = this.router.getCurrentNavigation()?.extras.state;
       delete state['__v'];
       delete state['createdAt'];

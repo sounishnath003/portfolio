@@ -40,4 +40,11 @@ export class TimelineService {
       params: { id: payload._id || '' },
     });
   }
+
+  deleteTimelineById(id: string) {
+    return this.http.delete('/api/timelines/delete', {
+      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+      params: { id },
+    });
+  }
 }
