@@ -4,6 +4,15 @@ import { BehaviorSubject, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ServiceUtility } from './utils';
 
+export interface ProjectTypeDTO {
+  _id?: string;
+  __v: number;
+  projectType: string;
+  tags: Array<string>;
+  logo: string;
+  description: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -31,7 +40,9 @@ export class ProjectTypeService {
   createNewProjectType(payload: any) {
     ProjectTypeService.formatPayloadReceived(payload);
     const resp$ = this.http
-      .post('/api/project-type/create', payload, { headers: ServiceUtility.getXpiKeyFromLocalStorage() })
+      .post('/api/project-type/create', payload, {
+        headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+      })
       .pipe(
         catchError((err) => {
           return throwError(err);

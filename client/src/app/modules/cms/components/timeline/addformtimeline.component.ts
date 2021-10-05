@@ -78,20 +78,23 @@ export class AddformtimelineComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {}
 
-  onSubmitClicked(emittedPayload: { type: string; payload: TimelineDTO }) {
+  onSubmitClicked(emittedPayload: {
+    type: string;
+    payload: ThisType<TimelineDTO>;
+  }) {
     emittedPayload.type === 'ADD'
       ? this.create_new_timeline(emittedPayload.payload)
       : this.update_edited_timeline(emittedPayload.payload);
   }
 
-  create_new_timeline(payload: TimelineDTO) {
+  create_new_timeline(payload: Partial<TimelineDTO>) {
     this.activeSubscription = this.timelineService
       .createNewTimeline(payload)
       .subscribe((data) => {
         this.router.navigate(['cms', 'dashboard', 'timelines']).then();
       });
   }
-  update_edited_timeline(payload: TimelineDTO) {
+  update_edited_timeline(payload: ThisType<TimelineDTO>) {
     this.activeSubscription = this.timelineService
       .updateNewTimeline(payload)
       .subscribe((data) => {

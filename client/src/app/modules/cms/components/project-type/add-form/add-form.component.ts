@@ -9,77 +9,18 @@ import {
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ProjectTypeService } from '../../../../shared';
+import { CustomFormInterface } from 'src/app/modules/shared/components/customform/customform.component';
+import { ProjectTypeDTO, ProjectTypeService } from '../../../../shared';
 
 @Component({
   selector: 'app-add-form',
   template: `
-    <div *ngIf="error" class="text-red-400 font-semibold">
-      Error: {{ error }}
-    </div>
-    <div class="font-semibold text-gray-800">
-      <div class="text-2xl text-blue-600">Create new project type</div>
-      <div class="my-4">
-        <form [formGroup]="form" (ngSubmit)="onSubmitClicked()">
-          <div class="flex flex-col space-y-3">
-            <label for="logo">Logo URL: </label>
-            <input
-              required
-              type="url"
-              name="logo"
-              id="logo"
-              formControlName="logo"
-              class="py-2 px-4 rounded bg-gray-50 border outline-none border-gray-600"
-              placeholder="https://goo.gl/images/assets/v1/ng.svg"
-            />
-          </div>
-          <div class="flex flex-col space-y-3 my-3">
-            <label for="projectType">Project Type: </label>
-            <input
-              required
-              type="text"
-              name="projectType"
-              id="projectType"
-              formControlName="projectType"
-              class="py-2 px-4 rounded bg-gray-50 border outline-none border-gray-600"
-              placeholder="Project Type: Angular"
-            />
-          </div>
-          <div class="flex flex-col space-y-3">
-            <label for="tags">Tags: </label>
-            <input
-              required
-              type="text"
-              name="tags"
-              id="tags"
-              formControlName="tags"
-              class="py-2 px-4 rounded bg-gray-50 border outline-none border-gray-600"
-              placeholder="#angular, #webdev, ..."
-            />
-          </div>
-          <div class="flex flex-col space-y-3 my-3">
-            <label for="description">Description: </label>
-            <textarea
-              required="true"
-              rows="5"
-              type="text"
-              name="description"
-              id="description"
-              formControlName="description"
-              class="py-2 px-4 rounded bg-gray-50 border outline-none border-gray-600"
-              placeholder="Description: Add some good description which tells your experience"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            value="Save"
-            class="my-4 float-right px-8 py-2 tracking-wide rounded bg-blue-600 text-white"
-          >
-            {{ buttonText }}
-          </button>
-        </form>
-      </div>
-    </div>
+    <app-customform
+      formTitle="Create new project type"
+      [formGroupContext]="form"
+      [customFormContext]="formContext"
+      (onSubmitEmitter)="onSubmitClicked($event)"
+    ></app-customform>
   `,
   styles: [],
 })
@@ -96,7 +37,7 @@ export class AddFormComponent implements OnInit, OnDestroy {
   buttonText: string = 'Publish';
 
   form: FormGroup = new FormGroup({
-    _id: new FormControl(''),
+    _id: new FormControl(null, []),
     __v: new FormControl(''),
     projectType: new FormControl('', { validators: [Validators.required] }),
     tags: new FormControl('', { validators: [Validators.required] }),
@@ -104,12 +45,39 @@ export class AddFormComponent implements OnInit, OnDestroy {
     description: new FormControl('', { validators: [Validators.required] }),
   });
 
+  // * Form Context Payload for custom form builder
+  formContext: Array<CustomFormInterface> = [
+    {
+      fieldControlName: 'logo',
+      labelText: 'Logo URL',
+      placeholderText: 'https://goo.gl/images/assets/v1/ng.svg',
+      type: 'url',
+    },
+    {
+      fieldControlName: 'projectType',
+      labelText: 'Project Type',
+      placeholderText: 'Project Type: Angular',
+      type: 'text',
+    },
+    {
+      fieldControlName: 'tags',
+      labelText: 'Tags',
+      placeholderText: '#angular, #webdev, ...',
+      type: 'text',
+    },
+    {
+      fieldControlName: 'description',
+      labelText: 'Description',
+      placeholderText:
+        'Description: Add some good description which tells your experience',
+      type: 'textarea',
+    },
+  ];
+
   constructor(
     private readonly projectTypeService: ProjectTypeService,
     private router: Router
-  ) {
-    this.preloadChecksForUrlState();
-  }
+  ) {}
 
   ngOnInit(): void {
     if (this.projectToEdit !== null) {
@@ -118,33 +86,20 @@ export class AddFormComponent implements OnInit, OnDestroy {
         ...this.projectToEdit,
         tags: this.projectToEdit.tags.toString(),
       });
-      console.log(this.form.value);
     }
   }
 
-  onSubmitClicked() {
-    if (this.form.invalid) alert('Please fill your data correctly');
-    else {
-      const rawFormData = this.form.value;
-      this.buttonText = 'Publishing...';
-      setTimeout(() => {
-        if (this.urlType === 'add')
-          this.createNewProjectTypeRecord(rawFormData);
-        else this.editProjectType(rawFormData);
-      }, 1100);
-    }
+  onSubmitClicked(emittedPayload: {
+    type: string;
+    payload: Partial<ProjectTypeDTO>;
+  }) {
+    emittedPayload.type === 'ADD'
+      ? this.createNewProjectTypeRecord(emittedPayload.payload)
+      : this.editProjectType(emittedPayload.payload);
   }
 
   ngOnDestroy() {
     this.activeSubscription.unsubscribe();
-  }
-
-  private preloadChecksForUrlState() {
-    this.urlType = this.router.url.split('/')[4];
-    if (this.urlType === 'edit') {
-      const state = this.router.getCurrentNavigation()?.extras.state;
-      this.form.setValue({ ...this.form.value, ...state });
-    }
   }
 
   private createNewProjectTypeRecord(rawFormData: any) {

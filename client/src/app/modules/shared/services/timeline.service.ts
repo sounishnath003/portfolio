@@ -28,13 +28,13 @@ export class TimelineService {
     );
   }
 
-  createNewTimeline(payload: TimelineDTO) {
+  createNewTimeline(payload: Partial<TimelineDTO>) {
     return this.http.post('/api/timelines/create', payload, {
       headers: ServiceUtility.getXpiKeyFromLocalStorage(),
     });
   }
 
-  updateNewTimeline(payload: TimelineDTO) {
+  updateNewTimeline(payload: Partial<TimelineDTO>) {
     return this.http.patch('/api/timelines/update', payload, {
       headers: ServiceUtility.getXpiKeyFromLocalStorage(),
       params: { id: payload._id || '' },

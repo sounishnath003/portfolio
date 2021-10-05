@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TimelineDTO } from '../../services/timeline.service';
 
-type PayloadInterface<T> = T;
+export type PayloadInterface = any;
 type InputType = 'text' | 'url' | 'email' | 'textarea';
 
 export interface CustomFormInterface {
@@ -21,7 +20,7 @@ export interface CustomFormInterface {
       <div class="my-4">
         <form [formGroup]="formGroupContext" (ngSubmit)="onSubmit()">
           <div *ngFor="let content of customFormContext">
-            <div *ngIf="get_status(content.type)">
+            <div *ngIf="!get_status(content.type)">
               <div class="flex flex-col space-y-3">
                 <label [for]="content.fieldControlName"
                   >{{ content.labelText }}:
@@ -37,7 +36,7 @@ export interface CustomFormInterface {
                 />
               </div>
             </div>
-            <div *ngIf="!get_status(content.type)">
+            <div *ngIf="get_status(content.type)">
               <div class="flex flex-col space-y-3 my-3">
                 <label [for]="content.fieldControlName"
                   >{{ content.labelText }}
@@ -84,10 +83,10 @@ export class CustomformComponent implements OnInit {
 
   @Output() onSubmitEmitter: EventEmitter<{
     type: string;
-    payload: PayloadInterface<TimelineDTO>;
+    payload: Partial<PayloadInterface>;
   }> = new EventEmitter<{
     type: string;
-    payload: PayloadInterface<TimelineDTO>;
+    payload: Partial<PayloadInterface>;
   }>();
 
   constructor(private router: Router) {
@@ -136,6 +135,6 @@ export class CustomformComponent implements OnInit {
   }
 
   get_status(type: string): boolean {
-    return type === 'text' ? true : false;
+    return type === 'textarea' ? true : false;
   }
 }
