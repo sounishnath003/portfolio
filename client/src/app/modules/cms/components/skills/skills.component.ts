@@ -9,39 +9,46 @@ import { SkillService } from 'src/app/modules/shared/services/skill.service';
       <app-add-route-button
         routeToLink="/cms/dashboard/skills/add"
       ></app-add-route-button>
-      <div
-        *ngFor="let skill_node of allSkillTable; let idx = index"
-        class="my-3"
-      >
-        <div class="text-blue-700">{{ skill_node.parentSkill }}</div>
-        <div class="parent-grid">
-          <div
-            *ngFor="let c of skill_node.relatedSkills"
-            class="m-auto rounded px-4 my-2 py-2 border border-gray-500 hover:border-red-600 hover:bg-red-100 transition-all cursor-pointer"
-          >
+      <div *ngIf="allSkillTable.length; else temp">
+        <div
+          *ngFor="let skill_node of allSkillTable; let idx = index"
+          class="my-3"
+        >
+          <div class="text-blue-700">{{ skill_node.parentSkill }}</div>
+          <div class="parent-grid">
             <div
-              class="flex control_display flex-wrap justify-between items-center"
+              *ngFor="let c of skill_node.relatedSkills"
+              class="m-auto rounded px-4 my-2 py-2 border border-gray-500 hover:border-red-600 hover:bg-red-100 transition-all cursor-pointer"
             >
-              <div>{{ c.skill }}</div>
               <div
-                (click)="
-                  onPressed({
-                    parentSkillIdx: idx,
-                    skillToDeleteId: c._id
-                  })
-                "
+                class="flex control_display flex-wrap justify-between items-center"
               >
-                <img
-                  src="assets/close.svg"
-                  alt="close.icon"
-                  class="w-5 hover:text-red-400"
-                />
+                <div>{{ c.skill }}</div>
+                <div
+                  (click)="
+                    onPressed({
+                      parentSkillIdx: idx,
+                      skillToDeleteId: c._id
+                    })
+                  "
+                >
+                  <img
+                    src="assets/close.svg"
+                    alt="close.icon"
+                    class="w-5 hover:text-red-400"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <ng-template #temp>
+      <div class="m-auto p-4 bg-red-50 rounded-lg text-center text-red-500">
+        No skills contents are made. Add some to populate view.
+      </div>
+    </ng-template>
     <app-modal
       [showModal]="showModal"
       message="Are you sure want to delete skills?"

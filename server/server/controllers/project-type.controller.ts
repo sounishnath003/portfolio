@@ -14,7 +14,7 @@ router.get(
 
       return res.status(200).send({
         ...SUCCESS,
-        data: projectTypes,
+        data: projectTypes.reverse(),
       });
     } catch (error) {
       next(error);

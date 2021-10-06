@@ -26,7 +26,7 @@ export class ProjectTypeComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectTypeService.getAllProjectTypes().subscribe((resp: any) => {
-      this.projectTypes = resp.data.reverse();
+      this.projectTypes = resp.data;
     });
   }
 
@@ -37,7 +37,7 @@ export class ProjectTypeComponent implements OnInit {
       .updatedProjectType(_editedFormTemp)
       .subscribe((resp: any) => {
         resp.subscribe((re: any) => {
-          this.projectTypes = re.data.reverse();
+          this.projectTypes = re.data;
         });
       });
   }
