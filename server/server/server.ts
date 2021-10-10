@@ -13,7 +13,7 @@ import {
 } from "./utils";
 
 export class Server {
-  private readonly PORT = 5000 || process.env.PORT;
+  private readonly PORT = process.env.PORT || 5000;
   private readonly workers = cpus().length;
   private app = express();
 
