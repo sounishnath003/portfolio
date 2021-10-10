@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <footer>
       <div class="mt-10 text-gray-700 text-center m-auto border-t">
         <div class="my-3">
-          &copy; {{ year }} Made with ❤️ using 🧑🏽‍💻 Angular & ☀️ Node
+          &copy; {{ year }} Made with ❤️ using 🧑🏽‍💻 Angular ☀️ Node ☀️
           TypeScript
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-hero',
   template: `
     <div class="mx-24">
-      <div class="text-gray-800 font-semibold">
+      <div class="text-gray-800 font-semibold back-image">
         <div class="my-6 text-4xl md:text-5xl">
           Hello &excl;
           <span class="text-blue-600"> I&apos;m Sounish&comma; </span>
@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [],
+  styleUrls: ['hero.component.css'],
 })
 export class HeroComponent implements OnInit {
   constructor() {}
