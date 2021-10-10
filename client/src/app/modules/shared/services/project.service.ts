@@ -27,7 +27,9 @@ export class ProjectService {
   }
 
   getAllProjects() {
-    return this.http.get<ResponseObject>('/api/projects/top-4');
+    return this.http.get<ResponseObject>(
+      'https://portfolio-sounish-backend.herokuapp.com/api/projects/top-4'
+    );
   }
 
   getProjectById(_id: string): Observable<{ data: ProjectInterface }> {

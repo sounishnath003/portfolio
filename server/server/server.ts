@@ -39,7 +39,7 @@ export class Server {
     this.app.use(json());
     this.app.use(
       cors({
-        origin: ["localhost:4200"],
+        origin: ["http://localhost:4200", "localhost:4200"],
         credentials: true,
       })
     );
