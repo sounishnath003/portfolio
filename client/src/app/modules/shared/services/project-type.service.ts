@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { ServiceUtility } from './utils';
 
 export interface ProjectTypeDTO {
@@ -34,13 +35,13 @@ export class ProjectTypeService {
   }
 
   getAllProjectTypes() {
-    return this.http.get('/api/project-type/all');
+    return this.http.get(`${environment.API_URL}/api/project-type/all`);
   }
 
   createNewProjectType(payload: any) {
     ProjectTypeService.formatPayloadReceived(payload);
     const resp$ = this.http
-      .post('/api/project-type/create', payload, {
+      .post(`${environment.API_URL}/api/project-type/create`, payload, {
         headers: ServiceUtility.getXpiKeyFromLocalStorage(),
       })
       .pipe(
@@ -56,9 +57,13 @@ export class ProjectTypeService {
     const projectId: string = projectType._id;
     ProjectTypeService.formatPayloadReceived(projectType);
     return this.http
-      .put(`/api/project-type/update/${projectId}`, projectType, {
-        headers: ServiceUtility.getXpiKeyFromLocalStorage(),
-      })
+      .put(
+        `${environment.API_URL}/api/project-type/update/${projectId}`,
+        projectType,
+        {
+          headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+        }
+      )
       .pipe(
         map(() => {
           this.refreshNeeded$.next(true);
@@ -68,8 +73,11 @@ export class ProjectTypeService {
   }
 
   deleteProjectType(projectId: string) {
-    return this.http.delete(`/api/project-type/delete/${projectId}`, {
-      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
-    });
+    return this.http.delete(
+      `${environment.API_URL}/api/project-type/delete/${projectId}`,
+      {
+        headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+      }
+    );
   }
 }

@@ -1,6 +1,6 @@
 {
   "/api": {
     "target": "https://portfolio-sounish-backend.herokuapp.com",
-    "secure": false
+    "secure": true
   }
 }

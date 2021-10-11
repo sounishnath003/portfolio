@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ServiceUtility } from './utils';
 
 export interface TimelineDTO {
@@ -24,25 +25,33 @@ export class TimelineService {
 
   getAllTimelines(): Observable<TimelineReceivedInterface<Array<TimelineDTO>>> {
     return this.http.get<TimelineReceivedInterface<Array<TimelineDTO>>>(
-      '/api/timelines/all'
+      `${environment.API_URL}/api/timelines/all`
     );
   }
 
   createNewTimeline(payload: Partial<TimelineDTO>) {
-    return this.http.post('/api/timelines/create', payload, {
-      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
-    });
+    return this.http.post(
+      `${environment.API_URL}/api/timelines/create`,
+      payload,
+      {
+        headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+      }
+    );
   }
 
   updateNewTimeline(payload: Partial<TimelineDTO>) {
-    return this.http.patch('/api/timelines/update', payload, {
-      headers: ServiceUtility.getXpiKeyFromLocalStorage(),
-      params: { id: payload._id || '' },
-    });
+    return this.http.patch(
+      `${environment.API_URL}/api/timelines/update`,
+      payload,
+      {
+        headers: ServiceUtility.getXpiKeyFromLocalStorage(),
+        params: { id: payload._id || '' },
+      }
+    );
   }
 
   deleteTimelineById(id: string) {
-    return this.http.delete('/api/timelines/delete', {
+    return this.http.delete(`${environment.API_URL}/api/timelines/delete`, {
       headers: ServiceUtility.getXpiKeyFromLocalStorage(),
       params: { id },
     });

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host=0.0.0.0 --proxy-config=proxy.conf.json --sourceMap=false & ngtw watch",
+    "start": "ng serve --host=0.0.0.0 --sourceMap=false & ngtw watch",
     "build": "ngtw build && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
