@@ -5,3 +5,7 @@ build
 dist
 
 *.log
+
+.env
+
+dist

@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
         <div
           class="max-w-xl text-3xl md:text-6xl md:leading-normal leading-relaxed tracking-wide"
         >
-          <mark class="bg-yellow-100 rounded"> Backend &amp; Frontend </mark>
+          <mark class="bg-yellow-100 rounded"> Fullstack &AMP; Data </mark>
           Engineer Based in Kolkata, In.
         </div>
         <div
