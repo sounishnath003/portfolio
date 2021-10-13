@@ -39,7 +39,12 @@ export class Server {
     this.app.use(json());
     this.app.use(
       cors({
-        origin: ["http://localhost:4200", "localhost:4200"],
+        origin: [
+          "http://localhost:4200",
+          "localhost:4200",
+          "https://sounishnath.netlify.app",
+          "https://sounishnath.netlify.app/",
+        ],
         credentials: true,
       })
     );
