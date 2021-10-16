@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
+import { ProjectDTO, ProjectService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-featuredprojects',
@@ -69,7 +69,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
   providers: [ProjectService],
 })
 export class FeaturedprojectsComponent implements OnInit {
-  projects: Array<ProjectInterface> = [];
+  projects: Array<ProjectDTO> = [];
   constructor(
     private readonly projectService: ProjectService,
     private router: Router,
@@ -82,7 +82,7 @@ export class FeaturedprojectsComponent implements OnInit {
     });
   }
 
-  generate_projectDetail_route(project: ProjectInterface) {
+  generate_projectDetail_route(project: ProjectDTO) {
     this.router.navigate(
       ['project-details', project._id, project.title, 'view'],
       {

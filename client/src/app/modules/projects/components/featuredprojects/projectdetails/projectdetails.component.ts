@@ -1,7 +1,7 @@
 import { AfterViewChecked, Component, OnInit, Pipe } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
+import { ProjectDTO, ProjectService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-projectdetails',
@@ -55,7 +55,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
   providers: [ProjectService],
 })
 export class ProjectdetailsComponent implements OnInit, AfterViewChecked {
-  project!: ProjectInterface;
+  project!: ProjectDTO;
   contentIds: Array<string> = [];
 
   constructor(

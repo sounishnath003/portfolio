@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
+import { ProjectDTO, ProjectService } from 'src/app/modules/shared';
 
 @Component({
   selector: 'app-tableview',
@@ -18,7 +18,7 @@ import { ProjectInterface, ProjectService } from 'src/app/modules/shared';
   styles: [],
 })
 export class TableviewComponent implements OnInit {
-  projects: Array<ProjectInterface> = [];
+  projects: Array<ProjectDTO> = [];
 
   constructor(private projectService: ProjectService, private router: Router) {}
 

@@ -4,8 +4,9 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ServiceUtility } from './utils';
 
-export interface ProjectInterface {
-  _id: string;
+export interface ProjectDTO {
+  _id?: string;
+  __v?: string;
   title: string;
   photo: string;
   description: string;
@@ -13,7 +14,7 @@ export interface ProjectInterface {
 }
 
 interface ResponseObject {
-  data: Array<ProjectInterface>;
+  data: Array<ProjectDTO>;
 }
 
 @Injectable({
@@ -33,8 +34,8 @@ export class ProjectService {
     );
   }
 
-  getProjectById(_id: string): Observable<{ data: ProjectInterface }> {
-    return this.http.get<{ data: ProjectInterface }>(
+  getProjectById(_id: string): Observable<{ data: ProjectDTO }> {
+    return this.http.get<{ data: ProjectDTO }>(
       `${environment.API_URL}/api/projects/search`,
       {
         params: { id: _id },
@@ -44,16 +45,16 @@ export class ProjectService {
 
   public createNewProjectRecord(rawFormData: any) {
     ProjectService.formatPayloadReceived(rawFormData);
-    return this.http.post<ProjectInterface>(
+    return this.http.post<ProjectDTO>(
       `${environment.API_URL}/api/projects/create`,
       rawFormData,
       { headers: ServiceUtility.getXpiKeyFromLocalStorage() }
     );
   }
 
-  public updateProjectRecord(rawFormData: ProjectInterface) {
-    return this.http.put<ProjectInterface>(
-      `${environment.API_URL}${environment.API_URL}/api/projects/update/${rawFormData._id}`,
+  public updateProjectRecord(rawFormData: ProjectDTO) {
+    return this.http.put<ProjectDTO>(
+      `${environment.API_URL}/api/projects/update/${rawFormData._id}`,
       rawFormData,
       { headers: ServiceUtility.getXpiKeyFromLocalStorage() }
     );

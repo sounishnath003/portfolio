@@ -27,6 +27,7 @@ export const JWT_REFRESH_SECRET = process.env
 
 export async function generate_api_key(payload: any) {
   const today: string = new Date().toLocaleDateString();
+  console.log({today});
   if (today !== payload)
     throw new Error(`You are not authorized person!. Go back`);
   return hashSync(payload, genSaltSync(10));

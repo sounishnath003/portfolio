@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectInterface, ProjectService} from "../../../shared";
+import {ProjectDTO, ProjectService} from "../../../shared";
 
 @Component({
   selector: 'app-projects',
@@ -53,7 +53,7 @@ import {ProjectInterface, ProjectService} from "../../../shared";
   styles: [],
 })
 export class ProjectsComponent implements OnInit {
-  projectsTop4: Array<ProjectInterface> = [];
+  projectsTop4: Array<ProjectDTO> = [];
 
   constructor(private readonly projectService: ProjectService) {}
 
