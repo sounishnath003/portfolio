@@ -6,27 +6,34 @@
           Hello! <span nz-typography>👋</span> ,
           <span nz-typography class="p-2 text-blue-700">I'm Sounish Nath.</span>
           <br />
-          <mark nz-typography> Fullstack & AI/ML Engineer </mark>
+          <mark nz-typography> {{ featureObserver$ | async }} </mark>
           <br />
           Based In Mumbai, In.
         </h1>
       </div>
       <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit esse
-        necessitatibus nostrum dolorum ullam. Iure distinctio consequatur nulla
-        libero minus ea nesciunt ad, quibusdam architecto! Impedit possimus
-        corrupti veritatis delectus.
+        <span nz-typography
+          >Currently working at Tata Consultancy Services as an Full time
+          Software Engineer. Who is quite proficient with building scalable
+          backend systems with NodeJS and Go.</span
+        >
       </div>
       <div>
         <b nz-typography class="uppercase">worked at &colon;</b>
         <div class="grid-4 my-4">
-          <div>TCS</div>
-          <div>Google</div>
-          <div>Microsoft</div>
+          <div
+            *ngFor="let company of companies"
+            fxLayout="row"
+            fxLayoutAlign="space-around center"
+          >
+            <div>
+              <img [src]="company.link" [alt]="company.name" class="w-32" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div>2</div>
+    <app-newsletter-subs fxFlex="40"></app-newsletter-subs>
   </div>
 </div>

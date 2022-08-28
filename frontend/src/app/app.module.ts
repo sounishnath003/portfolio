@@ -10,13 +10,19 @@ import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
 import { IntroductionComponent } from './components/introduction/introduction.component';
+import { NewsletterSubsComponent } from './components/newsletter-subs/newsletter-subs.component';
+import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, IntroductionComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    IntroductionComponent,
+    NewsletterSubsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
