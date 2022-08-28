@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GithubHeatmapComponent } from './components/github-heatmap/github-heatmap.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { NewsletterSubsComponent } from './components/newsletter-subs/newsletter-subs.component';
@@ -22,6 +23,7 @@ registerLocaleData(en);
     HeaderComponent,
     IntroductionComponent,
     NewsletterSubsComponent,
+    GithubHeatmapComponent,
   ],
   imports: [
     BrowserModule,
