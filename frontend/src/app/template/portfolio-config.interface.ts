@@ -2,6 +2,7 @@ export interface PortfolioConfigurationInterface {
   currentBio: string;
   avatarURL: string;
   selfFeatures: string[];
+  socialLinks: SocialLink[];
   companiesWorkedAt: CompaniesWorkedAt[];
   skillsSets: SkillsSet[];
 }
@@ -19,4 +20,9 @@ export interface SkillsSet {
 export interface List {
   name: string;
   logo: string;
+}
+
+export interface SocialLink {
+  type: string;
+  username: string;
 }

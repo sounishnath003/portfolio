@@ -1,5 +1,9 @@
 <div>
-  <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutAlign="space-around center">
+  <div
+    fxLayout.gt-sm="row"
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+  >
     <div fxLayout="column" class="w-1/2" fxLayoutGap="15px">
       <div class="w-full">
         <h1 nz-typography class="font-black tracking-normal">
@@ -16,7 +20,7 @@
       </div>
       <div>
         <b nz-typography class="uppercase">worked at &colon;</b>
-        <div class="grid-4 my-4">
+        <div class="res-grid my-4">
           <div
             *ngFor="let company of companies$ | async"
             fxLayout="row"

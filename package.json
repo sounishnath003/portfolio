@@ -26,5 +26,8 @@
   "homepage": "https://github.com/sounishnath003/portfolio#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "github-calendar": "^2.3.1"
   }
 }

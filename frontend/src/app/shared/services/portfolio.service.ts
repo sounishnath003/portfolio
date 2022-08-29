@@ -41,4 +41,10 @@ export class PortfolioService {
   get companiesWorkedAt$(): Observable<Array<CompaniesWorkedAt>> {
     return of(this.portfolioData.companiesWorkedAt);
   }
+
+  getSocialLink(type: string) {
+    return this.portfolioData.socialLinks.filter((x) =>
+      x.type.toLowerCase().includes(type.toLowerCase())
+    )[0];
+  }
 }
