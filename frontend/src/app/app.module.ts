@@ -9,26 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubHeatmapComponent } from './components/github-heatmap/github-heatmap.component';
 import { HeaderComponent } from './components/header/header.component';
-import { IntroductionComponent } from './components/introduction/introduction.component';
-import { NewsletterSubsComponent } from './components/newsletter-subs/newsletter-subs.component';
 import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
-import { SkillsComponent } from './components/skills/skills.component';
-import { HomeComponent } from './components/home/home.component';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    IntroductionComponent,
-    NewsletterSubsComponent,
-    GithubHeatmapComponent,
-    SkillsComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
