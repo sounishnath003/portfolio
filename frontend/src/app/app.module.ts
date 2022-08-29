@@ -14,6 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { NewsletterSubsComponent } from './components/newsletter-subs/newsletter-subs.component';
 import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
+import { SkillsComponent } from './components/skills/skills.component';
+import { HomeComponent } from './components/home/home.component';
 
 registerLocaleData(en);
 
@@ -24,6 +26,8 @@ registerLocaleData(en);
     IntroductionComponent,
     NewsletterSubsComponent,
     GithubHeatmapComponent,
+    SkillsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

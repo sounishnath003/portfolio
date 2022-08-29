@@ -4,20 +4,44 @@
       <img
         src="https://avatars.githubusercontent.com/u/40270033?v=4"
         alt="sounish-nath-logo"
-        class="rounded-full w-12 h-12 ring-blue-600 border-4 border-white shadow"
+        class="rounded-full w-12 h-12 ring-blue-600 border-4 border-white shadow cursor-pointer"
       />
     </div>
     <div
       class="px-4 py-2 hover:cursor-pointer rounded-lg"
-      routerLinkActive="true"
-      routerLink="/"
+      routerLinkActive="button-gray"
+      routerLink="home"
     >
       Home
     </div>
-    <div class="button-hover-gray">Blogs</div>
-    <div class="button-hover-gray">Projects</div>
-    <div class="button-hover-gray">Uses</div>
-    <div class="button-hover-gray">Resume</div>
+    <div
+      routerLink="blogs"
+      routerLinkActive="button-gray"
+      class="button-hover-gray"
+    >
+      Blogs
+    </div>
+    <div
+      routerLink="projects"
+      routerLinkActive="button-gray"
+      class="button-hover-gray"
+    >
+      Projects
+    </div>
+    <div
+      routerLink="uses"
+      routerLinkActive="button-gray"
+      class="button-hover-gray"
+    >
+      Uses
+    </div>
+    <div
+      routerLink="resume"
+      routerLinkActive="button-gray"
+      class="button-hover-gray"
+    >
+      Resume
+    </div>
   </div>
   <div class="hover:cursor-pointer button-hover-gray">Sign in</div>
 </div>
