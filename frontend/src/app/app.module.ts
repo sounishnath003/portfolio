@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
+import { PortfolioService } from './shared/services/portfolio.service';
 
 registerLocaleData(en);
 
@@ -24,7 +25,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NzZorroModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, PortfolioService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

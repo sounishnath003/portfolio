@@ -1,10 +1,14 @@
-<div fxLayout="row" fxLayoutAlign="space-between center">
+<div
+  fxLayout.gt-sm="row"
+  fxLayout="column"
+  fxLayoutAlign="space-between center"
+>
   <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="22px">
     <div routerLink="/">
       <img
-        src="https://avatars.githubusercontent.com/u/40270033?v=4"
+        [src]="avatarURL$ | async"
         alt="sounish-nath-logo"
-        class="rounded-full w-12 h-12 ring-blue-600 border-4 border-white shadow cursor-pointer"
+        class="rounded-full w-12 h-12 shadow cursor-pointer"
       />
     </div>
     <div

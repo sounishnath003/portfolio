@@ -1,5 +1,5 @@
 <div>
-  <div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutAlign="space-around center">
     <div fxLayout="column" class="w-1/2" fxLayoutGap="15px">
       <div class="w-full">
         <h1 nz-typography class="font-black tracking-normal">
@@ -12,28 +12,28 @@
         </h1>
       </div>
       <div>
-        <span nz-typography
-          >Currently working at Tata Consultancy Services as an Full time
-          Software Engineer. Who is quite proficient with building scalable
-          backend systems with NodeJS and Go.</span
-        >
+        <span nz-typography> {{ currentBio$ | async }} </span>
       </div>
       <div>
         <b nz-typography class="uppercase">worked at &colon;</b>
         <div class="grid-4 my-4">
           <div
-            *ngFor="let company of companies"
+            *ngFor="let company of companies$ | async"
             fxLayout="row"
-            fxLayoutAlign="space-around center"
+            fxLayoutAlign="start center"
           >
             <div>
-              <img [src]="company.link" [alt]="company.name" class="w-32" />
+              <img
+                [src]="company.link"
+                [alt]="company.name"
+                class="w-32 sm:w-32 rounded-sm"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <app-newsletter-subs fxFlex="40"></app-newsletter-subs>
+    <app-newsletter-subs fxFlex.gt-sm="40"></app-newsletter-subs>
   </div>
 </div>

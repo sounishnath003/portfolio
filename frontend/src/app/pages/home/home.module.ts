@@ -6,6 +6,7 @@ import { IntroductionComponent } from 'src/app/components/introduction/introduct
 import { NewsletterSubsComponent } from 'src/app/components/newsletter-subs/newsletter-subs.component';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
 import { NzZorroModule } from 'src/app/shared/nz-zorro/nz-zorro.module';
+import { PortfolioService } from 'src/app/shared/services/portfolio.service';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
@@ -17,6 +18,7 @@ import { HomeComponent } from './home.component';
     SkillsComponent,
     HomeComponent,
   ],
+  providers: [PortfolioService],
   imports: [CommonModule, HomeRoutingModule, NzZorroModule],
 })
 export class HomeModule {}
