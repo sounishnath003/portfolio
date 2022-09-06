@@ -1,0 +1,19 @@
+<nz-card
+  [nzHoverable]="true"
+  [nzTitle]="
+    recommendation.fullname +
+    ' , ' +
+    recommendation.designation +
+    ' at ' +
+    recommendation.origanization
+  "
+>
+  <nz-card-meta [nzAvatar]="avatarTemplate"></nz-card-meta>
+  <p nz-typography>{{ recommendation.endorsement }}</p>
+</nz-card>
+
+<ng-template #avatarTemplate>
+  <nz-avatar
+    nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+  ></nz-avatar>
+</ng-template>

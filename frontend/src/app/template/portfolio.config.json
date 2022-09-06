@@ -6,7 +6,7 @@
     "Backend Developer...",
     "Programmer by profession...",
     "Cloud & DevOps Engineer...",
-    "Eat, sleep, code...",
+    "Eat, Sleep, Code...",
     "Adventurous Freak..."
   ],
   "socialLinks": [{ "type": "Github", "username": "sounishnath003" }],
@@ -96,6 +96,22 @@
     }
   ],
   "recommendations": [
+    {
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "fullname": "John Doe",
+      "designation": "Developer",
+      "origanization": "LinkedIN",
+      "organizationLink": "http://linkedin.com",
+      "endorsement": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
+    {
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "fullname": "John Doe",
+      "designation": "Developer",
+      "origanization": "LinkedIN",
+      "organizationLink": "http://linkedin.com",
+      "endorsement": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
     {
       "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
       "fullname": "John Doe",
