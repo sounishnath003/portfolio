@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PortfolioService } from 'src/app/shared/services/portfolio.service';
 import { SkillsSet } from 'src/app/template/portfolio-config.interface';
 
 @Component({
@@ -9,10 +8,8 @@ import { SkillsSet } from 'src/app/template/portfolio-config.interface';
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
-  skillsSets$!: Observable<SkillsSet[]>;
-  constructor(private readonly portfolioService: PortfolioService) {}
+  @Input() skillsSets$!: Observable<SkillsSet[]>;
+  constructor() {}
 
-  ngOnInit(): void {
-    this.skillsSets$ = this.portfolioService.skillsSets$;
-  }
+  ngOnInit(): void {}
 }

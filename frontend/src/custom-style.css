@@ -1,7 +1,7 @@
 .res-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap:0.63rem;
 }
 
 .button-gray {
@@ -30,7 +30,7 @@
     font-weight: 500;
 }
 
-.calender {
+body>app-root>div.mx-10.my-5>div>app-home>app-github-heatmap>div>div{
     border: none;
 }
 

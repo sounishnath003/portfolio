@@ -5,7 +5,7 @@
     <div class="text-left" *ngFor="let skill of skillsSets$ | async">
       <h4 nz-typography>{{ skill.parentTopic }}&colon;</h4>
       <div class="res-grid mx-6">
-        <div *ngFor="let technology of skill.lists">
+        <ul *ngFor="let technology of skill.lists">
           <li
             class="button-hover-gray"
             nz-typography
@@ -22,7 +22,7 @@
               </p>
             </div>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
   </div>

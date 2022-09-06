@@ -3,6 +3,7 @@ import { map, Observable, of, repeat, timer } from 'rxjs';
 import {
   CompaniesWorkedAt,
   PortfolioConfigurationInterface,
+  Recommendation,
   SkillsSet,
 } from 'src/app/template/portfolio-config.interface';
 import DATA from '../../template/portfolio.config.json';
@@ -46,5 +47,9 @@ export class PortfolioService {
     return this.portfolioData.socialLinks.filter((x) =>
       x.type.toLowerCase().includes(type.toLowerCase())
     )[0];
+  }
+
+  get recommendations$(): Observable<Recommendation[]> {
+    return of(this.portfolioData.recommendations);
   }
 }

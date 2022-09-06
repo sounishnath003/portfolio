@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PortfolioService } from 'src/app/shared/services/portfolio.service';
 import { CompaniesWorkedAt } from 'src/app/template/portfolio-config.interface';
 
 @Component({
@@ -9,15 +8,11 @@ import { CompaniesWorkedAt } from 'src/app/template/portfolio-config.interface';
   styleUrls: ['./introduction.component.css'],
 })
 export class IntroductionComponent implements OnInit {
-  featureObserver$!: Observable<string>;
-  currentBio$!: Observable<string>;
-  companies$!: Observable<CompaniesWorkedAt[]>;
+  @Input() featureObserver$!: Observable<string>;
+  @Input() currentBio$!: Observable<string>;
+  @Input() companies$!: Observable<CompaniesWorkedAt[]>;
 
-  constructor(private portfolioService: PortfolioService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.currentBio$ = this.portfolioService.currentBio$;
-    this.featureObserver$ = this.portfolioService.tagLines$;
-    this.companies$ = this.portfolioService.companiesWorkedAt$;
-  }
+  ngOnInit(): void {}
 }

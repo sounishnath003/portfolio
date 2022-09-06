@@ -3,13 +3,18 @@
   "avatarURL": "https://avatars.githubusercontent.com/u/40270033?v=4",
   "selfFeatures": [
     "Fullstack & AI/ML Engineer...",
-    "Backend Engineer...",
+    "Backend Developer...",
     "Programmer by profession...",
     "Cloud & DevOps Engineer...",
+    "Eat, sleep, code...",
     "Adventurous Freak..."
   ],
   "socialLinks": [{ "type": "Github", "username": "sounishnath003" }],
   "companiesWorkedAt": [
+    {
+      "name": "Ercess Live",
+      "link": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1464550355/lznmymxi2yhdfvg6ie74.png"
+    },
     {
       "name": "TCS",
       "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQesjEVwtXATKjbYul6F5f6URCru9HZQg7fKhNsgZNG9n9DbqCG9IPqm5RqUdY1OjuKj0U&usqp=CAU"
@@ -29,12 +34,13 @@
       "lists": [
         { "name": "Angular", "logo": "assets/angular.logo.svg" },
         { "name": "React", "logo": "assets/react.logo.svg" },
+        { "name": "Redux / Context API", "logo": "assets/react.logo.svg" },
         { "name": "HTML/CSS", "logo": "assets/html.logo.svg" },
         { "name": "JavaScript/ES6+", "logo": "assets/js.logo.svg" },
         { "name": "HUGO", "logo": "assets/hugo.logo.svg" },
         { "name": "TailwindCSS", "logo": "assets/tailwind.logo.svg" },
         { "name": "Material UI", "logo": "assets/material.logo.svg" },
-        { "name": "Next.JS", "logo": "assets/next.logo.png" }
+        { "name": "Next.JS / Gatsby", "logo": "assets/next.logo.png" }
       ]
     },
     {
@@ -43,16 +49,30 @@
         { "name": "Ruby on Rails", "logo": "assets/ruby.logo.svg" },
         { "name": "Node.JS + Express", "logo": "assets/node.logo.svg" },
         { "name": "Nest.JS", "logo": "assets/nest.logo.svg" },
-        { "name": "Django", "logo": "assets/django.logo.svg" }
+        { "name": "Django", "logo": "assets/django.logo.svg" },
+        { "name": "GraphQL / REST API", "logo": "assets/django.logo.svg" }
       ]
     },
     {
-      "parentTopic": "Toolings & Ecosystems",
+      "parentTopic": "Toolings",
+      "lists": [
+        { "name": "Hasura", "logo": "assets/ts.logo.svg" },
+        { "name": "Postman", "logo": "assets/java.logo.svg" },
+        { "name": "Firebase", "logo": "assets/go.logo.svg" },
+        { "name": "VScode", "logo": "assets/py.logo.svg" },
+        { "name": "Windows", "logo": "assets/py.logo.svg" },
+        { "name": "Chrome/Firefox", "logo": "assets/py.logo.svg" }
+      ]
+    },
+    {
+      "parentTopic": "Ecosystems",
       "lists": [
         { "name": "TypeScript", "logo": "assets/ts.logo.svg" },
         { "name": "Java 8", "logo": "assets/java.logo.svg" },
         { "name": "Golang", "logo": "assets/go.logo.svg" },
-        { "name": "Python3", "logo": "assets/py.logo.svg" }
+        { "name": "Python3", "logo": "assets/py.logo.svg" },
+        { "name": "MongoDB/Mongoose", "logo": "assets/py.logo.svg" },
+        { "name": "MySQL", "logo": "assets/py.logo.svg" }
       ]
     },
     {
@@ -61,8 +81,28 @@
         { "name": "Google Cloud", "logo": "assets/gcp.logo.svg" },
         { "name": "Docker", "logo": "assets/docker.logo.svg" },
         { "name": "Kubernetes", "logo": "assets/kube.logo.svg" },
-        { "name": "Ansible", "logo": "assets/ansible.logo.svg" }
+        { "name": "Ansible", "logo": "assets/ansible.logo.svg" },
+        { "name": "Github", "logo": "assets/py.logo.svg" },
+        { "name": "Netlify", "logo": "assets/py.logo.svg" },
+        { "name": "Heroku", "logo": "assets/py.logo.svg" }
       ]
+    },
+    {
+      "parentTopic": "Design",
+      "lists": [
+        { "name": "Adobe XD", "logo": "assets/gcp.logo.svg" },
+        { "name": "Figma", "logo": "assets/docker.logo.svg" }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "fullname": "John Doe",
+      "designation": "Developer",
+      "origanization": "LinkedIN",
+      "organizationLink": "http://linkedin.com",
+      "endorsement": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     }
   ]
 }
