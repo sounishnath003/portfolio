@@ -1,4 +1,17 @@
 <div class="m-auto text-center my-10">
   <p nz-typography>Recent writings on my experience</p>
   <h2 nz-typography>Recent Blogs</h2>
+  <div *ngIf="recentBlogPosts$ | async; else noBlog">
+    <div>
+      <code>{{ recentBlogPosts$ | async | json }}</code>
+    </div>
+  </div>
+  <ng-template #noBlog>
+    <h5
+      nz-typography
+      class="text-gray-800 bg-yellow-300 px-6 py-1 rounded-sm inline-flex"
+    >
+      Yet to be updated soon...
+    </h5>
+  </ng-template>
 </div>

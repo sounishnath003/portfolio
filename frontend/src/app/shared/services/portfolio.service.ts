@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { map, Observable, of, repeat, timer } from 'rxjs';
+import { filter, map, Observable, of, repeat, takeLast, timer } from 'rxjs';
 import {
+  BlogPost,
   CompaniesWorkedAt,
   PortfolioConfigurationInterface,
   Recommendation,
@@ -51,5 +52,24 @@ export class PortfolioService {
 
   get recommendations$(): Observable<Recommendation[]> {
     return of(this.portfolioData.recommendations);
+  }
+
+  get recentBlogs$(): Observable<BlogPost[]> {
+    return of(this.portfolioData.blogPosts).pipe(
+      filter((x) => x.length > 0),
+      takeLast(3),
+      map((x) => {
+        return x.reverse().map((y) => ({
+          ...y,
+          readingTime: this.getReadingTimeInMinutes(y.content),
+        }));
+      })
+    );
+  }
+
+  private getReadingTimeInMinutes(content: string): string {
+    const wordsPerMinute = 200;
+    const noOfWords = content.split(/\s/g).length;
+    return `${Math.ceil(noOfWords / wordsPerMinute)} mins`;
   }
 }

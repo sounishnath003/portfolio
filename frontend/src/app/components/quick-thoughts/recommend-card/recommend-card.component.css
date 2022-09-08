@@ -1,5 +1,11 @@
+.card-style {
+  min-width: 300px;
+  margin-top: 16px;
+  max-height: 18rem;
+  min-height: 12rem;
+  overflow-y: scroll;
+}
 
-      p {
-        margin: 0;
-      }
-    
+p {
+  margin: 0;
+}

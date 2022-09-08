@@ -6,6 +6,18 @@ export interface PortfolioConfigurationInterface {
   companiesWorkedAt: CompaniesWorkedAt[];
   skillsSets: SkillsSet[];
   recommendations: Recommendation[];
+  blogPosts: BlogPost[];
+}
+
+export interface BlogPost {
+  tags: string[];
+  title: string;
+  shortDescription: string;
+  content: string;
+  avatar: string;
+  author: string;
+  datePublished: string;
+  readingTime?: string;
 }
 
 export interface CompaniesWorkedAt {
