@@ -1,19 +1,27 @@
 <nz-card
-  [nzHoverable]="true"
-  [nzTitle]="
-    recommendation.fullname +
-    ' , ' +
-    recommendation.designation +
-    ' at ' +
-    recommendation.origanization
+  style="
+    min-width: 300px;
+    margin-top: 16px;
+    max-height: 18rem;
+    overflow-y: scroll;
   "
+  [nzHoverable]="true"
+  class="border-2 border-black rounded-md hover:bg-yellow-50"
 >
-  <nz-card-meta [nzAvatar]="avatarTemplate"></nz-card-meta>
-  <p nz-typography>{{ recommendation.endorsement }}</p>
+  <nz-card-meta
+    [nzAvatar]="avatarTemplate"
+    [nzTitle]="recommendation | cardTitle"
+    [nzDescription]="recommendation.endorsement"
+  >
+  </nz-card-meta>
 </nz-card>
 
 <ng-template #avatarTemplate>
-  <nz-avatar
-    nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-  ></nz-avatar>
+  <a [href]="recommendation.linkedInURL" target="_blank">
+    <nz-avatar
+      class="ring-2 ring-blue-600 shadow inset-1"
+      [nzSrc]="recommendation.avatar"
+    >
+    </nz-avatar>
+  </a>
 </ng-template>

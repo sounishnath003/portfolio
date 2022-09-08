@@ -5,6 +5,7 @@ import { GithubHeatmapComponent } from 'src/app/components/github-heatmap/github
 import { IntroductionComponent } from 'src/app/components/introduction/introduction.component';
 import { NewsletterSubsComponent } from 'src/app/components/newsletter-subs/newsletter-subs.component';
 import { QuickThoughtsComponent } from 'src/app/components/quick-thoughts/quick-thoughts.component';
+import { CardTitlePipe } from 'src/app/components/quick-thoughts/recommend-card/card-title.pipe';
 import { RecommendCardComponent } from 'src/app/components/quick-thoughts/recommend-card/recommend-card.component';
 import { RecentBlogsComponent } from 'src/app/components/recent-blogs/recent-blogs.component';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
@@ -25,6 +26,7 @@ import { HomeComponent } from './home.component';
     QuickProjectsComponent,
     RecentBlogsComponent,
     RecommendCardComponent,
+    CardTitlePipe,
   ],
   providers: [PortfolioService],
   imports: [CommonModule, HomeRoutingModule, NzZorroModule],

@@ -18,7 +18,7 @@ export interface Recommendation {
   fullname: string;
   designation: string;
   origanization: string;
-  organizationLink: string;
+  linkedInURL: string;
   endorsement: string;
 }
 

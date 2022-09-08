@@ -1,12 +1,12 @@
 <div class="m-auto text-center my-10">
   <p nz-typography>What my colleagues say about</p>
   <h2 nz-typography>Recommendations</h2>
-  <div nz-row [nzGutter]="8">
+  <div class="grid-auto">
     <app-recommend-card
-      nz-col
-      [nzSpan]="8"
+      class="m-auto"
       *ngFor="let recommendation of recommendations$ | async"
       [recommendation]="recommendation"
-    ></app-recommend-card>
+    >
+    </app-recommend-card>
   </div>
 </div>
