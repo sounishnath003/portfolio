@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+
 export interface PortfolioConfigurationInterface {
   currentBio: string;
   githubUsername: string;
@@ -18,6 +20,8 @@ export interface Project {
   title: string;
   shortDescription: string;
   content: string;
+  content$?: Observable<string>;
+  readingTime?: string;
   avatar: string;
   author: string;
   datePublished: string;
@@ -30,6 +34,8 @@ export interface BlogPost {
   title: string;
   shortDescription: string;
   content: string;
+  content$?: Observable<string>;
+  readingTime?: string;
   avatar: string;
   author: string;
   datePublished: string;
@@ -62,4 +68,6 @@ export interface List {
 export interface SocialLink {
   type: string;
   username: string;
+  link: string;
+  icon: string;
 }

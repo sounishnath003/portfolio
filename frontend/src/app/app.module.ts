@@ -9,10 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
 import { PortfolioService } from './shared/services/portfolio.service';
-import { FooterComponent } from './components/footer/footer.component';
 
 registerLocaleData(en);
 

@@ -2,8 +2,18 @@
   <p nz-typography>Recent writings on my experience</p>
   <h2 nz-typography>Recent Blogs</h2>
   <div *ngIf="recentBlogPosts$ | async; else noBlog">
-    <div>
-      <code>{{ recentBlogPosts$ | async | json }}</code>
+    <div
+      fxLayout.gt-md="row wrap"
+      fxLayout="column wrap"
+      fxLayoutAlign="start center"
+      fxLayoutAlign.gt-md="center center"
+      fxLayoutGap="16"
+      fxLayoutGap.gt-md="10"
+    >
+      <app-card-holder
+        *ngFor="let blog of recentBlogPosts$ | async"
+        [cardContent]="blog"
+      ></app-card-holder>
     </div>
   </div>
   <ng-template #noBlog>

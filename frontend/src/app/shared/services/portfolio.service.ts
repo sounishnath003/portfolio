@@ -5,6 +5,7 @@ import {
   BlogPost,
   CompaniesWorkedAt,
   PortfolioConfigurationInterface,
+  Project,
   Recommendation,
   SkillsSet,
 } from 'src/app/template/portfolio-config.interface';
@@ -20,12 +21,6 @@ export class PortfolioService {
 
   get githubUsername() {
     return this.portfolioData.githubUsername;
-  }
-
-  loadMarkdownfile() {
-    return this.httpService.get(`/assets/contents/blogs/hugo-blog.md`, {
-      responseType: 'text',
-    });
   }
 
   get avatarURL$(): Observable<string> {
@@ -71,17 +66,40 @@ export class PortfolioService {
       filter((x) => x.length > 0),
       takeLast(3),
       map((x) => {
-        return x.reverse().map((y) => ({
-          ...y,
-          readingTime: this.getReadingTimeInMinutes(y.content),
-        }));
+        return this.processAndReformatData(x);
       })
     );
+  }
+
+  private processAndReformatData(x: BlogPost[] | Project[]): {
+    content$: Observable<string>;
+    readingTime: string;
+    id: string;
+    slug: string;
+    tags: string[];
+    title: string;
+    shortDescription: string;
+    content: string;
+    avatar: string;
+    author: string;
+    datePublished: string;
+  }[] {
+    return x.reverse().map((y) => ({
+      ...y,
+      content$: this.loadFileFromAssets$(y.content),
+      readingTime: this.getReadingTimeInMinutes(y.content),
+    }));
   }
 
   private getReadingTimeInMinutes(content: string): string {
     const wordsPerMinute = 200;
     const noOfWords = content.split(/\s/g).length;
-    return `${Math.ceil(noOfWords / wordsPerMinute)} mins`;
+    return `${Math.ceil(noOfWords / wordsPerMinute)} min read`;
+  }
+
+  private loadFileFromAssets$(filepath: string): Observable<string> {
+    return this.httpService.get(`/assets/contents${filepath}`, {
+      responseType: 'text',
+    });
   }
 }

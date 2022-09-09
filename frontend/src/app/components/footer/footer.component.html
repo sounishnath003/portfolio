@@ -4,6 +4,7 @@
     fxLayout.gt-md="row"
     fxLayoutAlign.gt-md="space-between center"
     fxLayoutAlign="center center"
+    fxLayoutGap="20"
     class="mb-4"
   >
     <div
@@ -26,8 +27,17 @@
       <div>&copy;</div>
       <div>2020 - {{ currentYear }}</div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5">
-      <div *ngFor="let link of socialLinks$ | async">{{ link.type }}</div>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20">
+      <div *ngFor="let link of socialLinks$ | async">
+        <a [href]="link.link" target="_blank">
+          <img
+            class="hover:bg-gray-100 rounded-full cursor-pointer"
+            [src]="link.icon"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </div>

@@ -10,7 +10,38 @@
     "Eat, Sleep, Code...",
     "Adventurous Freak..."
   ],
-  "socialLinks": [{ "type": "Github", "username": "sounishnath003" }],
+  "socialLinks": [
+    {
+      "type": "Github",
+      "username": "sounishnath003",
+      "link": "https://github.com/sounishnath003",
+      "icon": "/assets/github.logo.svg"
+    },
+    {
+      "type": "Linkedin",
+      "username": "sounishnath",
+      "link": "https://www.linkedin.com/in/sounish-nath-897b30186/",
+      "icon": "/assets/linkedin.logo.svg"
+    },
+    {
+      "type": "Twitter",
+      "username": "sounish1",
+      "link": "https://www.twitter.com/sounish1",
+      "icon": "/assets/twitter.logo.svg"
+    },
+    {
+      "type": "Instagram",
+      "username": "sounishnath003",
+      "link": "https://www.instagram.com/sounish003/",
+      "icon": "/assets/instagram.logo.svg"
+    },
+    {
+      "type": "Facebook",
+      "username": "sounishnath",
+      "link": "https://www.facebook.com/sounish.nath",
+      "icon": "/assets/facebook.logo.svg"
+    }
+  ],
   "companiesWorkedAt": [
     {
       "name": "Ercess Live",
@@ -122,6 +153,29 @@
       "endorsement": "Sounish is such a sport person and he thinks every aspect of technical problem analytically. He is a great team player and always ready to help others. I would recommend him for any position."
     }
   ],
-  "blogPosts": [],
+  "blogPosts": [
+    {
+      "id": "1",
+      "slug": "how-to-build-hugo",
+      "tags": ["dev", "hugo"],
+      "title": "How to build a static site with Hugo",
+      "shortDescription": "Hugo is a static site generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo is designed to make website creation fun again.",
+      "content": "/blogs/hugo-blog.md",
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "author": "sounishnath003",
+      "datePublished": "2021-05-01"
+    },
+    {
+      "id": "1",
+      "slug": "how-to-build-hugo",
+      "tags": ["dev", "hugo"],
+      "title": "How to build a static site with Hugo",
+      "shortDescription": "Hugo is a static site generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo is designed to make website creation fun again.",
+      "content": "/blogs/hugo-blog.md",
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "author": "sounishnath003",
+      "datePublished": "2021-05-01"
+    }
+  ],
   "projects": []
 }

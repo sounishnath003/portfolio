@@ -7,6 +7,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 const modules = [
@@ -19,6 +20,7 @@ const modules = [
   NzInputModule,
   NzIconModule,
   NzAvatarModule,
+  NzTagModule,
 ];
 
 @NgModule({
