@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { filter, map, Observable, of, repeat, takeLast, timer } from 'rxjs';
 import {
@@ -15,7 +16,17 @@ import DATA from '../../template/portfolio.config.json';
 export class PortfolioService {
   private portfolioData: PortfolioConfigurationInterface = DATA;
 
-  constructor() {}
+  constructor(private httpService: HttpClient) {}
+
+  get githubUsername() {
+    return this.portfolioData.githubUsername;
+  }
+
+  loadMarkdownfile() {
+    return this.httpService.get(`/assets/contents/blogs/hugo-blog.md`, {
+      responseType: 'text',
+    });
+  }
 
   get avatarURL$(): Observable<string> {
     return of(this.portfolioData.avatarURL);
@@ -44,7 +55,8 @@ export class PortfolioService {
     return of(this.portfolioData.companiesWorkedAt);
   }
 
-  getSocialLink(type: string) {
+  getSocialLink(type: string = 'ALL') {
+    if (type === 'ALL') return of(this.portfolioData.socialLinks);
     return this.portfolioData.socialLinks.filter((x) =>
       x.type.toLowerCase().includes(type.toLowerCase())
     )[0];

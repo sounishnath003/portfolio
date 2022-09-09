@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import GithubCalendar from 'github-calendar';
 import { PortfolioService } from 'src/app/shared/services/portfolio.service';
+import { SocialLink } from 'src/app/template/portfolio-config.interface';
 
 @Component({
   selector: 'app-github-heatmap',
@@ -14,7 +15,8 @@ export class GithubHeatmapComponent implements OnInit {
   ngOnInit(): void {
     GithubCalendar(
       '.calendar',
-      this.portfolioService.getSocialLink('Github').username || 'Null',
+      (this.portfolioService.getSocialLink('Github') as SocialLink).username ||
+        'Null',
       {
         responsive: true,
         tooltips: true,

@@ -33,7 +33,7 @@
               "src/styles.css",
               "./node_modules/github-calendar/dist/github-calendar-responsive.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/marked/marked.min.js"]
           },
           "configurations": {
             "production": {

@@ -12,11 +12,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NzZorroModule } from './shared/nz-zorro/nz-zorro.module';
 import { PortfolioService } from './shared/services/portfolio.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

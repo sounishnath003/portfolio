@@ -28,6 +28,7 @@ import { HomeComponent } from './home.component';
     ProjectsComponent,
     EmailCardComponent,
     SkillsComponent,
+    
   ],
   imports: [CommonModule, HomeRoutingModule],
 })

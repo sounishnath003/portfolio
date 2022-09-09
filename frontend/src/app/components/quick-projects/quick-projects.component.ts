@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Project } from 'src/app/template/portfolio-config.interface';
 
 @Component({
   selector: 'app-quick-projects',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quick-projects.component.css']
 })
 export class QuickProjectsComponent implements OnInit {
-
+  @Input() recentProjects$!: Observable<Project[]>;
   constructor() { }
 
   ngOnInit(): void {

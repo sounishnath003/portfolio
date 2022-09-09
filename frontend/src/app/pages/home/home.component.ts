@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PortfolioService } from 'src/app/shared/services/portfolio.service';
 import {
+  BlogPost,
   CompaniesWorkedAt,
+  Project,
   Recommendation,
   SkillsSet,
 } from 'src/app/template/portfolio-config.interface';
@@ -18,6 +20,8 @@ export class HomeComponent implements OnInit {
   companies$!: Observable<CompaniesWorkedAt[]>;
   skillsSets$!: Observable<SkillsSet[]>;
   recommendations$!: Observable<Recommendation[]>;
+  recentBlogPosts$!: Observable<BlogPost[]>;
+  recentProjects$!: Observable<Project[]>;
 
   constructor(private readonly portfolioService: PortfolioService) {}
 
@@ -27,5 +31,7 @@ export class HomeComponent implements OnInit {
     this.companies$ = this.portfolioService.companiesWorkedAt$;
     this.skillsSets$ = this.portfolioService.skillsSets$;
     this.recommendations$ = this.portfolioService.recommendations$;
+    this.recentBlogPosts$ = this.portfolioService.recentBlogs$;
+    this.recentBlogPosts$ = this.portfolioService.recentBlogs$;
   }
 }

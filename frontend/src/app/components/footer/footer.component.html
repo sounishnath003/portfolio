@@ -1,0 +1,33 @@
+<div class="my-10 p-2 border-t mx-6">
+  <div
+    fxLayout="column"
+    fxLayout.gt-md="row"
+    fxLayoutAlign.gt-md="space-between center"
+    fxLayoutAlign="center center"
+    class="mb-4"
+  >
+    <div
+      fxLayout="column"
+      fxLayout.gt-md="row"
+      fxLayoutAlign.gt-md="space-between center"
+      fxLayoutAlign="center center"
+      fxLayoutGap="5"
+    >
+      <div>
+        Made with ❤️ by
+        <b>
+          <a
+            [href]="['https://github.com/' + githubUsername]"
+            target="_blank"
+            >{{ githubUsername }}</a
+          >
+        </b>
+      </div>
+      <div>&copy;</div>
+      <div>2020 - {{ currentYear }}</div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5">
+      <div *ngFor="let link of socialLinks$ | async">{{ link.type }}</div>
+    </div>
+  </div>
+</div>
