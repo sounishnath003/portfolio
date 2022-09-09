@@ -166,15 +166,26 @@
       "datePublished": "2021-05-01"
     },
     {
-      "id": "1",
-      "slug": "how-to-build-hugo",
-      "tags": ["dev", "hugo"],
-      "title": "How to build a static site with Hugo",
-      "shortDescription": "Hugo is a static site generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo is designed to make website creation fun again.",
+      "id": "2",
+      "slug": "how-to-build-nextjs",
+      "tags": ["dev", "nextjs"],
+      "title": "How to build a static site with NextJS",
+      "shortDescription": "Next.js is a React framework that provides an opinionated structure for creating and deploying React applications. It includes a number of features, such as server-side rendering and generating static websites, that make it easier to create React applications.",
       "content": "/blogs/hugo-blog.md",
       "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
       "author": "sounishnath003",
-      "datePublished": "2021-05-01"
+      "datePublished": "2021-05-07"
+    },
+    {
+      "id": "3",
+      "slug": "how-to-build-gatsby",
+      "tags": ["dev", "gatsby"],
+      "title": "How to build a static site with Gatsby",
+      "shortDescription": "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps. Gatsby is a static PWA (Progressive Web App) generator. You get code and data splitting out-of-the-box. Gatsby loads only the critical HTML, CSS, data, and JavaScript so your site loads as fast as possible.",
+      "content": "/blogs/hugo-blog.md",
+      "avatar": "https://avatars.githubusercontent.com/u/40270033?v=4",
+      "author": "sounishnath003",
+      "datePublished": "2021-05-18"
     }
   ],
   "projects": []

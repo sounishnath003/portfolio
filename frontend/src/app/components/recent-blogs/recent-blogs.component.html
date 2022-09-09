@@ -13,6 +13,7 @@
       <app-card-holder
         *ngFor="let blog of recentBlogPosts$ | async"
         [cardContent]="blog"
+        [routerLink]="['/blogs', blog.slug]"
       ></app-card-holder>
     </div>
   </div>

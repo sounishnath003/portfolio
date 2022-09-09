@@ -64,14 +64,27 @@ export class PortfolioService {
   get recentBlogs$(): Observable<BlogPost[]> {
     return of(this.portfolioData.blogPosts).pipe(
       filter((x) => x.length > 0),
-      takeLast(3),
       map((x) => {
-        return this.processAndReformatData(x);
+        return this.processAndReformatData([...x], 3);
       })
     );
   }
 
-  private processAndReformatData(x: BlogPost[] | Project[]): {
+  get allBlogs$(): Observable<BlogPost[]> {
+    return of(this.portfolioData.blogPosts).pipe(
+      filter((x) => x.length > 0),
+      takeLast(3),
+      map((x) => {
+        return this.processAndReformatData([...x], -1);
+      })
+    );
+  }
+
+  // if top==-1 returns all the blogs || projects ; else returns top n blogs || projects
+  private processAndReformatData(
+    x: BlogPost[] | Project[],
+    top: number = -1
+  ): {
     content$: Observable<string>;
     readingTime: string;
     id: string;
@@ -84,11 +97,21 @@ export class PortfolioService {
     author: string;
     datePublished: string;
   }[] {
-    return x.reverse().map((y) => ({
-      ...y,
-      content$: this.loadFileFromAssets$(y.content),
-      readingTime: this.getReadingTimeInMinutes(y.content),
-    }));
+    if (top === -1) {
+      return x.reverse().map((y) => ({
+        ...y,
+        content$: this.loadFileFromAssets$(y.content),
+        readingTime: this.getReadingTimeInMinutes(y.content),
+      }));
+    }
+    return x
+      .reverse()
+      .slice(x.length - 3)
+      .map((y) => ({
+        ...y,
+        content$: this.loadFileFromAssets$(y.content),
+        readingTime: this.getReadingTimeInMinutes(y.content),
+      }));
   }
 
   private getReadingTimeInMinutes(content: string): string {
