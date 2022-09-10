@@ -39,8 +39,10 @@
         </div>
       </div>
     </div>
-    <div>
-      <h2 nz-typography>{{ blogDetails.title }}</h2>
+    <div fxLayout="row" fxLayoutGap="8" fxLayoutAlign="center center">
+      <nz-tag nzColor="magenta" *ngFor="let tag of blogDetails.tags"
+        ># {{ tag }}</nz-tag
+      >
     </div>
     <div class="prose lg:prose-xl">
       <article

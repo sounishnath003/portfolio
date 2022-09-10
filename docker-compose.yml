@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  portfolio-frontend:
+    container_name: portfolio-frontend
+    image: portfolio-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    expose:
+      - 4200
+    depends_on:
+      - portfolio-backend
+    restart: always
+  
+  portfolio-backend:
+    container_name: portfolio-backend
+    image: portfolio-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    restart: always
