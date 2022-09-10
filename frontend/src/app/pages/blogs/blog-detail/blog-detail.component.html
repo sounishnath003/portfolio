@@ -42,10 +42,10 @@
     <div>
       <h2 nz-typography>{{ blogDetails.title }}</h2>
     </div>
-
-    <div
-      class="prose"
-      [innerHTML]="blogDetails.content$ | async | markdownParser"
-    ></div>
+    <div class="prose lg:prose-xl">
+      <article
+        [innerHTML]="blogDetails.content$ | async | markdownParser"
+      ></article>
+    </div>
   </div>
 </div>
