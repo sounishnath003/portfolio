@@ -13,7 +13,9 @@ services:
     depends_on:
       - portfolio-backend
     restart: always
-  
+    volumes:
+      - ./frontend:/app
+
   portfolio-backend:
     container_name: portfolio-backend
     image: portfolio-backend
@@ -25,3 +27,5 @@ services:
     expose:
       - 3000
     restart: always
+    volumes:
+      - ./backend:/app
