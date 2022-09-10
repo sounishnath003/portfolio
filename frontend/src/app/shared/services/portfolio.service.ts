@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { filter, map, Observable, of, repeat, takeLast, timer } from 'rxjs';
+import { filter, map, Observable, of, repeat, timer } from 'rxjs';
 import {
   BlogPost,
   CompaniesWorkedAt,
@@ -78,12 +78,15 @@ export class PortfolioService {
     );
   }
 
-  get allBlogs$(): Observable<BlogPost[]> {
+  getAllBlogsByTag$(selectedTag: string): Observable<BlogPost[]> {
     return of(this.portfolioData.blogPosts).pipe(
       filter((x) => x.length > 0),
-      takeLast(3),
       map((x) => {
-        return this.processAndReformatData([...x], -1);
+        if (selectedTag === '') return this.processAndReformatData([...x], -1);
+        const filteredLists = [
+          ...x.filter((post) => post.tags.includes(selectedTag)),
+        ];
+        return this.processAndReformatData([...filteredLists], -1);
       })
     );
   }
@@ -95,6 +98,21 @@ export class PortfolioService {
         return this.processAndReformatData(
           x.filter((y) => y.slug.toLowerCase() === slug.toLowerCase())
         )[0];
+      })
+    );
+  }
+
+  get tagsFromBlogPosts$(): Observable<string[]> {
+    return of(this.portfolioData.blogPosts).pipe(
+      filter((x) => x.length > 0),
+      map((x) => {
+        const tags = new Set<string>();
+        x.forEach((y) => {
+          y.tags.forEach((z) => {
+            tags.add(z);
+          });
+        });
+        return [...tags];
       })
     );
   }

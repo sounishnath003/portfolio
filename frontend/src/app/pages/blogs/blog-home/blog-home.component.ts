@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { PortfolioService } from 'src/app/shared/services/portfolio.service';
 import { BlogPost } from 'src/app/template/portfolio-config.interface';
 
@@ -9,8 +9,27 @@ import { BlogPost } from 'src/app/template/portfolio-config.interface';
   styleUrls: ['./blog-home.component.css'],
 })
 export class BlogHomeComponent implements OnInit {
-  blogsPosts$: Observable<BlogPost[]> = this.portfolioService.allBlogs$;
+  private tagSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  blogsPosts$!: Observable<BlogPost[]>;
+  tagsFromBlogPosts$: Observable<string[]> =
+    this.portfolioService.tagsFromBlogPosts$;
+
   constructor(private readonly portfolioService: PortfolioService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tagSubject.subscribe((selectedTag: string) => {
+      this.blogsPosts$ = this.portfolioService.getAllBlogsByTag$(selectedTag);
+    });
+  }
+  updateTag(tag: string) {
+    this.tagSubject.next(tag);
+  }
+
+  get isTagSelected() {
+    return this.tagSubject.value !== '';
+  }
+
+  get selectedTag() {
+    return this.tagSubject.value;
+  }
 }

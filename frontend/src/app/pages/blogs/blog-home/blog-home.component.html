@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h2 nz-typography>Blogs I've wrote 📝...</h2>
+  <h2 nz-typography>Blogs I have wrote 📝...</h2>
   <p nz-typography>
     i try to write once in a while. let me know your thoughts in mail
     <a nz-typography href="mailto:flock.sinasini@gmail.com"
@@ -7,6 +7,28 @@
     >
   </p>
 </div>
+
+<div class="my-5">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20">
+    <nz-tag
+      class="cursor-pointer"
+      [nzColor]="selectedTag === tag ? 'green' : 'magenta'"
+      *ngFor="let tag of tagsFromBlogPosts$ | async"
+      (click)="updateTag(tag)"
+    >
+      #{{ tag }}
+    </nz-tag>
+    <nz-tag
+      nzColor="error"
+      class="cursor-pointer"
+      (click)="updateTag('')"
+      *ngIf="isTagSelected"
+    >
+      <span> &cross; CLEAR ALL</span>
+    </nz-tag>
+  </div>
+</div>
+
 <div *ngIf="blogsPosts$ | async; else noBlog">
   <div
     fxLayout.gt-md="row wrap"
