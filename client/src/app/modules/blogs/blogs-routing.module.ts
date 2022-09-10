@@ -5,6 +5,7 @@ import { BlogsComponent } from './blogs.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: BlogsComponent,
   },
 ];

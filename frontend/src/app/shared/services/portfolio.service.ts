@@ -16,8 +16,16 @@ import DATA from '../../template/portfolio.config.json';
 })
 export class PortfolioService {
   private portfolioData: PortfolioConfigurationInterface = DATA;
-
-  constructor(private httpService: HttpClient) {}
+  constructor(private httpService: HttpClient) {
+    // this.httpService
+    //   .get<PortfolioConfigGistInterface>(
+    //     `https://api.github.com/gists/8553c94a81b7ad5382c590d28f31a37e`
+    //   )
+    //   .pipe(map((x) => JSON.parse(x.files['portfolio.config.json'].content)))
+    //   .subscribe((data) => {
+    //     this.portfolioData$.next({ ...data });
+    //   });
+  }
 
   get githubUsername() {
     return this.portfolioData.githubUsername;
@@ -76,6 +84,17 @@ export class PortfolioService {
       takeLast(3),
       map((x) => {
         return this.processAndReformatData([...x], -1);
+      })
+    );
+  }
+
+  public getBlogPostBySlug$(slug: string): Observable<BlogPost> {
+    return of(this.portfolioData.blogPosts).pipe(
+      filter((x) => x.length > 0),
+      map((x) => {
+        return this.processAndReformatData(
+          x.filter((y) => y.slug.toLowerCase() === slug.toLowerCase())
+        )[0];
       })
     );
   }

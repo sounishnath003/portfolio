@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h2 nz-typography>Blogs I've wrote 📝...</h2>
+  <p nz-typography>
+    i try to write once in a while. let me know your thoughts in mail
+    <a nz-typography href="mailto:flock.sinasini@gmail.com"
+      ><b class="text-gray-700">📤 flock.sinasini@gmail.com.</b></a
+    >
+  </p>
+</div>
+<div *ngIf="blogsPosts$ | async; else noBlog">
+  <div
+    fxLayout.gt-md="row wrap"
+    fxLayout="column wrap"
+    fxLayoutAlign="start center"
+    fxLayoutAlign.gt-md="center center"
+    fxLayoutGap="16"
+    fxLayoutGap.gt-md="10"
+  >
+    <app-card-holder
+      *ngFor="let blog of blogsPosts$ | async"
+      [cardContent]="blog"
+      [routerLink]="['/blogs', blog.slug]"
+    ></app-card-holder>
+  </div>
+</div>
+<ng-template #noBlog>
+  <app-no-data></app-no-data>
+</ng-template>

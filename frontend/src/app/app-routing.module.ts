@@ -5,13 +5,13 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    pathMatch: 'full',
+    title: 'Sounish Nath | Portfolio Home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'blogs',
-    pathMatch: 'full',
+    title: 'Sounish Nath | Portfolio Blogs',
     loadChildren: () =>
       import('./pages/blogs/blogs.module').then((m) => m.BlogsModule),
   },
