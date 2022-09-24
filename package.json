@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "npx concurrently -m=100 \"npm run backend:dev\" \"npm run frontend:dev\"",
-    "backend:dev": "cd backend && npm run start:dev",
+    "start:dev": "npx concurrently -m=100 \"npm run frontend:dev\"",
     "frontend:dev": "cd frontend && npm start",
     "dev:client": "cd client && npm run start",
     "dev:server": "cd server && npm run dev",

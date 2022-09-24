@@ -1,0 +1,46 @@
+<app-page-head
+  title="Time to look into projects 📝..."
+  subtitle="My experties pans across web technologies, clouds, building infrastructure
+    and more."
+></app-page-head>
+
+<div class="my-5">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20">
+    <nz-tag
+      class="cursor-pointer"
+      [nzColor]="selectedTag === tag ? 'green' : 'magenta'"
+      *ngFor="let tag of tagsFromBlogPosts$ | async"
+      (click)="updateTag(tag)"
+    >
+      #{{ tag }}
+    </nz-tag>
+    <nz-tag
+      nzColor="error"
+      class="cursor-pointer"
+      (click)="updateTag('')"
+      *ngIf="isTagSelected"
+    >
+      <span> &cross; CLEAR ALL</span>
+    </nz-tag>
+  </div>
+</div>
+
+<div *ngIf="blogsPosts$ | async; else noBlog">
+  <div
+    fxLayout.gt-md="row wrap"
+    fxLayout="column wrap"
+    fxLayoutAlign="start center"
+    fxLayoutAlign.gt-md="center center"
+    fxLayoutGap="16"
+    fxLayoutGap.gt-md="10"
+  >
+    <app-card-holder
+      *ngFor="let blog of blogsPosts$ | async"
+      [cardContent]="blog"
+      [routerLink]="['/blogs', blog.slug]"
+    ></app-card-holder>
+  </div>
+</div>
+<ng-template #noBlog>
+  <app-no-data></app-no-data>
+</ng-template>
