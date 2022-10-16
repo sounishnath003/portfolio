@@ -1,9 +1,15 @@
 <div
-  fxLayout.gt-sm="row"
-  fxLayout="column"
+  fxLayout="row wrap"
   fxLayoutAlign="space-between center"
+  fxLayoutGap.gt-md="30"
+  fxLayoutGap="0"
 >
-  <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="22px">
+  <div
+    fxLayout.gt-md="row"
+    fxLayout="column wrap"
+    fxLayoutAlign="start center"
+    fxLayoutGap="30"
+  >
     <div routerLink="/">
       <img
         [src]="avatarURL$ | async"
@@ -12,39 +18,45 @@
       />
     </div>
     <div
-      class="px-4 py-2 hover:cursor-pointer rounded-lg"
-      routerLinkActive="button-gray"
-      routerLink="home"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-around center"
+      fxLayoutGap="20"
     >
-      Home
-    </div>
-    <div
-      routerLink="blogs"
-      routerLinkActive="button-gray"
-      class="button-hover-gray"
-    >
-      Blogs
-    </div>
-    <div
-      routerLink="projects"
-      routerLinkActive="button-gray"
-      class="button-hover-gray"
-    >
-      Projects
-    </div>
-    <div
-      routerLink="uses"
-      routerLinkActive="button-gray"
-      class="button-hover-gray"
-    >
-      Uses
-    </div>
-    <div
-      routerLink="resume"
-      routerLinkActive="button-gray"
-      class="button-hover-gray"
-    >
-      Resume
+      <div
+        class="px-4 py-2 hover:cursor-pointer rounded-lg"
+        routerLinkActive="button-gray"
+        routerLink="home"
+      >
+        Home
+      </div>
+      <div
+        routerLink="blogs"
+        routerLinkActive="button-gray"
+        class="button-hover-gray"
+      >
+        Blogs
+      </div>
+      <div
+        routerLink="projects"
+        routerLinkActive="button-gray"
+        class="button-hover-gray"
+      >
+        Projects
+      </div>
+      <div
+        routerLink="uses"
+        routerLinkActive="button-gray"
+        class="button-hover-gray"
+      >
+        Uses
+      </div>
+      <div
+        routerLink="resume"
+        routerLinkActive="button-gray"
+        class="button-hover-gray"
+      >
+        Resume
+      </div>
     </div>
   </div>
   <div class="hover:cursor-pointer button-hover-gray font-sans">Sign in</div>
