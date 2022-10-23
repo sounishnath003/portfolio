@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { PortfolioService } from 'src/app/shared/services/portfolio.service';
-import { BlogPost } from 'src/app/template/portfolio-config.interface';
+import {
+  BlogPost,
+  SocialLink,
+} from 'src/app/template/portfolio-config.interface';
 
 @Component({
   selector: 'app-blog-home',
@@ -13,6 +16,9 @@ export class BlogHomeComponent implements OnInit {
   blogsPosts$!: Observable<BlogPost[]>;
   tagsFromBlogPosts$: Observable<string[]> =
     this.portfolioService.tagsFromBlogPosts$;
+  socialLinks$: Observable<SocialLink[]> = this.portfolioService.getSocialLink(
+    'ALL'
+  ) as Observable<SocialLink[]>;
 
   constructor(private readonly portfolioService: PortfolioService) {}
 

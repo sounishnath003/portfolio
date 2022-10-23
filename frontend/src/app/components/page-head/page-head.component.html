@@ -6,4 +6,19 @@
       ><b class="text-gray-700">📤 flock.sinasini@gmail.com.</b></a
     >
   </p>
+
+  <div
+    class="mb-20 mt-3"
+    fxLayout="row wrap"
+    fxLayoutGap="15px"
+    fxLayoutAlign="center center"
+  >
+    <div>Connect with me on:</div>
+    <div *ngFor="let link of socialLinks$ | async">
+      <a [href]="link.link" target="_blank">
+        <img [src]="link.icon" alt="social link" width="30" height="30" />
+      </a>
+    </div>
+  </div>
+  
 </div>
