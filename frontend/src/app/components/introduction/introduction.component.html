@@ -19,14 +19,20 @@
         <span nz-typography> {{ currentBio$ | async }} </span>
       </div>
       <div>
-        <button
-          nz-button
-          nzType="text"
-          nzSize="large"
-          class="bg-black font-sans text-white tracking-wide rounded-lg my-3"
+        <a
+          href="https://drive.google.com/file/d/1DTdMBo3_boDDWl9a3y6ZWG489WFS3c4O/view?usp=sharing"
+          download="SounishNath_Resume.pdf"
+          target="_blank"
         >
-          Download Resume &darr;
-        </button>
+          <button
+            nz-button
+            nzType="text"
+            nzSize="large"
+            class="bg-black font-sans text-white tracking-wide rounded-lg my-3"
+          >
+            Download Resume &darr;
+          </button>
+        </a>
       </div>
       <div>
         <b nz-typography class="uppercase">worked at &colon;</b>
