@@ -1,0 +1,42 @@
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap:0.63rem;
+}
+
+.button-gray {
+    padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    background-color: rgba(243, 244, 246, 0.85);
+        cursor: pointer;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all;
+}
+
+.button-hover-gray {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.button-hover-gray:hover {
+    background-color: rgba(243, 244, 246, 0.85);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+body>app-root>div.mx-10.my-5>div>app-home>app-github-heatmap>div>div{
+    border: none;
+}
+
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div:nth-child(1)>div {border: none;}
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div.contrib-column.table-column {display: table-cell; font-weight: 500; color: rgb(30, 28, 38);}
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div:nth-child(odd)>span.contrib-number{font-weight: 500; color: rgb(9, 8, 14);}
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div:nth-child(even)>span.contrib-number{font-weight: 500; color: rgb(9, 8, 14);}
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div:nth-child(1)>div>div>div>div.float-right.color-fg-muted>svg:nth-child(even){display: inline-flex; gap: 3;}
+body>app-root>div>div>app-home>app-github-heatmap>div>div>div:nth-child(1)>div>div>div>div.float-right.color-fg-muted>svg:nth-child(odd){display: inline-flex; gap: 3;}

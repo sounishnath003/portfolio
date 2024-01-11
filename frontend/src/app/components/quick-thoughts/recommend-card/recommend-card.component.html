@@ -1,0 +1,21 @@
+<nz-card
+  [nzHoverable]="true"
+  class="border border-black rounded-md hover:bg-yellow-50 card-style"
+>
+  <nz-card-meta
+    [nzAvatar]="avatarTemplate"
+    [nzTitle]="recommendation | cardTitle"
+    [nzDescription]="recommendation.endorsement"
+  >
+  </nz-card-meta>
+</nz-card>
+
+<ng-template #avatarTemplate>
+  <a [href]="recommendation.linkedInURL" target="_blank">
+    <nz-avatar
+      class="ring-2 ring-blue-600 shadow inset-1"
+      [nzSrc]="recommendation.avatar"
+    >
+    </nz-avatar>
+  </a>
+</ng-template>

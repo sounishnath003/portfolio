@@ -1,0 +1,64 @@
+<div>
+  <div
+    fxLayout.gt-sm="row"
+    fxLayout="column"
+    fxLayoutAlign="space-around start"
+  >
+    <div fxLayout="column" class="mx-5" fxLayoutGap="15px">
+      <div class="w-full">
+        <h1 nz-typography class="font-black tracking-normal">
+          Hello! <span nz-typography>👋</span> ,
+          <span nz-typography class="p-2 text-blue-700">I'm Sounish Nath.</span>
+          <br />
+          <mark nz-typography> {{ featureObserver$ | async }} </mark>
+          <br />
+          Based In Mumbai, In.
+        </h1>
+      </div>
+      <div>
+        <span nz-typography> {{ currentBio$ | async }} </span>
+      </div>
+      <div>
+        <a
+          href="https://drive.google.com/file/d/1DTdMBo3_boDDWl9a3y6ZWG489WFS3c4O/view?usp=sharing"
+          download="SounishNath_Resume.pdf"
+          target="_blank"
+        >
+          <button
+            nz-button
+            nzType="text"
+            nzSize="large"
+            class="bg-black font-sans text-white tracking-wide rounded-lg my-3"
+          >
+            Download Resume &darr;
+          </button>
+        </a>
+      </div>
+      <div>
+        <b nz-typography class="uppercase">worked at &colon;</b>
+        <div class="res-grid my-4">
+          <div
+            *ngFor="let company of companies$ | async"
+            fxLayout="row"
+            fxLayoutAlign="start center"
+          >
+            <div>
+              <img
+                [src]="company.link"
+                [alt]="company.name"
+                class="w-32 sm:w-32 rounded-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-newsletter-subs fxFlex.gt-sm="40"></app-newsletter-subs>
+  </div>
+  <div class="text-center">
+    <h2 nz-typography class="transition-all animate-bounce">
+      <span class="p-1 cursor-pointer text-gray-800">&darr;</span>
+    </h2>
+  </div>
+</div>

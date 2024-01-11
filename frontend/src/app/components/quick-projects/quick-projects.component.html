@@ -1,0 +1,17 @@
+<div class="m-auto text-center my-10">
+  <p nz-typography>Projects that I build</p>
+  <h2 nz-typography>Featured projects</h2>
+</div>
+
+<div class="m-auto text-center my-10">
+  <p nz-typography>Projects that I build</p>
+  <h2 nz-typography>Featured projects</h2>
+  <div *ngIf="recentProjects$ | async; else noBlog">
+    <div>
+      <code>{{ recentProjects$ | async | json }}</code>
+    </div>
+  </div>
+  <ng-template #noBlog>
+    <app-no-data></app-no-data>
+  </ng-template>
+</div>

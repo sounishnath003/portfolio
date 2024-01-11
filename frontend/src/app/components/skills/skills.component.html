@@ -1,0 +1,29 @@
+<div class="m-auto text-center">
+  <p nz-typography>Things I'm good at</p>
+  <h2 nz-typography>Skillsets Bagpack</h2>
+  <div class="my-2" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="15">
+    <div class="text-left" *ngFor="let skill of skillsSets$ | async">
+      <h4 nz-typography>{{ skill.parentTopic }}&colon;</h4>
+      <div class="res-grid mx-6">
+        <ul *ngFor="let technology of skill.lists">
+          <li
+            class="button-hover-gray"
+            nz-typography
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="5"
+          >
+            <div>
+              <img [src]="technology.logo" alt="logo" width="30" height="30" />
+            </div>
+            <div>
+              <p nz-typography class="mt-3 hover:font-semibold">
+                {{ technology.name }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
