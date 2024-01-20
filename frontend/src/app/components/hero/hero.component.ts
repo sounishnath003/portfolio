@@ -1,15 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrl: './hero.component.css',
 })
 export class HeroComponent {
   @Input()
-  attributes!: string;
+  attributes$!: Observable<string>;
   @Input()
-  profileSummary!: string;
+  profileSummary$!: Observable<string>;
+
+  @Input()
+  workedAtCompanies$!: Observable<{ companyName: string; image: string }[]>;
+
+  constructor() {}
 }
