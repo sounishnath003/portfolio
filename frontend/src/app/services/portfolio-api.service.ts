@@ -26,6 +26,15 @@ export class PortfolioApiService {
     return of(PortfolioDB.profileSummary);
   }
 
+  get skillsets$(): Observable<
+    {
+      domain: string;
+      skills: string[];
+    }[]
+  > {
+    return of(PortfolioDB.skillsSets);
+  }
+
   get bio$(): Observable<string> {
     return of(PortfolioDB.aboutBio).pipe(
       map((data) =>

@@ -23,7 +23,7 @@ export const PortfolioDB = {
   yearOfStartWorking: 2021,
   aboutBio: `
   <p>
-  
+
     Versatile Software Engineer with {{yearOfStartWorking}} years of experience. Excited about building scalable distributed data processing systems, backend systems, deep learning models. I designed and developed data warehouses ETL pipelines, Machine Learning/Deep Learning models.
 
     Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
@@ -33,4 +33,57 @@ export const PortfolioDB = {
     ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles. 
   </h2>
 `,
+  skillsSets: [
+    {
+      domain: 'Programming Languages',
+      skills: [
+        'Python',
+        'TypeScript',
+        'Golang',
+        'Java',
+        'OOP',
+        'Data Structures',
+      ],
+    },
+    {
+      domain: 'Frontend Technologies',
+      skills: ['Angular', 'RxJS', 'Apollo Server', 'Tailwind'],
+    },
+    {
+      domain: 'Backend Technologies',
+      skills: [
+        'Node.JS',
+        'NestJS',
+        'Django',
+        'FastAPI',
+        'GraphQL',
+        'REST API',
+        'MySQL',
+        'Mongo DB',
+      ],
+    },
+    {
+      domain: 'Deep Learning / Tools',
+      skills: [
+        'PyTorch',
+        'Lightning',
+        'Tensorflow',
+        'TorchServe',
+        'Transformers',
+        'Transfer Learning',
+      ],
+    },
+    {
+      domain: 'DevOps / MLOps',
+      skills: [
+        'Terraform',
+        'Docker',
+        'Kubernetes',
+        'Cloud Build',
+        'Kubeflow',
+        'DVC',
+        'GitHub',
+      ],
+    },
+  ],
 };
