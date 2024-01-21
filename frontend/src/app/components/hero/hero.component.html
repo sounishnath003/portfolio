@@ -4,10 +4,10 @@
   <div>
     <div class="flex flex-col justify-start">
       <div class="text-2xl">
-        Hello! 👋, <span class="text-primary"> I'm Sounish Nath.</span>
+        Hello! 👋, <b class="text-primary"> I'm Sounish Nath.</b>
       </div>
       <div class="text-6xl">
-        I <span> {{ attributes$ | async }} </span>
+        <span [textContent]="attributes$ | async"></span>
       </div>
       <div class="my-6 max-w-xl text-content">
         <span [textContent]="profileSummary$ | async"> </span>

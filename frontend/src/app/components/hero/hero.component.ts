@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-hero',
   standalone: true,

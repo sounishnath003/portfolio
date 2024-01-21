@@ -1,12 +1,13 @@
 export const PortfolioDB = {
   attributes: [
-    'am a Software Engineer 👨‍💻',
-    'deal with Cloud Data and AI 🤖',
-    'build things break stuffs 🛠️',
-    'write code and make videos 🎥',
+    'I am a Software Engineer 👨‍💻',
+    'Backend Engineer. AI Alchemist.',
+    'Digital Craftsman Data & Cloud ☁️',
+    'Trains Large Deeplearning Models 🤖',
+    'I turn lines of code into tangible magic.',
   ],
   profileSummary:
-    'I build scalable backend systems with NodeJS and Go. Helping people to make world a better lives through quality softwares.',
+    'Excited about building Scalable distributed data processing systems, Backend services,  train Deep learning models and Generative AI applications.',
   workedAtCompanies: [
     {
       companyName: 'Tata Consultancy Services (TCS)',
@@ -19,4 +20,17 @@ export const PortfolioDB = {
         'https://www.crio.do/static/5ac1a39f9eebf6fe904e14069500353e/fd8b5/Crio_Dark.png',
     },
   ],
+  yearOfStartWorking: 2021,
+  aboutBio: `
+  <p>
+  
+    Versatile Software Engineer with {{yearOfStartWorking}} years of experience. Excited about building scalable distributed data processing systems, backend systems, deep learning models. I designed and developed data warehouses ETL pipelines, Machine Learning/Deep Learning models.
+
+    Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
+  </p>
+
+  <h2 class="my-3 bg-yellow-100"> 
+    ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles. 
+  </h2>
+`,
 };

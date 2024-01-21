@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { PortfolioDB } from '../../../memdb/portfolioDB';
-import { Observable, map, of, repeat, timer } from 'rxjs';
+import { Observable, concatMap, from, map, of, repeat, timer } from 'rxjs';
+import { UtilsService } from './utils.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PortfolioApiService {
   private attributes = PortfolioDB.attributes;
-  constructor() {}
+  constructor(private readonly utilityService: UtilsService) {}
 
   get workedAtCompanies$(): Observable<
     { companyName: string; image: string }[]
@@ -16,16 +17,25 @@ export class PortfolioApiService {
   }
 
   get attributes$(): Observable<string> {
-    return timer(0, 3000).pipe(
-      map(() => {
-        const item = '' + this.attributes.shift();
-        this.attributes.push(item);
-        return item;
-      }),
+    return from(PortfolioDB.attributes).pipe(
+      concatMap(this.utilityService.typeEffect$),
       repeat()
     );
   }
   get profileSummary$(): Observable<string> {
     return of(PortfolioDB.profileSummary);
+  }
+
+  get bio$(): Observable<string> {
+    return of(PortfolioDB.aboutBio).pipe(
+      map((data) =>
+        data.replace(
+          '{{yearOfStartWorking}}',
+          `${Math.floor(
+            new Date().getFullYear() - PortfolioDB.yearOfStartWorking
+          )}`
+        )
+      )
+    );
   }
 }
