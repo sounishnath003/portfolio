@@ -26,10 +26,17 @@
           >
             <h2 class="card-title text-center">
               {{ recommendation.personWhoProvided }}
+              <span>
+                <img
+                  src="/assets/linkedin-logo.svg"
+                  alt="linkedin"
+                  class="w-4"
+                />
+              </span>
             </h2>
           </a>
           <p>
-            {{ recommendation.role }}&comma; {{ recommendation.organization }}
+            {{ recommendation.role }} &bull; {{ recommendation.organization }}
           </p>
           <div
             class="text-justify text-sm mt-2 text-secondary max-h-24 overflow-y-clip"

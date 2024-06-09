@@ -18,7 +18,7 @@
 
   <div>
     <img
-      class="rounded-full w-64"
+      class="rounded-full w-64 ring-2 ring-blue-700 ring-offset-4"
       src="assets/sounish-nath-photo.webp"
       alt="sounish-logo"
     />
@@ -31,7 +31,7 @@
       *ngFor="let item of workedAtCompanies$ | async"
       [src]="item.image"
       [alt]="item.companyName"
-      class="w-32"
+      class="w-36"
     />
   </div>
 </div>
