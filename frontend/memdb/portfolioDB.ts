@@ -37,12 +37,12 @@ export const PortfolioDB = {
     {
       domain: 'Programming Languages',
       skills: [
-        'Python',
-        'TypeScript',
-        'Golang',
-        'Java',
         'OOP',
-        'Data Structures',
+        'Java',
+        'Python',
+        'Golang',
+        'TypeScript',
+        'Data Structures & Algorithms',
       ],
     },
     {
