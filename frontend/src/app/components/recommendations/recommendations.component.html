@@ -1,5 +1,7 @@
 <div>
-  <h3 class="text-primary text-5xl mb-4">&bullet; Recommendations</h3>
+  <h3 class="text-primary text-4xl md:text-5xl mb-4">
+    &bullet; Recommendations
+  </h3>
   <div
     *ngIf="recommendations$ | async as recommendations"
     class="grid grid-cols-1 md:grid-cols-2 gap-6 h-auto"
@@ -26,10 +28,20 @@
               {{ recommendation.personWhoProvided }}
             </h2>
           </a>
-          <p>{{ recommendation.role }}, {{ recommendation.organization }}</p>
-          <div class="text-justify text-sm mt-2 text-secondary">
+          <p>
+            {{ recommendation.role }}&comma; {{ recommendation.organization }}
+          </p>
+          <div
+            class="text-justify text-sm mt-2 text-secondary max-h-24 overflow-y-clip"
+          >
             {{ recommendation.comments }}
           </div>
+          <a
+            [href]="recommendation.profileLink"
+            target="_blank"
+            class="link-accent cursor-pointer text-right"
+            ><p class="text-sm">Read more &rarr;</p></a
+          >
         </div>
       </div>
     </div>
