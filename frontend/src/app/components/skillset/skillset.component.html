@@ -4,12 +4,12 @@
     <div class="text-3xl my-6 text-secondary">
       {{ stack.domain }} &HorizontalLine;
     </div>
-    <div class="grid grid-cols-6 gap-3 my-4">
-      <button
-        class="btn btn-outline btn-primary"
+    <div class="grid grid-cols-8 gap-3 my-4">
+      <div
+        class="btn btn-primary"
         *ngFor="let skill of stack.skills"
         [textContent]="skill"
-      ></button>
+      ></div>
     </div>
   </div>
 </div>

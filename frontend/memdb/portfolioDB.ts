@@ -7,7 +7,7 @@ export const PortfolioDB = {
     'I turn lines of code into tangible magic.',
   ],
   profileSummary:
-    'Excited about building Scalable distributed data processing systems, Backend services,  train Deep learning models and Generative AI applications.',
+    'Excited about building Scalable distributed data processing systems, Backend services,  train deep learning models and Generative AI applications.',
   workedAtCompanies: [
     {
       companyName: 'Tata Consultancy Services (TCS)',
