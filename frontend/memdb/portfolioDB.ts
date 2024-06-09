@@ -1,4 +1,5 @@
 export const PortfolioDB = {
+  name: 'Sounish Nath',
   attributes: [
     'I am a Software Engineer 👨‍💻',
     'Backend Engineer. AI Alchemist.',
@@ -7,7 +8,7 @@ export const PortfolioDB = {
     'I turn lines of code into tangible magic.',
   ],
   profileSummary:
-    'Excited about building Scalable distributed data processing systems, Backend services,  train deep learning models and Generative AI applications.',
+    'Excited about building Scalable distributed data processing systems, Backend services,  train deep learning models and Generative AI applications. Based in Mumbai, India.',
   workedAtCompanies: [
     {
       companyName: 'Tata Consultancy Services (TCS)',

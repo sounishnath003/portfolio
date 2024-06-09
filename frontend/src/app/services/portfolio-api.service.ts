@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PortfolioDB } from '../../../memdb/portfolioDB';
-import { Observable, concatMap, from, map, of, repeat, timer } from 'rxjs';
+import { Observable, concatMap, from, map, of, repeat } from 'rxjs';
 import { UtilsService } from './utils.service';
 
 @Injectable({
@@ -9,6 +9,10 @@ import { UtilsService } from './utils.service';
 export class PortfolioApiService {
   private attributes = PortfolioDB.attributes;
   constructor(private readonly utilityService: UtilsService) {}
+
+  get name$(): Observable<string> {
+    return of(PortfolioDB.name);
+  }
 
   get workedAtCompanies$(): Observable<
     { companyName: string; image: string }[]

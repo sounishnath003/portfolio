@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class HeroComponent {
   @Input()
+  name$!: Observable<string>;
+  @Input()
   attributes$!: Observable<string>;
   @Input()
   profileSummary$!: Observable<string>;

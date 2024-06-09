@@ -1,17 +1,19 @@
 <div class="navbar bg-base-100">
-    <div class="flex-1 gap-3 hover:cursor-pointer" routerLink="home">
-        <img class="w-12 rounded-full"
-            src="https://media.licdn.com/dms/image/D4D03AQHojhFQ6dxZBA/profile-displayphoto-shrink_200_200/0/1695930340150?e=2147483647&v=beta&t=xLrHiQmk5-JPuNr2oOj9leTMKdUQGj1Gxd58vw550FM"
-            alt="sounish-logo">
-            <span>Sounish Nath</span>
-    </div>
-    <div class="flex items-center gap-4">
-        <ul class="menu menu-horizontal px-1">
-            <li class="hover:text-primary"><a routerLink="home">Home</a></li>
-            <li class="hover:text-primary"><a routerLink="blogs">Blogs</a></li>
-            <li class="hover:text-primary"><a routerLink="projects">Projects</a></li>
-            <li class="hover:text-primary"><a routerLink="blogs">Uses</a></li>
-            <li class="hover:text-primary"><a routerLink="blogs">Resume</a></li>
-        </ul>
-    </div>
+  <div class="flex-1 gap-3 hover:cursor-pointer" routerLink="home">
+    <img
+      class="w-12 rounded-full"
+      src="/assets/sounish-nath-photo.webp"
+      alt="sounish-logo"
+    />
+    <span>{{name$ | async}}</span>
+  </div>
+  <div class="flex items-center gap-4">
+    <ul class="menu menu-horizontal px-1">
+      <li class="hover:text-primary"><a routerLink="home">Home</a></li>
+      <li class="hover:text-primary"><a routerLink="blogs">Blogs</a></li>
+      <li class="hover:text-primary"><a routerLink="projects">Projects</a></li>
+      <li class="hover:text-primary"><a routerLink="blogs">Uses</a></li>
+      <li class="hover:text-primary"><a routerLink="blogs">Resume</a></li>
+    </ul>
+  </div>
 </div>

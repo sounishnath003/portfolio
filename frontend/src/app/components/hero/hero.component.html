@@ -4,7 +4,7 @@
   <div>
     <div class="flex flex-col justify-start">
       <div class="text-2xl">
-        Hello! 👋, <b class="text-primary"> I'm Sounish Nath.</b>
+        Hello! 👋, <b class="text-primary"> I'm {{ name$ | async }}.</b>
       </div>
       <div class="text-6xl max-w-xl">
         <span [textContent]="attributes$ | async"></span>
