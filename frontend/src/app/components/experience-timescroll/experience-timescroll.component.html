@@ -4,12 +4,11 @@
   </div>
 
   <div>
-    <ul class="timeline timeline-vertical">
+    <ul class="timeline timeline-compact timeline-vertical">
       <li *ngFor="let timeline of professionalExperiencesTimeline$ | async">
         <div class="timeline-start">
-          <div class="flex flex-col">
-            <p>{{ timeline.timeInfo }}</p>
-            <p>{{ timeline.organizationName }}</p>
+          <div>
+            <p>&bullet; {{ timeline.timeInfo }}</p>
           </div>
         </div>
         <div class="timeline-middle">
@@ -26,13 +25,18 @@
             />
           </svg>
         </div>
-        <div class="timeline-end timeline-box">
-          <p class="text-accent">
-            {{ timeline.roleOrWork }} &bullet; {{ timeline.location }}
-          </p>
+        <div class="timeline-end w-full timeline-box">
+          <div class="flex justify-between">
+            <p>
+              {{ timeline.roleOrWork }} &bullet; {{ timeline.organizationName }}
+            </p>
+            <p class="text-accent">
+              {{ timeline.location }}
+            </p>
+          </div>
           <div
-            [textContent]="timeline.content"
-            class="text-base-content max-h-64 overflow-hidden hidden-scrollbar my-3 text-md"
+            [innerHTML]="timeline.content"
+            class="text-base-content max-h-64 overflow-hidden hidden-scrollbar prose"
           ></div>
         </div>
         <hr />

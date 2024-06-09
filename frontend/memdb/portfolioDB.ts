@@ -132,19 +132,47 @@ export const PortfolioDB = {
   ],
   professionalExperiencesTimeline: [
     {
-      timeInfo: 'Feb 2021 - May 2021',
-      location: 'Remote',
-      roleOrWork: 'System Engineer Intern',
+      timeInfo: 'Feb 2021 - Jun 2021',
+      location: 'Mumbai, Remote',
+      roleOrWork: 'Software Engineer Intern',
       organizationName: 'Tata Consultancy Services',
-      content:
-        'I undertook the responsibility of conducting thorough research, analysis, and design activities for SamayLa, a comprehensive work management application. My role encompassed crafting solutions that prioritize accessibility and elevate usability standards through the implementation of an effective UX design process. By meticulously studying user behaviors, market trends, and industry best practices, I facilitated the creation of intuitive interfaces and streamlined workflows within the application. Through my efforts, I aimed to empower users with a more efficient and user-friendly work management solution, enhancing productivity and user satisfaction across the board.',
+      content: `
+        <ul>
+          <li><b class='text-secondary'>Migrated ML workflows to  Google Vertex AI </b>, enabling continuous learning, automated scalability, and improved model training efficiency. </li>
+          </li>Developed a high-performance IT Asset Scanner Tool in Golang, achieving a <b class='text-secondary'>70% speed improvement over previous implementations </b>.</li>
+          <li>Designed and implemented online seat reservation functionality in Angular TypeScript, utilizing the Decorator Design Pattern to enhance user experience and drive a <b class='text-secondary'>20% increase in user attraction. </b></li>
+          <li> Tools: Golang, TypeScript, NodeJS, Angular, MongoDB, GCE, scikit-learn, LightGBM, XGBoost, TensorFlow </li>
+        </ul>
+        
+      `,
     },
+    {
+      timeInfo: 'May 2020 - Jun 2020',
+      location: 'Bangaluru, Remote',
+      roleOrWork: 'Angular Frontend Developer',
+      organizationName: 'ERCESS Live',
+      content: `
+        <ul>
+          <li><b class='text-secondary'>Boosted user engagement with interactive search</b>, customizable filters, and KPI dashboards in Angular (Python, TypeScript).</li>
+          <li>Integrated <b class='text-secondary'>Stripe for seamless in-app</b> purchases.</li>
+          <li>Tools: Python, TypeScript, Django, Angular, d3, MongoDB, Stripe SDK</li>
+        </ul>
+        
+      `,
+    },
+
     {
       timeInfo: 'Aug 2017 - July 2021',
       location: 'Kolkata, India',
       roleOrWork: 'B.Tech in Computer Science and Engineering',
       organizationName: 'Brainware Group of Institutions',
-      content: '9.43 DGPA * Class 12: 83.24% * Class 10: 89.33%',
+      content: `
+      <ul>
+        <li> 9.43 DGPA </li>
+        <li> Class 12: 82.60 % </li>
+        <li> Class 10: 89.28 % </li>
+      <ul>
+      `,
     },
   ],
 };
