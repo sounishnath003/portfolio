@@ -130,4 +130,21 @@ export const PortfolioDB = {
         'Sounish is hardworking employee. He is always keen to learn new technologies and apply that knowledge in building new and innovative solutions. He is having good hands on knowledge about Google Cloud and has expertise in AI & ML fields. He is a great team player, mentor and leader who can be an asset to any organisation.',
     },
   ],
+  professionalExperiencesTimeline: [
+    {
+      timeInfo: 'Feb 2021 - May 2021',
+      location: 'Remote',
+      roleOrWork: 'System Engineer Intern',
+      organizationName: 'Tata Consultancy Services',
+      content:
+        'I undertook the responsibility of conducting thorough research, analysis, and design activities for SamayLa, a comprehensive work management application. My role encompassed crafting solutions that prioritize accessibility and elevate usability standards through the implementation of an effective UX design process. By meticulously studying user behaviors, market trends, and industry best practices, I facilitated the creation of intuitive interfaces and streamlined workflows within the application. Through my efforts, I aimed to empower users with a more efficient and user-friendly work management solution, enhancing productivity and user satisfaction across the board.',
+    },
+    {
+      timeInfo: 'Aug 2017 - July 2021',
+      location: 'Kolkata, India',
+      roleOrWork: 'B.Tech in Computer Science and Engineering',
+      organizationName: 'Brainware Group of Institutions',
+      content: '9.43 DGPA * Class 12: 83.24% * Class 10: 89.33%',
+    },
+  ],
 };

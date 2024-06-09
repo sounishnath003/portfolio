@@ -64,4 +64,16 @@ export class PortfolioApiService {
   > {
     return of(PortfolioDB.recommendations);
   }
+
+  get professionalExperiencesTimeline$(): Observable<
+    {
+      timeInfo: string;
+      location: string;
+      roleOrWork: string;
+      organizationName: string;
+      content: string;
+    }[]
+  > {
+    return of(PortfolioDB.professionalExperiencesTimeline);
+  }
 }

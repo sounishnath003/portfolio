@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AboutComponent } from '../../components/about/about.component';
 import { SkillsetComponent } from '../../components/skillset/skillset.component';
 import { RecommendationsComponent } from '../../components/recommendations/recommendations.component';
+import { ExperienceTimescrollComponent } from '../../components/experience-timescroll/experience-timescroll.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { RecommendationsComponent } from '../../components/recommendations/recom
     AboutComponent,
     SkillsetComponent,
     RecommendationsComponent,
+    ExperienceTimescrollComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -40,6 +42,15 @@ export class HomeComponent {
       comments: string;
     }[]
   >;
+  professionalExperiencesTimeline$: Observable<
+    {
+      timeInfo: string;
+      location: string;
+      roleOrWork: string;
+      organizationName: string;
+      content: string;
+    }[]
+  >;
 
   constructor(private readonly portfolioService: PortfolioApiService) {
     this.name$ = this.portfolioService.name$;
@@ -49,5 +60,7 @@ export class HomeComponent {
     this.bio$ = this.portfolioService.bio$;
     this.skillsets$ = this.portfolioService.skillsets$;
     this.recommendations$ = this.portfolioService.recommendations$;
+    this.professionalExperiencesTimeline$ =
+      this.portfolioService.professionalExperiencesTimeline$;
   }
 }

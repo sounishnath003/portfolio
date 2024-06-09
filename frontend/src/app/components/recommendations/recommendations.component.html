@@ -15,7 +15,7 @@
           <img
             src="{{ recommendation.avatar }}"
             alt="Avatar"
-            class="w-full h-full object-cover rounded-xl"
+            class="w-full h-full object-cover rounded-xl black-and-white-burnout"
           />
         </figure>
         <div class="card-body md:w-2/3 flex flex-col justify-center">
@@ -39,7 +39,7 @@
             {{ recommendation.role }} &bull; {{ recommendation.organization }}
           </p>
           <div
-            class="text-justify text-sm mt-2 text-secondary max-h-24 overflow-y-clip"
+            class="text-justify text-sm mt-2 text-secondary max-h-24 overflow-y-scroll hidden-scrollbar"
           >
             {{ recommendation.comments }}
           </div>
