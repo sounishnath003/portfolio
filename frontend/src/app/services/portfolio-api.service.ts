@@ -51,4 +51,17 @@ export class PortfolioApiService {
       )
     );
   }
+
+  get recommendations$(): Observable<
+    {
+      personWhoProvided: string;
+      profileLink: string;
+      avatar: string;
+      role: string;
+      organization: string;
+      comments: string;
+    }[]
+  > {
+    return of(PortfolioDB.recommendations);
+  }
 }

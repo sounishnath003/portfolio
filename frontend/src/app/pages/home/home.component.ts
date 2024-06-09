@@ -4,11 +4,17 @@ import { PortfolioApiService } from '../../services/portfolio-api.service';
 import { Observable } from 'rxjs';
 import { AboutComponent } from '../../components/about/about.component';
 import { SkillsetComponent } from '../../components/skillset/skillset.component';
+import { RecommendationsComponent } from '../../components/recommendations/recommendations.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, AboutComponent, SkillsetComponent],
+  imports: [
+    HeroComponent,
+    AboutComponent,
+    SkillsetComponent,
+    RecommendationsComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -24,6 +30,16 @@ export class HomeComponent {
       skills: string[];
     }[]
   >;
+  recommendations$: Observable<
+    {
+      personWhoProvided: string;
+      profileLink: string;
+      avatar: string;
+      role: string;
+      organization: string;
+      comments: string;
+    }[]
+  >;
 
   constructor(private readonly portfolioService: PortfolioApiService) {
     this.name$ = this.portfolioService.name$;
@@ -32,5 +48,6 @@ export class HomeComponent {
     this.workedAtCompanies$ = this.portfolioService.workedAtCompanies$;
     this.bio$ = this.portfolioService.bio$;
     this.skillsets$ = this.portfolioService.skillsets$;
+    this.recommendations$ = this.portfolioService.recommendations$;
   }
 }

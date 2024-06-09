@@ -87,4 +87,47 @@ export const PortfolioDB = {
       ],
     },
   ],
+  recommendations: [
+    {
+      personWhoProvided: 'Prashant Mishra',
+      profileLink: 'https://www.linkedin.com/in/prashant-mishra-78976046/',
+      avatar:
+        'https://media.licdn.com/dms/image/D4D03AQGY6w7EXVYvTg/profile-displayphoto-shrink_800_800/0/1664472802368?e=1723680000&v=beta&t=b-z_Myu3Q2vD1F-v3bPa8tQN3PbuBw4Kdccug3qayYw',
+      role: 'Azure Data Engineer',
+      organization: 'Cognizant',
+      comments:
+        'I have worked with Sounish within the same team( Analytics team) where he had joined as a fresher. But the work ethic and competency he had shown both on the technical front as well as on the functional front was quite remarkable and matched the level of any pro developer. ',
+    },
+    {
+      personWhoProvided: 'Arokia jenefer Antony',
+      profileLink:
+        'https://www.linkedin.com/in/arokia-jenefer-antony-867292119/',
+      avatar:
+        'https://media.licdn.com/dms/image/C5103AQGyrfv88yUZsQ/profile-displayphoto-shrink_800_800/0/1576128074406?e=1723680000&v=beta&t=TRSR5-4WyJPK7BPMDpvKSafUpg17zGRNxtdUGM4GEx8',
+      role: 'Senior Consultant, Backend Dev',
+      organization: 'Infosys',
+      comments:
+        'Sounish Nath consistently demonstrated his skills through problem-solving, teamwork and actively participation. He played a pivotal role in Machine Learning development and showcased his ability to deliver expected outcomes. What I appreciate most about Sounish is his dedication, reliability, creativity about the work he is being engaged.',
+    },
+    {
+      personWhoProvided: 'Udhav Lahane',
+      profileLink: 'https://www.linkedin.com/in/udhav-lahane-87542320/',
+      avatar:
+        'https://media.licdn.com/dms/image/D4D03AQG8L1UoZJ4fFA/profile-displayphoto-shrink_800_800/0/1695306325608?e=1723680000&v=beta&t=2fj79IUwjoilNon5sfsg7CY49aelTxmDa-ZVOyiigCY',
+      role: 'Senior Cloud Architect',
+      organization: 'TCS',
+      comments:
+        'Sounish is hardworking and dedicated associate. He joined TCS and within no time print his footprint in our project. He is expert in Cloud Services almost in all areas with AI / ML expertise.',
+    },
+    {
+      personWhoProvided: 'Rinkesh Kore',
+      profileLink: 'https://www.linkedin.com/in/rinkeshkore/',
+      avatar:
+        'https://media.licdn.com/dms/image/C5603AQGdmxmOIftTiA/profile-displayphoto-shrink_800_800/0/1595190732763?e=1723680000&v=beta&t=wawWSM-jQ1QWkH03xL5GGQOMNXw-pVpIQ2C5AaEVd8s',
+      role: 'Data Engineer',
+      organization: 'TCS',
+      comments:
+        'Sounish is hardworking employee. He is always keen to learn new technologies and apply that knowledge in building new and innovative solutions. He is having good hands on knowledge about Google Cloud and has expertise in AI & ML fields. He is a great team player, mentor and leader who can be an asset to any organisation.',
+    },
+  ],
 };
