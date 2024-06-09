@@ -1,30 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogDetailComponent } from './blog-detail/blog-detail.component';
-import { BlogHomeComponent } from './blog-home/blog-home.component';
 import { BlogsComponent } from './blogs.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: BlogsComponent,
+    path: "",
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        component: BlogHomeComponent,
-      },
-      {
-        path: ':slug',
-        pathMatch: 'full',
-        component: BlogDetailComponent,
-      },
-    ],
-  },
+        path: "",
+        pathMatch: "full",
+        component: BlogsComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class BlogsRoutingModule {}
+export class BlogsRoutingModule { }

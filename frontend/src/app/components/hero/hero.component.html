@@ -1,0 +1,37 @@
+<div
+  class="flex flex-col md:flex-row gap-3 justify-center md:justify-around items-center"
+>
+  <div>
+    <div class="flex flex-col justify-start">
+      <div class="text-2xl">
+        Hello! 👋, <b class="text-primary"> I'm {{ name$ | async }}.</b>
+      </div>
+      <div class="text-6xl max-w-xl">
+        <span [textContent]="attributes$ | async"></span>
+      </div>
+      <div class="my-6 max-w-xl text-content">
+        <span [textContent]="profileSummary$ | async"> </span>
+      </div>
+    </div>
+    <button class="btn btn-primary">Download Resume &darr;</button>
+  </div>
+
+  <div>
+    <img
+      class="rounded-full w-64 ring-2 ring-blue-700 ring-offset-4"
+      src="assets/sounish-nath-photo.webp"
+      alt="sounish-logo"
+    />
+  </div>
+</div>
+<div class="my-10 text-xl">
+  Worked At &colon;
+  <div class="flex my-3 flex-start justify-start items-center gap-6 max-w-md">
+    <img
+      *ngFor="let item of workedAtCompanies$ | async"
+      [src]="item.image"
+      [alt]="item.companyName"
+      class="w-36"
+    />
+  </div>
+</div>

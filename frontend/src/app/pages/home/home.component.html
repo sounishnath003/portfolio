@@ -1,10 +1,20 @@
-<app-introduction
-  [currentBio$]="currentBio$"
-  [featureObserver$]="featureObserver$"
-  [companies$]="companies$"
-></app-introduction>
-<app-skills [skillsSets$]="skillsSets$"></app-skills>
-<app-github-heatmap></app-github-heatmap>
-<app-quick-thoughts [recommendations$]="recommendations$"></app-quick-thoughts>
-<app-recent-blogs [recentBlogPosts$]="recentBlogPosts$"></app-recent-blogs>
-<app-quick-projects [recentProjects$]="recentProjects$"></app-quick-projects>
+<app-hero
+  [name$]="name$"
+  [attributes$]="attributes$"
+  [profileSummary$]="profileSummary$"
+  [workedAtCompanies$]="workedAtCompanies$"
+></app-hero>
+
+<app-about class="m-10" [bio$]="bio$"></app-about>
+
+<app-skillset class="m-10" [skillsets$]="skillsets$"></app-skillset>
+
+<app-recommendations
+  class="m-10"
+  [recommendations$]="recommendations$"
+></app-recommendations>
+
+<app-experience-timescroll
+  class="m-10"
+  [professionalExperiencesTimeline$]="professionalExperiencesTimeline$"
+></app-experience-timescroll>
