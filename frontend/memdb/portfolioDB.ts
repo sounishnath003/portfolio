@@ -30,7 +30,7 @@ export const PortfolioDB = {
     Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
   </p>
 
-  <h2 class="my-3 bg-yellow-100"> 
+  <h2 class="my-3 bg-yellow-300"> 
     ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles. 
   </h2>
 `,
@@ -131,6 +131,32 @@ export const PortfolioDB = {
     },
   ],
   professionalExperiencesTimeline: [
+    {
+      timeInfo: 'Aug 2021 - Present',
+      location: 'Mumbai',
+      roleOrWork: 'Software Engineer, Cloud Data & AI',
+      organizationName: 'Tata Consultancy Services',
+      content: `
+      <ul>
+        <li><b class='text-secondary'>Optimized Data Services:</b> Engineered a high-performance GraphQL API, boosting downstream/upstream app performance by 60% for data-as-a-service offerings.</li>
+        <li><b class='text-secondary'>Migrated to Cloud:</b> Led the migration of SQL SSRS, Hive, and Presto jobs to Google Dataproc, increasing availability and significantly reducing operational costs.</li>
+        <li><b class='text-secondary'>AI-Powered Helpdesk:</b> Pioneered deep neural networks for Helpdesk issues, saving 80 person-months, improving productivity by 42%, enhancing user experience by 85%, and reducing turnaround time by 20%.</li>
+        <li><b class='text-secondary'>Self-Managed Data Platform:</b> Architected a serverless data platform with data governance and quality at its core, building a robust data fabric ecosystem.</li>
+        <li><b class='text-secondary'>Generative AI Prototypes:</b> Led the development of 6 Generative AI prototype service agents, demonstrating the potential of LLMs for reimagined IT operations.</li>
+        <li><b class='text-secondary'>Predictive Data Pipelines:</b> Developed accelerated data pipelines (ADP) with a Predictive Modeling framework handling 2.2+ billion data events for global IT monitoring. This enabled 52% earlier capacity planning and 36% cost savings within 1.2 hours.</li>
+        <li><b class='text-secondary'>Cost Reduction Initiative:</b> Led a project to identify unused GCP resources and establish bucket expiration policies, resulting in annual cost savings exceeding ₹20,00,000.</li>
+        <li><b class='text-secondary'>Alert Visualization Tool:</b> Built a tool that groups infrastructure alerts by context, reducing Mean Time To Resolution (MTTR). It models dependencies as a graph and uses BFS algorithms to identify root causes.</li>
+      </ul>
+
+      <p class='text-secondary'> Technical Skills </p>
+
+      <ul>
+        <li> Cloud Platforms: GCP, Vertex AI, BigQuery, Dataproc, Pubsub </li>
+        <li> Programming Languages: Python, TypeScript, SQL </li>
+        <li> Frameworks & Tools: NestJS, Docker, Pubsub, Airflow, Terraform, Cloud Run, Cloud Functions, Cloud Workflows </li>
+      </ul>
+      `,
+    },
     {
       timeInfo: 'Feb 2021 - Jun 2021',
       location: 'Mumbai, Remote',

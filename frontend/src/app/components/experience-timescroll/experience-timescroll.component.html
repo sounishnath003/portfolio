@@ -26,8 +26,8 @@
           </svg>
         </div>
         <div class="timeline-end w-full timeline-box">
-          <div class="flex justify-between">
-            <p>
+          <div class="flex justify-between text-blue-700 font-semibold">
+            <p class="md:text-xl">
               {{ timeline.roleOrWork }} &bullet; {{ timeline.organizationName }}
             </p>
             <p class="text-accent">
@@ -36,7 +36,7 @@
           </div>
           <div
             [innerHTML]="timeline.content"
-            class="text-base-content max-h-64 overflow-hidden hidden-scrollbar prose"
+            class="text-base-content max-h-72 overflow-hidden hidden-scrollbar prose"
           ></div>
         </div>
         <hr />
