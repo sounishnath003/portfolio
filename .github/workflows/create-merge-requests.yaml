@@ -20,8 +20,8 @@ jobs:
       - name: Create Merge Request to Master
         run: |
           git fetch origin master
-          git checkout -b merge-dev-to-master
-          git pull origin merge-dev-to-master || true  # Attempt to pull, but don't fail if the branch doesn't exist
+          git checkout -b merge-dev-to-master || git checkout merge-dev-to-master
+          git reset --hard origin/merge-dev-to-master || true  # Reset to remote state if branch exists
           git merge origin/dev
           git push origin merge-dev-to-master
           gh pr create --base master --head merge-dev-to-master --title "Merge dev to master" --body "Auto-created merge request from dev to master"
@@ -32,8 +32,8 @@ jobs:
       - name: Create Merge Request to Production
         run: |
           git fetch origin production
-          git checkout -b merge-master-to-production
-          git pull origin merge-master-to-production || true  # Attempt to pull, but don't fail if the branch doesn't exist
+          git checkout -b merge-master-to-production || git checkout merge-master-to-production
+          git reset --hard origin/merge-master-to-production || true  # Reset to remote state if branch exists
           git merge origin/master
           git push origin merge-master-to-production
           gh pr create --base production --head merge-dev-to-production --title "Merge dev to production" --body "Auto-created merge request from master to production"
