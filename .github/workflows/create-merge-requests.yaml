@@ -1,0 +1,42 @@
+name: Auto Create Merge Requests
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  create-merge-requests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Git
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+
+      - name: Create Merge Request to Master
+        run: |
+          git fetch origin master
+          git checkout -b merge-dev-to-master || git checkout merge-dev-to-master
+          git reset --hard origin/merge-dev-to-master || true  # Reset to remote state if branch exists
+          git merge origin/dev
+          git push origin merge-dev-to-master
+          gh pr create --base master --head merge-dev-to-master --title "Merge dev to master" --body "Auto-created merge request from dev to master"
+
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Merge Request to Production
+        run: |
+          git fetch origin production
+          git checkout -b merge-master-to-production || git checkout merge-master-to-production
+          git reset --hard origin/merge-master-to-production || true  # Reset to remote state if branch exists
+          git merge origin/master
+          git push origin merge-master-to-production
+          gh pr create --base production --head merge-dev-to-production --title "Merge dev to production" --body "Auto-created merge request from master to production"
+
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
