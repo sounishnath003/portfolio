@@ -9,7 +9,7 @@ import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.comp
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [CommonModule, RouterOutlet, NavbarComponent, GetInTouchComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent],
 })
 export class AppComponent {
   title = 'frontend';

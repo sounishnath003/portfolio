@@ -6,6 +6,7 @@ import { AboutComponent } from '../../components/about/about.component';
 import { SkillsetComponent } from '../../components/skillset/skillset.component';
 import { RecommendationsComponent } from '../../components/recommendations/recommendations.component';
 import { ExperienceTimescrollComponent } from '../../components/experience-timescroll/experience-timescroll.component';
+import { GetInTouchComponent } from '../../components/get-in-touch/get-in-touch.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { ExperienceTimescrollComponent } from '../../components/experience-times
     SkillsetComponent,
     RecommendationsComponent,
     ExperienceTimescrollComponent,
+    GetInTouchComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
