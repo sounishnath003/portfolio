@@ -21,17 +21,19 @@ jobs:
         run: |
           git fetch origin master
           git checkout -b merge-dev-to-master
+          git pull origin merge-dev-to-master || true  # Attempt to pull, but don't fail if the branch doesn't exist
           git merge origin/dev
           git push origin merge-dev-to-master
           gh pr create --base master --head merge-dev-to-master --title "Merge dev to master" --body "Auto-created merge request from dev to master"
-        
+
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Merge Request to Production
         run: |
           git fetch origin production
-          git checkout -b merge-dev-to-production
+          git checkout -b merge-master-to-production
+          git pull origin merge-master-to-production || true  # Attempt to pull, but don't fail if the branch doesn't exist
           git merge origin/master
           git push origin merge-master-to-production
           gh pr create --base production --head merge-dev-to-production --title "Merge dev to production" --body "Auto-created merge request from master to production"
