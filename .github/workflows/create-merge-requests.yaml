@@ -22,7 +22,7 @@ jobs:
           git fetch origin master
           git checkout -b merge-dev-to-master
           git merge origin/dev
-          git push origin merge-dev-to-master:refs/heads/merge-dev-to-master
+          git push origin merge-dev-to-master
           gh pr create --base master --head merge-dev-to-master --title "Merge dev to master" --body "Auto-created merge request from dev to master"
         
         env:
@@ -32,9 +32,9 @@ jobs:
         run: |
           git fetch origin production
           git checkout -b merge-dev-to-production
-          git merge origin/dev
-          git push origin merge-dev-to-production:refs/heads/merge-dev-to-production
-          gh pr create --base production --head merge-dev-to-production --title "Merge dev to production" --body "Auto-created merge request from dev to production"
+          git merge origin/master
+          git push origin merge-master-to-production
+          gh pr create --base production --head merge-dev-to-production --title "Merge dev to production" --body "Auto-created merge request from master to production"
 
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
