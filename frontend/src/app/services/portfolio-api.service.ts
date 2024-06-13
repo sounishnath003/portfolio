@@ -76,4 +76,18 @@ export class PortfolioApiService {
   > {
     return of(PortfolioDB.professionalExperiencesTimeline);
   }
+
+  get linktreeDetails$(): Observable<{
+    publicName: string;
+    photo: string;
+    designation: string;
+    bio: string;
+    links: {
+      profileName: string;
+      href: string;
+      icon: string;
+    }[];
+  }> {
+    return of(PortfolioDB.linktreeDetails);
+  }
 }
