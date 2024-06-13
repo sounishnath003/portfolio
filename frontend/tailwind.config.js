@@ -7,7 +7,7 @@ module.exports = {
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
     themes: [
-      "bumblebee",
+      // "bumblebee",
       {
         mytheme: {
           // primary: "#00ad81",
@@ -20,15 +20,15 @@ module.exports = {
           // warning: "#cb5700",
           // error: "#ff2761",
 
-          // primary: "#0023ff",
-          // secondary: "#006a00",
-          // accent: "#009885",
-          // neutral: "#160c11",
-          // "base-100": "#fbfffb",
-          // info: "#009dff",
-          // success: "#88f36b",
-          // warning: "#d63800",
-          // error: "#ff6389",
+          primary: "#0023ff",
+          secondary: "#006a00",
+          accent: "#009885",
+          neutral: "#160c11",
+          "base-100": "#fbfffb",
+          info: "#009dff",
+          success: "#88f36b",
+          warning: "#d63800",
+          error: "#ff6389",
         },
       },
     ],

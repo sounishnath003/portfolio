@@ -1,4 +1,4 @@
-name: Auto PR from DEV
+name: Auto PR from dev
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
           source_branch: master
           destination_branch: production
           pr_title: "Auto PR: Update from master to production"
-          pr_body: "This pull request is automatically created to update the production branch with latest changes from DEV."
+          pr_body: "This pull request is automatically created to update the production branch with latest changes from master."

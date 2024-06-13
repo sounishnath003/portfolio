@@ -30,7 +30,7 @@ export const PortfolioDB = {
     Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
   </p>
 
-  <h2 class="my-3 bg-yellow-300"> 
+  <h2 class="my-3 font-bold text-success"> 
     ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles. 
   </h2>
 `,
@@ -201,4 +201,42 @@ export const PortfolioDB = {
       `,
     },
   ],
+  linktreeDetails: {
+    publicName: 'Sounish Nath',
+    photo: '/assets/sounish-nath-photo.webp',
+    designation: 'Software Engineer @ Tata Consultancy Services',
+    bio: 'Well done is better than well said!',
+    links: [
+      {
+        profileName: 'LinkedIn',
+        icon: '/assets/linkedin-logo.svg',
+        href: 'https://www.linkedin.com/in/sounishnath/',
+      },
+      {
+        profileName: 'Github',
+        icon: '/assets/github-logo.png',
+        href: 'https://www.github.com/sounishnath003/',
+      },
+      {
+        profileName: 'Leetcode',
+        icon: '/assets/leetcode-logo.png',
+        href: 'https://leetcode.com/sounish/',
+      },
+      {
+        profileName: 'Instagram',
+        icon: '/assets/instagram-logo.svg',
+        href: 'https://www.instagram.com/sounishnath/',
+      },
+      {
+        profileName: 'YouTube',
+        icon: '/assets/youtube-logo.svg',
+        href: 'https://www.youtube.com/@sounishnath513',
+      },
+      {
+        profileName: 'Facebook',
+        icon: '/assets/facebook-logo.svg',
+        href: 'https://www.facebook.com/sounish.nath',
+      },
+    ],
+  },
 };
