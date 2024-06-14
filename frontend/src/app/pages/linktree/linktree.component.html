@@ -1,42 +1,48 @@
 <div
-  class="card max-w-[780px] text-primary-content flex flex-col justify-center items-center p-4 m-auto bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900"
-  *ngIf="linkTreeDetails$ | async as details"
+  class="relative mx-auto max-w-[608px] rounded-lg bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg"
 >
-  <div class="avatar">
-    <div class="w-24 rounded-full">
-      <img [src]="details.photo" alt="profile-logo" />
-    </div>
-  </div>
-  <div class="card-body flex flex-col justify-center items-center gap-4">
-    <h2
-      class="card-title text-3xl md:text-5xl bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-orange-500 via-indigo-500 to-green-500 text-transparent bg-clip-text"
+  <div class="card bg-white p-7 rounded-md">
+    <div
+      class="text-primary-content flex flex-col justify-center items-center p-4 m-auto"
+      *ngIf="linkTreeDetails$ | async as details"
     >
-      {{ details.publicName | titlecase }}
-    </h2>
-    <p
-      class="text-accent text-xl text-center"
-      [textContent]="details.designation"
-    ></p>
-    <p
-      class="text-accent text-sm italic tracking-wide"
-      [textContent]="details.bio"
-    ></p>
-
-    <!-- comment -->
-    <button
-      *ngFor="let link of details.links"
-      class="btn w-full hover:bg-accent"
-    >
-      <a
-        [href]="link.href"
-        target="_blank"
-        class="link-hover flex justify-around items-center gap-4 m-auto"
-      >
-        <div>
-          <img [src]="link.icon" [alt]="link.profileName" class="w-6" />
+      <div class="avatar">
+        <div class="w-32 rounded-full black-and-white-burnout">
+          <img [src]="details.photo" alt="profile-logo" />
         </div>
-        <div>{{ link.profileName }}</div>
-      </a>
-    </button>
+      </div>
+      <div class="card-body flex flex-col justify-center items-center gap-4">
+        <h2
+          class="card-title text-3xl md:text-6xl bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-orange-500 via-indigo-500 to-green-500 text-transparent bg-clip-text tracking-wide"
+        >
+          {{ details.publicName | titlecase }}
+        </h2>
+        <p
+          class="text-primary-content text-xl text-center"
+          [textContent]="details.designation"
+        ></p>
+        <p
+          class="text-primary-content text-sm italic"
+          [textContent]="details.bio"
+        ></p>
+
+        <!-- comment -->
+        <button
+          *ngFor="let link of details.links"
+          class="btn-ghost w-full text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >
+          <a
+            [href]="link.href"
+            target="_blank"
+            class="link-hover flex justify-center items-center gap-4 m-auto"
+          >
+            <div>
+              <img [src]="link.icon" [alt]="link.profileName" class="w-6" />
+            </div>
+            <div class="text-xl">{{ link.profileName }}</div>
+          </a>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
