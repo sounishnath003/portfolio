@@ -13,7 +13,11 @@
         <span [textContent]="profileSummary$ | async"> </span>
       </div>
     </div>
-    <button class="btn btn-primary">Download Resume &darr;</button>
+    <button class="btn btn-primary">
+      <a [download]="resumeDownload$() | async" href="/assets/resume.pdf"
+        >Download Resume &darr;</a
+      >
+    </button>
   </div>
 
   <div>

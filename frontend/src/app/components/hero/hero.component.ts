@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 @Component({
   selector: 'app-hero',
   standalone: true,
@@ -20,4 +20,17 @@ export class HeroComponent {
   workedAtCompanies$!: Observable<{ companyName: string; image: string }[]>;
 
   constructor() {}
+
+  resumeDownload$() {
+    const date = new Date();
+    return this.name$.pipe(
+      map(
+        (d) =>
+          `${d.replaceAll(
+            ' ',
+            ''
+          )}_Resume_${date.getFullYear()}${date.getMonth()}${date.getDate()}.pdf`
+      )
+    );
+  }
 }
