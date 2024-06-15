@@ -2,13 +2,18 @@ import { Injectable } from '@angular/core';
 import { PortfolioDB } from '../../../memdb/portfolioDB';
 import { Observable, concatMap, from, map, of, repeat } from 'rxjs';
 import { UtilsService } from './utils.service';
+import { HttpClient } from '@angular/common/http';
+import { GithubUserProject } from './github.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PortfolioApiService {
   private attributes = PortfolioDB.attributes;
-  constructor(private readonly utilityService: UtilsService) {}
+  constructor(
+    private readonly utilityService: UtilsService,
+    private readonly httpClient: HttpClient
+  ) {}
 
   get name$(): Observable<string> {
     return of(PortfolioDB.name);
@@ -89,5 +94,25 @@ export class PortfolioApiService {
     }[];
   }> {
     return of(PortfolioDB.linktreeDetails);
+  }
+
+  get getGithubProjects$(): Observable<GithubUserProject[]> {
+    const githubUsername = PortfolioDB.githubUsername;
+    if (githubUsername == undefined || githubUsername.length == 0)
+      return of([]);
+
+    return this.httpClient
+      .get<GithubUserProject[]>(
+        `https://api.github.com/users/${githubUsername}/repos`
+      )
+      .pipe(
+        map((data) =>
+          data.sort(
+            (a: GithubUserProject, b: GithubUserProject) =>
+              new Date(b.updated_at).getTime() -
+              new Date(a.updated_at).getTime()
+          )
+        )
+      );
   }
 }

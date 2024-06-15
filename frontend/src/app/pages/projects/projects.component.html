@@ -1,3 +1,7 @@
-<p>projects works!</p>
+<div>
+  @for (item of githubProjects$|async; track $index) {
+  <div>{{ item.full_name }}</div>
+  }
+</div>
 
 <app-get-in-touch></app-get-in-touch>

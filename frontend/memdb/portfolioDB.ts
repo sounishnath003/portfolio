@@ -239,4 +239,5 @@ export const PortfolioDB = {
       },
     ],
   },
+  githubUsername: `sounishnath003`,
 };
