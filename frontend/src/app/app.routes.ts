@@ -26,4 +26,9 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./pages/linktree/linktree.module').then((m) => m.LinktreeModule),
   },
+  {
+    path: 'resume',
+    loadChildren: () =>
+      import('./pages/resume/resume.module').then((m) => m.ResumeModule),
+  },
 ];

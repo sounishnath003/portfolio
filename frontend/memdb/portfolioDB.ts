@@ -205,7 +205,7 @@ export const PortfolioDB = {
     publicName: 'Sounish Nath',
     photo: '/assets/sounish-nath-photo.webp',
     designation: 'Software Engineer @ Tata Consultancy Services',
-    bio: 'Well done is better than well said!',
+    bio: '≈≈≈ Well done is better than well said! ≈≈≈',
     links: [
       {
         profileName: 'LinkedIn',
