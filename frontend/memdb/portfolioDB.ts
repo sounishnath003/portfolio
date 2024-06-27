@@ -204,7 +204,7 @@ export const PortfolioDB = {
   linktreeDetails: {
     publicName: 'Sounish Nath',
     photo: '/assets/sounish-nath-photo.webp',
-    designation: 'Software Engineer @ Tata Consultancy Services',
+    designation: 'Cloud, Data & AI @ Tata Consultancy Services',
     bio: '≈≈≈ Well done is better than well said! ≈≈≈',
     links: [
       {
