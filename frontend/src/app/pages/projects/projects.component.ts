@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { GetInTouchComponent } from '../../components/get-in-touch/get-in-touch.component';
 import { PortfolioApiService } from '../../services/portfolio-api.service';
-import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
+import { AsyncPipe, CommonModule, DatePipe, JsonPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 import { GithubUserProject } from '../../services/github.model';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, GetInTouchComponent],
+  imports: [CommonModule, DatePipe, GetInTouchComponent],
   providers: [PortfolioApiService],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
