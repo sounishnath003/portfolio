@@ -125,7 +125,15 @@ export class PortfolioApiService {
   }
 
   getFeaturedProjectBySlug(slugName: string): Observable<FeaturedProject> {
-    return of(PortfolioDB.featuredProjects.filter(project => project.slugName === slugName)[0]);
+    const projects = PortfolioDB.featuredProjects.filter(project => project.slugName === slugName);
+    if (projects.length == 0) {
+      return of({} as FeaturedProject);
+    }
+    return of(projects[0]);
+  }
+
+  getBlogMarkdownContent$(projectMarkdownContentFileUri: string) {
+    return this.httpClient.get(projectMarkdownContentFileUri, { responseType: 'text' });
   }
 }
 
@@ -136,6 +144,6 @@ export interface FeaturedProject {
   shortDescription: string;
   image: string;
   markdownContentFile: string;
-  dateOfPublish: Date;
+  dateOfPublish: string;
   tags: string[];
 }

@@ -1,11 +1,12 @@
 <div *ngIf="project$ | async as project ; else template">
-    <div class="-mt-5 p-2 rounded-lg border rounded-lg h-screen mx-auto">
-        <div class="grid grid-cols-3 gap-2">
-            <div class="p-2 border-r border-gray-300 flex flex-col justify-center items-center gap-5 w-full">
+    <div class="-mt-5 p-2 rounded-lg border rounded-lg h-screen mx-auto hidden-scrollbar">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 w-full">
+            <div class="p-2 border-r border-gray-300 flex flex-col justify-start items-center gap-5 w-full">
                 <div class="flex flex-row justify-between items-center w-full text-xl">
                     <div class="text-2xl cursor-pointer"> <a href="/">&larr;</a> </div>
                     <div class="p-2 rounded bg-gray-100 text-xs"> {{ project.dateOfPublish | date }} </div>
                 </div>
+
 
                 <div class="rounded-lg w-full">
                     <img [src]="project.image" alt="placeholder-img" class="p-2 rounded-lg max-h-48 w-full">
@@ -13,9 +14,9 @@
 
                 <div class="w-full text-xl lg:text-3xl font-bold text-primary"> {{project.title}} </div>
 
-                <div class="flex flex-row gap-2 w-full text-xs">
+                <div class="flex flex-row gap-2 text-xs items-center w-full">
                     @for (tag of project.tags; track $index) {
-                    <div class=" border px-2 py-1 rounded bg-gray-50"> {{tag}} </div>
+                    <div class="text-center border px-2 py-1 rounded bg-gray-50"> {{tag}} </div>
                     }
                 </div>
 
@@ -23,7 +24,8 @@
                 <div class="font-sans my-5"> {{project.shortDescription}} </div>
 
             </div>
-            <div class="p-2">2</div>
+            <hr class="lg:hidden block" />
+            <div class="m-2 lg:col-span-2 prose w-full" [innerHTML]="sanitizeHtml( markdownContent$ | async)"> </div>
         </div>
     </div>
 </div>
