@@ -4,34 +4,33 @@
     <option>Github</option>
 </select>
 
-@for (item of [1,2,3]; track $index) {
-<div class="my-5 border rounded-lg p-3 h-auto cursor-pointer">
+@for (project of featuredProjects$ | async; track $index) {
+<div class="my-5 border rounded-lg p-3 h-auto cursor-pointer" [routerLink]="getSlugUrl(project)" >
     <div class="flex flex-col justify-between items-center gap-3">
         <div class="flex flex-row gap-2 items-center">
-            <div class="flex flex-col gap-3 items-start justify-center">
+            <div class="flex flex-col gap-6 items-start justify-center">
                 <div class="flex flex-row gap-2">
-                    <div><h3 class="text-2xl font-bold tracking-wide text-primary">Manifold</h3></div>
+                    <div>
+                        <h3 class="text-2xl font-bold tracking-wide text-primary"> {{ project.title}} </h3>
+                    </div>
                     <div class="p-2 rounded bg-gray-100 text-xs">
-                        {{ "2024-06-10" | date }}
+                        {{ project.dateOfPublish | date }}
                     </div>
                 </div>
 
                 <div class="text-sm max-w-lg text-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-                    itaque repudiandae eius doloribus, deserunt non cupiditate amet
-                    quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea
-                    ipsam corporis aperiam aspernatur!
+                    {{ project.shortDescription }}
                 </div>
 
 
-                <div class="grid grid-cols-5 gap-2">
-                    @for (item of [1,2,4,5]; track $index) {
-                    <div class="p-2 rounded bg-gray-100 text-xs">Angular</div>
+                <div class="grid grid-cols-4 gap-2 text-center w-auto">
+                    @for (tag of project.tags; track $index) {
+                    <div class="text-wrap px-1 bg-gray-200 text-gray-700 py-2 rounded-lg text-xs"> {{ tag }} </div>
                     }
                 </div>
             </div>
 
-            <div> <img src="https://placehold.co/600x400" alt="placeholder-img" class="rounded w-64"> </div>
+            <div> <img [src]="project.image" alt="placeholder-img" class="rounded w-64"> </div>
         </div>
 
     </div>

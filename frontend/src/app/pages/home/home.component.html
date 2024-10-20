@@ -1,4 +1,4 @@
-<app-hero [name$]="name$" [attributes$]="attributes$" [profileSummary$]="profileSummary$"
+<app-hero [name$]="name$" [resume$]="resume$" [attributes$]="attributes$" [profileSummary$]="profileSummary$"
   [workedAtCompanies$]="workedAtCompanies$"></app-hero>
 
 <app-about class="m-10" [bio$]="bio$"></app-about>
@@ -11,7 +11,7 @@
   </ul>
 </div>
 
-<div class="w-full my-10 grid lg:grid-cols-5 grid-cols-2 items-center- gap-3 h-auto lg:h-100">
+<div class="w-full my-10 grid lg:grid-cols-5 grid-cols-2 items-center- gap-3 overflow-hidden" style="height: 50rem;">
   <app-skillset [skillsets$]="skillsets$" class="col-span-2 border-r border-gray-100"></app-skillset>
   <div class="col-span-3 hidden-scrollbar p-3"> <router-outlet></router-outlet> </div>
 </div>

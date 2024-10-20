@@ -24,12 +24,13 @@ import { ProjectsComponent } from "./components/projects/projects.component";
     RouterLink,
     RouterLinkActive,
     ProjectsComponent
-],
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   name$: Observable<string>;
+  resume$: Observable<string>;
   attributes$: Observable<string>;
   profileSummary$: Observable<string>;
   workedAtCompanies$: Observable<{ companyName: string; image: string }[]>;
@@ -62,6 +63,7 @@ export class HomeComponent {
 
   constructor(private readonly portfolioService: PortfolioApiService) {
     this.name$ = this.portfolioService.name$;
+    this.resume$ = this.portfolioService.resume$;
     this.attributes$ = this.portfolioService.attributes$;
     this.profileSummary$ = this.portfolioService.profileSummary$;
     this.workedAtCompanies$ = this.portfolioService.workedAtCompanies$;

@@ -1,5 +1,6 @@
 export const PortfolioDB = {
   name: 'Sounish Nath',
+  resume: "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin",
   attributes: [
     'Software Engineer.',
     'Backend Engineer.',
@@ -262,4 +263,60 @@ export const PortfolioDB = {
     ],
   },
   githubUsername: `sounishnath003`,
+  featuredProjects: [
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: new Date(),
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+  ]
 };
