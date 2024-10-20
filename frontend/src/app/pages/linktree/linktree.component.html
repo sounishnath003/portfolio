@@ -13,16 +13,16 @@
       </div>
       <div class="card-body flex flex-col justify-around items-center gap-4">
         <h2
-          class="card-title text-3xl md:text-6xl bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-orange-500 via-indigo-500 to-green-500 text-transparent bg-clip-text tracking-wide"
+          class="card-title text-3xl md:text-6xl bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-orange-950 via-blue-800 to-slate-600 bg-clip-text text-transparent font-bold tracking-wide"
         >
           {{ details.publicName | titlecase }}
         </h2>
         <p
-          class="text-primary-content md:text-xl text-center"
+          class="text-black md:text-xl text-center"
           [textContent]="details.designation"
         ></p>
         <p
-          class="text-primary-content text-sm italic text-center"
+          class="text-secondary text-sm italic text-center"
           [textContent]="details.bio"
         ></p>
       </div>
@@ -30,15 +30,15 @@
     <div class="md:grid md:grid-cols-3 gap-4">
       <button
         *ngFor="let link of details.links"
-        class="btn-ghost w-full text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        class="btn-ghost w-full bg-gradient-to-r from-blue-500 via-violet-800 to-purple-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
       >
         <a
           [href]="link.href"
           target="_blank"
-          class="link-hover flex justify-center items-center gap-4 m-auto"
+          class="link-hover text-white flex justify-center items-center gap-4 m-auto"
         >
           <div>
-            <img [src]="link.icon" [alt]="link.profileName" class="w-6" />
+            <img [src]="link.icon" [alt]="link.profileName" class="w-6 bg-white rounded-full w-12" />
           </div>
           <div class="text-xl">{{ link.profileName }}</div>
         </a>
