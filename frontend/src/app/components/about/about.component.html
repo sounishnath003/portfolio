@@ -1,4 +1,4 @@
 <div>
   <p class="text-5xl text-primary">&bullet; About</p>
-  <div class="my-3 text-content" [innerHTML]="bio$ | async"></div>
+  <div *ngIf="bio$ | async as bio" class="my-3" [innerHTML]="bio"></div>
 </div>

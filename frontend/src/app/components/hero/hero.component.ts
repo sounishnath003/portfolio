@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MarkdownService } from 'ngx-markdown';
 import { Observable, map } from 'rxjs';
 @Component({
   selector: 'app-hero',
@@ -20,7 +21,7 @@ export class HeroComponent {
   @Input()
   workedAtCompanies$!: Observable<{ companyName: string; image: string }[]>;
 
-  constructor() {}
+  constructor(private readonly markdownService: MarkdownService) { }
 
   resumeDownload$() {
     const date = new Date();
@@ -33,5 +34,9 @@ export class HeroComponent {
           )}_Resume_${date.getFullYear()}${date.getMonth()}${date.getDate()}.pdf`
       )
     );
+  }
+
+  markdownCompile(content: string) {
+    return this.markdownService.parse(content);
   }
 }

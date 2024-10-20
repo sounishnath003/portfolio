@@ -6,10 +6,13 @@ import { Observable } from 'rxjs';
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule],
+  providers: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
 export class AboutComponent {
   @Input()
   bio$!: Observable<string>;
+
+  constructor() { }
 }

@@ -8,6 +8,9 @@
 html,
 :root {
   font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .black-and-white-burnout {
@@ -15,9 +18,12 @@ html,
 }
 
 .hidden-scrollbar {
-  overflow-y: auto; /* Enable scrolling when content overflows */
-  scrollbar-width: none; /* Hide scrollbar (not supported in all browsers) */
-  -ms-overflow-style: none; /* Hide for IE and Edge */
+  overflow-y: auto;
+  /* Enable scrolling when content overflows */
+  scrollbar-width: none;
+  /* Hide scrollbar (not supported in all browsers) */
+  -ms-overflow-style: none;
+  /* Hide for IE and Edge */
 }
 
 .hidden-scrollbar::-webkit-scrollbar {
