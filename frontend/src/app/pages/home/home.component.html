@@ -1,22 +1,27 @@
-<app-hero
-  [name$]="name$"
-  [attributes$]="attributes$"
-  [profileSummary$]="profileSummary$"
-  [workedAtCompanies$]="workedAtCompanies$"
-></app-hero>
+<app-hero [name$]="name$" [attributes$]="attributes$" [profileSummary$]="profileSummary$"
+  [workedAtCompanies$]="workedAtCompanies$"></app-hero>
 
 <app-about class="m-10" [bio$]="bio$"></app-about>
 
+<!-- 
 <app-skillset class="m-10" [skillsets$]="skillsets$"></app-skillset>
 
-<app-recommendations
-  class="m-10"
-  [recommendations$]="recommendations$"
-></app-recommendations>
+<app-recommendations class="m-10" [recommendations$]="recommendations$"></app-recommendations>
 
-<app-experience-timescroll
-  class="m-10"
-  [professionalExperiencesTimeline$]="professionalExperiencesTimeline$"
-></app-experience-timescroll>
+<app-experience-timescroll class="m-10"
+  [professionalExperiencesTimeline$]="professionalExperiencesTimeline$"></app-experience-timescroll> -->
 
-<app-get-in-touch></app-get-in-touch>
+<div class="my-10 flex flex-row items-center justify-center">
+  <ul class="menu menu-horizontal bg-base-200 rounded-box">
+    <li><a routerLinkActive="bg-gray-50" routerLink="">Projects</a></li>
+    <li><a routerLinkActive="bg-gray-50" routerLink="work-experiences">Work experiences</a></li>
+    <li><a routerLinkActive="bg-gray-50" routerLink="new-things-i-learnt">What I learnt new?</a></li>
+  </ul>
+</div>
+
+<div class="w-full grid grid-cols-3 items-center gap-3">
+  <app-skillset class="col-span-1 border-r border-gray-100"></app-skillset>
+  <div class="col-span-2"> <router-outlet></router-outlet> </div>
+</div>
+
+<app-get-in-touch class="my-20"></app-get-in-touch>

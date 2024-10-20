@@ -3,10 +3,11 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { PortfolioApiService } from '../../services/portfolio-api.service';
 import { Observable } from 'rxjs';
 import { AboutComponent } from '../../components/about/about.component';
-import { SkillsetComponent } from '../../components/skillset/skillset.component';
+import { SkillsetComponent } from './components/skillset/skillset.component';
 import { RecommendationsComponent } from '../../components/recommendations/recommendations.component';
 import { ExperienceTimescrollComponent } from '../../components/experience-timescroll/experience-timescroll.component';
 import { GetInTouchComponent } from '../../components/get-in-touch/get-in-touch.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,9 @@ import { GetInTouchComponent } from '../../components/get-in-touch/get-in-touch.
     RecommendationsComponent,
     ExperienceTimescrollComponent,
     GetInTouchComponent,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
