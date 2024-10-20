@@ -1,6 +1,4 @@
-<div
-  class="flex flex-col md:flex-row gap-3 justify-center md:justify-around items-center"
->
+<div class="flex flex-col md:flex-row gap-3 justify-center md:justify-around items-center">
   <div>
     <div class="flex flex-col justify-start">
       <div class="text-2xl">
@@ -10,51 +8,33 @@
         <span [textContent]="attributes$ | async"></span>
       </div>
       <div class="my-6 max-w-xl text-content">
-        <span [textContent]="profileSummary$ | async"> </span>
+        <div *ngIf="profileSummary$ | async as pf" [innerHTML]="markdownCompile(pf)"> </div>
       </div>
     </div>
     <button class="btn btn-primary">
-      <a [download]="resumeDownload$() | async" href="/assets/resume.pdf"
-        >Download Resume &darr;</a
-      >
+      <a [download]="resumeDownload$() | async" href="/assets/resume.pdf">Download Resume &darr;</a>
     </button>
   </div>
 
   <div>
-    <img
-      class="rounded-full w-64 ring-2 ring-blue-700 ring-offset-4"
-      src="assets/sounish-nath-photo.webp"
-      alt="sounish-logo"
-    />
+    <img class="rounded-full w-64 ring-2 ring-blue-700 ring-offset-4" src="assets/sounish-nath-photo.webp"
+      alt="sounish-logo" />
     <div class="my-10">
       <div class="flex gap-3 flex-row justify-center items-center">
         <a href="https://www.linkedin.com/in/sounishnath/" target="_blank">
-          <img
-            alt="linkedin"
-            src="/assets/linkedin-logo.svg"
-            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all"
-          />
+          <img alt="linkedin" src="/assets/linkedin-logo.svg"
+            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all" />
         </a>
         <a href="https://x.com/sounish1" target="_blank">
-          <img
-            src="/assets/twitter-logo.svg"
-            alt="x"
-            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all"
-          />
+          <img src="/assets/twitter-logo.svg" alt="x"
+            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all" />
         </a>
         <a href="mailto:flock.sinasini@gmail.com">
-          <img
-            src="/assets/email-logo.svg"
-            alt="mail"
-            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all"
-          />
+          <img src="/assets/email-logo.svg" alt="mail"
+            class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all" />
         </a>
-        <img
-          routerLink="/linktree"
-          src="/assets/user-logo.svg"
-          alt="mail"
-          class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all"
-        />
+        <img routerLink="/linktree" src="/assets/user-logo.svg" alt="mail"
+          class="w-10 p-2 cursor-pointer rounded-md border hover:shadow-lg inset-1 transition-all" />
       </div>
     </div>
   </div>
@@ -62,11 +42,6 @@
 <div class="my-10 text-xl">
   Worked At &colon;
   <div class="flex my-3 flex-start justify-start items-center gap-6 max-w-md">
-    <img
-      *ngFor="let item of workedAtCompanies$ | async"
-      [src]="item.image"
-      [alt]="item.companyName"
-      class="w-36"
-    />
+    <img *ngFor="let item of workedAtCompanies$ | async" [src]="item.image" [alt]="item.companyName" class="w-36" />
   </div>
 </div>

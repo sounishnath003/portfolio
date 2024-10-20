@@ -8,7 +8,7 @@ export const PortfolioDB = {
     'Focused, Versatile, and Passionate',
   ],
   profileSummary:
-    'Excited about building Scalable distributed data processing systems, Backend services,  train deep learning models and Generative AI applications. Based in Mumbai, India.',
+    'Excited about building **Scalable distributed data processing** systems, **Backend services**,  train **deep learning models** and **Generative AI** applications. Based in Mumbai, India.',
   workedAtCompanies: [
     {
       companyName: 'Tata Consultancy Services (TCS)',
@@ -25,13 +25,13 @@ export const PortfolioDB = {
   aboutBio: `
   <p>
 
-    Versatile Software Engineer with {{yearOfStartWorking}} years of experience. Excited about building scalable distributed data processing systems, backend systems, deep learning models. I designed and developed data warehouses ETL pipelines, Machine Learning/Deep Learning models.
-
+    Versatile Software Engineer with {{yearOfStartWorking}} years of experience. Excited about building scalable distributed data processing systems, backend systems, deep learning models. I designed and developed data warehouses ETL pipelines, Machine Learning/Deep Learning models. 
+    
     Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
   </p>
 
-  <h2 class="my-3 font-bold text-success"> 
-    ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles. 
+  <h2 class="my-3 font-bold text-success">
+    ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles.
   </h2>
 `,
   skillsSets: [
