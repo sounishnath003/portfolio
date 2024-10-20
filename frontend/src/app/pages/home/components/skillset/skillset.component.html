@@ -1,0 +1,10 @@
+<div>
+    <div class="text-2xl lg:text-5xl text-primary">&bullet; Skillset</div>
+    <div class="my-4">
+        <div class="flex flex-row items-start justify-start" *ngFor="let stack of skillsets$ | async">
+            <div class="my-1"> <span class="text-secondary font-bold">{{stack.domain}}:</span> <span
+                    class="font-sans text-content text-sm">
+                    {{stringify(stack.skills)}}</span> </div>
+        </div>
+    </div>
+</div>

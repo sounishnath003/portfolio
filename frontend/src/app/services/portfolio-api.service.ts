@@ -13,10 +13,14 @@ export class PortfolioApiService {
   constructor(
     private readonly utilityService: UtilsService,
     private readonly httpClient: HttpClient
-  ) {}
+  ) { }
 
   get name$(): Observable<string> {
     return of(PortfolioDB.name);
+  }
+
+  get resume$(): Observable<string> {
+    return of(PortfolioDB.resume);
   }
 
   get workedAtCompanies$(): Observable<
@@ -115,4 +119,31 @@ export class PortfolioApiService {
         )
       );
   }
+
+  get featuredProjects$(): Observable<FeaturedProject[]> {
+    return of(PortfolioDB.featuredProjects);
+  }
+
+  getFeaturedProjectBySlug(slugName: string): Observable<FeaturedProject> {
+    const projects = PortfolioDB.featuredProjects.filter(project => project.slugName === slugName);
+    if (projects.length == 0) {
+      return of({} as FeaturedProject);
+    }
+    return of(projects[0]);
+  }
+
+  getBlogMarkdownContent$(projectMarkdownContentFileUri: string) {
+    return this.httpClient.get(projectMarkdownContentFileUri, { responseType: 'text' });
+  }
+}
+
+
+export interface FeaturedProject {
+  title: string;
+  slugName: string;
+  shortDescription: string;
+  image: string;
+  markdownContentFile: string;
+  dateOfPublish: string;
+  tags: string[];
 }

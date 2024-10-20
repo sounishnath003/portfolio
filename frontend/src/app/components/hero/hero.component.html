@@ -12,7 +12,8 @@
       </div>
     </div>
     <button class="btn btn-primary">
-      <a [download]="resumeDownload$() | async" href="/assets/resume.pdf">Download Resume &darr;</a>
+      <a target="_blank" [href]="resume$| async">Download Resume
+        &darr;</a>
     </button>
   </div>
 

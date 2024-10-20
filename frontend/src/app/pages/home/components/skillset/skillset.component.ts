@@ -1,13 +1,13 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, NgForOf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-skillset',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgForOf, AsyncPipe],
   templateUrl: './skillset.component.html',
-  styleUrl: './skillset.component.css',
+  styleUrl: './skillset.component.css'
 })
 export class SkillsetComponent {
   @Input() skillsets$!: Observable<
@@ -16,4 +16,8 @@ export class SkillsetComponent {
       skills: string[];
     }[]
   >;
+
+  stringify(skills: string[]) {
+    return skills.join(", ");
+  }
 }
