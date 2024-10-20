@@ -1,14 +1,11 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProjectViewComponent } from './pages/project-view/project-view.component';
+
 
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '/home',
-  },
-  {
-    path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
@@ -18,9 +15,9 @@ export const routes: Routes = [
       import('./pages/blogs/blogs.module').then((m) => m.BlogsModule),
   },
   {
-    path: 'projects',
-    loadChildren: () =>
-      import('./pages/projects/projects.module').then((m) => m.ProjectsModule),
+    path: "projects/:slugName",
+    pathMatch: "full",
+    component: ProjectViewComponent
   },
   {
     path: 'linktree',

@@ -1,5 +1,6 @@
 export const PortfolioDB = {
   name: 'Sounish Nath',
+  resume: "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin",
   attributes: [
     'Software Engineer.',
     'Backend Engineer.',
@@ -38,30 +39,49 @@ export const PortfolioDB = {
     {
       domain: 'Programming Languages',
       skills: [
-        'OOP',
         'Java',
         'Python',
         'Golang',
+        'Javascript',
         'TypeScript',
-        'Data Structures & Algorithms',
+        'SQL',
       ],
     },
     {
+      domain: 'JavaScript Runtime',
+      skills: [
+        "Node.js", "Bun", "Cloud Functions"
+      ]
+    },
+    {
       domain: 'Frontend Technologies',
-      skills: ['Angular', 'RxJS', 'Apollo Server', 'Tailwind'],
+      skills: ["HTML", "CSS", "Angular", "RxJs", "Graphql", 'TailwindCSS', "NgRx"],
     },
     {
       domain: 'Backend Technologies',
       skills: [
-        'Node.JS',
-        'NestJS',
+        'Nest.JS',
+        'Flask',
         'Django',
+        'Go',
+        'Fiber',
         'FastAPI',
-        'GraphQL',
         'REST API',
-        'MySQL',
-        'Mongo DB',
+        'Express.js',
+        'GraphQL (Apollo Server)',
       ],
+    },
+    {
+      domain: 'Databases',
+      skills: [
+        "SQL Server", "MongoDB", "Firebase", "Azure Cosmos DB", "BigQuery"
+      ]
+    },
+    {
+      domain: "Libraries/Framework",
+      skills: [
+        "Vscode", "Kafka", "Elasticsearch", "Pubsub", "Apache Spark", "Pyspark", "BigData", "Git/Github", "Apache Airflow", "Apache Beam", "Google Cloud Services"
+      ]
     },
     {
       domain: 'Deep Learning / Tools',
@@ -72,13 +92,16 @@ export const PortfolioDB = {
         'TorchServe',
         'Transformers',
         'Transfer Learning',
+        "Huggingface",
+        "Kubeflow",
+        "Kubeflow Pipelines"
       ],
     },
     {
       domain: 'DevOps / MLOps',
       skills: [
-        'Terraform',
         'Docker',
+        'Terraform',
         'Kubernetes',
         'Cloud Build',
         'Kubeflow',
@@ -240,4 +263,24 @@ export const PortfolioDB = {
     ],
   },
   githubUsername: `sounishnath003`,
+  featuredProjects: [
+    {
+      title: 'Full Stack Application on GKE',
+      slugName: 'full-stack-application-on-gke',
+      shortDescription: "This repository contains the code for a full-stack application deployed on Google Kubernetes Engine (GKE). The application consists of the following services.",
+      image: 'assets/featuredProjects/images/fullstack-stack-application-on-gke.gif',
+      markdownContentFile: `assets/featuredProjects/fullstack-stack-application-on-gke.md`,
+      dateOfPublish: '2024-10-18',
+      tags: ["Angular", "Go", "Postgres", "Kubernetes"]
+    },
+    {
+      title: 'Manifold',
+      slugName: 'Manifold-genai-saas-platform',
+      shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque repudiandae eius doloribus, deserunt non cupiditate amet quam. Ullam corrupti libero, nihil fugit reiciendis accusantium ea ipsam corporis aperiam aspernatur!",
+      image: 'https://placehold.co/600x400',
+      markdownContentFile: `assets/featuredProjects/manifold.md`,
+      dateOfPublish: '2024-05-10',
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+    },
+  ]
 };

@@ -14,6 +14,8 @@ export class HeroComponent {
   @Input()
   name$!: Observable<string>;
   @Input()
+  resume$!: Observable<string>;
+  @Input()
   attributes$!: Observable<string>;
   @Input()
   profileSummary$!: Observable<string>;
@@ -22,19 +24,6 @@ export class HeroComponent {
   workedAtCompanies$!: Observable<{ companyName: string; image: string }[]>;
 
   constructor(private readonly markdownService: MarkdownService) { }
-
-  resumeDownload$() {
-    const date = new Date();
-    return this.name$.pipe(
-      map(
-        (d) =>
-          `${d.replaceAll(
-            ' ',
-            ''
-          )}_Resume_${date.getFullYear()}${date.getMonth()}${date.getDate()}.pdf`
-      )
-    );
-  }
 
   markdownCompile(content: string) {
     return this.markdownService.parse(content);
