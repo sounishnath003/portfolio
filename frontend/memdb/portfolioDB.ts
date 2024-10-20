@@ -38,30 +38,49 @@ export const PortfolioDB = {
     {
       domain: 'Programming Languages',
       skills: [
-        'OOP',
         'Java',
         'Python',
         'Golang',
+        'Javascript',
         'TypeScript',
-        'Data Structures & Algorithms',
+        'SQL',
       ],
     },
     {
+      domain: 'JavaScript Runtime',
+      skills: [
+        "Node.js", "Bun", "Cloud Functions"
+      ]
+    },
+    {
       domain: 'Frontend Technologies',
-      skills: ['Angular', 'RxJS', 'Apollo Server', 'Tailwind'],
+      skills: ["HTML", "CSS", "Angular", "RxJs", "Graphql", 'TailwindCSS', "NgRx"],
     },
     {
       domain: 'Backend Technologies',
       skills: [
-        'Node.JS',
-        'NestJS',
+        'Nest.JS',
+        'Flask',
         'Django',
+        'Go',
+        'Fiber',
         'FastAPI',
-        'GraphQL',
         'REST API',
-        'MySQL',
-        'Mongo DB',
+        'Express.js',
+        'GraphQL (Apollo Server)',
       ],
+    },
+    {
+      domain: 'Databases',
+      skills: [
+        "SQL Server", "MongoDB", "Firebase", "Azure Cosmos DB", "BigQuery"
+      ]
+    },
+    {
+      domain: "Libraries/Framework",
+      skills: [
+        "Vscode", "Kafka", "Elasticsearch", "Pubsub", "Apache Spark", "Pyspark", "BigData", "Git/Github", "Apache Airflow", "Apache Beam", "Google Cloud Services"
+      ]
     },
     {
       domain: 'Deep Learning / Tools',
@@ -72,13 +91,16 @@ export const PortfolioDB = {
         'TorchServe',
         'Transformers',
         'Transfer Learning',
+        "Huggingface",
+        "Kubeflow",
+        "Kubeflow Pipelines"
       ],
     },
     {
       domain: 'DevOps / MLOps',
       skills: [
-        'Terraform',
         'Docker',
+        'Terraform',
         'Kubernetes',
         'Cloud Build',
         'Kubeflow',

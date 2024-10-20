@@ -8,6 +8,7 @@ import { RecommendationsComponent } from '../../components/recommendations/recom
 import { ExperienceTimescrollComponent } from '../../components/experience-timescroll/experience-timescroll.component';
 import { GetInTouchComponent } from '../../components/get-in-touch/get-in-touch.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ProjectsComponent } from "./components/projects/projects.component";
 
 @Component({
   selector: 'app-home',
@@ -21,8 +22,9 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     GetInTouchComponent,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
-  ],
+    RouterLinkActive,
+    ProjectsComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
