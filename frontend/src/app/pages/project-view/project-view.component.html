@@ -15,18 +15,25 @@
 
                 <div class="w-full text-xl lg:text-3xl font-bold text-primary"> {{project.title}} </div>
 
-                <div class="flex flex-row gap-2 text-xs items-center w-full">
+                <div class="flex flex-row flex-wrap gap-2 text-xs items-center w-full">
                     @for (tag of project.tags; track $index) {
                     <div class="text-center border px-2 py-1 rounded bg-gray-50"> {{tag}} </div>
                     }
                 </div>
+                <div class="text-xl font-semibold text-secondary w-full">Project Demo:</div>
+                <div class="flex flex-row flex-wrap gap-2 text-xs items-start w-full -mt-2">
+                    @for (link of project.links; track $index) {
+                    <a [href]="link.link" class="border p-2 rounded hover:bg-gray-50 text-primary" target="_blank">
+                        {{link.type}}
+                    </a>
+                    }
+                </div>
 
-
-                <div class="font-sans my-5"> {{project.shortDescription}} </div>
-
+                <div class="font-sans"> {{project.shortDescription}} </div>
             </div>
             <hr class="lg:hidden block" />
             <div class="m-2 lg:col-span-2 prose w-full" [innerHTML]="sanitizeHtml( markdownContent$ | async)"> </div>
+
         </div>
     </div>
 </div>

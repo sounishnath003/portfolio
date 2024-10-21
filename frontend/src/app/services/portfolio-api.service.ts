@@ -126,7 +126,8 @@ export class PortfolioApiService {
         image: "",
         markdownContentFile: "",
         dateOfPublish: "",
-        tags: []
+        tags: [],
+        links: []
       } as FeaturedProject);
     }
     return of(projects[0]);
@@ -146,6 +147,7 @@ export interface FeaturedProject {
   markdownContentFile: string;
   dateOfPublish: string;
   tags: string[];
+  links: { type: string, link: string }[]
 }
 
 export interface ProfessionExperience {

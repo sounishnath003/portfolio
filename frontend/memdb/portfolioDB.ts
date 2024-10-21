@@ -262,7 +262,17 @@ export const PortfolioDB = {
       image: 'assets/featuredProjects/images/fullstack-stack-application-on-gke.gif',
       markdownContentFile: `assets/featuredProjects/fullstack-stack-application-on-gke.md`,
       dateOfPublish: '2024-10-18',
-      tags: ["Angular", "Go", "Postgres", "Kubernetes"]
+      tags: ["Angular", "Go", "Postgres", "Kubernetes"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://github.com/sounishnath003/manifold`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/fullstack-microservice-golang-gke/`
+        },
+      ]
     },
     {
       title: 'Manifold',
@@ -271,7 +281,17 @@ export const PortfolioDB = {
       image: 'https://placehold.co/600x400',
       markdownContentFile: `assets/featuredProjects/manifold.md`,
       dateOfPublish: '2024-05-10',
-      tags: ['Angular', "LLM", "Websockets", "Generative AI"]
+      tags: ['Angular', "LLM", "Websockets", "Generative AI"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://github.com/sounishnath003/manifold`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/manifold`
+        },
+      ]
     },
   ]
 };
