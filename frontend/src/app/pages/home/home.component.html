@@ -5,13 +5,13 @@
 
 <div class="my-10 flex flex-row items-center justify-center">
   <ul class="menu menu-horizontal bg-base-200 rounded-box">
-    <li><a routerLinkActive="bg-gray-50 text-primary" routerLink="">Projects</a></li>
-    <li><a routerLinkActive="bg-gray-50 text-primary" routerLink="work-experiences">Work experiences</a></li>
-    <li><a routerLinkActive="bg-gray-50 text-primary" routerLink="new-things-i-learnt">New learnings</a></li>
+    <li><a routerLinkActive="bg-base-100 text-primary" routerLink="">Projects</a></li>
+    <li><a routerLinkActive="bg-base-100 text-primary" routerLink="work-experiences">Work experiences</a></li>
+    <li><a routerLinkActive="bg-base-100 text-primary" routerLink="new-things-i-learnt">New learnings</a></li>
   </ul>
 </div>
 
-<div class="w-full my-10 grid lg:grid-cols-5 grid-cols-2 items-center- gap-3 overflow-hidden" style="height: 40rem;">
+<div class="w-full my-10 grid lg:grid-cols-5 grid-cols-2 gap-3 overflow-hidden" style="height: 45rem;">
   <app-skillset [skillsets$]="skillsets$" class="col-span-2 border-r border-gray-100"></app-skillset>
   <div class="col-span-3 hidden-scrollbar p-3"> <router-outlet></router-outlet> </div>
 </div>

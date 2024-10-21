@@ -74,15 +74,7 @@ export class PortfolioApiService {
     return of(PortfolioDB.recommendations);
   }
 
-  get professionalExperiencesTimeline$(): Observable<
-    {
-      timeInfo: string;
-      location: string;
-      roleOrWork: string;
-      organizationName: string;
-      content: string;
-    }[]
-  > {
+  get professionalExperiencesTimeline$(): Observable<ProfessionExperience[]> {
     return of(PortfolioDB.professionalExperiencesTimeline);
   }
 
@@ -127,9 +119,45 @@ export class PortfolioApiService {
   getFeaturedProjectBySlug(slugName: string): Observable<FeaturedProject> {
     const projects = PortfolioDB.featuredProjects.filter(project => project.slugName === slugName);
     if (projects.length == 0) {
-      return of({} as FeaturedProject);
+      return of({
+        title: "",
+        slugName: "",
+        shortDescription: "",
+        image: "",
+        markdownContentFile: "",
+        dateOfPublish: "",
+        tags: [],
+        links: []
+      } as FeaturedProject);
     }
     return of(projects[0]);
+  }
+
+
+  get personalBlogs$(): Observable<PersonalBlog[]> {
+    return of(PortfolioDB.personalBlogs);
+  }
+
+
+  getBlogBySlug(slugName: string): Observable<PersonalBlog> {
+    const blogs = PortfolioDB.personalBlogs.filter(blog => blog.slugName === slugName);
+    if (blogs.length == 0) {
+      return of({
+        title: "",
+        slugName: "",
+        shortDescription: "",
+        image: "",
+        markdownContentFile: "",
+        dateOfPublish: "",
+        tags: [],
+        links: []
+      } as PersonalBlog);
+    }
+    return of(blogs[0]);
+  }
+
+  get achievements$(): Observable<string[]> {
+    return of(PortfolioDB.achievements);
   }
 
   getBlogMarkdownContent$(projectMarkdownContentFileUri: string) {
@@ -146,4 +174,24 @@ export interface FeaturedProject {
   markdownContentFile: string;
   dateOfPublish: string;
   tags: string[];
+  links: { type: string, link: string }[]
+}
+
+export interface PersonalBlog {
+  title: string;
+  slugName: string;
+  shortDescription: string;
+  image: string;
+  markdownContentFile: string;
+  dateOfPublish: string;
+  tags: string[];
+  links: { type: string, link: string }[]
+}
+
+export interface ProfessionExperience {
+  timeInfo: string;
+  location: string;
+  roleOrWork: string;
+  organizationName: string;
+  content: string;
 }

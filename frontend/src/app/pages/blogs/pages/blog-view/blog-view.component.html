@@ -1,35 +1,35 @@
-<div *ngIf="project$ | async as project;">
-    <div *ngIf="project.title.length>0;else template"
+<div *ngIf="blog$ | async as blog;">
+    <div *ngIf="blog.title.length>0;else template"
         class="-mt-5 p-2 rounded-lg border rounded-lg h-screen mx-auto hidden-scrollbar">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 w-full">
             <div class="p-2 border-r border-gray-300 flex flex-col justify-start items-center gap-5 w-full">
                 <div class="flex flex-row justify-between items-center w-full text-xl">
                     <div class="text-2xl cursor-pointer"> <a href="/">&larr;</a> </div>
-                    <div class="p-2 rounded bg-gray-100 text-xs"> {{ project.dateOfPublish | date }} </div>
+                    <div class="p-2 rounded bg-gray-100 text-xs"> {{ blog.dateOfPublish | date }} </div>
                 </div>
 
 
                 <div class="rounded-lg w-full">
-                    <img [src]="project.image" alt="placeholder-img" class="p-2 rounded-lg max-h-48 w-full">
+                    <img [src]="blog.image" alt="placeholder-img" class="p-2 rounded-lg max-h-48 w-full">
                 </div>
 
-                <div class="w-full text-xl lg:text-3xl font-bold text-primary"> {{project.title}} </div>
+                <div class="w-full text-xl lg:text-3xl font-bold text-primary"> {{blog.title}} </div>
 
                 <div class="flex flex-row flex-wrap gap-2 text-xs items-center w-full">
-                    @for (tag of project.tags; track $index) {
+                    @for (tag of blog.tags; track $index) {
                     <div class="text-center border px-2 py-1 rounded bg-gray-50"> {{tag}} </div>
                     }
                 </div>
-                <div class="text-xl font-semibold text-secondary w-full">Project Demo:</div>
+                <div class="text-xl font-semibold text-secondary w-full">Blog Demo:</div>
                 <div class="flex flex-row flex-wrap gap-2 text-xs items-start w-full -mt-2">
-                    @for (link of project.links; track $index) {
+                    @for (link of blog.links; track $index) {
                     <a [href]="link.link" class="border p-2 rounded hover:bg-gray-50 text-primary" target="_blank">
                         {{link.type}}
                     </a>
                     }
                 </div>
 
-                <div class="font-sans"> {{project.shortDescription}} </div>
+                <div class="font-sans"> {{blog.shortDescription}} </div>
             </div>
             <hr class="lg:hidden block" />
             <div class="m-2 lg:col-span-2 prose w-full" [innerHTML]="sanitizeHtml( markdownContent$ | async)"> </div>
