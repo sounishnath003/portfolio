@@ -74,15 +74,7 @@ export class PortfolioApiService {
     return of(PortfolioDB.recommendations);
   }
 
-  get professionalExperiencesTimeline$(): Observable<
-    {
-      timeInfo: string;
-      location: string;
-      roleOrWork: string;
-      organizationName: string;
-      content: string;
-    }[]
-  > {
+  get professionalExperiencesTimeline$(): Observable<ProfessionExperience[]> {
     return of(PortfolioDB.professionalExperiencesTimeline);
   }
 
@@ -127,7 +119,15 @@ export class PortfolioApiService {
   getFeaturedProjectBySlug(slugName: string): Observable<FeaturedProject> {
     const projects = PortfolioDB.featuredProjects.filter(project => project.slugName === slugName);
     if (projects.length == 0) {
-      return of({} as FeaturedProject);
+      return of({
+        title: "",
+        slugName: "",
+        shortDescription: "",
+        image: "",
+        markdownContentFile: "",
+        dateOfPublish: "",
+        tags: []
+      } as FeaturedProject);
     }
     return of(projects[0]);
   }
@@ -146,4 +146,12 @@ export interface FeaturedProject {
   markdownContentFile: string;
   dateOfPublish: string;
   tags: string[];
+}
+
+export interface ProfessionExperience {
+  timeInfo: string;
+  location: string;
+  roleOrWork: string;
+  organizationName: string;
+  content: string;
 }

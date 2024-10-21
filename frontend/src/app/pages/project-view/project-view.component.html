@@ -1,5 +1,6 @@
-<div *ngIf="project$ | async as project ; else template">
-    <div class="-mt-5 p-2 rounded-lg border rounded-lg h-screen mx-auto hidden-scrollbar">
+<div *ngIf="project$ | async as project;">
+    <div *ngIf="project.title.length>0;else template"
+        class="-mt-5 p-2 rounded-lg border rounded-lg h-screen mx-auto hidden-scrollbar">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 w-full">
             <div class="p-2 border-r border-gray-300 flex flex-col justify-start items-center gap-5 w-full">
                 <div class="flex flex-row justify-between items-center w-full text-xl">

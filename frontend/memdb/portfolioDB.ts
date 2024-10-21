@@ -4,8 +4,9 @@ export const PortfolioDB = {
   attributes: [
     'Software Engineer.',
     'Backend Engineer.',
+    'Data Engineer.',
     'Data, AI & Cloud ☁️',
-    'Deep neural networks.',
+    'Machine Learning.',
     'Focused, Versatile, and Passionate',
   ],
   profileSummary:
@@ -160,39 +161,32 @@ export const PortfolioDB = {
       roleOrWork: 'Software Engineer, Cloud Data & AI',
       organizationName: 'Tata Consultancy Services',
       content: `
-      <ul>
-        <li><b class='text-secondary'>Optimized Data Services:</b> Engineered a high-performance GraphQL API, boosting downstream/upstream app performance by 60% for data-as-a-service offerings.</li>
-        <li><b class='text-secondary'>Migrated to Cloud:</b> Led the migration of SQL SSRS, Hive, and Presto jobs to Google Dataproc, increasing availability and significantly reducing operational costs.</li>
-        <li><b class='text-secondary'>AI-Powered Helpdesk:</b> Pioneered deep neural networks for Helpdesk issues, saving 80 person-months, improving productivity by 42%, enhancing user experience by 85%, and reducing turnaround time by 20%.</li>
-        <li><b class='text-secondary'>Self-Managed Data Platform:</b> Architected a serverless data platform with data governance and quality at its core, building a robust data fabric ecosystem.</li>
-        <li><b class='text-secondary'>Generative AI Prototypes:</b> Led the development of 6 Generative AI prototype service agents, demonstrating the potential of LLMs for reimagined IT operations.</li>
-        <li><b class='text-secondary'>Predictive Data Pipelines:</b> Developed accelerated data pipelines (ADP) with a Predictive Modeling framework handling 2.2+ billion data events for global IT monitoring. This enabled 52% earlier capacity planning and 36% cost savings within 1.2 hours.</li>
-        <li><b class='text-secondary'>Cost Reduction Initiative:</b> Led a project to identify unused GCP resources and establish bucket expiration policies, resulting in annual cost savings exceeding ₹20,00,000.</li>
-        <li><b class='text-secondary'>Alert Visualization Tool:</b> Built a tool that groups infrastructure alerts by context, reducing Mean Time To Resolution (MTTR). It models dependencies as a graph and uses BFS algorithms to identify root causes.</li>
-      </ul>
+      - Working on **OneGHD - Generative AI-empowered** enterprise search helpdesk platform.
+      - Streamlined real-time event processing **(PubSub, Transactional Outbox, Apache Beam)** for **4M+ TCS devices**, reducing operational costs by **68%** and ensuring **1000+ endpoints/hour** security compliance.
+      - Architected a scalable **distributed job server for asynchronous** SQL read processing, handling **50GB+** daily reporting queries. Separated reporting layer from applications.
+      - Engineered a **Spark-based time-series predictive model** that processed over **2.2 million** global IT events, enabling **52% faster** capacity planning and achieving **36%** cost savings. Optimized the process to analyze **150+ GB** of data in under **1.2 hours**.
+      - Developed a **High-performance machine learning algorithm** in Spark that accurately mapped **12+ million** software discoveries, improving audit, tracking, and reconciliation efforts by **68%**.
+      - Designed and implemented **GHD Rover**, a Transformer-based Deep Neural Network for TCS's Global IT-Helpdesk platform, delivering an **83.4% accuracy** in issue resolution and enhancing workforce productivity.
 
-      <p class='text-secondary'> Technical Skills </p>
-
-      <ul>
-        <li> Cloud Platforms: GCP, Vertex AI, BigQuery, Dataproc, Pubsub </li>
-        <li> Programming Languages: Python, TypeScript, SQL </li>
-        <li> Frameworks & Tools: NestJS, Docker, Pubsub, Airflow, Terraform, Cloud Run, Cloud Functions, Cloud Workflows </li>
-      </ul>
+      ### Technical skills:
+      - **Languages:** Python, Go, JavaScript, Node.js, SQL
+      - **Databases:** BigQuery, SQL Server 
+      - **Tools/Frameworks:** Bigdata, Tensorflow, PyTorch, Hive, PySpark, Apache Beam, Kafka, Google Cloud Services
       `,
     },
     {
       timeInfo: 'Feb 2021 - Jun 2021',
       location: 'Mumbai, Remote',
-      roleOrWork: 'Software Engineer Intern',
+      roleOrWork: 'Systems Engineer - Intern',
       organizationName: 'Tata Consultancy Services',
       content: `
-        <ul>
-          <li><b class='text-secondary'>Migrated ML workflows to  Google Vertex AI </b>, enabling continuous learning, automated scalability, and improved model training efficiency. </li>
-          </li>Developed a high-performance IT Asset Scanner Tool in Golang, achieving a <b class='text-secondary'>70% speed improvement over previous implementations </b>.</li>
-          <li>Designed and implemented online seat reservation functionality in Angular TypeScript, utilizing the Decorator Design Pattern to enhance user experience and drive a <b class='text-secondary'>20% increase in user attraction. </b></li>
-          <li> Tools: Golang, TypeScript, NodeJS, Angular, MongoDB, GCE, scikit-learn, LightGBM, XGBoost, TensorFlow </li>
-        </ul>
+        - Integrated payment SDK, email marketing UI, and user registration components.
+        - Transitioned **complex ML workflows to Kubeflow**, enhancing scalability and deployment speed; this initiative successfully handled **12+ concurrent model** deployments without downtime.
+        - **Modernized a large-scale web app to Angular**, implementing Routing Lazy Loading for a **30%** faster First Contentful Paint **(FCP)**.
         
+        ### Technical skills:
+        - **Languages:** Python, SQL, Node.Js
+        - **Tools/Frameworks:** Kubeflow, PyTorch, Vertex AI, Google cloud services
       `,
     },
     {
@@ -201,26 +195,23 @@ export const PortfolioDB = {
       roleOrWork: 'Angular Frontend Developer',
       organizationName: 'ERCESS Live',
       content: `
-        <ul>
-          <li><b class='text-secondary'>Boosted user engagement with interactive search</b>, customizable filters, and KPI dashboards in Angular (Python, TypeScript).</li>
-          <li>Integrated <b class='text-secondary'>Stripe for seamless in-app</b> purchases.</li>
-          <li>Tools: Python, TypeScript, Django, Angular, d3, MongoDB, Stripe SDK</li>
-        </ul>
+        - **Boosted user engagement with interactive search** customizable filters, and KPI dashboards in Angular (Python, TypeScript).
+        - Integrated **Stripe for seamless in-app** purchases.
         
+        ### Technical skills:
+        - **Tools:** Python, TypeScript, Django, Angular, d3, MongoDB, Stripe SDK
       `,
     },
 
     {
       timeInfo: 'Aug 2017 - July 2021',
-      location: 'Kolkata, India',
-      roleOrWork: 'B.Tech in Computer Science and Engineering',
+      location: 'Kolkata',
+      roleOrWork: 'B.Tech in Computer Science & Engineering',
       organizationName: 'Brainware Group of Institutions',
       content: `
-      <ul>
-        <li> 9.43 DGPA </li>
-        <li> Class 12: 82.60 % </li>
-        <li> Class 10: 89.28 % </li>
-      <ul>
+      - **DGPA:** 9.27
+      - **Class 12th:** 82.60%
+      - **Class 10th:** 89.28%
       `,
     },
   ],
