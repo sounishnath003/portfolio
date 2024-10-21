@@ -1,3 +1,15 @@
-<p>proudwork works!</p>
+<div class="flex flex-col gap-4 items-center w-full justify-center">
 
-<app-get-in-touch></app-get-in-touch>
+    <div class="text-3xl md:text-4xl text-primary w-full"> &bull; My Achievements </div>
+
+    <div class="p-4 rounded border w-full rounded-lg bg-gray-50">
+        <ul class="steps steps-vertical">
+            @for (achievement of achievements$ | async; track $index) {
+            <li class="step step-primary"> {{achievement}} </li>
+            }
+        </ul>
+    </div>
+
+
+    <app-get-in-touch></app-get-in-touch>
+</div>

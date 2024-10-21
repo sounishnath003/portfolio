@@ -1,3 +1,31 @@
-<p>blogs works!</p>
+<div class="flex flex-col gap-4 items-start justify-start">
+    <div class="text-3xl md:text-4xl text-primary">&bull; Personal Blogs</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        @for (blog of personalBlogs$ | async; track $index) {
+        <a [routerLink]="getSlugUrl(blog)">
+            <div class="card bg-base-100 w-96 shadow-lg">
+                <figure>
+                    <img [src]="blog.image" [alt]="blog.title" class="w-full" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">
+                        {{ blog.title }}
+                        <div class="text-xs"> {{ blog.dateOfPublish | date }} </div>
+                    </h2>
+                    <p class="overflow-hidden"> {{blog.shortDescription}}... </p>
+
+                    <div class="card-actions justify-end">
+                        @for (tag of blog.tags; track $index) {
+                        <div class="badge badge-outline text-xs"> {{ tag }} </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</div>
 
 <app-get-in-touch></app-get-in-touch>
