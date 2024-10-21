@@ -133,6 +133,33 @@ export class PortfolioApiService {
     return of(projects[0]);
   }
 
+
+  get personalBlogs$(): Observable<PersonalBlog[]> {
+    return of(PortfolioDB.personalBlogs);
+  }
+
+
+  getBlogBySlug(slugName: string): Observable<PersonalBlog> {
+    const blogs = PortfolioDB.personalBlogs.filter(blog => blog.slugName === slugName);
+    if (blogs.length == 0) {
+      return of({
+        title: "",
+        slugName: "",
+        shortDescription: "",
+        image: "",
+        markdownContentFile: "",
+        dateOfPublish: "",
+        tags: [],
+        links: []
+      } as PersonalBlog);
+    }
+    return of(blogs[0]);
+  }
+
+  get achievements$(): Observable<string[]> {
+    return of(PortfolioDB.achievements);
+  }
+
   getBlogMarkdownContent$(projectMarkdownContentFileUri: string) {
     return this.httpClient.get(projectMarkdownContentFileUri, { responseType: 'text' });
   }
@@ -140,6 +167,17 @@ export class PortfolioApiService {
 
 
 export interface FeaturedProject {
+  title: string;
+  slugName: string;
+  shortDescription: string;
+  image: string;
+  markdownContentFile: string;
+  dateOfPublish: string;
+  tags: string[];
+  links: { type: string, link: string }[]
+}
+
+export interface PersonalBlog {
   title: string;
   slugName: string;
   shortDescription: string;

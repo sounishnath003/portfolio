@@ -266,7 +266,7 @@ export const PortfolioDB = {
       links: [
         {
           type: 'Youtube',
-          link: `https://github.com/sounishnath003/manifold`
+          link: `https://www.youtube.com/watch?v=CvCA86iXHIE`
         },
         {
           type: 'Github',
@@ -285,7 +285,7 @@ export const PortfolioDB = {
       links: [
         {
           type: 'Youtube',
-          link: `https://github.com/sounishnath003/manifold`
+          link: `https://www.youtube.com/watch?v=CvCA86iXHIE`
         },
         {
           type: 'Github',
@@ -293,5 +293,33 @@ export const PortfolioDB = {
         },
       ]
     },
+  ],
+  personalBlogs: [
+    {
+      title: 'Full Stack Application on GKE',
+      slugName: 'full-stack-application-on-gke',
+      shortDescription: "This repository contains the code for a full-stack application deployed on Google Kubernetes Engine (GKE). The application consists of the following services.",
+      image: 'assets/personalBlogs/images/fullstack-stack-application-on-gke.gif',
+      markdownContentFile: `assets/personalBlogs/fullstack-stack-application-on-gke.md`,
+      dateOfPublish: '2024-10-18',
+      tags: ["Angular", "Go", "Postgres", "Kubernetes"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://github.com/sounishnath003/manifold`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/fullstack-microservice-golang-gke/`
+        },
+      ]
+    },
+  ],
+  achievements: [
+    'Received Top 10 Coders Team Appreciation Award ’23 - TCS Internal Hackathon.',
+    "Received 2x TCS Contextual Master Award for working on valuable deliverables across TCS worldwide.",
+    "Ranked AIR-2231 TCS Codevita 2020-2021. Secured PPO Offer at TCS.",
+    "Ranked AIR-3512 - Infosys HackwithInfy 2020. Secured PPO offer at Infosys.",
+    "4-star holder in Problem-solving at Hackerrank. 500+ problems solved in Leetcode."
   ]
 };
