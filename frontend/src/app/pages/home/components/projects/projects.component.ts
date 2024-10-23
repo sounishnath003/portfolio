@@ -17,7 +17,7 @@ import { GithubUserProject } from '../../../../services/github.model';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
-  selection: string = 'Github';
+  selection: string = 'Featured';
 
   featuredProjects$: Observable<FeaturedProject[]> = this.portfolioService.featuredProjects$
   githubProjects$: Observable<GithubUserProject[]> = this.portfolioService.getGithubProjects$;
