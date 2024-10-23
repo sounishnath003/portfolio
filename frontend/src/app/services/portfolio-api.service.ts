@@ -102,15 +102,14 @@ export class PortfolioApiService {
         `https://api.github.com/users/${githubUsername}/repos`
       )
       .pipe(
-        map((data) =>
-          data.sort(
-            (a: GithubUserProject, b: GithubUserProject) =>
-              new Date(b.updated_at).getTime() -
-              new Date(a.updated_at).getTime()
-          )
-        )
-      );
+        map((data) => data.filter((p) => p.name.length > 0).sort(
+          (a: GithubUserProject, b: GithubUserProject) =>
+            new Date(b.updated_at).getTime() -
+            new Date(a.updated_at).getTime()
+        ).slice(0, 26)
+        ))
   }
+  ;
 
   get featuredProjects$(): Observable<FeaturedProject[]> {
     return of(PortfolioDB.featuredProjects);

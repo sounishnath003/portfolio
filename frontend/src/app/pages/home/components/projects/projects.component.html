@@ -1,38 +1,13 @@
-<select class="select select-bordered w-full">
+<select class="select select-bordered w-full" [(ngModel)]="selection" value="Featured">
     <option disabled>Search projects</option>
     <option selected>Featured</option>
     <option>Github</option>
 </select>
 
-@for (project of featuredProjects$ | async; track $index) {
-<div class="my-5 border rounded-lg p-3 h-auto cursor-pointer" [routerLink]="getSlugUrl(project)" >
-    <div class="flex flex-col justify-between items-center gap-3">
-        <div class="flex flex-row gap-2 items-center">
-            <div class="flex flex-col gap-6 items-start justify-center">
-                <div class="flex flex-row gap-2">
-                    <div>
-                        <h3 class="text-xl font-bold tracking-wide text-primary"> {{ project.title}} </h3>
-                    </div>
-                    <div class="p-2 text-center rounded bg-gray-100 text-xs">
-                        {{ project.dateOfPublish | date }}
-                    </div>
-                </div>
-
-                <div class="text-sm max-w-lg text-content">
-                    {{ project.shortDescription }}
-                </div>
-
-
-                <div class="grid grid-cols-4 gap-2 text-center w-auto">
-                    @for (tag of project.tags; track $index) {
-                    <div class="text-wrap px-1 bg-gray-200 text-gray-700 py-2 rounded-lg text-xs"> {{ tag }} </div>
-                    }
-                </div>
-            </div>
-
-            <div> <img [src]="project.image" alt="placeholder-img" class="rounded w-64"> </div>
-        </div>
-
-    </div>
+<div *ngIf="selection === 'Featured'">
+    <app-featured-projects [featuredProjects$]="featuredProjects$"></app-featured-projects>
 </div>
-}
+
+<div *ngIf="selection === 'Github'">
+    <app-github-projects [githubProjects$]="githubProjects$"></app-github-projects>
+</div>
