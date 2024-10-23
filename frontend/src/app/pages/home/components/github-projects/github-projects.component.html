@@ -1,0 +1,20 @@
+<div class="my-5 h-auto cursor-pointer w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
+        @for (project of githubProjects$ | async; track $index) {
+        <a [href]="project.html_url" target="_blank"
+            class="flex max-h-md border flex-col gap-1 border rounded-lg cursor-pointer items-start justify-start p-2">
+            <div class="gap-1 flex-col flex">
+                <div class="font-semibold text-primary"> {{project.name}} </div>
+                <div *ngIf="project.description" class="text-sm text-secondary font-sans">
+                    {{project.description.slice(0, 150)}}... </div>
+            </div>
+
+            <div class="flex-1"></div>
+            <div class="flex flex-row gap-3 text-sm font-bold">
+                <div class="tracking-wide"> <strong>{{ project.language}}</strong> </div>
+                <div class=""> DefaultBranch : {{project.default_branch}} </div>
+            </div>
+        </a>
+        }
+    </div>
+</div>
