@@ -256,6 +256,25 @@ export const PortfolioDB = {
   githubUsername: `sounishnath003`,
   featuredProjects: [
     {
+      title: 'URL Shortner Service - Golang',
+      slugName: 'url-shortner-service-golang',
+      shortDescription: "Url shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.",
+      image: 'assets/featuredProjects/images/URL Shortner Service - Golang.gif',
+      markdownContentFile: `assets/featuredProjects/implement-url-shortner-service-golang.md`,
+      dateOfPublish: '2024-10-31',
+      tags: ["Golang", "Postgres", "Redis", "Bloom Filter"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://www.youtube.com/watch?v=o0OwyO-WH4g`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/url-shortner-service-golang`
+        },
+      ]
+    },
+    {
       title: 'Full Stack Application on GKE',
       slugName: 'full-stack-application-on-gke',
       shortDescription: "This repository contains the code for a full-stack application deployed on Google Kubernetes Engine (GKE). The application consists of the following services.",
@@ -295,6 +314,25 @@ export const PortfolioDB = {
     },
   ],
   personalBlogs: [
+    {
+      title: 'URL Shortner Service - Golang',
+      slugName: 'url-shortner-service-golang',
+      shortDescription: "Url shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.",
+      image: 'assets/featuredProjects/images/URL Shortner Service - Golang.gif',
+      markdownContentFile: `assets/personalBlogs/implement-url-shortner-service-golang.md`,
+      dateOfPublish: '2024-10-31',
+      tags: ["Golang", "Postgres", "Redis", "Bloom Filter"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://www.youtube.com/watch?v=o0OwyO-WH4g`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/url-shortner-service-golang`
+        },
+      ]
+    },
     {
       title: 'Full Stack Application on GKE',
       slugName: 'full-stack-application-on-gke',
