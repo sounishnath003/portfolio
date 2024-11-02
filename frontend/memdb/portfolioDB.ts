@@ -315,6 +315,25 @@ export const PortfolioDB = {
   ],
   personalBlogs: [
     {
+      title: 'Workerpool - Concurrency pattern for tasks',
+      slugName: 'learn-about-workerpool',
+      shortDescription: "Workerpool are useful for managing a pool of workers to perform tasks concurrently.  They help to control the number of goroutines running simultaneously.",
+      image: 'assets/personalBlogs/images/workerpool.gif',
+      markdownContentFile: `assets/personalBlogs/learn-about-workerpool.md`,
+      dateOfPublish: '2024-11-03',
+      tags: ["Golang", "Concurrency", "Design pattern"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://www.youtube.com/watch?v=o0OwyO-WH4g`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/url-shortner-service-golang`
+        },
+      ]
+    },
+    {
       title: 'URL Shortner Service - Golang',
       slugName: 'url-shortner-service-golang',
       shortDescription: "Url shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.",
