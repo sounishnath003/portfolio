@@ -1,15 +1,15 @@
-<div class="flex flex-col gap-4 items-start justify-start">
+<div class="flex flex-col gap-4 items-center md:items-start justify-start">
     <div class="text-3xl md:text-4xl text-primary">&bull; Personal Blogs</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3 items-center">
         @for (blog of personalBlogs$ | async; track $index) {
         <a [routerLink]="getSlugUrl(blog)">
             <div class="card bg-base-100 w-96 shadow-lg">
                 <figure>
-                    <img [src]="blog.image" [alt]="blog.title" class="w-full" />
+                    <img [src]="blog.image" [alt]="blog.title" class="w-full h-48" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title">
+                    <h2 class="card-title text-primary">
                         {{ blog.title }}
                         <div class="text-xs"> {{ blog.dateOfPublish | date }} </div>
                     </h2>
