@@ -116,7 +116,7 @@ export const PortfolioDB = {
       personWhoProvided: 'Prashant Mishra',
       profileLink: 'https://www.linkedin.com/in/prashant-mishra-78976046/',
       avatar:
-        'https://media.licdn.com/dms/image/D4D03AQGY6w7EXVYvTg/profile-displayphoto-shrink_800_800/0/1664472802368?e=1723680000&v=beta&t=b-z_Myu3Q2vD1F-v3bPa8tQN3PbuBw4Kdccug3qayYw',
+        'assets/recommendations/prashant.png',
       role: 'Azure Data Engineer',
       organization: 'Cognizant',
       comments:
@@ -127,7 +127,7 @@ export const PortfolioDB = {
       profileLink:
         'https://www.linkedin.com/in/arokia-jenefer-antony-867292119/',
       avatar:
-        'https://media.licdn.com/dms/image/C5103AQGyrfv88yUZsQ/profile-displayphoto-shrink_800_800/0/1576128074406?e=1723680000&v=beta&t=TRSR5-4WyJPK7BPMDpvKSafUpg17zGRNxtdUGM4GEx8',
+        'assets/recommendations/jenny.png',
       role: 'Senior Consultant',
       organization: 'Infosys',
       comments:
@@ -137,7 +137,7 @@ export const PortfolioDB = {
       personWhoProvided: 'Udhav Lahane',
       profileLink: 'https://www.linkedin.com/in/udhav-lahane-87542320/',
       avatar:
-        'https://media.licdn.com/dms/image/D4D03AQG8L1UoZJ4fFA/profile-displayphoto-shrink_800_800/0/1695306325608?e=1723680000&v=beta&t=2fj79IUwjoilNon5sfsg7CY49aelTxmDa-ZVOyiigCY',
+        'assets/recommendations/udhav.png',
       role: 'Senior Cloud Architect',
       organization: 'Tata Consultancy Services',
       comments:
@@ -147,7 +147,7 @@ export const PortfolioDB = {
       personWhoProvided: 'Rinkesh Kore',
       profileLink: 'https://www.linkedin.com/in/rinkeshkore/',
       avatar:
-        'https://media.licdn.com/dms/image/C5603AQGdmxmOIftTiA/profile-displayphoto-shrink_800_800/0/1595190732763?e=1723680000&v=beta&t=wawWSM-jQ1QWkH03xL5GGQOMNXw-pVpIQ2C5AaEVd8s',
+        'assets/recommendations/rinkesh.png',
       role: 'Data Engineer',
       organization: 'Tata Consultancy Services',
       comments:
