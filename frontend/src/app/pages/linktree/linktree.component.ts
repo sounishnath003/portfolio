@@ -22,5 +22,8 @@ export class LinktreeComponent {
       icon: string;
     }[];
   }> = this.portfolioApiService.linktreeDetails$;
+
+  resumeLink$: Observable<string> = this.portfolioApiService.resume$;
+
   constructor(private readonly portfolioApiService: PortfolioApiService) {}
 }
