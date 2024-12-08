@@ -11,14 +11,14 @@
         <div *ngIf="profileSummary$ | async as pf" [innerHTML]="markdownCompile(pf)"> </div>
       </div>
     </div>
-    <button class="btn btn-primary">
+    <button class="btn btn-primary mx-auto">
       <a target="_blank" [href]="resume$| async">Download Resume
         &darr;</a>
     </button>
   </div>
 
   <div>
-    <img class="rounded-full w-64 ring-2 ring-blue-700 ring-offset-4" src="assets/sounish-nath-photo.webp"
+    <img class="rounded-full w-96 ring-3 ring-blue-700 ring-offset-4" src="assets/sounish-nath-photo.webp"
       alt="sounish-logo" />
     <div class="my-10">
       <div class="flex gap-3 flex-row justify-center items-center">
