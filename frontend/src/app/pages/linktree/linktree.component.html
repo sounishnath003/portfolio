@@ -2,18 +2,19 @@
   <div class="card bg-white p-7 rounded-md">
     <div class="text-primary-content flex flex-col md:flex-row justify-center items-center p-4 m-auto gap-10">
       <div class="avatar">
-        <div class="w-32 rounded-full black-and-white-burnout">
+        <div class="w-48 rounded-full black-and-white-burnout-">
           <img [src]="details.photo" alt="profile-logo" />
         </div>
       </div>
       <div class="card-body flex flex-col justify-around items-center gap-4">
         <h2
-          class="card-title text-3xl md:text-6xl bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-orange-950 via-blue-800 to-slate-600 bg-clip-text text-transparent font-bold tracking-wide">
+          class="card-title text-xl text-center md:text-3xl md:text-6xl bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-orange-950 via-blue-800 to-slate-600 bg-clip-text text-transparent font-bold tracking-wide">
           {{ details.publicName | titlecase }}
         </h2>
         <p class="text-black md:text-xl text-center" [textContent]="details.designation"></p>
         <p class="text-secondary text-sm italic text-center" [textContent]="details.bio"></p>
-        <a [href]="resumeLink$ | async" target="_blank" class="w-full"><button class="btn btn-block btn-secondary text-md btn-outline">Download Resume &rarr;</button></a>
+        <a [href]="resumeLink$ | async" target="_blank" class="w-full"><button
+            class="btn btn-block btn-secondary text-md btn-outline">Download Resume &rarr;</button></a>
       </div>
     </div>
     <div class="md:grid md:grid-cols-3 gap-4">
