@@ -1,4 +1,4 @@
-FROM node:20-slim AS builder
+FROM --platform=linux/amd64 node:20-slim AS builder
 
 WORKDIR /app
 
