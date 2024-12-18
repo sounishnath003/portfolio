@@ -218,8 +218,8 @@ export const PortfolioDB = {
   linktreeDetails: {
     publicName: 'Sounish Nath',
     photo: '/assets/sounish-nath-photo.webp',
-    designation: 'Cloud, Data & AI @ Tata Consultancy Services',
-    bio: '≈≈≈ Well done is better than well said! ≈≈≈',
+    designation: 'Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.',
+    bio: 'Full-Stack Software & Data Engineer with expertise in Python, Go, Apache Spark, and GCP. Passionate about building scalable, high-impact products and optimizing real-time data pipelines. Skilled in designing end-to-end solutions that combine cloud technologies and AI to deliver business value.',
     links: [
       {
         profileName: 'LinkedIn',
