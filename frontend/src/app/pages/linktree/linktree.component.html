@@ -2,7 +2,7 @@
   <div class="card bg-white p-7 rounded-md">
     <div class="text-primary-content flex flex-col md:flex-row justify-center items-center p-4 m-auto gap-10">
       <div class="avatar">
-        <div class="w-48 rounded-full black-and-white-burnout-">
+        <div class="md:w-48 w-64 rounded-full black-and-white-burnout-">
           <img [src]="details.photo" alt="profile-logo" />
         </div>
       </div>
@@ -12,14 +12,14 @@
           {{ details.publicName | titlecase }}
         </h2>
         <p class="text-black md:text-xl text-center" [textContent]="details.designation"></p>
-        <p class="text-secondary text-sm italic text-center" [textContent]="details.bio"></p>
+        <p class="text-secondary text-sm text-centerr" [textContent]="details.bio"></p>
         <a [href]="resumeLink$ | async" target="_blank" class="w-full"><button
             class="btn btn-block btn-secondary text-md btn-outline">Download Resume &rarr;</button></a>
       </div>
     </div>
     <div class="md:grid md:grid-cols-3 gap-4">
       <button *ngFor="let link of details.links"
-        class="btn-ghost w-full bg-gradient-to-r from-blue-500 via-violet-800 to-purple-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+        class="btn-ghost w-full bg-gradient-to-r from-blue-500 via-violet-800 to-purple-600 hover:from-purple-600 hover:via-violet-800 hover:to-blue-500 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
         <a [href]="link.href" target="_blank"
           class="link-hover text-white flex justify-center items-center gap-4 m-auto">
           <div>

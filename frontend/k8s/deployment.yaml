@@ -1,0 +1,43 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "portfolio-frontend"
+  namespace: "default"
+  labels:
+    app: "portfolio-frontend"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "portfolio-frontend"
+  template:
+    metadata:
+      labels:
+        app: "portfolio-frontend"
+    spec:
+      containers:
+      - name: "portfilio-frontend-1"
+        image: "asia-south1-docker.pkg.dev/sounish-cloud-workstation/sounishnath-portfolio/portfilio-frontend:202412151213"
+---
+apiVersion: "autoscaling/v2"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "portfolio-frontend-hpa-rbdn"
+  namespace: "default"
+  labels:
+    app: "portfolio-frontend"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "portfolio-frontend"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      target:
+        type: "Utilization"
+        averageUtilization: 80
