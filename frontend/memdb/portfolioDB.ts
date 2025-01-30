@@ -315,6 +315,25 @@ export const PortfolioDB = {
   ],
   personalBlogs: [
     {
+      title: 'Optimize POST API Requests using Event-Driven Kafka',
+      slugName: 'optimize-postapis-kafka-mongo-golang',
+      shortDescription: "Whopping 46% Faster POST APIs. The service handles high-volume API requests by leveraging Kafka for message queuing and MongoDB for data storage.",
+      image: 'assets/personalBlogs/images/event-driven-system-youtube-thumbnai.gif',
+      markdownContentFile: `assets/personalBlogs/optimize-post-api-using-kafka-event-streams.md`,
+      dateOfPublish: '2025-01-30',
+      tags: ["Golang", "Kafka", "Events", "MongoDB"],
+      links: [
+        {
+          type: 'Youtube',
+          link: `https://youtu.be/pzLDCH6k3KQ`
+        },
+        {
+          type: 'Github',
+          link: `https://github.com/sounishnath003/event-driven-service-golang`
+        },
+      ]
+    },
+    {
       title: 'Workerpool - Concurrency pattern for tasks',
       slugName: 'learn-about-workerpool',
       shortDescription: "Workerpool are useful for managing a pool of workers to perform tasks concurrently.  They help to control the number of goroutines running simultaneously.",
