@@ -162,6 +162,10 @@ export class PortfolioApiService {
   getBlogMarkdownContent$(projectMarkdownContentFileUri: string) {
     return this.httpClient.get(projectMarkdownContentFileUri, { responseType: 'text' });
   }
+
+  getResumeMarkdown$(): Observable<string> {
+    return this.httpClient.get(PortfolioDB.resumeMarkdown, { responseType: 'text' });
+  }
 }
 
 

@@ -15,6 +15,11 @@ export const routes: Routes = [
       import('./pages/blogs/blogs.module').then((m) => m.BlogsModule),
   },
   {
+    path: 'resume',
+    loadChildren: () =>
+      import('./pages/resume/resume.module').then((m) => m.ResumeModule),
+  },
+  {
     path: "projects/:slugName",
     pathMatch: "full",
     component: ProjectViewComponent
