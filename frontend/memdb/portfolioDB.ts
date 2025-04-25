@@ -1,26 +1,30 @@
 export const PortfolioDB = {
   name: 'Sounish Nath',
   resume: "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin",
+  resumeMarkdown: `assets/resume.md`,
   attributes: [
-    'Software Engineer.',
-    'Backend Engineer.',
-    'Data Engineer.',
-    'Data, AI & Cloud ☁️',
-    'Machine Learning.',
+    'Software Engineer',
+    'Backend Engineer',
+    'Distributed Data platform',
     'Focused, Versatile, and Passionate',
   ],
   profileSummary:
-    'Excited about building **Scalable distributed data processing** systems, **Backend services**,  train **deep learning models** and **Generative AI** applications. Based in Mumbai, India.',
+    '**SDE-2 at Oracle** with expertise in **backend development and data platforms** for **Oracle Cloud Fusion**.Skilled in **Python, Golang, SQL, Kafka**, and **Spark**, with a focus on building **scalable distributed systems**. Based in **Bengaluru, India**.',
   workedAtCompanies: [
+    {
+      companyName: 'Oracle',
+      image:
+        'assets/orgs/oracle.png',
+    },
     {
       companyName: 'Tata Consultancy Services (TCS)',
       image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/1280px-Tata_Consultancy_Services_Logo.svg.png',
+        'assets/orgs/tcs.png',
     },
     {
       companyName: 'Crio.do',
       image:
-        'https://www.crio.do/static/5ac1a39f9eebf6fe904e14069500353e/fd8b5/Crio_Dark.png',
+        'assets/orgs/crio.png',
     },
   ],
   yearOfStartWorking: 2021,
