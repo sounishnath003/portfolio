@@ -30,14 +30,13 @@ export const PortfolioDB = {
   yearOfStartWorking: 2021,
   aboutBio: `
   <p>
-
-    Versatile Software Engineer with {{yearOfStartWorking}} years of experience. Excited about building scalable distributed data processing systems, backend systems, deep learning models. I designed and developed data warehouses ETL pipelines, Machine Learning/Deep Learning models. 
-    
-    Architecturing systems, Query Optmizations, Data Engineering, Deep Learning Model Architecture Design and Optmizations.
+    Passionate Software Engineer with {{yearOfStartWorking}} years of experience, currently working as an <b>SDE-2 at Oracle</b>. Specializing in <b>backend development</b>, <b>distributed systems</b>, and <b>large-scale data platforms</b>. Skilled in building <b>scalable</b>, <b>high-performance systems</b> using <b>Python</b>, <b>Golang</b>, <b>SQL</b>, <b>Kafka</b>, and <b>Spark</b>.
+    Strong in <b>system design</b>, <b>performance optimization</b>, and architecting <b>reliable cloud-native solutions</b>.
+    Occasionally explore <b>deep learning</b> out of curiosity, but my true passion lies in <b>backend and platform engineering</b>.
   </p>
 
   <h2 class="my-3 font-bold text-success">
-    ** P.S: Don't hire me for building BI dashboards only. I am not interested in pure data analysts roles.
+    <b>P.S:</b> Don't hire me for building BI dashboards only. I'm passionate about engineering complex, distributed systems.
   </h2>
 `,
   skillsSets: [
