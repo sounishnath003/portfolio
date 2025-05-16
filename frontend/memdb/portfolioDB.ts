@@ -159,6 +159,21 @@ export const PortfolioDB = {
   ],
   professionalExperiencesTimeline: [
     {
+      timeInfo: 'Apr 2025 - Present',
+      location: 'Bengaluru, Karnataka',
+      roleOrWork: 'Software Engineer II',
+      organizationName: 'Oracle',
+      content: `
+        - Working on **Oracle Cloud Fusion** BI backend microservices serving **1M+ daily** customers.
+        - Engineering an **AI-driven sidecar** in Python on OCI AI Stack for Oracle Fusion SCM to diagnose slow report jobs **(>10s)**, leveraging SQL traces and job metadata to generate **auto LLM-based RCA** and developer annotations.
+
+        ### Technical skills:
+        - **Languages:** Python, Go, Java, SQL
+        - **Database:** Oracle DB
+        - **Tools/Frameworks:** Oracle Cloud, OCI, Kafka, Apache spark, OBIEE, Helidon, Springboot
+      `,
+    },
+    {
       timeInfo: 'Aug 2021 - Present',
       location: 'Mumbai',
       roleOrWork: 'Software Engineer, Cloud Data & AI',
