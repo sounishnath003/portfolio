@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full lg:w-2/5 p-2 md:p-8 lg:h-screen lg:overflow-y-scroll border-r"
+    class="w-full lg:w-2/5 p-2 md:p-8 lg:h-screen lg:overflow-y-scroll border-b md:border-r"
     style="scrollbar-width: none; -ms-overflow-style: none"
   >
     <a href="/"

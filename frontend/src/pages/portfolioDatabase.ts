@@ -2,6 +2,14 @@ export const Portfolio = {
   fullname: "Sounish Nath",
   sarcasticBio:
     "I make Kubernetes ☸️ orchestrate chaos and call it 'scalability' 🎭📈",
+  profileBio: `SDE-2 at Oracle. At Oracle, building AI-driven cloud systems that serve 1M+ daily users. I architect scalable backend platforms and data pipelines, with proven experience migrating 40M+ tasks and reducing operational costs by 68%. Based in Bengaluru, India.`,
+  attributes: [
+    "Software Engineer",
+    "Scalable Backend",
+    "Distributed Systems",
+    "Data Platform Eng.",
+    "Hobbyist Developer",
+  ],
   resumeLink:
     "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin/edit",
   socialLinks: [
