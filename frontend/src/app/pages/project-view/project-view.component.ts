@@ -8,12 +8,11 @@ import { MarkdownService } from 'ngx-markdown';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-project-view',
-  standalone: true,
-  imports: [CommonModule, AsyncPipe, JsonPipe, NgIf, PageNotFoundComponent],
-  providers: [PortfolioApiService],
-  templateUrl: './project-view.component.html',
-  styleUrl: './project-view.component.css'
+    selector: 'app-project-view',
+    imports: [CommonModule, AsyncPipe, JsonPipe, NgIf, PageNotFoundComponent],
+    providers: [PortfolioApiService],
+    templateUrl: './project-view.component.html',
+    styleUrl: './project-view.component.css'
 })
 export class ProjectViewComponent implements OnInit {
   project$: BehaviorSubject<FeaturedProject> = new BehaviorSubject<FeaturedProject>({} as FeaturedProject);

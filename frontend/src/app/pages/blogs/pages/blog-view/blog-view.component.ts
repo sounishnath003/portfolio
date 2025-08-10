@@ -9,12 +9,11 @@ import { PersonalBlog, PortfolioApiService } from '../../../../services/portfoli
 import { PageNotFoundComponent } from '../../../page-not-found/page-not-found.component';
 
 @Component({
-  selector: 'app-blog-view',
-  standalone: true,
-  imports: [CommonModule, AsyncPipe, JsonPipe, NgIf, PageNotFoundComponent],
-  providers: [PortfolioApiService],
-  templateUrl: './blog-view.component.html',
-  styleUrl: './blog-view.component.css'
+    selector: 'app-blog-view',
+    imports: [CommonModule, AsyncPipe, JsonPipe, NgIf, PageNotFoundComponent],
+    providers: [PortfolioApiService],
+    templateUrl: './blog-view.component.html',
+    styleUrl: './blog-view.component.css'
 })
 export class BlogViewComponent implements OnInit {
   blog$: BehaviorSubject<PersonalBlog> = new BehaviorSubject<PersonalBlog>({} as PersonalBlog);

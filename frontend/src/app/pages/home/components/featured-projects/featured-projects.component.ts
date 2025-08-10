@@ -5,11 +5,10 @@ import { AsyncPipe, DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-featured-projects',
-  standalone: true,
-  imports: [AsyncPipe, DatePipe, RouterLink],
-  templateUrl: './featured-projects.component.html',
-  styleUrl: './featured-projects.component.css'
+    selector: 'app-featured-projects',
+    imports: [AsyncPipe, DatePipe, RouterLink],
+    templateUrl: './featured-projects.component.html',
+    styleUrl: './featured-projects.component.css'
 })
 export class FeaturedProjectsComponent {
 

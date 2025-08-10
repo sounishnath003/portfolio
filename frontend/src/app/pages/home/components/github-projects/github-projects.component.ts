@@ -6,11 +6,10 @@ import { RouterLink } from '@angular/router';
 import { GithubUserProject } from '../../../../services/github.model';
 
 @Component({
-  selector: 'app-github-projects',
-  standalone: true,
-  imports: [AsyncPipe, DatePipe, JsonPipe, NgIf],
-  templateUrl: './github-projects.component.html',
-  styleUrl: './github-projects.component.css'
+    selector: 'app-github-projects',
+    imports: [AsyncPipe, DatePipe, JsonPipe, NgIf],
+    templateUrl: './github-projects.component.html',
+    styleUrl: './github-projects.component.css'
 })
 export class GithubProjectsComponent {
   @Input() githubProjects$!: Observable<GithubUserProject[]>;

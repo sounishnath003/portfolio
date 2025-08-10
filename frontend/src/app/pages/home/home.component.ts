@@ -11,22 +11,21 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ProjectsComponent } from "./components/projects/projects.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    HeroComponent,
-    AboutComponent,
-    SkillsetComponent,
-    RecommendationsComponent,
-    ExperienceTimescrollComponent,
-    GetInTouchComponent,
-    RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
-    ProjectsComponent
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+    selector: 'app-home',
+    imports: [
+        HeroComponent,
+        AboutComponent,
+        SkillsetComponent,
+        RecommendationsComponent,
+        ExperienceTimescrollComponent,
+        GetInTouchComponent,
+        RouterOutlet,
+        RouterLink,
+        RouterLinkActive,
+        ProjectsComponent
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent {
   name$: Observable<string>;

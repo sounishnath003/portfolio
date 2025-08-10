@@ -5,12 +5,11 @@ import { Observable } from 'rxjs';
 import { MarkdownService } from 'ngx-markdown';
 
 @Component({
-  selector: 'app-timeline',
-  standalone: true,
-  imports: [NgFor, AsyncPipe],
-  providers: [PortfolioApiService, MarkdownService],
-  templateUrl: './timeline.component.html',
-  styleUrl: './timeline.component.css'
+    selector: 'app-timeline',
+    imports: [NgFor, AsyncPipe],
+    providers: [PortfolioApiService, MarkdownService],
+    templateUrl: './timeline.component.html',
+    styleUrl: './timeline.component.css'
 })
 export class TimelineComponent implements OnInit {
   professionalExperiencesTimeline$: Observable<ProfessionExperience[]> = new Observable<ProfessionExperience[]>();

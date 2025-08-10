@@ -9,12 +9,11 @@ import { FeaturedProjectsComponent } from "../featured-projects/featured-project
 import { GithubUserProject } from '../../../../services/github.model';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [DatePipe, RouterLink, AsyncPipe, FormsModule, NgIf, GithubProjectsComponent, FeaturedProjectsComponent],
-  providers: [PortfolioApiService],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+    selector: 'app-projects',
+    imports: [DatePipe, RouterLink, AsyncPipe, FormsModule, NgIf, GithubProjectsComponent, FeaturedProjectsComponent],
+    providers: [PortfolioApiService],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
   selection: string = 'Featured';

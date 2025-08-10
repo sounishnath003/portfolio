@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 import { PortfolioApiService } from '../../services/portfolio-api.service';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+    selector: 'app-navbar',
+    imports: [CommonModule, RouterLink, RouterLinkActive],
+    templateUrl: './navbar.component.html',
+    standalone: true,
+    styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
   name$: Observable<string> = this.portfolioService.name$;

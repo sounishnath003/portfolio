@@ -6,12 +6,11 @@ import { AsyncPipe, DatePipe, JsonPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-blogs',
-  standalone: true,
-  imports: [GetInTouchComponent, AsyncPipe, DatePipe, RouterLink],
-  providers: [PortfolioApiService],
-  templateUrl: './blogs.component.html',
-  styleUrl: './blogs.component.css',
+    selector: 'app-blogs',
+    imports: [GetInTouchComponent, AsyncPipe, DatePipe, RouterLink],
+    providers: [PortfolioApiService],
+    templateUrl: './blogs.component.html',
+    styleUrl: './blogs.component.css'
 })
 export class BlogsComponent implements OnInit {
   personalBlogs$: Observable<PersonalBlog[]> = new Observable<PersonalBlog[]>();

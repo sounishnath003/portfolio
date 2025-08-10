@@ -5,12 +5,11 @@ import { Observable } from 'rxjs';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-proudwork',
-  standalone: true,
-  imports: [GetInTouchComponent, AsyncPipe, JsonPipe],
-  providers: [PortfolioApiService],
-  templateUrl: './proudwork.component.html',
-  styleUrl: './proudwork.component.css',
+    selector: 'app-proudwork',
+    imports: [GetInTouchComponent, AsyncPipe, JsonPipe],
+    providers: [PortfolioApiService],
+    templateUrl: './proudwork.component.html',
+    styleUrl: './proudwork.component.css'
 })
 export class ProudworkComponent {
   achievements$: Observable<string[]> = this.portfolioService.achievements$;

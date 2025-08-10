@@ -4,11 +4,10 @@ import { RouterLink } from '@angular/router';
 import { MarkdownService } from 'ngx-markdown';
 import { Observable, map } from 'rxjs';
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+    selector: 'app-hero',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.css'
 })
 export class HeroComponent {
   @Input()

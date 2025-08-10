@@ -4,11 +4,10 @@ import { Observable } from 'rxjs';
 import { AsyncPipe, NgFor, NgIf, TitleCasePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-linktree',
-  standalone: true,
-  imports: [NgIf, AsyncPipe, TitleCasePipe, NgFor],
-  templateUrl: './linktree.component.html',
-  styleUrl: './linktree.component.css',
+    selector: 'app-linktree',
+    imports: [NgIf, AsyncPipe, TitleCasePipe, NgFor],
+    templateUrl: './linktree.component.html',
+    styleUrl: './linktree.component.css'
 })
 export class LinktreeComponent {
   linkTreeDetails$: Observable<{
