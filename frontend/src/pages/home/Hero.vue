@@ -2,7 +2,7 @@
   <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
     <div class="mb-8 flex justify-center">
       <div class="text-xl">
-        Hello! 👋, I'm <span class="text-blue-700 font-medium text-2xl">Sounish Nath.</span>
+        Hello! 👋, I'm <span class="text-blue-700 dark:text-gray-50 font-medium text-2xl">Sounish Nath.</span>
       </div>
     </div>
     <div class="text-center">
@@ -32,7 +32,7 @@ import WorkAt from './WorkAt.vue';
 
 const profileBio = `SDE-2 at Oracle. At Oracle, building AI-driven cloud systems that serve 1M+ daily users. I architect scalable backend platforms and data pipelines, with proven experience migrating 40M+ tasks and reducing operational costs by 68%. Based in Bengaluru, India.`;
 
-const attributes = ['Software Engineer', 'Scalable Backend', 'Distributed Systems', 'Data Platform Eng.'];
+const attributes = ['Software Engineer', 'Scalable Backend', 'Distributed Systems', 'Data Platform Eng.', 'Hobbyist Developer'];
 
 const resumeLink: string = `https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin/edit`;
 

@@ -1,10 +1,8 @@
 <template>
-  <Hero />
+    About page
 </template>
 
 <script setup lang="ts">
-import Hero from './Hero.vue';
-
-
+import { ref, computed } from 'vue';
 
 </script>
