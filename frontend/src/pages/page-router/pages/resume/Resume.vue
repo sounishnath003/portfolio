@@ -1,0 +1,3 @@
+<template>
+    Resume section
+</template>

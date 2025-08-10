@@ -1,0 +1,3 @@
+<template>
+    Projects Section
+</template>
