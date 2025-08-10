@@ -1,3 +1,1 @@
-<template>
-    Projects Section
-</template>
+<template>Projects Section</template>

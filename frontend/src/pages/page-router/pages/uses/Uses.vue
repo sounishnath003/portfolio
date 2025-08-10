@@ -1,3 +1,1 @@
-<template>
-    Uses Section
-</template>
+<template>Uses Section</template>

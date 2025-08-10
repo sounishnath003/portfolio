@@ -1,3 +1,1 @@
-<template>
-    Resume section
-</template>
+<template>Resume section</template>

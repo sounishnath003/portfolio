@@ -1,0 +1,115 @@
+export const Portfolio = {
+  fullname: "Sounish Nath",
+  sarcasticBio:
+    "I make Kubernetes ☸️ orchestrate chaos and call it 'scalability' 🎭📈",
+  resumeLink:
+    "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin/edit",
+  socialLinks: [
+    {
+      name: "GitHub",
+      href: "https://github.com/sounishnath003",
+      iconName: "github",
+    },
+    { name: "Twitter", href: "https://x.com/sounish1", iconName: "twitter" },
+    {
+      name: "Linkedin",
+      href: "https://linkedin.com/in/sounishnath",
+      iconName: "linkedin",
+    },
+    {
+      name: "Email",
+      href: "mailto:flock.sinasini@gmail.com",
+      iconName: "gmail",
+    },
+  ],
+  skills: [
+    {
+      topic: "Programming Languages",
+      skills: ["Java", "Python", "Golang", "Javascript", "TypeScript", "SQL"],
+    },
+    {
+      topic: "Frontend",
+      skills: [
+        "HTML",
+        "CSS",
+        "Angular",
+        "Vue.js",
+        "Vite",
+        "RxJs",
+        "Graphql",
+        "TailwindCSS",
+        "Pinia",
+        "Node.js",
+        "Bun",
+        "NgRx",
+      ],
+    },
+    {
+      topic: "Backend",
+      skills: [
+        "Nest.JS",
+        "Flask",
+        "Django",
+        "Go",
+        "Fiber",
+        "FastAPI",
+        "REST API",
+        "Express.js",
+        "GraphQL (Apollo Server)",
+        "Mux",
+        "Go/Echo",
+        "Springboot",
+      ],
+    },
+    {
+      topic: "Databases",
+      skills: ["Redis", "MongoDB", "PostgreSQL", "Oracle ADW", "Elasticsearch"],
+    },
+    {
+      topic: "Libraries/Frameworks",
+      skills: [
+        "Kafka",
+        "Pubsub",
+        "Apache Spark",
+        "Bigdata",
+        "Pyspark",
+        "Apache Airflow",
+        "Pytest",
+        "Unit tests",
+      ],
+    },
+    {
+      topic: "DevOps",
+      skills: [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "OCI",
+        "GCP",
+        "Prometheus",
+        "Grafana",
+        "CI/CD",
+      ],
+    },
+    {
+      topic: "Deeplearning and AI",
+      skills: [
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "scikit-learn",
+        "Hugging Face Transformers",
+        "Kubeflow",
+        "Torchserve",
+        "LLMs",
+        "Generative AI",
+        "langchain",
+        "CrewAI",
+      ],
+    },
+    {
+      topic: "Miscellenous",
+      skills: ["Cooking", "Biking", "Open source", "FOSS", "Self hosted"],
+    },
+  ],
+};

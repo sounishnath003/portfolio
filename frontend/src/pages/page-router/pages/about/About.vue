@@ -1,8 +1,5 @@
-<template>
-    About page
-</template>
+<template>About page</template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-
+import { ref, computed } from "vue";
 </script>

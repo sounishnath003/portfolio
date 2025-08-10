@@ -1,3 +1,1 @@
-<template>
-    Blogs Section
-</template>
+<template>Blogs Section</template>
