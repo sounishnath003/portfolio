@@ -106,10 +106,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { LockClosedIcon } from "@heroicons/vue/24/solid";
 
 const navigation = [
-  { name: "Projects", to: "/pages/projects" },
+  { name: "Experience", to: "/pages/work-experience" },
   { name: "Blogs", to: "/pages/blogs" },
   { name: "About", to: "/pages/about" },
-  { name: "Resume", to: "/pages/resume" },
+  { name: "Projects", to: "/pages/projects" },
   { name: "Uses", to: "/pages/uses" },
 ];
 

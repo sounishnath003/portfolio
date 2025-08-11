@@ -12,6 +12,7 @@ import Projects from "./pages/page-router/pages/projects/Projects.vue";
 import Blogs from "./pages/page-router/pages/blogs/Blogs.vue";
 import Resume from "./pages/page-router/pages/resume/Resume.vue";
 import Uses from "./pages/page-router/pages/uses/Uses.vue";
+import Experience from "./pages/page-router/pages/experience/Experience.vue";
 
 const routes: Array<RouteRecordRaw> = [
   { path: "/", component: Home },
@@ -20,6 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     component: PageRouter,
     children: [
       { path: "about", component: About },
+      { path: "work-experience", component: Experience },
       { path: "projects", component: Projects },
       { path: "blogs", component: Blogs },
       { path: "resume", component: Resume },
