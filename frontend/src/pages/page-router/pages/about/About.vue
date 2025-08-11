@@ -16,13 +16,14 @@
     </div>
 
     <div>
-        <ul class="lg:pl-20 flex gap-3 my-2" role="list">
-            <li v-for="(link, index) in Portfolio.socialLinks" :key="index">
-                <a :href="link.href" target="_blank" rel="noopener noreferrer" :class="socialButtonCss">
-                    <img :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${link.iconName}.svg`"
-                        class="w-4 dark:invert" :alt="link.iconName">
-                    {{ link.name }}
-                </a>
+        <ul class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 my-2 w-full" role="list">
+            <li v-for="(link, index) in Portfolio.socialLinks" :key="index" class="flex w-full">
+            <a :href="link.href" target="_blank" rel="noopener noreferrer"
+                :class="`${socialButtonCss} w-full justify-center`" style="width: 100%;">
+                <img :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${link.iconName}.svg`"
+                class="w-4 dark:invert" :alt="link.iconName">
+                {{ link.name }}
+            </a>
             </li>
         </ul>
     </div>
@@ -31,6 +32,6 @@
 <script setup lang="ts">
 import { Portfolio } from '../../../portfolioDatabase';
 
-const socialButtonCss = `inline-flex gap-4 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-accent-foreground h-10 px-4 py-2 active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100`;
+const socialButtonCss = `inline-flex gap-4 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-accent-foreground h-10 px-4 py-2 active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100 w-full sm:w-auto`;
 
 </script>
