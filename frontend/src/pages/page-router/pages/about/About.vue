@@ -1,6 +1,6 @@
 <template>
     <div><img :src="Portfolio.aboutPage.photo" alt="about#photo" loading="lazy"
-            class="aspect-circle rotate-3 rounded-2xl object-cover dark:bg-zinc-800 w-76"></div>
+            class="rounded-full aspect-circle rotate-3 object-cover dark:bg-zinc-800 w-76"></div>
     <div>
         <p class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">{{
             Portfolio.aboutPage.headline }}</p>
@@ -16,7 +16,7 @@
     </div>
 
     <div>
-        <ul class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 my-2 w-full" role="list">
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 my-2 w-full" role="list">
             <li v-for="(link, index) in Portfolio.socialLinks" :key="index" class="flex w-full">
             <a :href="link.href" target="_blank" rel="noopener noreferrer"
                 :class="`${socialButtonCss} w-full justify-center`" style="width: 100%;">

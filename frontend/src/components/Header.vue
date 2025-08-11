@@ -107,10 +107,10 @@ import { LockClosedIcon } from "@heroicons/vue/24/solid";
 
 const navigation = [
   { name: "Experience", to: "/pages/work-experience" },
-  { name: "Blogs", to: "/pages/blogs" },
+  // { name: "Blogs", to: "/pages/blogs" },
   { name: "About", to: "/pages/about" },
   { name: "Projects", to: "/pages/projects" },
-  { name: "Uses", to: "/pages/uses" },
+  // { name: "Uses", to: "/pages/uses" },
 ];
 
 const mobileMenuOpen = ref(false);

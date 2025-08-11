@@ -151,5 +151,88 @@ export const Portfolio = {
         Passionate about building <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable systems</span>
         that handle <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">petabyte-scale data workloads</span>.
     </p>`
+  },
+  workExperiencePage: {
+    experiences: [
+      {
+        company: "Oracle",
+        href: "https://oracle.com",
+        role: "Software Engineer - II",
+        type: "Full-time",
+        mode: "Bangalore, IN",
+        duration: "2025 - Continuing",
+        highlights: [
+          'Architected Oracle Cloud Fusion BI microservices serving 1M+ enterprise customers with 99.9% uptime',
+          'Built AI-driven Python diagnostic system reducing troubleshooting time by 75% using LLM-powered root cause analysis',
+          'Optimized cloud-native performance monitoring for Fortune 500 supply chain systems on OCI platform'
+        ]
+      },
+      {
+        company: "Tata Consultancy Services",
+        href: "https://tcs.com",
+        role: "Software Developer",
+        type: "Full-time",
+        mode: "Mumbai, IN",
+        duration: "2021 - 2025",
+        highlights: [
+          'Architected end-to-end data pipelines using Spark/Hadoop/Kafka processing 300GB+ real-time streaming data with fault-tolerant design',
+          'Rebuilt legacy PHP job server into distributed Golang architecture with Kafka/PostgreSQL, improving SQL analytics performance by 64%',
+          'Migrated 40.2M+ daily async tasks to Google Cloud (Pub/Sub, Dataflow) achieving 68% cost reduction and improved system reliability',
+          'Built scalable BigQuery microservices managing petabyte-scale data operations and automated enterprise asset discovery'
+        ]
+      },
+      {
+        company: "ERCESS Live",
+        href: "https://ercess.com",
+        role: "Frontend Engineer",
+        type: "Intership",
+        mode: "Remote",
+        duration: "2020 - 2020",
+        highlights: [
+          'Boosted user engagement with interactive search customizable filters, and KPI dashboards in Angular (Python, TypeScript).',
+          'Implemented Python-Django based Admin console and role-based (RBAC) access control'
+        ]
+      },
+      {
+        company: "Brainware Group of Institutions",
+        href: "https://www.brainwareuniversity.ac.in/",
+        role: "B.Tech in Computer Science and Engineering",
+        type: "Graduation",
+        mode: "Kolkata, IN",
+        duration: "2017 - 2021",
+        highlights: [
+          'CGPA: 9.27/10',
+          'Class 12th: 82.60%',
+        ]
+      }
+    ]
+  },
+  projectsPage: {
+    projects: [
+      {
+        title: `URL Shortner Service`,
+        datePublished: `Oct 31, 2024`,
+        thumbnail: `https://sounishnath.netlify.app/assets/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `URL shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.`,
+        techStack: ['Go', 'Postgresql', 'Redis', 'Bloom Filters'],
+        links: [
+          { 'iconName': 'github', href: `https://github.com/sounishnath003/url-shortner-service-golang` },
+          { 'iconName': 'youtube', href: `https://www.youtube.com/watch?v=o0OwyO-WH4g` },
+          { 'iconName': 'linkedin', href: `https://www.linkedin.com/posts/sounishnath_golang-urlshortener-bloomfilter-activity-7257995197781819392-m8es?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w` }
+        ]
+      },
+      {
+        title: `URL Shortner Service`,
+        datePublished: `Oct 31, 2024`,
+        thumbnail: `https://sounishnath.netlify.app/assets/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `URL shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.`,
+        techStack: ['Go', 'Postgresql', 'Redis', 'Bloom Filters'],
+        links: [
+          { 'iconName': 'github', href: `https://github.com/sounishnath003/url-shortner-service-golang` },
+          { 'iconName': 'youtube', href: `https://www.youtube.com/watch?v=o0OwyO-WH4g` },
+          { 'iconName': 'linkedin', href: `https://www.linkedin.com/posts/sounishnath_golang-urlshortener-bloomfilter-activity-7257995197781819392-m8es?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w` }
+        ]
+      },
+    ]
   }
 };
