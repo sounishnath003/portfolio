@@ -25,7 +25,12 @@ export const Portfolio = {
       iconName: "linkedin",
     },
     {
-      name: "Email",
+      name: "Leetcode",
+      href: "https://leetcode.com/sounish",
+      iconName: "leetcode",
+    },
+    {
+      name: "Gmail",
       href: "mailto:flock.sinasini@gmail.com",
       iconName: "gmail",
     },
@@ -120,4 +125,22 @@ export const Portfolio = {
       skills: ["Cooking", "Biking", "Open source", "FOSS", "Self hosted"],
     },
   ],
+  aboutPage: {
+    headline: `I'm Sounish Nath 👋. I live in Bengaluru, India, where I build my stuffs.`,
+    subtitle: `Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.`,
+    photo: `/sounish-nath-photo.webp`,
+    description: `
+                <p class="text-gray-800 dark:text-white leading-relaxed text-lg">
+                    <span class="font-semibold text-blue-600">Backend Software & Data Engineer</span> specializing in 
+                    <span class="bg-blue-50 px-2 py-1 rounded text-blue-800 font-medium">distributed systems architecture</span> and 
+                    <span class="bg-green-50 px-2 py-1 rounded text-green-800 font-medium">high-throughput data processing</span>. 
+                    Expert in <span class="font-semibold">Python</span>, <span class="font-semibold">Go</span>, 
+                    <span class="font-semibold">Apache Spark</span>, and <span class="font-semibold">GCP</span> with deep proficiency in 
+                    <span class="text-purple-700 font-medium">Kubernetes orchestration</span>, 
+                    <span class="text-purple-700 font-medium">microservices design patterns</span>, and 
+                    <span class="text-purple-700 font-medium">event-driven architectures</span>. 
+                    Passionate about building <span class="bg-yellow-100 px-2 py-1 rounded text-yellow-800 font-semibold">fault-tolerant, scalable systems</span> 
+                    that handle <span class="text-red-600 font-bold">petabyte-scale data workloads</span>.
+                </p>`
+  }
 };
