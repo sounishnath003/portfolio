@@ -2,7 +2,16 @@ export const Portfolio = {
   fullname: "Sounish Nath",
   sarcasticBio:
     "I make Kubernetes ☸️ orchestrate chaos and call it 'scalability' 🎭📈",
-  profileBio: `SDE-2 at Oracle. At Oracle, building AI-driven cloud systems that serve 1M+ daily users. I architect scalable backend platforms and data pipelines, with proven experience migrating 40M+ tasks and reducing operational costs by 68%. Based in Bengaluru, India.`,
+  profileBio: `<p class="text-gray-500 dark:text-gray-200 font-medium dark:text-white leading-relaxed text-md">
+    <span class="font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded shadow-sm">SDE-2 at Oracle</span>. 
+    At Oracle, building <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">AI-driven cloud systems</span> 
+    that serve <span class="text-green-600 dark:text-green-400 font-bold bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded">1M+ daily users</span>. 
+    I architect <span class="text-purple-700 dark:text-purple-400 font-medium">scalable backend platforms</span> and 
+    <span class="text-purple-700 dark:text-purple-400 font-medium">data pipelines</span>, with proven experience migrating 
+    <span class="text-orange-600 dark:text-orange-400 font-bold bg-orange-50 dark:bg-orange-900/20 px-1.5 py-0.5 rounded">40M+ tasks</span> 
+    and reducing operational costs by <span class="text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">68%</span>. 
+    Based in <span class="font-semibold text-gray-900 dark:text-gray-100 underline decoration-2 decoration-blue-400 dark:decoration-blue-500">Bengaluru, India</span>.
+</p>`,
   attributes: [
     "Software Engineer",
     "Scalable Backend",
@@ -130,17 +139,17 @@ export const Portfolio = {
     subtitle: `Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.`,
     photo: `/sounish-nath-photo.webp`,
     description: `
-                <p class="text-gray-800 dark:text-white leading-relaxed text-lg">
-                    <span class="font-semibold text-blue-600">Backend Software & Data Engineer</span> specializing in 
-                    <span class="bg-blue-50 px-2 py-1 rounded text-blue-800 font-medium">distributed systems architecture</span> and 
-                    <span class="bg-green-50 px-2 py-1 rounded text-green-800 font-medium">high-throughput data processing</span>. 
-                    Expert in <span class="font-semibold">Python</span>, <span class="font-semibold">Go</span>, 
-                    <span class="font-semibold">Apache Spark</span>, and <span class="font-semibold">GCP</span> with deep proficiency in 
-                    <span class="text-purple-700 font-medium">Kubernetes orchestration</span>, 
-                    <span class="text-purple-700 font-medium">microservices design patterns</span>, and 
-                    <span class="text-purple-700 font-medium">event-driven architectures</span>. 
-                    Passionate about building <span class="bg-yellow-100 px-2 py-1 rounded text-yellow-800 font-semibold">fault-tolerant, scalable systems</span> 
-                    that handle <span class="text-red-600 font-bold">petabyte-scale data workloads</span>.
-                </p>`
+    <p class="text-gray-800 dark:text-white leading-relaxed text-lg">
+        <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Software & Data Engineer</span> specializing in
+        <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems architecture</span> and
+        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data processing</span>.
+        Expert in <span class="font-semibold text-gray-900 dark:text-gray-100">Python</span>, <span class="font-semibold text-gray-900 dark:text-gray-100">Go</span>,
+        <span class="font-semibold text-gray-900 dark:text-gray-100">Apache Spark</span>, and <span class="font-semibold text-gray-900 dark:text-gray-100">GCP</span> with deep proficiency in
+        <span class="text-purple-700 dark:text-purple-400 font-medium">Kubernetes orchestration</span>,
+        <span class="text-purple-700 dark:text-purple-400 font-medium">microservices design patterns</span>, and
+        <span class="text-purple-700 dark:text-purple-400 font-medium">event-driven architectures</span>.
+        Passionate about building <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable systems</span>
+        that handle <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">petabyte-scale data workloads</span>.
+    </p>`
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+  <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
     <div class="mb-8 flex justify-center">
       <div class="text-xl">
         Hello! 👋, I'm
@@ -10,8 +10,7 @@
       <h1 class="text-6xl font-semibold tracking-tight text-balance sm:text-7xl">
         {{ attributeValue }}
       </h1>
-      <p class="mt-8 font-medium text-pretty text-gray-500 dark:text-gray-200 font-medium">
-        {{ Portfolio.profileBio }}
+      <p class="mt-8 font-medium text-pretty" v-html="Portfolio.profileBio">
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <a :href="Portfolio.resumeLink" target="_blank">
