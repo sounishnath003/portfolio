@@ -139,7 +139,7 @@ export const Portfolio = {
     subtitle: `Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.`,
     photo: `/sounish-nath-photo.webp`,
     description: `
-    <p class="text-gray-800 dark:text-white leading-relaxed text-lg">
+    <p class="text-gray-800 dark:text-white leading-relaxed text-pretty tracking-tight">
         <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Software & Data Engineer</span> specializing in
         <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems architecture</span> and
         <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data processing</span>.
