@@ -1,6 +1,9 @@
 <template>
   <div class="relative isolate px-6 pt-2 lg:px-8 min-h-screen flex flex-col">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+    <div
+      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      aria-hidden="true"
+    >
       <div
         class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
         style="
@@ -22,7 +25,8 @@
             76.1% 97.7%,
             74.1% 44.1%
           );
-        " />
+        "
+      />
     </div>
     <Header />
     <div class="flex-1">
@@ -34,15 +38,25 @@
         <div class="flex items-center gap-4">
           <span>&bull; Built with ❤️, </span>
           <span>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vite.svg" class="w-8 dark:invert" alt="vite">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vite.svg"
+              class="w-8 dark:invert"
+              alt="vite"
+            />
           </span>
           <span>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" class="w-8 dark:invert"
-              alt="github">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+              class="w-8 dark:invert"
+              alt="github"
+            />
           </span>
           <span>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/netlify.svg" class="w-8 dark:invert"
-              alt="netlify">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/netlify.svg"
+              class="w-8 dark:invert"
+              alt="netlify"
+            />
           </span>
         </div>
         <div>&bull; Version: 4.0</div>
@@ -50,7 +64,8 @@
     </footer>
     <div
       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-      aria-hidden="true">
+      aria-hidden="true"
+    >
       <div
         class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
         style="
@@ -72,7 +87,8 @@
             76.1% 97.7%,
             74.1% 44.1%
           );
-        " />
+        "
+      />
     </div>
   </div>
 </template>
