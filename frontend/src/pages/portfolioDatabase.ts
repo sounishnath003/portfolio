@@ -207,7 +207,7 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
-        title: `Referral Emailer Service`,
+        title: `Referral Emailer`,
         datePublished: `Jul 29, 2025`,
         thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
         description: `Built high-performance cold emailing tool with Golang/MongoDB featuring AI-powered resume analysis and personalized email generation, boosting outreach efficiency by 80%`,
