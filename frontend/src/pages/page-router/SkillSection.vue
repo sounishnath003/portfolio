@@ -35,7 +35,7 @@
     <div class="mt-6">
       <div
         v-for="skill in Portfolio.skills"
-        class="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground- my-3 font-medium text-gray-700 dark:text-gray-100"
+        class="hidden lg:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground- my-3 font-medium text-gray-700 dark:text-gray-100"
       >
         <p>
           <span

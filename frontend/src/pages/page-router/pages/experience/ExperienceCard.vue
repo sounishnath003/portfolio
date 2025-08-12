@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-neural-50 dark:bg-gray-900 rounded-lg py-2 dark:px-4 w-auto md:w-2xl">
+    <div class="bg-neural-50 dark:bg-gray-900 rounded-lg py-2 dark:px-4 w-auto md:w-3xl">
         <div class="flex justify-between items-start mb-2">
             <div class="flex-1">
                 <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 mb-2">
