@@ -3,7 +3,7 @@
     <p
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-gray-100 md:block -mb-10"
     >
-      What colleagues says about
+      What colleagues say about
       <span class="text-blue-600 dark:text-white underline"
         >Sounish&quest;</span
       >
