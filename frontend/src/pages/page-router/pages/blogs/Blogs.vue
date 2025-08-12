@@ -1,0 +1,1 @@
+<template>Blogs Section</template>
