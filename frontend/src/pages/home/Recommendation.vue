@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <p class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-gray-100 hhidden md:block">
-            &bull; What Colleagues Says About Sounish?
+    <div class="text-center">
+        <p class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-gray-100 md:block -mb-10">
+            What colleagues says about <span class="text-blue-600 dark:text-white underline">Sounish&quest;</span>
         </p>
     </div>
     <transition name="fade" mode="out-in" appear>

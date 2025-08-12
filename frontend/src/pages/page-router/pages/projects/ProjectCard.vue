@@ -3,7 +3,7 @@
         class="bg-white dark:bg-gray-900 rounded-2xl p-4 md:max-w-5xl mx-auto border border-gray-300 dark:border-gray-600">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <!-- Left Side: Content -->
-            <div class="space-y-2">
+            <div class="space-y-4">
                 <!-- Header -->
                 <div class="flex items-center gap-4">
                     <h2 class="text-2xl font-semibold text-pretty tracking-tight">{{ props.project.title }}</h2>
@@ -38,8 +38,8 @@
             <!-- Right Side: Visual/Device -->
             <div class="relative hidden md:inline-flex">
                 <img :src="props.project.thumbnail" loading="lazy"
-                    class="bg-center bg-no-repeat w-full border border-gray-400 dark:border-gray-800 rounded-2xl"
-                    :alt="props.project.title">
+                class="bg-center bg-no-repeat w-full border border-gray-400 dark:border-gray-800 rounded-2xl"
+                :alt="props.project.title">
             </div>
         </div>
     </div>

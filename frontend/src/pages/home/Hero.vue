@@ -16,7 +16,7 @@
         <a :href="Portfolio.resumeLink" target="_blank">
           <PrimaryButton text="Download Resume" buttonType="Download" color="blue" />
         </a>
-        <a href="#/pages/about" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Interested? Know more
+        <a href="#/pages/work-experience" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Interested? Know more
           <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
