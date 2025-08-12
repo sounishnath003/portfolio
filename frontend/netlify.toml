@@ -1,0 +1,10 @@
+[build]
+  command = "vite build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[[redirects]]
+  # This redirects any path to the root URL (index.html)
+  from = "/*"
+  to = "/index.html"
+  status = 200
