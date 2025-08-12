@@ -234,5 +234,45 @@ export const Portfolio = {
         ]
       },
     ]
+  },
+  endorsementPage: {
+    endorsements: [
+      {
+        company: 'Genpact',
+        companyLogo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFIjOdiff8hjA/company-logo_200_200/company-logo_200_200/0/1736265728917/genpact_logo?e=1758153600&v=beta&t=McdQT8HUbb2deKLinbny9ZPrjSV4CJHsbaTDwigaBVA',
+        endorsement: 'I have worked with Sounish within the same team (Analytics team) where he had joined as a fresher. But the work ethic and competency he had shown both on the technical front as well as on the functional front was quite remarkable and matched the level of any pro developer.',
+        avatar: '/endorsements/prashant.png',
+        name: 'Prashant Mishra',
+        workBio: 'Lead Data Engineer of Genpact',
+        linkedin: 'https://www.linkedin.com/in/prashant-mishra-78976046/'
+      },
+      {
+        company: "Infosys",
+        companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/330px-Infosys_logo.svg.png",
+        endorsement: "Sounish Nath consistently demonstrated his skills through problem-solving, teamwork and actively participation. He played a pivotal role in Machine Learning development and showcased his ability to deliver expected outcomes. What I appreciate most about Sounish is his dedication, reliability, creativity about the",
+        avatar: "/endorsements/jenny.png",
+        name: "Arokia jenefer Antony",
+        workBio: "Senior Consultant of Infosys",
+        linkedin: "https//www.linkedin.com/in/arokia-jenefer-antony-867292119/"
+      },
+      {
+        company: "Tata Consultancy Services",
+        companyLogo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Tata_Consultancy_Services.svg/500px-Tata_Consultancy_Services.svg.png",
+        endorsement: "Sounish is hardworking and dedicated associate. He joined TCS and within no time print his footprint on our project. He is expert in Cloud Services almost in all areas with AI / ML expertise.",
+        avatar: "/endorsements/udhav.png",
+        name: "Udhav Lahane",
+        workBio: "Azure Data Engineer of TCS",
+        linkedin: "https//www.linkedin.com/in/udhav-lahane-87542320/"
+      },
+      {
+        company: "Deloitte",
+        companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Logo_of_Deloitte.svg/500px-Logo_of_Deloitte.svg.png",
+        endorsement: "Sounish is hardworking employee. He is always keen to learn new technologies and apply that knowledge in building new and innovative solutions. He is having good hands on knowledge about Google Cloud and has expertise in AI & ML fields. He is a great team player, mentor and leader who can be an asset to any",
+        avatar: "/endorsements/rinkesh.png",
+        name: "Rinkesh Kore",
+        workBio: "Data Engineer of Delotte USI",
+        linkedin: "https//www.linkedin.com/in/rinkeshkore/"
+      }
+    ]
   }
 };
