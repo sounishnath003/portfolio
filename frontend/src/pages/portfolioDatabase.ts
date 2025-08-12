@@ -207,30 +207,72 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
-        title: `URL Shortner Service`,
-        datePublished: `Oct 31, 2024`,
-        thumbnail: `https://sounishnath.netlify.app/assets/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
-        description: `URL shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.`,
-        techStack: ["Go", "Postgresql", "Redis", "Bloom Filters"],
+        title: `Referral Emailer Service`,
+        datePublished: `Jul 29, 2025`,
+        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `Built high-performance cold emailing tool with Golang/MongoDB featuring AI-powered resume analysis and personalized email generation, boosting outreach efficiency by 80%`,
+        techStack: ["Go", "Vue.js", "SMTP", "Concurrency"],
         links: [
           {
             iconName: "github",
-            href: `https://github.com/sounishnath003/url-shortner-service-golang`,
+            href: `https://github.com/sounishnath003/referrer-emailer-go/`,
           },
           {
             iconName: "youtube",
-            href: `https://www.youtube.com/watch?v=o0OwyO-WH4g`,
+            href: `https://www.youtube.com/watch?v=c72SXbLTQ0c`,
           },
           {
             iconName: "linkedin",
-            href: `https://www.linkedin.com/posts/sounishnath_golang-urlshortener-bloomfilter-activity-7257995197781819392-m8es?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+            href: `https://www.linkedin.com/posts/sounishnath_ai-referrals-tailored-resumes-your-private-activity-7355118109952819202-zIOp?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Money Minder Service`,
+        datePublished: `Jun 29, 2025`,
+        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `Built secure full-stack finance tracker with Vue.js 3 and Golang, featuring role-based auth, real-time charts, and RESTful APIs with 40% latency reduction`,
+        techStack: ["Go", "Vue.js", "BigQuery", "GCP"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/money-minder`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=I5X-nayuyoU`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_personalproject-hobbyproject-opensource-activity-7350180853152468992-fAVa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `InterviewMe.AI - Powered Interview`,
+        datePublished: `Oct 31, 2024`,
+        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `Built real-time interview platform using WebRTC and microservices architecture, reducing response times by 40% with high-concurrency support`,
+        techStack: ["NodeJs", "Typescript", "Angular", "WebRTC"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/intervieew-mee.ai`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=t_-JyN0Lis8`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_google-gemini-generativeai-activity-7238520743670493184-3KbV?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
           },
         ],
       },
       {
         title: `URL Shortner Service`,
         datePublished: `Oct 31, 2024`,
-        thumbnail: `https://sounishnath.netlify.app/assets/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
         description: `URL shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.`,
         techStack: ["Go", "Postgresql", "Redis", "Bloom Filters"],
         links: [
