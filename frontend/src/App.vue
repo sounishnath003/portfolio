@@ -36,7 +36,7 @@
       <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
         <div>Copyright @ 2024</div>
         <div class="flex items-center gap-4">
-          <span>&bull; Built with ❤️, </span>
+          <span>&bull; Built with ❤️ </span>
           <span>
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vite.svg"
