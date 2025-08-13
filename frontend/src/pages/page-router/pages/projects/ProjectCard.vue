@@ -7,11 +7,11 @@
       <div class="space-y-4">
         <!-- Header -->
         <div class="flex items-center gap-4">
-          <h2 class="text-2xl font-semibold text-pretty tracking-tight">
+          <h2 class="text-xl font-semibold text-pretty tracking-tight">
             {{ props.project.title }}
           </h2>
           <span
-            class="px-2 py-1 rounded bg-gray-100 dark:text-gray-900 text-xs cursor-pointer font-medium"
+            class="px-2 py-1 rounded bg-gray-100 dark:text-gray-900 text-[11px] cursor-pointer font-medium"
           >
             {{ props.project.datePublished }}
           </span>

@@ -1,6 +1,6 @@
 ## Sounish Nath | Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a5d8f615-ef5d-4662-af72-ba668b302bbf/deploy-status)](https://app.netlify.com/sites/sounishnath/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d8b11a43-ac14-4eb9-984a-81fc12e4c704/deploy-status)](https://app.netlify.com/projects/sounishnath/deploys)
 
 This is my portfolio website, showcasing my skills and projects.
 
@@ -19,9 +19,9 @@ Checkout website : **[Sounish Nath | Portfolio Website](https://sounishnath.netl
 
 **Technologies used:**
 
-* Angular
+* Vue + TypeScript
 * TailwindCSS
-* TypeScript
+* Gitub Actions
 * Netlify
 
 **Feel free to explore the website and learn more about my work.**
@@ -33,10 +33,12 @@ Checkout website : **[Sounish Nath | Portfolio Website](https://sounishnath.netl
 * **[[GitHub profile link](https://github.com/sounishnath003/)]**
 * **[[Twitter profile link](https://x.com/sounish1/)]**
 
+**Design Inspiration**: 
+https://rdsx.dev/ - Simple Minimalistic Portfolio. Big thanks to the RDS.
 
 Thank you for visiting!
 
-**Built with ❤️ using 👨‍💻Angular, 🛠️ Github, 🌎 Netlify ‐
-Version: 3.6.9**
+**Built with ❤️ using 👨‍💻VueJS, 🛠️ Github, 🌎 Netlify ‐
+Version: 4.0**
 
 **[Portfolio](https://sounishnath.netlify.app/)**
