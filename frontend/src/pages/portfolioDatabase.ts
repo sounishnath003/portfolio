@@ -249,7 +249,7 @@ export const Portfolio = {
         ],
       },
       {
-        title: `InterviewMe.AI - Powered Interview`,
+        title: `InterviewMe.AI Platform`,
         datePublished: `Oct 31, 2024`,
         thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
         description: `Built real-time interview platform using WebRTC and microservices architecture, reducing response times by 40% with high-concurrency support`,
