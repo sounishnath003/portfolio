@@ -4,7 +4,7 @@
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-gray-100 md:block -mb-10"
     >
       What colleagues say about
-      <span class="text-blue-600 dark:text-white underline"
+      <span class="text-blue-600 dark:text-yellow-400 underline"
         >Sounish&quest;</span
       >
     </p>
