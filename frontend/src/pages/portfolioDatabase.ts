@@ -207,6 +207,27 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
+        title: `Taskflow: Weekplanner AI`,
+        datePublished: `Aug 15, 2025`,
+        thumbnail: `/featuredProjects/images/taskflow01.gif`,
+        description: `AI-powered weekly planner with Gemini/Firebase Studio featuring smart scheduling, automated task generation, and drag-and-drop organization`,
+        techStack: ["Firebase", "Vue.js", "Gemini", "GCP"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/taskflow-weekplanner/`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=3rLyBheAPEs`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_how-i-built-a-smart-week-planner-activity-7362195279833378816-_ELZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
         title: `Referral Emailer`,
         datePublished: `Jul 29, 2025`,
         thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
