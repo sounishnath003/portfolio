@@ -230,7 +230,7 @@ export const Portfolio = {
       {
         title: `Referral Emailer`,
         datePublished: `Jul 29, 2025`,
-        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        thumbnail: `/featuredProjects/images/ReferrerEmailerService.gif`,
         description: `Built high-performance cold emailing tool with Golang/MongoDB featuring AI-powered resume analysis and personalized email generation, boosting outreach efficiency by 80%`,
         techStack: ["Go", "Vue.js", "SMTP", "Concurrency"],
         links: [
@@ -251,7 +251,7 @@ export const Portfolio = {
       {
         title: `Money Minder Service`,
         datePublished: `Jun 29, 2025`,
-        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        thumbnail: `/featuredProjects/images/MoneyMinder.webp`,
         description: `Built secure full-stack finance tracker with Vue.js 3 and Golang, featuring role-based auth, real-time charts, and RESTful APIs with 40% latency reduction`,
         techStack: ["Go", "Vue.js", "BigQuery", "GCP"],
         links: [
@@ -272,7 +272,7 @@ export const Portfolio = {
       {
         title: `InterviewMe.AI Platform`,
         datePublished: `Oct 31, 2024`,
-        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        thumbnail: `/featuredProjects/images/IntervieewMeAI.webp`,
         description: `Built real-time interview platform using WebRTC and microservices architecture, reducing response times by 40% with high-concurrency support`,
         techStack: ["NodeJs", "Typescript", "Angular", "WebRTC"],
         links: [
