@@ -136,21 +136,33 @@ export const Portfolio = {
   ],
   aboutPage: {
     headline: `I'm Sounish Nath 👋. I live in Bengaluru, India, where I build my stuffs.`,
-    subtitle: `Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.`,
+    subtitle: `Backend & Distributed Systems Engineer | Building High-Impact AI-Driven Products | Designing & Optimizing Cloud-Scale Data Pipelines`,
     photo: `/sounish-nath-photo.webp`,
     description: `
     <p class="text-gray-800 dark:text-white leading-relaxed text-pretty tracking-tight">
-        <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Software & Data Engineer</span> specializing in
-        <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems architecture</span> and
-        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data processing</span>.
-        Expert in <span class="font-semibold text-gray-900 dark:text-gray-100">Python</span>, <span class="font-semibold text-gray-900 dark:text-gray-100">Go</span>,
-        <span class="font-semibold text-gray-900 dark:text-gray-100">Apache Spark</span>, and <span class="font-semibold text-gray-900 dark:text-gray-100">GCP</span> with deep proficiency in
-        <span class="text-purple-700 dark:text-purple-400 font-medium">Kubernetes orchestration</span>,
-        <span class="text-purple-700 dark:text-purple-400 font-medium">microservices design patterns</span>, and
-        <span class="text-purple-700 dark:text-purple-400 font-medium">event-driven architectures</span>.
-        Passionate about building <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable systems</span>
-        that handle <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">petabyte-scale data workloads</span>.
-    </p>`,
+      <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Data Platform Software Engineer</span>
+      specializing in
+      <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems</span>
+      and
+      <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data pipelines</span>.
+      Experienced in
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Go</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Python</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Kafka</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Apache Spark</span>,
+      and
+      <span class="font-semibold text-gray-900 dark:text-gray-100">GCP/OCI</span>.
+      Skilled in
+      <span class="text-purple-700 dark:text-purple-400 font-medium">Kubernetes</span>,
+      <span class="text-purple-700 dark:text-purple-400 font-medium">microservices</span>,
+      and
+      <span class="text-purple-700 dark:text-purple-400 font-medium">event-driven systems</span>.
+      Passionate about building
+      <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable platforms</span>
+      designed for
+      <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">real-time analytics at massive scale</span>.
+    </p>
+    `,
   },
   workExperiencePage: {
     experiences: [
