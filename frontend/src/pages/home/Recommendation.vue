@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
     <!-- Title -->
     <div class="text-center mb-12 fade-in-up">
       <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">

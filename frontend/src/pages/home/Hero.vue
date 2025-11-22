@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mx-auto max-w-3xl py-32 sm:py-48 lg:py-56 overflow-hidden">
+  <div class="relative w-full py-16 sm:py-24 lg:py-32">
     <!-- Animated Background Patterns -->
     <div class="absolute inset-0 -z-10 overflow-hidden opacity-30 dark:opacity-20">
       <!-- Geometric Grid Pattern -->
@@ -7,7 +7,7 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10">
+    <div class="relative z-10 mx-auto max-w-3xl px-6 lg:px-8">
       <!-- Greeting with subtle animation -->
       <div class="mb-8 flex justify-center fade-in-up" style="animation-delay: 0.05s">
         <div class="text-xl font-medium text-gray-700 dark:text-gray-300">
