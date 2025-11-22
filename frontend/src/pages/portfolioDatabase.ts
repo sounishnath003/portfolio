@@ -3,7 +3,7 @@ export const Portfolio = {
   sarcasticBio:
     "I make Kubernetes ☸️ orchestrate chaos & call it 'scalability' 🎭📈",
   profileBio: `<p class="text-gray-500 dark:text-gray-200 font-medium dark:text-white leading-relaxed text-md">
-    <span class="font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded shadow-sm">SDE-2 at Oracle</span>. 
+    <span class="font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded shadow-sm">Software Engineer 2 @ Oracle</span>.
     At Oracle, building <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">AI-driven cloud systems</span> 
     that serve <span class="text-green-600 dark:text-green-400 font-bold bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded">1M+ daily users</span>. 
     I architect <span class="text-purple-700 dark:text-purple-400 font-medium">scalable backend platforms</span> and 
