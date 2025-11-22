@@ -1,13 +1,16 @@
 <template>
   <div
-    class="bg-white dark:bg-gray-900 rounded-2xl p-4 md:max-w-5xl mx-auto border border-gray-300 dark:border-gray-600 mb-4">
+    class="bg-white dark:bg-gray-900 rounded-2xl p-4 md:max-w-5xl mx-auto border border-gray-300 dark:border-gray-600 mb-4 transition-all duration-300 group cursor-pointer">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
       <!-- Left Side: Content -->
       <div class="space-y-4 order-2 lg:order-1">
         <!-- Header -->
         <div class="flex items-center gap-3 flex-wrap">
           <h2 class="text-lg md:text-xl font-semibold text-pretty tracking-tight text-gray-900 dark:text-gray-100">
-            {{ props.project.title }}
+            <span
+              class="relative inline-block transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 dark:after:bg-blue-400 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+              {{ props.project.title }}
+            </span>
           </h2>
           <span
             class="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-[11px] md:text-xs font-medium whitespace-nowrap">
@@ -46,9 +49,9 @@
             class="w-full h-auto border border-gray-300 dark:border-gray-600 rounded-xl" :alt="props.project.title" />
         </div>
         <!-- Desktop: Show image -->
-        <div class="hidden lg:block">
+        <div class="hidden lg:block overflow-hidden rounded-2xl border border-gray-400 dark:border-gray-800">
           <img :src="props.project.thumbnail" loading="lazy"
-            class="bg-center bg-no-repeat w-full border border-gray-400 dark:border-gray-800 rounded-2xl"
+            class="bg-center bg-no-repeat w-full transition-transform duration-500 group-hover:scale-105"
             :alt="props.project.title" />
         </div>
       </div>

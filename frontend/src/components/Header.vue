@@ -110,7 +110,7 @@ const navigation = [
   // { name: "Blogs", to: "/pages/blogs" },
   { name: "About", to: "/pages/about" },
   { name: "Projects", to: "/pages/projects" },
-  // { name: "Uses", to: "/pages/uses" },
+  { name: "Uses", to: "/pages/uses" },
 ];
 
 const mobileMenuOpen = ref(false);

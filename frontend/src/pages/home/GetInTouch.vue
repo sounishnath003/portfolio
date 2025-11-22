@@ -28,7 +28,7 @@
         </h2>
         <p class="mb-8 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
           Interested in working together or want to know more?<br />
-          <a href="#/pages/about"
+          <a href="/pages/about"
             class="text-blue-600 dark:text-yellow-400 hover:text-blue-700 dark:hover:text-yellow-300 font-medium transition-colors duration-300 inline-flex items-center gap-2 group/link">
             Learn more about me
             <svg class="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none"
