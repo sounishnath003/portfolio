@@ -224,6 +224,44 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
+        title: `Chad Gipidii - Agent Loop`,
+        datePublished: `Oct 10, 2025`,
+        thumbnail: `/featuredProjects/images/chad-gipidii.gif`,
+        description: `An extensible AI agent powered by Google Gemini, featuring dynamic tool registration via an @tool decorator, multi-step tool execution, color-coded logging, configurable LLM backends, and robust error handling for reliable task automation.`,
+        techStack: ["Python", "Pydantic", "Gemini 2.5-Pro"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/chad-gipidi-ai-agents-tool`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=E5rNsOvUR0w`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_github-sounishnath003chad-gipidi-ai-agents-tool-activity-7393552425871282176-Z1q4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Gossip Raft - KV Store`,
+        datePublished: `Oct 10, 2025`,
+        thumbnail: `/featuredProjects/images/gossip-raft.gif`,
+        description: `A sharded, replicated in-memory key-value store in Go using Raft for fault tolerance, gRPC for inter-node communication, and a gossip protocol for eventual consistency.`,
+        techStack: ["Go", "GRPC", "Raft", "Gossip Protocol"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/gossip-raft-consensus-keystore`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/in/sounishnath`,
+          },
+        ],
+      },
+      {
         title: `Taskflow: Weekplanner AI`,
         datePublished: `Aug 15, 2025`,
         thumbnail: `/featuredProjects/images/taskflow01.gif`,
