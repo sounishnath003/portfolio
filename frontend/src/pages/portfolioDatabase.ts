@@ -1,7 +1,7 @@
 export const Portfolio = {
   fullname: "Sounish Nath",
   sarcasticBio:
-    "I make Kubernetes ☸️ orchestrate chaos and call it 'scalability' 🎭📈",
+    "I make Kubernetes ☸️ orchestrate chaos & call it 'scalability' 🎭📈",
   profileBio: `<p class="text-gray-500 dark:text-gray-200 font-medium dark:text-white leading-relaxed text-md">
     <span class="font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded shadow-sm">SDE-2 at Oracle</span>. 
     At Oracle, building <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">AI-driven cloud systems</span> 
@@ -136,35 +136,55 @@ export const Portfolio = {
   ],
   aboutPage: {
     headline: `I'm Sounish Nath 👋. I live in Bengaluru, India, where I build my stuffs.`,
-    subtitle: `Full-Stack Software & Data Engineer | Passionate about Building High-Impact Products with AI | Building & Optimizing Real-time Data Pipelines.`,
+    subtitle: `Backend & Distributed Systems Engineer | Building High-Impact AI-Driven Products | Designing & Optimizing Cloud-Scale Data Pipelines`,
     photo: `/sounish-nath-photo.webp`,
     description: `
     <p class="text-gray-800 dark:text-white leading-relaxed text-pretty tracking-tight">
-        <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Software & Data Engineer</span> specializing in
-        <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems architecture</span> and
-        <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data processing</span>.
-        Expert in <span class="font-semibold text-gray-900 dark:text-gray-100">Python</span>, <span class="font-semibold text-gray-900 dark:text-gray-100">Go</span>,
-        <span class="font-semibold text-gray-900 dark:text-gray-100">Apache Spark</span>, and <span class="font-semibold text-gray-900 dark:text-gray-100">GCP</span> with deep proficiency in
-        <span class="text-purple-700 dark:text-purple-400 font-medium">Kubernetes orchestration</span>,
-        <span class="text-purple-700 dark:text-purple-400 font-medium">microservices design patterns</span>, and
-        <span class="text-purple-700 dark:text-purple-400 font-medium">event-driven architectures</span>.
-        Passionate about building <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable systems</span>
-        that handle <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">petabyte-scale data workloads</span>.
-    </p>`,
+      <span class="font-semibold text-blue-600 dark:text-blue-400">Backend Data Platform Software Engineer</span>
+      specializing in
+      <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed systems</span>
+      and
+      <span class="bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200 font-medium">high-throughput data pipelines</span>.
+      Experienced in
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Go</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Python</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Kafka</span>,
+      <span class="font-semibold text-gray-900 dark:text-gray-100">Apache Spark</span>,
+      and
+      <span class="font-semibold text-gray-900 dark:text-gray-100">GCP/OCI</span>.
+      Skilled in
+      <span class="text-purple-700 dark:text-purple-400 font-medium">Kubernetes</span>,
+      <span class="text-purple-700 dark:text-purple-400 font-medium">microservices</span>,
+      and
+      <span class="text-purple-700 dark:text-purple-400 font-medium">event-driven systems</span>.
+      Passionate about building
+      <span class="bg-yellow-100 dark:bg-yellow-900/40 px-2 py-1 rounded text-yellow-800 dark:text-yellow-200 font-semibold shadow-sm">fault-tolerant, scalable platforms</span>
+      designed for
+      <span class="text-red-600 dark:text-red-400 font-bold bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">real-time analytics at massive scale</span>.
+    </p>
+    `,
   },
   workExperiencePage: {
     experiences: [
       {
         company: "Oracle",
         href: "https://oracle.com",
-        role: "Software Engineer - II",
+        role: "Member of Technical Staff",
         type: "Full-time",
         mode: "Bangalore, IN",
         duration: "2025 - Continuing",
         highlights: [
-          "Architected Oracle Cloud Fusion BI microservices serving 1M+ enterprise customers with 99.9% uptime",
-          "Built AI-driven Python diagnostic system reducing troubleshooting time by 75% using LLM-powered root cause analysis",
-          "Optimized cloud-native performance monitoring for Fortune 500 supply chain systems on OCI platform",
+          "Developed cloud-native microservices on Oracle Cloud Fusion Analytics Warehouse, utilizing OCI Kubernetes Engine, OCI Streaming, and Autonomous Transaction Processing to provide low-latency analytics for 1M+ daily users.",
+
+          "Built predictive analytics workflows in Fusion Intelligent Applications to capture real-time metrics and mitigate production failures, reducing downtime risk by 30% for enterprise customers.",
+
+          "Delivered an AI-driven sidecar service on the OCI AI & Data Science stack, automating RCA for slow-running Fusion SCM jobs and reducing triage time by 40%, boosting developer productivity by 20%.",
+
+          "Enhanced backend pipelines with adaptive query caching, parallel execution, and workload-aware resource allocation, improving report generation speed by 15%.",
+
+          "Collaborated with cross-functional teams to design efficient star and snowflake schemas in Oracle Fusion Data Intelligence, optimizing query performance for analysts.",
+
+          "Tech stack: Python, Java, Spring Boot, Spark, OCI, Autonomous Database, Git, Docker, Kubernetes Engine."
         ],
       },
       {
@@ -175,10 +195,19 @@ export const Portfolio = {
         mode: "Mumbai, IN",
         duration: "2021 - 2025",
         highlights: [
-          "Architected end-to-end data pipelines using Spark/Hadoop/Kafka processing 300GB+ real-time streaming data with fault-tolerant design",
-          "Rebuilt legacy PHP job server into distributed Golang architecture with Kafka/PostgreSQL, improving SQL analytics performance by 64%",
-          "Migrated 40.2M+ daily async tasks to Google Cloud (Pub/Sub, Dataflow) achieving 68% cost reduction and improved system reliability",
-          "Built scalable BigQuery microservices managing petabyte-scale data operations and automated enterprise asset discovery",
+          "Re-architected a distributed job orchestration engine using Go, Kafka, and PostgreSQL, replacing a legacy PHP service and boosting SQL analytics performance by 64 %.",
+
+          "Migrated 4.2M + daily async tasks to Pub / Sub, Spark, Hadoop, and Delta Lake, improving throughput and cutting infrastructure cost by 68 % across 300GB / day batch + streaming pipelines.",
+
+          "Built BigQuery - driven data lake backup and asset discovery services, improving compliance and data governance efficiency by 30 %.",
+
+          "Developed a low - latency GraphQL Data - as - a - Service API(300ms P95) processing 3.5TB / month, reducing latency by 60 % and scaling to 3× traffic.",
+
+          "Automated CI / CD with Docker, Kubernetes, and GitOps, reducing deployment lead time by 50% and increasing rollout reliability.",
+
+          "Launched GHD Rover, an AI- powered enterprise search platform using Hugging Face + vector databases, achieving 88.4 % accuracy with personalised LLM recommendations.",
+
+          "Tech stack: Python, SQL, Kafka, Spark, Go, Hadoop, AWS, GCP, PyTorch, web services, cloud infrastructure.",
         ],
       },
       {
@@ -206,6 +235,44 @@ export const Portfolio = {
   },
   projectsPage: {
     projects: [
+      {
+        title: `Chad Gipidii - Agent Loop`,
+        datePublished: `Oct 10, 2025`,
+        thumbnail: `/featuredProjects/images/chad-gipidii.gif`,
+        description: `An extensible AI agent powered by Google Gemini, featuring dynamic tool registration via an @tool decorator, multi-step tool execution, color-coded logging, configurable LLM backends, and robust error handling for reliable task automation.`,
+        techStack: ["Python", "Pydantic", "Gemini 2.5-Pro"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/chad-gipidi-ai-agents-tool`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=E5rNsOvUR0w`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_github-sounishnath003chad-gipidi-ai-agents-tool-activity-7393552425871282176-Z1q4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Gossip Raft - KV Store`,
+        datePublished: `Oct 10, 2025`,
+        thumbnail: `/featuredProjects/images/gossip-raft.gif`,
+        description: `A sharded, replicated in-memory key-value store in Go using Raft for fault tolerance, gRPC for inter-node communication, and a gossip protocol for eventual consistency.`,
+        techStack: ["Go", "GRPC", "Raft", "Gossip Protocol"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/gossip-raft-consensus-keystore`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/in/sounishnath`,
+          },
+        ],
+      },
       {
         title: `Taskflow: Weekplanner AI`,
         datePublished: `Aug 15, 2025`,

@@ -1,14 +1,10 @@
 <template>
-  <p
-    class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 hhidden md:block"
-  >
+  <p class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 hhidden md:block">
     &bull; Work Experience
   </p>
 
-  <ExperienceCard
-    v-for="experience in Portfolio.workExperiencePage.experiences"
-    :experience="experience"
-  />
+  <ExperienceCard v-for="experience in Portfolio.workExperiencePage.experiences" :experience="experience" />
+  <div class="mb-5"></div>
 </template>
 
 <script setup lang="ts">
