@@ -55,7 +55,7 @@ import { Portfolio } from "../portfolioDatabase";
 
 const socialButtonCss = `inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-accent-foreground h-10 w-10 active:border-b active:scale-[0.97] hover:border-[0.2px] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100`;
 
-const domainUrl = ref(window.location.hostname);
+const domainUrl = ref(typeof window !== 'undefined' ? window.location.hostname : 'sounishnath.netlify.app');
 </script>
 
 <style scoped>

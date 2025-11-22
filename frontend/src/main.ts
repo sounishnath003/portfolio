@@ -1,7 +1,6 @@
-import { createApp } from "vue";
+import { ViteSSG } from "vite-ssg";
 import "./style.css";
 import App from "./App.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
 import type { RouteRecordRaw } from "vue-router";
 
 import Home from "./pages/home/Home.vue";
@@ -14,7 +13,7 @@ import Resume from "./pages/page-router/pages/resume/Resume.vue";
 import Uses from "./pages/page-router/pages/uses/Uses.vue";
 import Experience from "./pages/page-router/pages/experience/Experience.vue";
 
-const routes: Array<RouteRecordRaw> = [
+export const routes: Array<RouteRecordRaw> = [
   { path: "/", component: Home },
   {
     path: "/pages",
@@ -31,11 +30,6 @@ const routes: Array<RouteRecordRaw> = [
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
 
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
+export const createApp = ViteSSG(App, { routes }, () => {
+  // install plugins etc.
 });
-
-const app = createApp(App);
-app.use(router);
-app.mount("#app");

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc -b && vite-ssg build",
     "preview": "vite preview",
     "format": "prettier . --write"
   },
@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "motion-v": "^1.7.4",
     "tailwindcss": "^4.1.11",
+    "vite-ssg": "^28.2.2",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },

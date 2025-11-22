@@ -1,10 +1,12 @@
 <template>
-  <div class="bg-neural-50 dark:bg-gray-900 rounded-lg py-3 px-4 w-full max-w-full mb-4">
+  <div
+    class="bg-neural-50 dark:bg-gray-900 rounded-lg py-3 px-4 w-full max-w-full mb-4 transition-colors duration-300 group cursor-pointer">
     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
       <div class="flex-1 min-w-0">
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
-          <h3 class="hover:underline font-semibold text-lg sm:text-xl flex-shrink-0">
-            <a :href="props.experience.href" target="_blank" class="block">
+          <h3 class="font-semibold text-lg sm:text-xl flex-shrink-0">
+            <a :href="props.experience.href" target="_blank"
+              class="relative inline-block text-gray-900 dark:text-gray-100 transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 dark:after:bg-blue-400 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
               {{ props.experience.company }}
             </a>
           </h3>
