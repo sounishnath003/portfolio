@@ -428,4 +428,13 @@ export const Portfolio = {
       },
     ],
   },
+  usesPage: {
+    devices: [{ name: "Macbook Pro 14\"", spec: "M4, 512 GB" },
+    { name: "Macbook Air 13\"", spec: "M1, 256 GB" },
+    { name: "Dell Latitude", spec: "7460, 32 GB" },
+    { name: "BenQ Display", spec: '27", 2K Display' },
+    { name: "Logitech Keyboard", spec: "Mx Master Keys Mini" },
+    { name: "Logitech Mouse", spec: "Bluetooth" },
+    { name: "Bose Speaker", spec: "Portable Home Speaker" },]
+  }
 };
