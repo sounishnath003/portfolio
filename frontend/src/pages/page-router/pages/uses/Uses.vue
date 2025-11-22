@@ -41,10 +41,13 @@
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div v-for="(tool, index) in software" :key="index"
-          class="group flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300">
+          class="group flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 cursor-pointer hover:shadow-sm">
           <img :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${tool.icon}.svg`"
-            class="w-6 h-6 dark:invert opacity-70 group-hover:opacity-100 transition-opacity" :alt="tool.name" />
-          <span class="font-medium text-gray-700 dark:text-gray-200">{{ tool.name }}</span>
+            class="w-6 h-6 dark:invert opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+            :alt="tool.name" />
+          <span
+            class="font-medium text-gray-700 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{{
+            tool.name }}</span>
         </div>
       </div>
     </Motion>
@@ -58,10 +61,13 @@
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div v-for="(tool, index) in technologies" :key="index"
-          class="group flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300">
+          class="group flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 cursor-pointer hover:shadow-sm">
           <img :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${tool.icon}.svg`"
-            class="w-6 h-6 dark:invert opacity-70 group-hover:opacity-100 transition-opacity" :alt="tool.name" />
-          <span class="font-medium text-gray-700 dark:text-gray-200">{{ tool.name }}</span>
+            class="w-6 h-6 dark:invert opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+            :alt="tool.name" />
+          <span
+            class="font-medium text-gray-700 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{{
+            tool.name }}</span>
         </div>
       </div>
     </Motion>
