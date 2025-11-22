@@ -64,6 +64,20 @@
           <span>Updated {{ new Date(repo.updated_at).toLocaleDateString() }}</span>
         </div>
       </a>
+
+      <a href="https://github.com/sounishnath003?tab=repositories" target="_blank" rel="noopener noreferrer"
+        class="group p-5 rounded-2xl border border-dashed border-gray-300 dark:border-gray-700 bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col items-center justify-center text-center h-full min-h-[140px]">
+        <div class="p-3 rounded-full bg-gray-100 dark:bg-gray-800 mb-3 group-hover:scale-110 transition-transform">
+          <ArrowRightIcon class="w-6 h-6 text-gray-600 dark:text-gray-300" />
+        </div>
+        <h3
+          class="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          Browse all repositories
+        </h3>
+        <p class="text-xs text-gray-500 mt-1">
+          Check out more on GitHub
+        </p>
+      </a>
     </div>
   </Motion>
 
@@ -75,7 +89,7 @@ import { ref, onMounted } from "vue";
 import { Portfolio } from "../../../portfolioDatabase";
 import ProjectCard from "./ProjectCard.vue";
 import { Motion } from "motion-v";
-import { StarIcon, CodeBracketSquareIcon } from "@heroicons/vue/24/outline";
+import { StarIcon, CodeBracketSquareIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
 
 interface GitHubRepo {
   id: number;
