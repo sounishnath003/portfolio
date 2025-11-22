@@ -41,7 +41,7 @@
               <PrimaryButton text="Download Resume" buttonType="Download" color="blue" />
             </div>
           </a>
-          <a href="#/pages/work-experience"
+          <a href="/pages/work-experience"
             class="group relative text-sm/6 font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 inline-flex items-center gap-2">
             <span>Interested? Know more</span>
             <span aria-hidden="true" class="inline-block transition-transform duration-200 group-hover:translate-x-1">
