@@ -385,7 +385,7 @@ export const Portfolio = {
       {
         company: "Genpact",
         companyLogo:
-          "https://media.licdn.com/dms/image/v2/D4E0BAQFIjOdiff8hjA/company-logo_200_200/company-logo_200_200/0/1736265728917/genpact_logo?e=1758153600&v=beta&t=McdQT8HUbb2deKLinbny9ZPrjSV4CJHsbaTDwigaBVA",
+          "https://images.seeklogo.com/logo-png/51/1/genpact-logo-png_seeklogo-517714.png",
         endorsement:
           "I have worked with Sounish within the same team (Analytics team) where he had joined as a fresher. But the work ethic and competency he had shown both on the technical front as well as on the functional front was quite remarkable and matched the level of any pro developer.",
         avatar: "/endorsements/prashant.png",
