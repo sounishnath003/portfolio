@@ -1,16 +1,10 @@
 <template>
   <div>
-    <img
-      :src="Portfolio.aboutPage.photo"
-      alt="about#photo"
-      loading="lazy"
-      class="rounded-full aspect-circle rotate-3 object-cover dark:bg-zinc-800 w-76"
-    />
+    <img :src="Portfolio.aboutPage.photo" alt="about#photo" loading="lazy"
+      class="rounded-full aspect-circle rotate-3 object-cover dark:bg-zinc-800 w-76" />
   </div>
   <div>
-    <p
-      class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
-    >
+    <p class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
       {{ Portfolio.aboutPage.headline }}
     </p>
   </div>
@@ -20,39 +14,22 @@
   </div>
 
   <div>
-    <div
-      class="space-y-7 text-base text-zinc-600 dark:text-zinc-400"
-      v-html="Portfolio.aboutPage.description"
-    ></div>
+    <div class="space-y-7 text-base text-zinc-600 dark:text-zinc-400" v-html="Portfolio.aboutPage.description"></div>
   </div>
 
   <div>
-    <ul
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 my-2 w-full"
-      role="list"
-    >
-      <li
-        v-for="(link, index) in Portfolio.socialLinks"
-        :key="index"
-        class="flex w-full"
-      >
-        <a
-          :href="link.href"
-          target="_blank"
-          rel="noopener noreferrer"
-          :class="`${socialButtonCss} w-full justify-center`"
-          style="width: 100%"
-        >
-          <img
-            :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${link.iconName}.svg`"
-            class="w-4 dark:invert"
-            :alt="link.iconName"
-          />
+    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 my-2 w-full" role="list">
+      <li v-for="(link, index) in Portfolio.socialLinks" :key="index" class="flex w-full">
+        <a :href="link.href" target="_blank" rel="noopener noreferrer"
+          :class="`${socialButtonCss} w-full justify-center`" style="width: 100%">
+          <img :src="`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${link.iconName}.svg`" class="w-4 dark:invert"
+            :alt="link.iconName" />
           {{ link.name }}
         </a>
       </li>
     </ul>
   </div>
+  <div class="mb-5"></div>
 </template>
 
 <script setup lang="ts">

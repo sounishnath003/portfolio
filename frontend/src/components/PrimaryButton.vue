@@ -1,8 +1,15 @@
 <template>
-  <div :class="computedCss">
-    <div>{{ text }}</div>
-    <ArrowDownOnSquareIcon class="w-6" v-if="buttonType === 'Download'" />
-    <ArrowRightIcon class="w-6" v-if="buttonType === 'Normal'" />
+  <div :class="computedCss" class="group/btn relative overflow-hidden">
+    <div class="relative z-10 flex items-center justify-evenly gap-2">{{ text }}</div>
+    <ArrowDownOnSquareIcon
+      class="w-6 relative z-10 transition-transform duration-300 group-hover/btn:translate-y-[-2px] group-hover/btn:rotate-12"
+      v-if="buttonType === 'Download'" />
+    <ArrowRightIcon class="w-6 relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1"
+      v-if="buttonType === 'Normal'" />
+    <!-- Subtle shine effect on hover -->
+    <div
+      class="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent">
+    </div>
   </div>
 </template>
 
