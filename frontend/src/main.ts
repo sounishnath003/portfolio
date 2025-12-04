@@ -12,9 +12,11 @@ import Blogs from "./pages/page-router/pages/blogs/Blogs.vue";
 import Resume from "./pages/page-router/pages/resume/Resume.vue";
 import Uses from "./pages/page-router/pages/uses/Uses.vue";
 import Experience from "./pages/page-router/pages/experience/Experience.vue";
+import Linktree from "./pages/linktree/Linktree.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   { path: "/", component: Home },
+  { path: "/links", component: Linktree },
   {
     path: "/pages",
     component: PageRouter,
