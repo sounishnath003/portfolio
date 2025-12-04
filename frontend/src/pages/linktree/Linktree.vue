@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen bg-gray-50 dark:bg-zinc-900 flex flex-col items-center justify-center p-4 overflow-hidden">
+  <div class="relative min-h-screen bg-zinc-50 rounded-xl dark:bg-zinc-900 flex flex-col items-center justify-center p-4 overflow-hidden">
     <div class="absolute inset-0 -z-10 opacity-30 dark:opacity-20">
       <div class="absolute inset-0 bg-grid-geometric animate-grid-move"></div>
     </div>

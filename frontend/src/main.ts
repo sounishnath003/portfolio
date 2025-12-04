@@ -16,7 +16,7 @@ import Linktree from "./pages/linktree/Linktree.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   { path: "/", component: Home },
-  { path: "/links", component: Linktree },
+  { path: "/linktree", component: Linktree },
   {
     path: "/pages",
     component: PageRouter,
