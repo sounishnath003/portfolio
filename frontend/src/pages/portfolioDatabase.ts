@@ -233,6 +233,27 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
+        title: `Leetcode Multiplayer`,
+        datePublished: `Dec 21, 2025`,
+        thumbnail: `/featuredProjects/images/leetcode-multiplayer.gif`,
+        description: `This project is a multiplayer platform for practicing Leetcode problems. It allows users to collaborate and compete in solving coding challenges in real-time with integrated audio calling and cloud code execution.`,
+        techStack: ["Go", "HTMX", "WebRTC", "WebSockets"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/practice-leetcode-multiplayer`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=3QiOIUQptu8`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_building-a-real-time-multiplayer-leetcode-activity-7410656401850531841-IoLi?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
         title: `Chad Gipidii - Agent Loop`,
         datePublished: `Oct 10, 2025`,
         thumbnail: `/featuredProjects/images/chad-gipidii.gif`,
