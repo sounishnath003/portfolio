@@ -1,0 +1,30 @@
+# Apply rules to all major search engine crawlers
+User-agent: *
+
+# --- Core Public Pages (Allow) ---
+# All pages defined in your router that you want indexed.
+
+# Homepage
+Allow: /
+
+# Nested Pages (About, Work Experience, Projects, etc.)
+# These paths are all allowed by default, but explicitly listing them confirms intent.
+Allow: /pages/about
+Allow: /pages/work-experience
+Allow: /pages/projects
+Allow: /pages/blogs
+Allow: /pages/uses
+Allow: /linktree
+
+# --- Pages to Disallow/Exclude from Search Results (Crawl Budget Optimization) ---
+
+# 2. Resume: You likely don't want the raw PDF or viewable resume page indexed 
+# as it's often a duplicate of the 'work-experience' content.
+Disallow: /pages/resume
+
+# 3. NotFound (404 Page): Disallow crawling of the 404 page itself.
+Disallow: /404
+
+# --- XML Sitemap Location (Crucial for Discovery) ---
+# This is required to tell search engines where to find the list of all pages.
+Sitemap: https://sounishnath.netlify.app/sitemap.xml
