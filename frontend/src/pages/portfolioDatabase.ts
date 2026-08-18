@@ -125,6 +125,19 @@ export const Portfolio = {
   workExperiencePage: {
     experiences: [
       {
+        company: "Microsoft",
+        href: "https://microsoft.com",
+        role: "Software Engineer II, Fabric Spark Infrastructure",
+        type: "Full-time",
+        mode: "Bangalore, IN",
+        duration: "2026 - Continuing",
+        highlights: [
+          "Building resilient infrastructure support compute clusters for Azure Data family of products.",
+
+          "Tech stack: C#, .NET Framework, Azure Compute Infrastructure"
+        ],
+      },
+      {
         company: "Oracle",
         href: "https://oracle.com",
         role: "Software Engineer 2, Fusion Data Intelligence Platform",
