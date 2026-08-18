@@ -5,7 +5,7 @@
     </div>
     <div class="flex items-center gap-6 justify-evenly">
       <div v-for="exp in workExperiences">
-        <img :src="exp.image" :alt="exp.companyName" class="w-24 md:w-48" />
+        <img :src="exp.image" :alt="exp.companyName" class="w-24 md:w-56" />
       </div>
     </div>
   </div>
@@ -26,6 +26,10 @@ interface WorkExperience {
 }
 
 const workExperiences = ref<WorkExperience[]>([
+  {
+    companyName: "Microsoft",
+    imageName: "microsoft.png",
+  },
   {
     companyName: "Oracle",
     imageName: "oracle.png",

@@ -1,21 +1,17 @@
 export const Portfolio = {
   fullname: "Sounish Nath",
   sarcasticBio:
-    "I make Kubernetes ☸️ orchestrate chaos & call it 'scalability' 🎭📈",
+    "I build systems that don't wake you up at 3AM — distributed auth, streaming pipelines, and backend services",
   profileBio: `<p class="text-gray-500 dark:text-gray-200 font-medium leading-relaxed text-md">
-    <span class="font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded shadow-sm">Software Engineer 2 @ Oracle</span>.
-    I specialize in building <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">cloud-native microservices</span> leveraging <span class="font-semibold text-blue-800 dark:text-blue-200">Go, Python, and Kubernetes</span>.
-    My work includes architecting <span class="text-purple-700 dark:text-purple-400 font-medium">AI-driven platforms</span> and optimizing <span class="text-orange-700 dark:text-orange-400 font-bold">Distributed Systems</span> that serve <span class="text-green-600 dark:text-green-400 font-semibold bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded">1M+ daily customers</span>.
-    Previously, rearchitected pipelines that accelerated SQL workloads by <span class="text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">64%</span> and reduced infrastructure spend by <span class="text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">68%</span>.
+    I design and ship <span class="bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded text-blue-800 dark:text-blue-200 font-medium">distributed backend systems</span> —
+    auth infra, real-time streaming services, and fault-tolerant microservices as a
+    <span class="text-green-600 dark:text-green-400 font-bold bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded">Software Engineer II</span> at <span class="font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded shadow-sm">Microsoft</span>. Previously at Oracle and TCS, re-architected a distributed job orchestration engine in <span class="font-semibold text-blue-800 dark:text-blue-200">Go + Kafka</span>
+    cutting SQL workload time by <span class="text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">64%</span>,
+    and migrated <span class="text-orange-600 dark:text-orange-400 font-bold bg-orange-50 dark:bg-orange-900/20 px-1.5 py-0.5 rounded">40M+ async tasks/day</span>
+    saving <span class="text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">68%</span> in infra cost.
     Based in <span class="font-semibold text-gray-900 dark:text-gray-100 underline decoration-2 decoration-blue-400 dark:decoration-blue-500">Bengaluru, India</span>.
-</p>`,
-  attributes: [
-    "Software Engineer",
-    "Scalable Backend",
-    "Distributed Systems",
-    "Data Platform Eng.",
-    "Hobbyist Developer",
-  ],
+</p> `,
+  attributes: ["Backend Engineer", "Distributed Systems", "Cloud-Native Infra", "Open Source Builder"],
   resumeLink:
     "https://drive.google.com/file/d/1hcKSEp-PJaNs8P86yN9e60mIBHiXVUin/edit",
   socialLinks: [
@@ -44,70 +40,35 @@ export const Portfolio = {
   skills: [
     {
       topic: "Programming Languages",
-      skills: ["Java", "Python", "Golang", "Javascript", "TypeScript", "SQL"],
+      skills: ["Python", "Golang", "Java", "TypeScript", "SQL"],
     },
     {
-      topic: "Frontend",
-      skills: [
-        "HTML",
-        "CSS",
-        "Angular",
-        "Vue.js",
-        "Vite",
-        "RxJs",
-        "Graphql",
-        "TailwindCSS",
-        "Pinia",
-        "Node.js",
-        "Bun",
-        "NgRx",
-      ],
-    },
-    {
-      topic: "Backend",
+      topic: "Backend & Systems",
       skills: [
         "Nest.JS",
-        "Flask",
-        "Django",
-        "Go",
-        "Fiber",
-        "FastAPI",
-        "REST API",
-        "Express.js",
-        "GraphQL (Apollo Server)",
-        "Mux",
         "Go/Echo",
-        "Springboot",
+        "FastAPI",
+        "Distributed Systems",
+        "Microservices",
+        "REST API",
+        "gRPC", "Apache Kafka", "Apache Spark"
       ],
     },
     {
-      topic: "Databases",
-      skills: ["Redis", "MongoDB", "PostgreSQL", "Oracle ADW", "Elasticsearch"],
+      topic: "Data & AI",
+      skills: ["Redis", "PostgreSQL", "BigQuery", "LLMs", "Vector DBs", "AI Agentic"],
     },
     {
-      topic: "Libraries/Frameworks",
-      skills: [
-        "Kafka",
-        "Pubsub",
-        "Apache Spark",
-        "Bigdata",
-        "Pyspark",
-        "Apache Airflow",
-        "Pytest",
-        "Unit tests",
-      ],
-    },
-    {
-      topic: "DevOps",
+      topic: "Cloud & Infra",
       skills: [
         "Docker",
         "Kubernetes",
-        "Terraform",
         "OCI",
         "GCP",
+        "Terraform",
+        "CI/CD",
         "Prometheus",
         "Grafana",
-        "CI/CD",
       ],
     },
     {
@@ -132,7 +93,7 @@ export const Portfolio = {
     },
   ],
   aboutPage: {
-    headline: `I'm Sounish Nath 👋. I live in Bengaluru, India, where I build my stuffs.`,
+    headline: `I'm Sounish Nath. I build distributed backend systems in Bengaluru, India.`,
     subtitle: `Backend & Distributed Systems Engineer | Building High-Impact AI-Driven Products | Designing & Optimizing Cloud-Scale Data Pipelines`,
     photo: `/sounish-nath-photo.webp`,
     description: `
@@ -164,30 +125,43 @@ export const Portfolio = {
   workExperiencePage: {
     experiences: [
       {
+        company: "Microsoft",
+        href: "https://microsoft.com",
+        role: "Software Engineer II, Fabric Spark Infrastructure",
+        type: "Full-time",
+        mode: "Bangalore, IN",
+        duration: "2026 - Continuing",
+        highlights: [
+          "Building resilient infrastructure support compute clusters for Azure Data family of products.",
+
+          "Tech stack: C#, .NET Framework, Azure Compute Infrastructure"
+        ],
+      },
+      {
         company: "Oracle",
         href: "https://oracle.com",
-        role: "Member of Technical Staff",
+        role: "Software Engineer 2, Fusion Data Intelligence Platform",
         type: "Full-time",
         mode: "Bangalore, IN",
         duration: "2025 - Continuing",
         highlights: [
-          "Developed cloud-native microservices on Oracle Cloud Fusion Analytics Warehouse, utilizing OCI Kubernetes Engine, OCI Streaming, and Autonomous Transaction Processing to provide low-latency analytics for 1M+ daily users.",
+          "Designed and deployed a distributed auth and access control system using OCI Resource Principal and Coherence-based session caching — enabling secure, low-latency cross-tenancy communication across OCI services without per-request credential overhead.",
 
-          "Built predictive analytics workflows in Fusion Intelligent Applications to capture real-time metrics and mitigate production failures, reducing downtime risk by 30% for enterprise customers.",
+          "Built and operate high-throughput microservices and real-time streaming services on Kubernetes + OCI Streaming + ATP serving 1M+ daily users — designed for fault tolerance with circuit breakers, retry budgets, and latency SLOs enforced at the service layer.",
 
-          "Delivered an AI-driven sidecar service on the OCI AI & Data Science stack, automating RCA for slow-running Fusion SCM jobs and reducing triage time by 40%, boosting developer productivity by 20%.",
+          "Architected an AI-driven observability sidecar that attaches to distributed jobs, captures execution traces, and runs automated root cause analysis — reduced engineer triage time by 40% and cut reactive debugging load significantly across the team.",
 
-          "Enhanced backend pipelines with adaptive query caching, parallel execution, and workload-aware resource allocation, improving report generation speed by 15%.",
+          "Developed a real-time anomaly detection service over live pipeline metrics — applies per-tier failure thresholds and predictive signals to fire pre-emptive alerts before cascading failures, reducing production downtime risk by 30%.",
 
-          "Collaborated with cross-functional teams to design efficient star and snowflake schemas in Oracle Fusion Data Intelligence, optimizing query performance for analysts.",
+          "Improved large-scale query performance through adaptive caching, parallel execution tuning, and workload-aware scheduling — delivered 15% faster P95 report latency on high-cardinality analytical datasets with no schema changes.",
 
-          "Tech stack: Python, Java, Spring Boot, Spark, OCI, Autonomous Database, Git, Docker, Kubernetes Engine."
+          "Tech stack: Java · Python · Go · Distributed Systems · Microservices · OCI (Dataflow, OKE, Streaming, ADB/ATP) · Kubernetes · Docker · Git"
         ],
       },
       {
         company: "Tata Consultancy Services",
         href: "https://tcs.com",
-        role: "Software Developer",
+        role: "Software Developer, Data and Digital Infrastructure Services",
         type: "Full-time",
         mode: "Mumbai, IN",
         duration: "2021 - 2025",
@@ -198,7 +172,7 @@ export const Portfolio = {
 
           "Built BigQuery - driven data lake backup and asset discovery services, improving compliance and data governance efficiency by 30 %.",
 
-          "Developed a low - latency GraphQL Data - as - a - Service API(300ms P95) processing 3.5TB / month, reducing latency by 60 % and scaling to 3× traffic.",
+          "Developed a low - latency GraphQL Data-as-Service API(300ms P95) processing 3.5TB / month, reducing latency by 60 % and scaling to 3× traffic.",
 
           "Automated CI / CD with Docker, Kubernetes, and GitOps, reducing deployment lead time by 50% and increasing rollout reliability.",
 
@@ -233,32 +207,11 @@ export const Portfolio = {
   projectsPage: {
     projects: [
       {
-        title: `Chad Gipidii - Agent Loop`,
-        datePublished: `Oct 10, 2025`,
-        thumbnail: `/featuredProjects/images/chad-gipidii.gif`,
-        description: `An extensible AI agent powered by Google Gemini, featuring dynamic tool registration via an @tool decorator, multi-step tool execution, color-coded logging, configurable LLM backends, and robust error handling for reliable task automation.`,
-        techStack: ["Python", "Pydantic", "Gemini 2.5-Pro"],
-        links: [
-          {
-            iconName: "github",
-            href: `https://github.com/sounishnath003/chad-gipidi-ai-agents-tool`,
-          },
-          {
-            iconName: "youtube",
-            href: `https://www.youtube.com/watch?v=E5rNsOvUR0w`,
-          },
-          {
-            iconName: "linkedin",
-            href: `https://www.linkedin.com/posts/sounishnath_github-sounishnath003chad-gipidi-ai-agents-tool-activity-7393552425871282176-Z1q4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
-          },
-        ],
-      },
-      {
         title: `Gossip Raft - KV Store`,
         datePublished: `Oct 10, 2025`,
         thumbnail: `/featuredProjects/images/gossip-raft.gif`,
-        description: `A sharded, replicated in-memory key-value store in Go using Raft for fault tolerance, gRPC for inter-node communication, and a gossip protocol for eventual consistency.`,
-        techStack: ["Go", "GRPC", "Raft", "Gossip Protocol"],
+        description: `Built a sharded, fault-tolerant key-value store from scratch in Go — implements Raft consensus for leader election and log replication, gRPC for inter-node RPC, and a gossip protocol for membership and eventual consistency. Designed to survive node failures without data loss.`,
+        techStack: ["Go", "gRPC", "Raft", "Leader election"],
         links: [
           {
             iconName: "github",
@@ -271,23 +224,44 @@ export const Portfolio = {
         ],
       },
       {
-        title: `Taskflow: Weekplanner AI`,
-        datePublished: `Aug 15, 2025`,
-        thumbnail: `/featuredProjects/images/taskflow01.gif`,
-        description: `AI-powered weekly planner with Gemini/Firebase Studio featuring smart scheduling, automated task generation, and drag-and-drop organization`,
-        techStack: ["Firebase", "Vue.js", "Gemini", "GCP"],
+        title: `URL Shortner Service`,
+        datePublished: `Oct 31, 2024`,
+        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
+        description: `Designed a read-heavy URL shortener in Go — uses Redis for sub-millisecond lookup caching, PostgreSQL for persistence, and Bloom filters to eliminate DB hits for non-existent keys. Built to handle high read throughput with minimal write amplification.`,
+        techStack: ["Go", "Postgresql", "Redis", "Bloom Filters"],
         links: [
           {
             iconName: "github",
-            href: `https://github.com/sounishnath003/taskflow-weekplanner/`,
+            href: `https://github.com/sounishnath003/url-shortner-service-golang`,
           },
           {
             iconName: "youtube",
-            href: `https://www.youtube.com/watch?v=3rLyBheAPEs`,
+            href: `https://www.youtube.com/watch?v=o0OwyO-WH4g`,
           },
           {
             iconName: "linkedin",
-            href: `https://www.linkedin.com/posts/sounishnath_how-i-built-a-smart-week-planner-activity-7362195279833378816-_ELZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+            href: `https://www.linkedin.com/posts/sounishnath_golang-urlshortener-bloomfilter-activity-7257995197781819392-m8es?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Leetcode Multiplayer`,
+        datePublished: `Dec 21, 2025`,
+        thumbnail: `/featuredProjects/images/leetcode-multiplayer.gif`,
+        description: `This project is a multiplayer platform for practicing Leetcode problems. It allows users to collaborate and compete in solving coding challenges in real-time with integrated audio calling and cloud code execution.`,
+        techStack: ["Go", "HTMX", "WebRTC", "WebSockets"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/practice-leetcode-multiplayer`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=3QiOIUQptu8`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_building-a-real-time-multiplayer-leetcode-activity-7410656401850531841-IoLi?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
           },
         ],
       },
@@ -313,27 +287,6 @@ export const Portfolio = {
         ],
       },
       {
-        title: `Money Minder Service`,
-        datePublished: `Jun 29, 2025`,
-        thumbnail: `/featuredProjects/images/MoneyMinder.webp`,
-        description: `Built secure full-stack finance tracker with Vue.js 3 and Golang, featuring role-based auth, real-time charts, and RESTful APIs with 40% latency reduction`,
-        techStack: ["Go", "Vue.js", "BigQuery", "GCP"],
-        links: [
-          {
-            iconName: "github",
-            href: `https://github.com/sounishnath003/money-minder`,
-          },
-          {
-            iconName: "youtube",
-            href: `https://www.youtube.com/watch?v=I5X-nayuyoU`,
-          },
-          {
-            iconName: "linkedin",
-            href: `https://www.linkedin.com/posts/sounishnath_personalproject-hobbyproject-opensource-activity-7350180853152468992-fAVa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
-          },
-        ],
-      },
-      {
         title: `InterviewMe.AI Platform`,
         datePublished: `Oct 31, 2024`,
         thumbnail: `/featuredProjects/images/IntervieewMeAI.webp`,
@@ -355,23 +308,65 @@ export const Portfolio = {
         ],
       },
       {
-        title: `URL Shortner Service`,
-        datePublished: `Oct 31, 2024`,
-        thumbnail: `/featuredProjects/images/URL%20Shortner%20Service%20-%20Golang.gif`,
-        description: `URL shortener service implemented to know the design system of a read heavy systems in golang. Low level design of a ready heavy systems.`,
-        techStack: ["Go", "Postgresql", "Redis", "Bloom Filters"],
+        title: `Money Minder Service`,
+        datePublished: `Jun 29, 2025`,
+        thumbnail: `/featuredProjects/images/MoneyMinder.webp`,
+        description: `Built secure full-stack finance tracker with Vue.js 3 and Golang, featuring role-based auth, real-time charts, and RESTful APIs with 40% latency reduction`,
+        techStack: ["Go", "Vue.js", "BigQuery", "GCP"],
         links: [
           {
             iconName: "github",
-            href: `https://github.com/sounishnath003/url-shortner-service-golang`,
+            href: `https://github.com/sounishnath003/money-minder`,
           },
           {
             iconName: "youtube",
-            href: `https://www.youtube.com/watch?v=o0OwyO-WH4g`,
+            href: `https://www.youtube.com/watch?v=I5X-nayuyoU`,
           },
           {
             iconName: "linkedin",
-            href: `https://www.linkedin.com/posts/sounishnath_golang-urlshortener-bloomfilter-activity-7257995197781819392-m8es?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+            href: `https://www.linkedin.com/posts/sounishnath_personalproject-hobbyproject-opensource-activity-7350180853152468992-fAVa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Chad Gipidii - Agent Loop`,
+        datePublished: `Oct 10, 2025`,
+        thumbnail: `/featuredProjects/images/chad-gipidii.gif`,
+        description: `An extensible AI agent powered by Google Gemini, featuring dynamic tool registration via an @tool decorator, multi-step tool execution, color-coded logging, configurable LLM backends, and robust error handling for reliable task automation.`,
+        techStack: ["Python", "Pydantic", "Gemini 2.5-Pro"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/chad-gipidi-ai-agents-tool`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=E5rNsOvUR0w`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_github-sounishnath003chad-gipidi-ai-agents-tool-activity-7393552425871282176-Z1q4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
+          },
+        ],
+      },
+      {
+        title: `Taskflow: Weekplanner AI`,
+        datePublished: `Aug 15, 2025`,
+        thumbnail: `/featuredProjects/images/taskflow01.gif`,
+        description: `AI-powered weekly planner with Gemini/Firebase Studio featuring smart scheduling, automated task generation, and drag-and-drop organization`,
+        techStack: ["Firebase", "Vue.js", "Gemini", "GCP"],
+        links: [
+          {
+            iconName: "github",
+            href: `https://github.com/sounishnath003/taskflow-weekplanner/`,
+          },
+          {
+            iconName: "youtube",
+            href: `https://www.youtube.com/watch?v=3rLyBheAPEs`,
+          },
+          {
+            iconName: "linkedin",
+            href: `https://www.linkedin.com/posts/sounishnath_how-i-built-a-smart-week-planner-activity-7362195279833378816-_ELZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACvzG_MBDq1RsJyszBPI5lbW-t9kvgRfK2w`,
           },
         ],
       },
@@ -387,7 +382,7 @@ export const Portfolio = {
           "I have worked with Sounish within the same team (Analytics team) where he had joined as a fresher. But the work ethic and competency he had shown both on the technical front as well as on the functional front was quite remarkable and matched the level of any pro developer.",
         avatar: "/endorsements/prashant.png",
         name: "Prashant Mishra",
-        workBio: "Lead Data Engineer of Genpact",
+        workBio: "Lead Data Engineer, Genpact · via LinkedIn",
         linkedin: "https://www.linkedin.com/in/prashant-mishra-78976046/",
       },
       {
