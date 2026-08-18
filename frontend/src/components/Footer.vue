@@ -61,7 +61,7 @@
                     <span class="text-gray-500 dark:text-gray-400">&bull;</span>
                     <span
                         class="transition-colors duration-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Version: 4.0
+                        Version: 4.5
                     </span>
                 </div>
             </div>
