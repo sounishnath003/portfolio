@@ -1,81 +1,144 @@
 <template>
-  <div class="relative w-full py-16 sm:py-24 lg:py-32">
-    <!-- Animated Background Patterns -->
+  <section class="relative pb-8 pt-24 sm:pt-28">
     <div class="absolute inset-0 -z-10 overflow-hidden opacity-30 dark:opacity-20">
-      <!-- Geometric Grid Pattern -->
       <div class="absolute inset-0 bg-grid-geometric animate-grid-move"></div>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 mx-auto max-w-3xl px-6 lg:px-8">
-      <!-- Greeting with subtle animation -->
-      <div class="mb-8 flex justify-center fade-in-up" style="animation-delay: 0.05s">
-        <div class="text-xl font-medium text-gray-700 dark:text-gray-300">
-          <span class="inline-block animate-wave-subtle">👋</span>, I'm
-          <span
-            class="text-blue-700 dark:text-yellow-400 font-semibold text-2xl transition-all duration-300 hover:scale-105 inline-block cursor-default">
-            {{ Portfolio.fullname }}.
-          </span>
-        </div>
-      </div>
+    <SectionKicker
+      index="00"
+      label="INIT"
+      title="I ship systems that stay quiet"
+      subtitle="Distributed auth, streaming pipelines, and backend services that don't wake you up at 3AM."
+      href="/pages/about"
+      hrefLabel="man about →"
+    />
 
-      <div class="text-center">
-        <!-- Main heading with smooth transition -->
-        <div class="fade-in-up" style="animation-delay: 0.1s" :key="attributeValue">
-          <h1
-            class="text-6xl font-semibold tracking-tight text-balance sm:text-7xl text-gray-900 dark:text-white transition-all duration-300 ease-out">
-            {{ attributeValue }}
-          </h1>
-        </div>
+    <div class="grid items-stretch gap-4 lg:grid-cols-2">
+      <div
+        class="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 sm:p-6"
+      >
+        <p class="font-mono text-[11px] tracking-widest text-gray-400">$ whoami</p>
+        <p class="mt-3 text-lg text-gray-700 dark:text-gray-300">
+          <span class="inline-block animate-wave-subtle">👋</span>
+          I'm
+          <span class="font-semibold text-blue-700 dark:text-yellow-400">{{ Portfolio.fullname }}</span>
+        </p>
 
-        <!-- Bio with fade-in -->
-        <div class="fade-in-up" style="animation-delay: 0.2s">
-          <p class="mt-8 font-medium text-pretty text-gray-600 dark:text-gray-300 leading-relaxed"
-            v-html="Portfolio.profileBio"></p>
-        </div>
+        <p class="mt-6 font-mono text-[11px] tracking-widest text-gray-400">$ role --watch</p>
+        <h1
+          class="mt-2 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-white"
+          :key="attributeValue"
+        >
+          <span class="role-swap">{{ attributeValue }}</span><span class="caret" aria-hidden="true"></span>
+        </h1>
 
-        <!-- CTA Buttons with micro-interactions -->
-        <div class="mt-10 flex items-center justify-center gap-x-6 fade-in-up" style="animation-delay: 0.3s">
-          <a :href="Portfolio.resumeLink" target="_blank" class="group relative inline-block">
-            <div class="relative transition-all duration-200 group-hover:scale-105 group-active:scale-95">
+        <p class="mt-5 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+          Software Engineer II at Microsoft, previously Oracle and TCS. I design and ship
+          <span class="font-mono text-gray-900 dark:text-gray-100">distributed backend systems</span>
+          — auth infra, real-time streaming, and fault-tolerant microservices. Rewrote a job
+          orchestrator in Go + Kafka
+          <span class="font-mono text-emerald-600 dark:text-emerald-400">−64%</span>
+          SQL time, moved
+          <span class="font-mono text-gray-900 dark:text-gray-100">40M+</span>
+          async tasks/day, cut infra cost
+          <span class="font-mono text-emerald-600 dark:text-emerald-400">−68%</span>.
+          Based in Bengaluru.
+        </p>
+
+        <div class="mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 pt-8">
+          <a :href="Portfolio.resumeLink" target="_blank" rel="noopener noreferrer" class="group inline-block">
+            <div class="transition-transform duration-200 group-hover:scale-[1.03] group-active:scale-95">
               <PrimaryButton text="Download Resume" buttonType="Download" color="blue" />
             </div>
           </a>
-          <a href="/pages/work-experience"
-            class="group relative text-sm/6 font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 inline-flex items-center gap-2">
-            <span>Interested? Know more</span>
-            <span aria-hidden="true" class="inline-block transition-transform duration-200 group-hover:translate-x-1">
-              &rarr;
-            </span>
+          <router-link
+            to="/pages/work-experience"
+            class="group relative inline-flex items-center gap-2 font-mono text-xs text-gray-500 transition-colors hover:text-blue-600 dark:text-gray-400 dark:hover:text-yellow-400"
+          >
+            full log →
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-200 group-hover:w-full"></span>
-          </a>
+              class="absolute bottom-0 left-0 h-px w-0 bg-blue-600 transition-all duration-200 group-hover:w-full dark:bg-yellow-400"
+            ></span>
+          </router-link>
         </div>
       </div>
 
-      <!-- WorkAt section -->
-      <div class="text-center my-16 fade-in-up" style="animation-delay: 0.4s">
-        <WorkAt />
-      </div>
+      <aside
+        class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-[#0d1117] dark:border-gray-800"
+      >
+        <div class="flex items-center gap-2 border-b border-white/10 px-4 py-2.5">
+          <span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span>
+          <span class="ml-2 truncate font-mono text-[11px] text-gray-400">boot.sh — sounish@bengaluru</span>
+        </div>
+
+        <div class="flex flex-1 flex-col space-y-3 p-5 font-mono text-[12px] leading-relaxed text-gray-300 sm:p-6 sm:text-[13px]">
+          <p>
+            <span class="text-gray-500">last login:</span> from microsoft.fabric.spark
+          </p>
+          <p>
+            <span class="text-emerald-400">sounish@bengaluru</span>
+            <span class="text-gray-600">:</span>
+            <span class="text-sky-400">~</span>
+            <span class="text-gray-400"> % uname -a</span>
+          </p>
+          <p class="text-gray-200">darwin · swe-ii · distributed-systems · utc+5:30</p>
+
+          <p>
+            <span class="text-emerald-400">sounish@bengaluru</span>
+            <span class="text-gray-600">:</span>
+            <span class="text-sky-400">~</span>
+            <span class="text-gray-400"> % roles --watch</span>
+          </p>
+
+          <ul class="space-y-1.5">
+            <li
+              v-for="(role, i) in Portfolio.attributes"
+              :key="role"
+              class="flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-300"
+              :class="i === attributeIndex ? 'bg-yellow-400/15 text-yellow-200' : 'text-gray-500'"
+            >
+              <span class="w-3 shrink-0 text-yellow-400">{{ i === attributeIndex ? "▸" : "" }}</span>
+              <span>{{ role }}</span>
+              <span v-if="i === attributeIndex" class="ml-auto text-[10px] text-emerald-400">running</span>
+            </li>
+          </ul>
+
+          <p class="mt-auto pt-4 text-gray-500">
+            <span class="text-emerald-400">sounish@bengaluru</span>
+            <span class="text-gray-600">:</span>
+            <span class="text-sky-400">~</span>
+            <span class="text-gray-400"> %</span>
+            <span class="ml-1 inline-block h-3.5 w-1.5 animate-pulse bg-yellow-400 align-middle"></span>
+          </p>
+        </div>
+      </aside>
     </div>
-  </div>
+
+    <div class="mt-4">
+      <WorkAt />
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 import PrimaryButton from "../../components/PrimaryButton.vue";
-import WorkAt from "./WorkAt.vue";
 import { Portfolio } from "../portfolioDatabase";
+import SectionKicker from "./SectionKicker.vue";
+import WorkAt from "./WorkAt.vue";
 
-let intervalId: number | null | undefined = null;
-let attributeIndex = 0;
-let attributeValue = ref(Portfolio.attributes[attributeIndex]);
+const attributeIndex = ref(0);
+const attributeValue = ref(Portfolio.attributes[0]);
+
+let intervalId: number | null = null;
 
 onMounted(() => {
   intervalId = window.setInterval(() => {
-    attributeIndex = (attributeIndex + 1) % Portfolio.attributes.length;
-    attributeValue.value = Portfolio.attributes[attributeIndex];
-  }, 2000); // Faster transitions
+    attributeIndex.value = (attributeIndex.value + 1) % Portfolio.attributes.length;
+    attributeValue.value = Portfolio.attributes[attributeIndex.value];
+  }, 2200);
 });
 
 onUnmounted(() => {
@@ -86,33 +149,17 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes waveSubtle {
-
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
   }
-
   25% {
     transform: translateY(-3px) rotate(12deg);
   }
-
   50% {
     transform: translateY(-2px) rotate(-8deg);
   }
-
   75% {
     transform: translateY(-1px) rotate(5deg);
   }
@@ -122,15 +169,31 @@ onUnmounted(() => {
   0% {
     transform: translate(0, 0);
   }
-
   100% {
     transform: translate(50px, 50px);
   }
 }
 
-.fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
+@keyframes roleIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .animate-wave-subtle {
@@ -139,7 +202,21 @@ onUnmounted(() => {
   display: inline-block;
 }
 
-/* Geometric Grid Pattern */
+.role-swap {
+  display: inline;
+  animation: roleIn 0.35s ease-out;
+}
+
+.caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.85em;
+  margin-left: 0.12em;
+  background: currentColor;
+  vertical-align: -0.05em;
+  animation: caretBlink 1.1s steps(1) infinite;
+}
+
 .bg-grid-geometric {
   background-image:
     linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
@@ -161,23 +238,12 @@ onUnmounted(() => {
   animation: gridMove 20s linear infinite;
 }
 
-/* Smooth transitions for all interactive elements */
-a,
-button {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-
-  .fade-in-up,
   .animate-wave-subtle,
-  .animate-grid-move {
+  .animate-grid-move,
+  .role-swap,
+  .caret {
     animation: none;
-    opacity: 1;
-  }
-
-  .fade-in-up {
     opacity: 1;
   }
 }

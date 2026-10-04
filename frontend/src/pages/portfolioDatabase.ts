@@ -40,11 +40,12 @@ export const Portfolio = {
   skills: [
     {
       topic: "Programming Languages",
-      skills: ["Python", "Golang", "Java", "TypeScript", "SQL"],
+      skills: ["C#", "Python", "Golang", "Java", "TypeScript", "SQL"],
     },
     {
       topic: "Backend & Systems",
       skills: [
+        "ASP DOTNET",
         "Nest.JS",
         "Go/Echo",
         "FastAPI",
