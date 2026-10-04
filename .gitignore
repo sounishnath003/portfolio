@@ -9,3 +9,5 @@ dist
 .env
 
 dist
+
+.DS_Store
